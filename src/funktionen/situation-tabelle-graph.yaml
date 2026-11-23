@@ -56,7 +56,7 @@ blocks:
           - type: text
             text: |
               Ein Graph ist **kein Bild vom Gefäß** und kein Bild vom Weg. Er zeigt, welcher Wert zu welcher Zeit gehört. Die Zeit steht auf der
-              x-Achse.
+              $x$-Achse.
   - type: section
     id: beispiel
     title: Beispiel

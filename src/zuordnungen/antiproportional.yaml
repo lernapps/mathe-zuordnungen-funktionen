@@ -34,8 +34,8 @@ blocks:
           aStep: 6
           aName: c (Pumpenstunden)
         nojs: |
-          Für c = 12 gehören zu 1, 2, 3, 4, 6 Pumpen die Zeiten 12 h, 6 h, 4 h, 3 h, 2 h. Pumpen mal Zeit ist immer 12. Der Graph ist eine
-          fallende Kurve, keine Gerade. Für c = 24 sind alle Zeiten doppelt so lang.
+          Für $c$ = 12 gehören zu 1, 2, 3, 4, 6 Pumpen die Zeiten 12 h, 6 h, 4 h, 3 h, 2 h. Pumpen mal Zeit ist immer 12. Der Graph ist eine
+          fallende Kurve, keine Gerade. Für $c$ = 24 sind alle Zeiten doppelt so lang.
   - type: section
     id: erklaerung
     title: Das Produkt bleibt gleich
@@ -48,18 +48,18 @@ blocks:
         licence: CC-BY-4.0
       - type: definition
         term: antiproportional
-        explanation: "Eine Zuordnung ist antiproportional, wenn zum Doppelten von x die Hälfte von y gehört. Das Produkt x · y ist dann immer gleich. Beispiel: 2 Pumpen brauchen 6 h, 4 Pumpen brauchen 3 h, beide Male 12."
+        explanation: "Eine Zuordnung ist antiproportional, wenn zum Doppelten von $x$ die Hälfte von $y$ gehört. Das Produkt $x$ · $y$ ist dann immer gleich. Beispiel: 2 Pumpen brauchen 6 h, 4 Pumpen brauchen 3 h, beide Male 12."
       - type: text
         text: |
-          Der Graph ist eine **fallende Kurve**, keine Gerade. Du rechnest mit dem Produkt c = x · y. Dann gilt y = c : x.
+          Der Graph ist eine **fallende Kurve**, keine Gerade. Du rechnest mit dem Produkt $c$ = $x$ · $y$. Dann gilt $y$ = $c$ : $x$.
           Im Dreisatz rechnest du links mal 2, rechts durch 2: Die Pfeile laufen **gegeneinander**.
       - type: note
         title: Merke
         blocks:
           - type: text
             text: |
-              „Je mehr, desto weniger“ reicht nicht. Je mehr 5-€-Gutscheine du einlöst, desto weniger bleibt zu zahlen (y = 40 − 5 · x). Das Produkt
-              bleibt dabei nicht gleich. Prüfe immer, ob x · y gleich bleibt.
+              „Je mehr, desto weniger“ reicht nicht. Je mehr 5-€-Gutscheine du einlöst, desto weniger bleibt zu zahlen ($y$ = 40 − 5 · $x$). Das Produkt
+              bleibt dabei nicht gleich. Prüfe immer, ob $x$ · $y$ gleich bleibt.
   - type: section
     id: beispiel
     title: Beispiel
@@ -95,7 +95,7 @@ blocks:
         given:
           e: { pick: 1, from: { data: antiproportional-paare } }
         task:
-          text: "Eine Zuordnung ist antiproportional. Zu x = {{e.x1}} gehört y = {{e.y1}}. Welches y gehört zu x = {{e.x2}}?"
+          text: "Eine Zuordnung ist antiproportional. Zu $x$ = {{e.x1}} gehört $y$ = {{e.y1}}. Welches $y$ gehört zu $x$ = {{e.x2}}?"
         answer: { value: "e.y2", compare: { number: { format: integer } } }
         mistakes:
           - value: "e.y1 * e.x2 / e.x1"
@@ -103,21 +103,21 @@ blocks:
         hint: "Rechne erst das Produkt x mal y aus dem ersten Paar. Teile es dann durch den neuen x-Wert."
         steps:
           - "Produkt: {{e.x1}} · {{e.y1}} = {{e.c}}"
-          - "y = {{e.c}} : {{e.x2}} = {{answer}}."
+          - "$y$ = {{e.c}} : {{e.x2}} = {{answer}}."
       - type: single-choice
         id: welche-tabelle-anti
-        text: "Welche Tabelle gehört zu einer antiproportionalen Zuordnung? (x und y)"
+        text: "Welche Tabelle gehört zu einer antiproportionalen Zuordnung? ($x$ und $y$)"
         options:
-          - text: "x: 1, 2, 3 und y: 8, 4, 2"
+          - text: "$x$: 1, 2, 3 und $y$: 8, 4, 2"
             correct: false
-            info: "Bei 1 und 2 passt es (8, 4), aber bei 3 müsste y = 8 : 3 sein, nicht 2."
-          - text: "x: 2, 3, 4 und y: 12, 8, 6"
+            info: "Bei 1 und 2 passt es (8, 4), aber bei 3 müsste $y$ = 8 : 3 sein, nicht 2."
+          - text: "$x$: 2, 3, 4 und $y$: 12, 8, 6"
             correct: true
             info: "Das Produkt ist immer 24: 2 · 12, 3 · 8, 4 · 6."
-          - text: "x: 2, 4, 6 und y: 6, 4, 2"
+          - text: "$x$: 2, 4, 6 und $y$: 6, 4, 2"
             correct: false
-            info: "Hier ist y jedes Mal um 2 kleiner. Das Produkt ändert sich: 12, 16, 12."
-        explanation: "Bei antiproportional ist x · y in jeder Spalte gleich."
+            info: "Hier ist $y$ jedes Mal um 2 kleiner. Das Produkt ändert sich: 12, 16, 12."
+        explanation: "Bei antiproportional ist $x$ · $y$ in jeder Spalte gleich."
         links:
           - title: "Lernlandkarte: Antiproportionale Zuordnungen"
             url: https://lernapps.net/apps/map/mathematik/c/antiproportionale-zuordnungen/
@@ -125,11 +125,11 @@ blocks:
         id: je-mehr-desto-weniger
         text: "Ein Taxi kostet 3 € Grundpreis und 2 € je km. Bei weniger Kilometern kostet es weniger. Die Zuordnung ist deshalb antiproportional."
         answer: false
-        explanation: "Weniger Kilometer, weniger Preis: Beides wird kleiner, nicht gegenläufig. Antiproportional ist nur, wenn mit größerem x das y kleiner wird und das Produkt gleich bleibt."
+        explanation: "Weniger Kilometer, weniger Preis: Beides wird kleiner, nicht gegenläufig. Antiproportional ist nur, wenn mit größerem $x$ das $y$ kleiner wird und das Produkt gleich bleibt."
         links:
           - title: "Lernlandkarte: Antiproportionale Zuordnungen"
             url: https://lernapps.net/apps/map/mathematik/c/antiproportionale-zuordnungen/
       - type: text
         text: |
-          **Das kannst du jetzt:** Du erkennst antiproportionale Zuordnungen am gleichen Produkt x · y und rechnest mit y = c : x. Als
+          **Das kannst du jetzt:** Du erkennst antiproportionale Zuordnungen am gleichen Produkt $x$ · $y$ und rechnest mit $y$ = $c$ : $x$. Als
           Nächstes unterscheidest du beide Arten.

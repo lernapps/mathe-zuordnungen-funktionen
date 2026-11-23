@@ -9,8 +9,8 @@ blocks:
     blocks:
       - type: text
         text: |
-          Die Klasse misst die Temperatur. Die Zeit x zählt in Stunden von 12 Uhr aus: −2 heißt 10 Uhr, 3 heißt 15 Uhr. Die
-          Temperatur y fällt, und sie wird auch negativ. Darum brauchen die Achsen **negative Zahlen**.
+          Die Klasse misst die Temperatur. Die Zeit $x$ zählt in Stunden von 12 Uhr aus: −2 heißt 10 Uhr, 3 heißt 15 Uhr. Die
+          Temperatur $y$ fällt, und sie wird auch negativ. Darum brauchen die Achsen **negative Zahlen**.
       - type: vue-component
         id: temperatur-graph
         component: Dreifachansicht
@@ -36,7 +36,7 @@ blocks:
           fixed: true
           hideTerm: true
         nojs: |
-          Tabelle zur Temperatur: um 10 Uhr (x = −2) 4 °C, um 11 Uhr 3 °C, um 12 Uhr 2 °C, um 13 Uhr 1 °C, um 14 Uhr 0 °C, um 15 Uhr
+          Tabelle zur Temperatur: um 10 Uhr ($x$ = −2) 4 °C, um 11 Uhr 3 °C, um 12 Uhr 2 °C, um 13 Uhr 1 °C, um 14 Uhr 0 °C, um 15 Uhr
           −1 °C. Der Graph ist eine fallende Linie. Sie liegt links oben und rechts unten.
   - type: section
     id: erklaerung
@@ -51,10 +51,10 @@ blocks:
       - type: text
         text: |
           Die Achsen sind **Zahlengeraden**: rechts und oben stehen positive Zahlen, links und unten negative. Die Achsen schneiden sich
-          im Ursprung (0|0). Erst kommt der x-Wert, dann der y-Wert.
+          im Ursprung (0|0). Erst kommt der $x$-Wert, dann der $y$-Wert.
       - type: table
         caption: Vorzeichen in den Quadranten
-        header: ["Quadrant", "x", "y"]
+        header: ["Quadrant", "$x$", "$y$"]
         rowHeaders: true
         rows:
           - ["I (rechts oben)", "positiv", "positiv"]
@@ -66,7 +66,7 @@ blocks:
         blocks:
           - type: text
             text: |
-              Ein Minus vor dem x-Wert heißt: nach links. Ein Minus vor dem y-Wert heißt: nach unten. In einer Rechnung setzt du negative
+              Ein Minus vor dem $x$-Wert heißt: nach links. Ein Minus vor dem $y$-Wert heißt: nach unten. In einer Rechnung setzt du negative
               Zahlen in Klammern: 5 + (−3) = 2.
   - type: section
     id: beispiel
@@ -89,18 +89,18 @@ blocks:
     blocks:
       - type: single-choice
         id: quadrant-um-sechzehn
-        text: "Um 16 Uhr (x = 4) sind es −2 °C. In welchem Quadranten liegt der Punkt (4|−2)?"
+        text: "Um 16 Uhr ($x$ = 4) sind es −2 °C. In welchem Quadranten liegt der Punkt (4|−2)?"
         options:
           - text: "Quadrant I"
             correct: false
-            info: "Im Quadranten I sind beide Werte positiv. Hier ist y negativ."
+            info: "Im Quadranten I sind beide Werte positiv. Hier ist $y$ negativ."
           - text: "Quadrant III"
             correct: false
-            info: "Im Quadranten III sind beide Werte negativ. Hier ist x = 4 positiv."
+            info: "Im Quadranten III sind beide Werte negativ. Hier ist $x$ = 4 positiv."
           - text: "Quadrant IV"
             correct: true
-            info: "x ist positiv (nach rechts), y negativ (nach unten): rechts unten, Quadrant IV."
-        explanation: "Positives x, negatives y gehört zum Quadranten IV."
+            info: "$x$ ist positiv (nach rechts), $y$ negativ (nach unten): rechts unten, Quadrant IV."
+        explanation: "Positives $x$, negatives $y$ gehört zum Quadranten IV."
         links:
           - title: "Lernlandkarte: Darstellungen von Funktionen"
             url: https://lernapps.net/apps/map/mathematik/c/funktionen-darstellung/
@@ -116,13 +116,13 @@ blocks:
             right: "Quadrant III"
           - left: "(1|−6)"
             right: "Quadrant IV"
-        explanation: "Achte auf die Vorzeichen. Erster Wert x: negativ heißt links. Zweiter Wert y: negativ heißt unten."
+        explanation: "Achte auf die Vorzeichen. Erster Wert $x$: negativ heißt links. Zweiter Wert $y$: negativ heißt unten."
         links:
           - title: "Lernlandkarte: Darstellungen von Funktionen"
             url: https://lernapps.net/apps/map/mathematik/c/funktionen-darstellung/
       - type: number
         id: abstand-y-achse
-        text: "Wie viele Einheiten liegt der Punkt (−3|2) von der y-Achse entfernt?"
+        text: "Wie viele Einheiten liegt der Punkt (−3|2) von der $y$-Achse entfernt?"
         answer: 3
         tolerance: 0
         mistakes:
@@ -130,7 +130,7 @@ blocks:
             message: "2 ist der y-Wert, also die Höhe über der x-Achse. Der Abstand zur y-Achse ist der x-Wert ohne Minus."
           - answer: -3
             message: "Ein Abstand ist nie negativ. Das Minus sagt nur, dass der Punkt links liegt."
-        explanation: "Der Abstand zur y-Achse ist der Betrag des x-Werts: 3 Einheiten, nach links."
+        explanation: "Der Abstand zur $y$-Achse ist der Betrag des $x$-Werts: 3 Einheiten, nach links."
         links:
           - title: "Lernlandkarte: Darstellungen von Funktionen"
             url: https://lernapps.net/apps/map/mathematik/c/funktionen-darstellung/
@@ -148,9 +148,9 @@ blocks:
             url: https://lernapps.net/apps/map/mathematik/c/funktionen-darstellung/
       - type: true-false
         id: vorzeichen-quadrant
-        text: "Ein Punkt mit negativem x-Wert und negativem y-Wert liegt links unten, im Quadranten III."
+        text: "Ein Punkt mit negativem $x$-Wert und negativem $y$-Wert liegt links unten, im Quadranten III."
         answer: true
-        explanation: "Negatives x: links. Negatives y: unten. Das ist links unten, Quadrant III."
+        explanation: "Negatives $x$: links. Negatives $y$: unten. Das ist links unten, Quadrant III."
         links:
           - title: "Lernlandkarte: Darstellungen von Funktionen"
             url: https://lernapps.net/apps/map/mathematik/c/funktionen-darstellung/

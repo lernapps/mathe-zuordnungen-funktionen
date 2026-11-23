@@ -9,8 +9,8 @@ blocks:
     blocks:
       - type: text
         text: |
-          Das Taxi der Klasse fährt bis 6 km. Fahrpreis: 3 € Grundpreis und 2 € je Kilometer. Aus der Strecke x wird genau ein
-          Fahrpreis y. Das ist eine Funktion. Nach dieser Seite beschreibst du sie mit **Funktionsterm** und **Graph**.
+          Das Taxi der Klasse fährt bis 6 km. Fahrpreis: 3 € Grundpreis und 2 € je Kilometer. Aus der Strecke $x$ wird genau ein
+          Fahrpreis $y$. Das ist eine Funktion. Nach dieser Seite beschreibst du sie mit **Funktionsterm** und **Graph**.
       - type: vue-component
         id: taxi-term
         component: Dreifachansicht
@@ -35,32 +35,32 @@ blocks:
           b: 3
           fixed: true
         nojs: |
-          Der Funktionsterm ist y = 2 · x + 3. Die Tabelle: 0 km kosten 3 €, 2 km 7 €, 4 km 11 €, 6 km 15 €. Der Graph ist eine steigende
-          Gerade, die bei 3 € auf der y-Achse beginnt.
+          Der Funktionsterm ist $y$ = 2 · $x$ + 3. Die Tabelle: 0 km kosten 3 €, 2 km 7 €, 4 km 11 €, 6 km 15 €. Der Graph ist eine steigende
+          Gerade, die bei 3 € auf der $y$-Achse beginnt.
   - type: section
     id: erklaerung
     title: Term, Graph und die beiden Mengen
     blocks:
       - type: definition
         term: Funktionsterm
-        explanation: "Der Funktionsterm ist die Rechenvorschrift, die aus x das y macht. Beispiel: y = 2 · x + 3 sagt: Nimm x mal 2 und addiere 3."
+        explanation: "Der Funktionsterm ist die Rechenvorschrift, die aus $x$ das $y$ macht. Beispiel: $y$ = 2 · $x$ + 3 sagt: Nimm $x$ mal 2 und addiere 3."
       - type: definition
         term: Definitionsmenge
-        explanation: "Die Definitionsmenge sind alle x-Werte, die du einsetzen darfst. Beim Taxi: alle Strecken von 0 bis 6 km."
+        explanation: "Die Definitionsmenge sind alle $x$-Werte, die du einsetzen darfst. Beim Taxi: alle Strecken von 0 bis 6 km."
       - type: definition
         term: Wertemenge
-        explanation: "Die Wertemenge sind alle y-Werte, die herauskommen. Beim Taxi: alle Preise von 3 € bis 15 €."
+        explanation: "Die Wertemenge sind alle $y$-Werte, die herauskommen. Beim Taxi: alle Preise von 3 € bis 15 €."
       - type: text
         text: |
-          Der **Graph** zeigt alle Paare (x|y) der Funktion. Er gehört nur zu einer Funktion, wenn jede senkrechte Linie ihn **höchstens
+          Der **Graph** zeigt alle Paare ($x$|$y$) der Funktion. Er gehört nur zu einer Funktion, wenn jede senkrechte Linie ihn **höchstens
           einmal** schneidet.
       - type: note
         title: Merke
         blocks:
           - type: text
             text: |
-              Die Definitionsmenge liegt auf der **x-Achse**, die Wertemenge auf der **y-Achse**. Beim Taxi ist 0 der kleinste x-Wert,
-              aber 3 der kleinste y-Wert, weil der Grundpreis immer bezahlt wird.
+              Die Definitionsmenge liegt auf der **$x$-Achse**, die Wertemenge auf der **$y$-Achse**. Beim Taxi ist 0 der kleinste $x$-Wert,
+              aber 3 der kleinste $y$-Wert, weil der Grundpreis immer bezahlt wird.
   - type: section
     id: beispiel
     title: Beispiel
@@ -69,7 +69,7 @@ blocks:
         title: Preis für 4 km
         blocks:
           - type: text
-            text: "Setze x = 4 in den Funktionsterm ein: $y = 2 \\cdot 4 + 3 = 8 + 3 = 11$. Die Fahrt kostet 11 €. Das Paar (4|11) liegt auf dem Graphen."
+            text: "Setze $x$ = 4 in den Funktionsterm ein: $y = 2 \\cdot 4 + 3 = 8 + 3 = 11$. Die Fahrt kostet 11 €. Das Paar (4|11) liegt auf dem Graphen."
   - type: section
     id: uebung
     title: Übung
@@ -81,7 +81,7 @@ blocks:
           b: { int: [1, 9] }
           x: { int: [2, 6] }
         task:
-          text: "Eine Funktion hat den Term y = {{m}} · x + {{b}}. Berechne y für x = {{x}}."
+          text: "Eine Funktion hat den Term $y$ = {{m}} · $x$ + {{b}}. Berechne $y$ für $x$ = {{x}}."
         answer: { value: "m * x + b", compare: { number: { format: integer } } }
         mistakes:
           - value: "(m + b) * x"
@@ -92,18 +92,18 @@ blocks:
           - "= {{answer}}"
       - type: single-choice
         id: definitionsmenge
-        text: "Das Taxi fährt bis 6 km, y = 2 · x + 3. Was ist die Definitionsmenge?"
+        text: "Das Taxi fährt bis 6 km, $y$ = 2 · $x$ + 3. Was ist die Definitionsmenge?"
         options:
           - text: "alle Strecken von 0 bis 6 km"
             correct: true
-            info: "Die Definitionsmenge sind die erlaubten x-Werte, hier die Strecken."
+            info: "Die Definitionsmenge sind die erlaubten $x$-Werte, hier die Strecken."
           - text: "alle Preise von 3 € bis 15 €"
             correct: false
-            info: "Das sind die y-Werte, also die Wertemenge."
+            info: "Das sind die $y$-Werte, also die Wertemenge."
           - text: "nur 0 km und 6 km"
             correct: false
             info: "Auch 1 km, 2,5 km und alle Werte dazwischen kannst du einsetzen."
-        explanation: "x ist die Strecke, y der Preis. Die Definitionsmenge gehört zu x."
+        explanation: "$x$ ist die Strecke, $y$ der Preis. Die Definitionsmenge gehört zu $x$."
         links:
           - title: "Lernlandkarte: Funktionsbegriff"
             url: https://lernapps.net/apps/map/mathematik/c/funktionsbegriff/
@@ -120,7 +120,7 @@ blocks:
           - text: "alle Preise von 0 € bis 15 €"
             correct: false
             info: "Kein Preis ist kleiner als 3 €, der Grundpreis wird immer bezahlt."
-        explanation: "Setze den kleinsten und den größten x-Wert ein: 3 € und 15 €."
+        explanation: "Setze den kleinsten und den größten $x$-Wert ein: 3 € und 15 €."
         links:
           - title: "Lernlandkarte: Funktionsbegriff"
             url: https://lernapps.net/apps/map/mathematik/c/funktionsbegriff/
@@ -137,14 +137,14 @@ blocks:
         options:
           - text: "Ja, jeder Punkt hat Koordinaten."
             correct: false
-            info: "Das haben alle Graphen. Entscheidend ist, ob zu jedem x nur ein y gehört."
-          - text: "Nein, zu fast jedem x gehören zwei y-Werte."
+            info: "Das haben alle Graphen. Entscheidend ist, ob zu jedem $x$ nur ein $y$ gehört."
+          - text: "Nein, zu fast jedem $x$ gehören zwei $y$-Werte."
             correct: true
-            info: "Eine senkrechte Linie bei x = 3 trifft den Kreis oben und unten, also zwei y-Werte."
+            info: "Eine senkrechte Linie bei $x$ = 3 trifft den Kreis oben und unten, also zwei $y$-Werte."
           - text: "Ja, weil der Kreis geschlossen ist."
             correct: false
             info: "Geschlossen oder nicht spielt keine Rolle. Es zählt, ob eine senkrechte Linie den Graphen mehr als einmal trifft."
-        explanation: "Zu x = 3 gehören zwei y-Werte. Damit ist der Kreis kein Graph einer Funktion."
+        explanation: "Zu $x$ = 3 gehören zwei $y$-Werte. Damit ist der Kreis kein Graph einer Funktion."
         links:
           - title: "Lernlandkarte: Funktionsbegriff"
             url: https://lernapps.net/apps/map/mathematik/c/funktionsbegriff/

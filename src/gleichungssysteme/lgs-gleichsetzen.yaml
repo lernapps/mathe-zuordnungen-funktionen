@@ -9,8 +9,8 @@ blocks:
     blocks:
       - type: text
         text: |
-          Aus dem Graphen hast du für Tarif A (y = x + 6) und Tarif B (y = 2 · x + 2) den Schnittpunkt abgelesen. Das war nur so genau, wie du den
-          Graphen lesen kannst. Jetzt berechnest du ihn. Beide Gleichungen sind schon nach y aufgelöst. Dann müssen die rechten Seiten gleich
+          Aus dem Graphen hast du für Tarif A ($y$ = $x$ + 6) und Tarif B ($y$ = 2 · $x$ + 2) den Schnittpunkt abgelesen. Das war nur so genau, wie du den
+          Graphen lesen kannst. Jetzt berechnest du ihn. Beide Gleichungen sind schon nach $y$ aufgelöst. Dann müssen die rechten Seiten gleich
           sein, wenn die Kosten gleich sind. Schreibe diese Gleichung für A und B auf.
   - type: section
     id: erklaerung
@@ -18,11 +18,11 @@ blocks:
     blocks:
       - type: definition
         term: Gleichsetzungsverfahren
-        explanation: "Beim Gleichsetzungsverfahren setzt du die beiden Terme für y gleich, löst nach x auf und rechnest y aus. Beispiel: x + 6 = 2 · x + 2 gibt x = 4, dann y = 4 + 6 = 10."
+        explanation: "Beim Gleichsetzungsverfahren setzt du die beiden Terme für $y$ gleich, löst nach $x$ auf und rechnest $y$ aus. Beispiel: $x$ + 6 = 2 · $x$ + 2 gibt $x$ = 4, dann $y$ = 4 + 6 = 10."
       - type: text
         text: |
-          **Schritt 1:** Beide Terme für y gleichsetzen. **Schritt 2:** Die entstandene Gleichung nach x lösen. **Schritt 3:** x in eine
-          Gleichung einsetzen und y berechnen. Dann die **Probe** in beiden Gleichungen.
+          **Schritt 1:** Beide Terme für $y$ gleichsetzen. **Schritt 2:** Die entstandene Gleichung nach $x$ lösen. **Schritt 3:** $x$ in eine
+          Gleichung einsetzen und $y$ berechnen. Dann die **Probe** in beiden Gleichungen.
       - type: note
         title: Merke
         blocks:
@@ -40,10 +40,10 @@ blocks:
             caption: Rechenweg zeilenweise
             header: ["Schritt", "Rechnung", "Begründung"]
             rows:
-              - ["1", "x + 6 = 2 · x + 2", "beide Terme für y gleichsetzen"]
-              - ["2", "6 = x + 2", "x auf beiden Seiten abziehen"]
-              - ["3", "4 = x", "2 auf beiden Seiten abziehen"]
-              - ["4", "y = 4 + 6 = 10", "x = 4 in die erste Gleichung einsetzen"]
+              - ["1", "$x$ + 6 = 2 · $x$ + 2", "beide Terme für $y$ gleichsetzen"]
+              - ["2", "6 = $x$ + 2", "$x$ auf beiden Seiten abziehen"]
+              - ["3", "4 = $x$", "2 auf beiden Seiten abziehen"]
+              - ["4", "$y$ = 4 + 6 = 10", "$x$ = 4 in die erste Gleichung einsetzen"]
               - ["5", "2 · 4 + 2 = 10", "Probe in der zweiten Gleichung"]
           - type: text
             text: "Die Lösung ist (4|10): Nach 4 Stunden kosten beide Tarife 10 €."
@@ -59,7 +59,7 @@ blocks:
           - "Die Gleichung nach x auflösen."
           - "x in eine Gleichung einsetzen und y berechnen."
           - "Die Probe in beiden Gleichungen machen."
-        explanation: "Erst gleichsetzen, dann x bestimmen, dann y berechnen, am Ende prüfen."
+        explanation: "Erst gleichsetzen, dann $x$ bestimmen, dann $y$ berechnen, am Ende prüfen."
         links:
           - title: "Lernlandkarte: Lineare Gleichungssysteme: rechnerisch"
             url: https://lernapps.net/apps/map/mathematik/c/lgs-rechnerisch/
@@ -68,22 +68,22 @@ blocks:
         given:
           e: { pick: 1, from: { data: schnittpunkte } }
         task:
-          text: "Löse das System mit dem Gleichsetzungsverfahren: y = {{e.m1}} · x + {{e.b1}} und y = {{e.m2}} · x + {{e.b2}}. Wie groß ist x?"
+          text: "Löse das System mit dem Gleichsetzungsverfahren: $y$ = {{e.m1}} · $x$ + {{e.b1}} und $y$ = {{e.m2}} · $x$ + {{e.b2}}. Wie groß ist $x$?"
         answer: { value: "e.x", compare: { number: { format: integer } } }
         mistakes:
           - value: "e.y"
             message: "Das ist der y-Wert der Lösung. Gefragt ist x: Setze die Terme gleich und löse nach x."
         hint: "Setze {{e.m1}} · x + {{e.b1}} = {{e.m2}} · x + {{e.b2}}. Bringe alle x auf eine Seite, alle Zahlen auf die andere."
         steps:
-          - "{{e.m1}} · x + {{e.b1}} = {{e.m2}} · x + {{e.b2}}"
-          - "({{e.dm}}) · x = {{e.db}}"
-          - "x = {{e.db}} : {{e.dm}} = {{answer}}."
+          - "{{e.m1}} · $x$ + {{e.b1}} = {{e.m2}} · $x$ + {{e.b2}}"
+          - "({{e.dm}}) · $x$ = {{e.db}}"
+          - "$x$ = {{e.db}} : {{e.dm}} = {{answer}}."
       - type: generated
         id: gleichsetzen-y
         given:
           e: { pick: 1, from: { data: schnittpunkte } }
         task:
-          text: "Das System y = {{e.m1}} · x + {{e.b1}} und y = {{e.m2}} · x + {{e.b2}} hat bei x = {{e.x}} seine Lösung. Berechne y."
+          text: "Das System $y$ = {{e.m1}} · $x$ + {{e.b1}} und $y$ = {{e.m2}} · $x$ + {{e.b2}} hat bei $x$ = {{e.x}} seine Lösung. Berechne $y$."
         answer: { value: "e.y", compare: { number: { format: integer } } }
         mistakes:
           - value: "e.x"
@@ -92,11 +92,11 @@ blocks:
             message: "Du hast + {{e.b2}} vergessen. y = {{e.m2}} · x + {{e.b2}}."
         hint: "Setze x in eine der beiden Gleichungen ein."
         steps:
-          - "y = {{e.m1}} · {{e.x}} + {{e.b1}}"
-          - "y = {{answer}}. Probe: {{e.m2}} · {{e.x}} + {{e.b2}} = {{answer}}."
+          - "$y$ = {{e.m1}} · {{e.x}} + {{e.b1}}"
+          - "$y$ = {{answer}}. Probe: {{e.m2}} · {{e.x}} + {{e.b2}} = {{answer}}."
       - type: number
         id: tarife-gleich
-        text: "Tarif A: y = 2 · x + 4. Tarif B: y = 4 · x + 2. Bei welchem x kosten beide gleich viel?"
+        text: "Tarif A: $y$ = 2 · $x$ + 4. Tarif B: $y$ = 4 · $x$ + 2. Bei welchem $x$ kosten beide gleich viel?"
         answer: 1
         tolerance: 0
         mistakes:
@@ -108,17 +108,17 @@ blocks:
             url: https://lernapps.net/apps/map/mathematik/c/lgs-rechnerisch/
       - type: single-choice
         id: gleichsetzen-erster-schritt
-        text: "Das System lautet y = 3 · x + 1 und y = x + 7. Was ist der erste Schritt beim Gleichsetzen?"
+        text: "Das System lautet $y$ = 3 · $x$ + 1 und $y$ = $x$ + 7. Was ist der erste Schritt beim Gleichsetzen?"
         options:
-          - text: "3 · x + 1 = x + 7 aufschreiben"
+          - text: "3 · $x$ + 1 = $x$ + 7 aufschreiben"
             correct: true
-            info: "Beide Terme sind für das gleiche y gleich groß. Daraus entsteht eine Gleichung nur mit x."
-          - text: "3 · x + 1 + x + 7 rechnen"
+            info: "Beide Terme sind für das gleiche $y$ gleich groß. Daraus entsteht eine Gleichung nur mit $x$."
+          - text: "3 · $x$ + 1 + $x$ + 7 rechnen"
             correct: false
             info: "Addieren gehört zu einem anderen Verfahren. Hier setzt du die Terme gleich."
-          - text: "y = 0 setzen"
+          - text: "$y$ = 0 setzen"
             correct: false
-            info: "y = 0 liefert die Nullstelle, nicht die Lösung des Systems."
+            info: "$y$ = 0 liefert die Nullstelle, nicht die Lösung des Systems."
         explanation: "Beim Gleichsetzen schreibst du beide Terme als Gleichung auf."
         links:
           - title: "Lernlandkarte: Lineare Gleichungssysteme: rechnerisch"

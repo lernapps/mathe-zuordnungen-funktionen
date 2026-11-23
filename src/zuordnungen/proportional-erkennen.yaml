@@ -54,7 +54,7 @@ blocks:
         licence: CC-BY-4.0
       - type: definition
         term: proportional
-        explanation: "Eine Zuordnung ist proportional, wenn zum Doppelten von $x$ das Doppelte von $y$ gehört, zum Dreifachen das Dreifache und so weiter. Der Quotient $y : x$ (y geteilt durch x) ist dann immer gleich."
+        explanation: "Eine Zuordnung ist proportional, wenn zum Doppelten von $x$ das Doppelte von $y$ gehört, zum Dreifachen das Dreifache und so weiter. Der Quotient $y : x$ ($y$ geteilt durch $x$) ist dann immer gleich."
       - type: text
         text: |
           Der Graph einer proportionalen Zuordnung ist eine **Gerade durch den Ursprung**, den Punkt $(0|0)$. Der gleiche
@@ -97,7 +97,7 @@ blocks:
     blocks:
       - type: true-false
         id: je-mehr-desto-mehr
-        text: Wenn x größer wird und y auch größer wird, ist die Zuordnung immer proportional.
+        text: Wenn $x$ größer wird und $y$ auch größer wird, ist die Zuordnung immer proportional.
         answer: false
         explanation: "Proportional heißt: doppeltes $x$ gibt doppeltes $y$. Bei $x = 1, 2, 3$ und $y = 3, 5, 7$ wird $y$ auch größer, aber nicht doppelt so groß."
         links:
@@ -105,18 +105,18 @@ blocks:
             url: https://lernapps.net/apps/map/mathematik/c/proportionale-zuordnungen/
       - type: single-choice
         id: welche-tabelle
-        text: "Welche Tabelle gehört zu einer proportionalen Zuordnung? Gegeben sind die Werte von x und y."
+        text: "Welche Tabelle gehört zu einer proportionalen Zuordnung? Gegeben sind die Werte von $x$ und $y$."
         options:
-          - text: "x: 1, 2, 3 und y: 3, 6, 9"
+          - text: "$x$: 1, 2, 3 und $y$: 3, 6, 9"
             correct: true
-            info: "Der Quotient $y : x$ ist immer 3. Von x = 1 auf x = 2 ist mal 2, und y wird von 3 auf 6 auch mal 2. Bei x = 3 ist y = 9."
-          - text: "x: 1, 2, 3 und y: 3, 5, 7"
+            info: "Der Quotient $y : x$ ist immer 3. Von $x$ = 1 auf $x$ = 2 ist mal 2, und $y$ wird von 3 auf 6 auch mal 2. Bei $x$ = 3 ist $y$ = 9."
+          - text: "$x$: 1, 2, 3 und $y$: 3, 5, 7"
             correct: false
             info: "Hier wird $y$ jedes Mal um 2 größer, der Quotient $y : x$ ändert sich: 3, 2,5, 2,33 (gerundet). Das ist nicht proportional."
-          - text: "x: 1, 2, 3 und y: 6, 3, 2"
+          - text: "$x$: 1, 2, 3 und $y$: 6, 3, 2"
             correct: false
             info: "Wenn $x$ größer wird, wird $y$ kleiner. Das Produkt $x \\cdot y$ bleibt 6: eine andere Art von Zuordnung, nicht proportional."
-          - text: "x: 1, 2, 3 und y: 2, 4, 7"
+          - text: "$x$: 1, 2, 3 und $y$: 2, 4, 7"
             correct: false
             info: "Aus 1 → 2 und 2 → 4 passt es, aber 3 → 7 nicht. Bei proportional müsste zu 3 die 6 gehören."
         explanation: "Bei einer proportionalen Zuordnung ist der Quotient $y : x$ in jeder Spalte gleich."
@@ -165,7 +165,7 @@ blocks:
         given:
           e: { pick: 1, from: { data: proportional-paare } }
         task:
-          text: "Eine Zuordnung ist proportional. Zu x = {{e.x1}} gehört y = {{e.y1}}. Welches y gehört zu x = {{e.x2}}?"
+          text: "Eine Zuordnung ist proportional. Zu $x$ = {{e.x1}} gehört $y$ = {{e.y1}}. Welches $y$ gehört zu $x$ = {{e.x2}}?"
         answer: { value: "e.y2", compare: number }
         mistakes:
           - value: "e.y1 + e.x2 - e.x1"
@@ -174,7 +174,7 @@ blocks:
             message: "Du hast y mit dem neuen x malgenommen. Berechne erst den Faktor y : x aus dem ersten Paar."
         hint: "Rechne erst den Faktor aus: y geteilt durch x aus dem ersten Paar."
         steps:
-          - "Faktor (der Quotient y : x) aus dem ersten Paar: {{e.y1}} : {{e.x1}} = {{e.k}}"
+          - "Faktor (der Quotient $y$ : $x$) aus dem ersten Paar: {{e.y1}} : {{e.x1}} = {{e.k}}"
           - "Dann {{e.x2}} mal den Faktor: {{e.x2}} · {{e.k}} = {{answer}}"
       - type: text
         text: |

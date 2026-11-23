@@ -37,7 +37,7 @@ blocks:
           hideTerm: true
         nojs: |
           Tabelle zum Taxi: Bei 0 km kostet die Fahrt 3 €, bei 1 km 5 €, bei 2 km 7 €, bei 3 km 9 €. Der Graph ist eine Linie, die bei
-          3 € auf der y-Achse beginnt und mit jedem Kilometer um 2 € steigt.
+          3 € auf der $y$-Achse beginnt und mit jedem Kilometer um 2 € steigt.
       - type: number
         id: fahrt-fuenf-km
         text: "Lies im Graphen ab: Was kostet eine Taxifahrt von 5 km?"
@@ -64,7 +64,7 @@ blocks:
         text: |
           Dieselbe Zuordnung kannst du auf drei Arten zeigen. **In Worten:** 3 € Grundpreis, dazu 2 € je Kilometer. **Als
           Tabelle:** Strecke und Preis in zwei Zeilen. **Als Graph:** Punkte im Koordinatensystem. Die Strecke steht auf der
-          x-Achse, der Preis auf der y-Achse.
+          $x$-Achse, der Preis auf der $y$-Achse.
       - type: note
         title: Merke
         blocks:
@@ -166,7 +166,7 @@ blocks:
         id: graph-ist-weg
         text: "Ein Graph „Zeit → Strecke“ zeigt den Weg, den jemand gegangen ist, wie eine Landkarte."
         answer: false
-        explanation: "Der Graph zeigt, welche Strecke zu welcher Zeit gehört. Die Zeit steht auf der x-Achse, die Strecke auf der y-Achse. Eine Landkarte zeigt dagegen den Ort."
+        explanation: "Der Graph zeigt, welche Strecke zu welcher Zeit gehört. Die Zeit steht auf der $x$-Achse, die Strecke auf der $y$-Achse. Eine Landkarte zeigt dagegen den Ort."
         links:
           - title: "Lernlandkarte: Zuordnungen"
             url: https://lernapps.net/apps/map/mathematik/c/zuordnungen/

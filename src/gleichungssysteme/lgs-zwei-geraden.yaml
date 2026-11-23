@@ -39,7 +39,7 @@ blocks:
           line2Name: Tarif B
           fixed: true
         nojs: |
-          Tarif A: y = 1 · x + 6, Tarif B: y = 2 · x + 2. Die Tabelle: nach 0, 1, 2, 3 Stunden kostet A 6 €, 7 €, 8 €, 9 € und B 2 €, 4 €, 6 €, 8 €.
+          Tarif A: $y$ = 1 · $x$ + 6, Tarif B: $y$ = 2 · $x$ + 2. Die Tabelle: nach 0, 1, 2, 3 Stunden kostet A 6 €, 7 €, 8 €, 9 € und B 2 €, 4 €, 6 €, 8 €.
           Der Graph von A ist die flachere Gerade (durchgezogen), der von B die steilere (gestrichelt).
       - type: number
         id: gleich-teuer
@@ -50,7 +50,7 @@ blocks:
         mistakes:
           - answer: 10
             message: "10 ist der Preis am Schnittpunkt (y-Achse). Gefragt ist die Zeit auf der x-Achse."
-        explanation: "Die Geraden schneiden sich bei x = 4. Dort kosten beide 10 €."
+        explanation: "Die Geraden schneiden sich bei $x$ = 4. Dort kosten beide 10 €."
         links:
           - title: "Lernlandkarte: Lineare Gleichungssysteme: grafisch"
             url: https://lernapps.net/apps/map/mathematik/c/lineare-gleichungssysteme/
@@ -60,7 +60,7 @@ blocks:
     blocks:
       - type: definition
         term: Gleichungssystem
-        explanation: "Ein lineares Gleichungssystem besteht aus zwei Gleichungen mit zwei Unbekannten x und y. Die Lösung ist ein Zahlenpaar (x|y), das beide Gleichungen erfüllt. Beispiel: y = x + 6 und y = 2 · x + 2 haben die Lösung (4|10)."
+        explanation: "Ein lineares Gleichungssystem besteht aus zwei Gleichungen mit zwei Unbekannten $x$ und $y$. Die Lösung ist ein Zahlenpaar ($x$|$y$), das beide Gleichungen erfüllt. Beispiel: $y$ = $x$ + 6 und $y$ = 2 · $x$ + 2 haben die Lösung (4|10)."
       - type: text
         text: |
           Zeichne beide Geraden und lies den **Schnittpunkt** ab. Seine Koordinaten sind die Lösung. Mit einer Tabelle kannst du die Stelle
@@ -70,7 +70,7 @@ blocks:
         blocks:
           - type: text
             text: |
-              Die Lösung besteht aus **zwei** Zahlen: x und y. Nur der x-Wert reicht nicht. In der Aufgabe heißt das: nach 4 Stunden und für 10 €.
+              Die Lösung besteht aus **zwei** Zahlen: $x$ und $y$. Nur der $x$-Wert reicht nicht. In der Aufgabe heißt das: nach 4 Stunden und für 10 €.
   - type: section
     id: beispiel
     title: Beispiel
@@ -96,7 +96,7 @@ blocks:
         given:
           e: { pick: 1, from: { data: schnittpunkte } }
         task:
-          text: "Die Geraden y = {{e.m1}} · x + {{e.b1}} und y = {{e.m2}} · x + {{e.b2}} schneiden sich bei x = {{e.x}}. Welchen y-Wert hat der Schnittpunkt?"
+          text: "Die Geraden $y$ = {{e.m1}} · $x$ + {{e.b1}} und $y$ = {{e.m2}} · $x$ + {{e.b2}} schneiden sich bei $x$ = {{e.x}}. Welchen $y$-Wert hat der Schnittpunkt?"
         answer: { value: "e.y", compare: { number: { format: integer } } }
         mistakes:
           - value: "e.x"
@@ -105,36 +105,36 @@ blocks:
             message: "Du hast die Zahl b der zweiten Gleichung vergessen. y = {{e.m2}} · x + {{e.b2}}, also bleibt + {{e.b2}} stehen."
         hint: "Setze x in eine Gleichung ein und rechne y aus."
         steps:
-          - "y = {{e.m1}} · {{e.x}} + {{e.b1}}"
-          - "y = {{answer}}. Probe mit der anderen Gleichung: {{e.m2}} · {{e.x}} + {{e.b2}} = {{answer}}."
+          - "$y$ = {{e.m1}} · {{e.x}} + {{e.b1}}"
+          - "$y$ = {{answer}}. Probe mit der anderen Gleichung: {{e.m2}} · {{e.x}} + {{e.b2}} = {{answer}}."
       - type: single-choice
         id: loesung-paar
-        text: "Welches Zahlenpaar (x|y) löst das System y = x + 6 und y = 2 · x + 2?"
+        text: "Welches Zahlenpaar ($x$|$y$) löst das System $y$ = $x$ + 6 und $y$ = 2 · $x$ + 2?"
         options:
           - text: "(4|10)"
             correct: true
             info: "4 + 6 = 10 und 2 · 4 + 2 = 10: beide Gleichungen stimmen."
           - text: "(10|4)"
             correct: false
-            info: "x und y sind vertauscht. Erst kommt x, dann y: 10 + 6 ist nicht 4."
+            info: "$x$ und $y$ sind vertauscht. Erst kommt $x$, dann $y$: 10 + 6 ist nicht 4."
           - text: "(4|8)"
             correct: false
-            info: "Bei x = 4 ergeben beide Gleichungen y = 10, nicht 8: 4 + 6 = 10 und 2 · 4 + 2 = 10."
+            info: "Bei $x$ = 4 ergeben beide Gleichungen $y$ = 10, nicht 8: 4 + 6 = 10 und 2 · 4 + 2 = 10."
         explanation: "Eine Lösung muss beide Gleichungen erfüllen."
         links:
           - title: "Lernlandkarte: Lineare Gleichungssysteme: grafisch"
             url: https://lernapps.net/apps/map/mathematik/c/lineare-gleichungssysteme/
       - type: true-false
         id: nur-x-wert
-        text: "Zur Lösung eines Gleichungssystems mit zwei Gleichungen reicht der x-Wert des Schnittpunkts."
+        text: "Zur Lösung eines Gleichungssystems mit zwei Gleichungen reicht der $x$-Wert des Schnittpunkts."
         answer: false
-        explanation: "Die Lösung ist ein Paar (x|y). Im Beispiel (4|10): nach 4 Stunden und für 10 €."
+        explanation: "Die Lösung ist ein Paar ($x$|$y$). Im Beispiel (4|10): nach 4 Stunden und für 10 €."
         links:
           - title: "Lernlandkarte: Lineare Gleichungssysteme: grafisch"
             url: https://lernapps.net/apps/map/mathematik/c/lineare-gleichungssysteme/
       - type: single-choice
         id: wann-b-teurer
-        text: "Tarif A: y = x + 6, Tarif B: y = 2 · x + 2. Ab wie vielen Stunden ist B teurer als A?"
+        text: "Tarif A: $y$ = $x$ + 6, Tarif B: $y$ = 2 · $x$ + 2. Ab wie vielen Stunden ist B teurer als A?"
         options:
           - text: "ab mehr als 4 Stunden"
             correct: true
@@ -151,5 +151,5 @@ blocks:
             url: https://lernapps.net/apps/map/mathematik/c/lineare-gleichungssysteme/
       - type: text
         text: |
-          **Das kannst du jetzt:** Du löst ein Gleichungssystem zeichnerisch: Schnittpunkt ablesen, Lösung als Paar (x|y) angeben und prüfen.
+          **Das kannst du jetzt:** Du löst ein Gleichungssystem zeichnerisch: Schnittpunkt ablesen, Lösung als Paar ($x$|$y$) angeben und prüfen.
           Als Nächstes fragst du, wie viele Lösungen es geben kann.

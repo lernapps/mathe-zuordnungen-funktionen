@@ -20,10 +20,10 @@ blocks:
           Ich kann Punkte und Figuren im Koordinatensystem eintragen und ablesen.
       - type: definition
         term: Koordinaten
-        explanation: "Die Koordinaten eines Punktes sind zwei Zahlen. Die erste sagt, wie weit der Punkt nach rechts liegt (x-Wert), die zweite, wie weit nach oben (y-Wert). Beispiel: Der Punkt (3|2) liegt 3 nach rechts und 2 nach oben."
+        explanation: "Die Koordinaten eines Punktes sind zwei Zahlen. Die erste sagt, wie weit der Punkt nach rechts liegt ($x$-Wert), die zweite, wie weit nach oben ($y$-Wert). Beispiel: Der Punkt (3|2) liegt 3 nach rechts und 2 nach oben."
       - type: definition
         term: Achse
-        explanation: "Die x-Achse läuft waagerecht, die y-Achse senkrecht. Sie schneiden sich im Ursprung (0|0). Auf jeder Achse stehen Zahlen in gleichen Abständen."
+        explanation: "Die $x$-Achse läuft waagerecht, die $y$-Achse senkrecht. Sie schneiden sich im Ursprung (0|0). Auf jeder Achse stehen Zahlen in gleichen Abständen."
       - type: vue-component
         id: test-punkt
         component: Kurztest
@@ -48,7 +48,7 @@ blocks:
           right: "Richtig."
           wrong: "Nicht richtig."
         nojs: |
-          Kurztest: Wo liegt der Punkt (4|1)? Antwort: 4 nach rechts und 1 nach oben, denn erst kommt der x-Wert, dann der y-Wert.
+          Kurztest: Wo liegt der Punkt (4|1)? Antwort: 4 nach rechts und 1 nach oben, denn erst kommt der $x$-Wert, dann der $y$-Wert.
       - type: vue-component
         id: test-ursprung
         component: Kurztest
@@ -78,6 +78,6 @@ blocks:
     blocks:
       - type: text
         text: |
-          - die Koordinaten eines Punktes angeben kannst (erst x, dann y),
+          - die Koordinaten eines Punktes angeben kannst (erst $x$, dann $y$),
           - einen Punkt mit gegebenen Koordinaten einträgst,
           - weißt, was die Achsen und der Ursprung sind.

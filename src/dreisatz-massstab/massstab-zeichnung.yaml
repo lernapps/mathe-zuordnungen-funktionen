@@ -90,7 +90,7 @@ blocks:
         given:
           e: { pick: 1, from: { data: massstab-bestimmen } }
         task:
-          text: "Eine Strecke ist in Wirklichkeit {{e.wirklich}} cm lang. In der Zeichnung ist sie {{e.zeichnung}} cm lang. Die Zeichnung hat den Maßstab 1 : x. Wie groß ist x?"
+          text: "Eine Strecke ist in Wirklichkeit {{e.wirklich}} cm lang. In der Zeichnung ist sie {{e.zeichnung}} cm lang. Die Zeichnung hat den Maßstab 1 : $x$. Wie groß ist $x$?"
         answer: { value: "e.scale", compare: { number: { format: integer } } }
         mistakes:
           - value: "e.wirklich * e.zeichnung"

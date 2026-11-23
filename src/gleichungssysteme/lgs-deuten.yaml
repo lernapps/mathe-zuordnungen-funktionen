@@ -9,7 +9,7 @@ blocks:
     blocks:
       - type: text
         text: |
-          Die Klasse hat das System aus Tarif A (y = x + 6) und Tarif B (y = 2 · x + 2) gelöst: (4|10). Aber was sagt das? Und welchen Tarif nimmt die
+          Die Klasse hat das System aus Tarif A ($y$ = $x$ + 6) und Tarif B ($y$ = 2 · $x$ + 2) gelöst: (4|10). Aber was sagt das? Und welchen Tarif nimmt die
           Klasse, wenn sie 3 Stunden telefoniert? Nach dieser Seite deutest du die Lösung im Sachzusammenhang.
       - type: single-choice
         id: tarif-drei-stunden
@@ -17,7 +17,7 @@ blocks:
         options:
           - text: "B kostet 8 €, A kostet 9 €. B ist billiger."
             correct: true
-            info: "B: 2 · 3 + 2 = 8. A: 3 + 6 = 9. Links vom Schnittpunkt (x < 4) ist B billiger."
+            info: "B: 2 · 3 + 2 = 8. A: 3 + 6 = 9. Links vom Schnittpunkt ($x$ < 4) ist B billiger."
           - text: "B kostet 10 €, A kostet 10 €."
             correct: false
             info: "Das gilt nur bei 4 Stunden, am Schnittpunkt. Bei 3 Stunden sind die Preise verschieden."
@@ -41,7 +41,7 @@ blocks:
         blocks:
           - type: text
             text: |
-              Welches Verfahren? Steht ein y schon allein, nimm Gleichsetzen oder Einsetzen. Steht dasselbe y in beiden Gleichungen mit entgegengesetztem Vorzeichen (+ y und − y), nimm
+              Welches Verfahren? Steht ein $y$ schon allein, nimm Gleichsetzen oder Einsetzen. Steht dasselbe $y$ in beiden Gleichungen mit entgegengesetztem Vorzeichen (+ $y$ und − $y$), nimm
               Addieren. Alle drei führen zur selben Lösung.
   - type: section
     id: beispiel
@@ -51,7 +51,7 @@ blocks:
         title: Eintritt für Kinder und Erwachsene
         blocks:
           - type: text
-            text: "I: 1 Kind und 1 Erwachsener zahlen 8 €. II: 2 Kinder und 1 Erwachsener zahlen 11 €. Mit k für den Preis eines Kindes und e für den Preis eines Erwachsenen: $k + e = 8$ und $2k + e = 11$. II minus I: $k = 3$. Dann $e = 8 - 3 = 5$. Antwort: Ein Kind zahlt 3 €, ein Erwachsener 5 €."
+            text: "I: 1 Kind und 1 Erwachsener zahlen 8 €. II: 2 Kinder und 1 Erwachsener zahlen 11 €. Mit $k$ für den Preis eines Kindes und e für den Preis eines Erwachsenen: $k + e = 8$ und $2k + e = 11$. II minus I: $k = 3$. Dann $e = 8 - 3 = 5$. Antwort: Ein Kind zahlt 3 €, ein Erwachsener 5 €."
   - type: section
     id: uebung
     title: Übung
@@ -70,8 +70,8 @@ blocks:
             message: "Das ist der Preis für einen Erwachsenen. Gefragt ist der Preis für ein Kind."
         hint: "Der Unterschied der beiden Rechnungen ist genau ein Kind."
         steps:
-          - "k + e = {{e.s}} und 2 · k + e = {{e.t}}"
-          - "II − I: k = {{e.t}} − {{e.s}} = {{answer}}. Ein Kind zahlt {{answer}} €."
+          - "$k$ + e = {{e.s}} und 2 · $k$ + e = {{e.t}}"
+          - "II − I: $k$ = {{e.t}} − {{e.s}} = {{answer}}. Ein Kind zahlt {{answer}} €."
       - type: generated
         id: eintritt-erwachsene
         given:
@@ -87,35 +87,35 @@ blocks:
           - "e = {{e.s}} − {{e.k}} = {{answer}}. Ein Erwachsener zahlt {{answer}} €."
       - type: single-choice
         id: schnittpunkt-deuten
-        text: "Tarif A: y = x + 6, Tarif B: y = 2 · x + 2 (x in Stunden, y in €). Die Lösung ist (4|10). Welcher Satz deutet sie richtig?"
+        text: "Tarif A: $y$ = $x$ + 6, Tarif B: $y$ = 2 · $x$ + 2 ($x$ in Stunden, $y$ in €). Die Lösung ist (4|10). Welcher Satz deutet sie richtig?"
         options:
           - text: "Nach 4 Stunden kosten beide Tarife 10 €."
             correct: true
-            info: "x = 4 ist die Zeit, y = 10 der gemeinsame Preis. Das ist der Tarif-Wechsel."
+            info: "$x$ = 4 ist die Zeit, $y$ = 10 der gemeinsame Preis. Das ist der Tarif-Wechsel."
           - text: "Nach 10 Stunden kosten beide Tarife 4 €."
             correct: false
-            info: "x und y sind vertauscht. Erst kommt x (Stunden), dann y (Euro)."
+            info: "$x$ und $y$ sind vertauscht. Erst kommt $x$ (Stunden), dann $y$ (Euro)."
           - text: "Tarif A ist ab 4 Stunden immer teurer."
             correct: false
             info: "Ab 4 Stunden ist B teurer, weil B steiler steigt. A ist dann billiger."
-        explanation: "Die Lösung (x|y) ist ein Zeitpunkt und ein Preis: Dort kosten beide gleich viel."
+        explanation: "Die Lösung ($x$|$y$) ist ein Zeitpunkt und ein Preis: Dort kosten beide gleich viel."
         links:
           - title: "Lernlandkarte: Lineare Gleichungssysteme: rechnerisch"
             url: https://lernapps.net/apps/map/mathematik/c/lgs-rechnerisch/
       - type: single-choice
         id: welches-verfahren
-        text: "I: y = 3 · x − 2, II: 2 · x + y = 13. Welches Verfahren geht am schnellsten?"
+        text: "I: $y$ = 3 · $x$ − 2, II: 2 · $x$ + $y$ = 13. Welches Verfahren geht am schnellsten?"
         options:
-          - text: "Einsetzen: y aus I in II einsetzen"
+          - text: "Einsetzen: $y$ aus I in II einsetzen"
             correct: true
-            info: "In I steht y schon allein. Du setzt 3 · x − 2 in II ein. Sofort bleibt nur noch x."
+            info: "In I steht $y$ schon allein. Du setzt 3 · $x$ − 2 in II ein. Sofort bleibt nur noch $x$."
           - text: "Addieren, ohne vorher umzuformen"
             correct: false
-            info: "Beim Addieren müsstest du erst umformen, weil y in I allein steht und in II mit + y. Einsetzen geht hier direkt."
+            info: "Beim Addieren müsstest du erst umformen, weil $y$ in I allein steht und in II mit + $y$. Einsetzen geht hier direkt."
           - text: "Nur zeichnen, rechnen geht nicht"
             correct: false
             info: "Rechnen geht immer. Zeichnen ist nur so genau, wie du den Graphen lesen kannst."
-        explanation: "Ist eine Gleichung schon nach y aufgelöst, ist Einsetzen oder Gleichsetzen der kürzeste Weg."
+        explanation: "Ist eine Gleichung schon nach $y$ aufgelöst, ist Einsetzen oder Gleichsetzen der kürzeste Weg."
         links:
           - title: "Lernlandkarte: Lineare Gleichungssysteme: rechnerisch"
             url: https://lernapps.net/apps/map/mathematik/c/lgs-rechnerisch/

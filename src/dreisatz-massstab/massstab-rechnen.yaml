@@ -40,7 +40,7 @@ blocks:
     title: Beispiel
     blocks:
       - type: example
-        title: 6 cm auf der Karte
+        title: 6 cm auf der Karte
         blocks:
           - type: table
             caption: Karte und Wirklichkeit bei 1 zu 5000

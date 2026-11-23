@@ -40,7 +40,7 @@ blocks:
     title: Beispiel
     blocks:
       - type: example
-        title: 4 Karten kosten 6 €
+        title: 4 Karten kosten 6 €
         blocks:
           - type: text
             text: Wie viel kosten 12 Karten?

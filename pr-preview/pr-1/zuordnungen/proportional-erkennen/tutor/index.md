@@ -50,7 +50,7 @@ Zahl der Minuten und $y$ sind die Kosten in Euro. Der **Term** $y$ = $k$ · $x$ 
 Interaktiv: Term, Tabelle und Graph zu einem Handytarif: Die Kosten in Euro sind der Preis pro Minute *k* mal die Minuten *x*, also *y* = *k* · *x*. Für *k* = 1 gehören zu 0, 1, 2, 3, 4 Minuten die Kosten 0 €, 1 €, 2 €, 3 €, 4 €. Der Graph ist eine Gerade durch den Ursprung. Für *k* = 2 sind es 0 €, 2 €, 4 €, 6 €, 8 €, die Gerade ist steiler.
 
 Du siehst Term, Tabelle und Graph zugleich. Mit dem Regler *k* stellst du den Preis pro Minute in Euro ein. Stelle
-*k* = 2 ein und vergleiche in der Tabelle die Kosten bei 2 Minuten mit denen bei 4 Minuten. Was fällt dir auf? Die
+*k* = 2 ein und vergleiche in der Tabelle die Kosten bei 1 Minute mit denen bei 2 Minuten. Was fällt dir auf? Die
 Antwort steht gleich unten.
 
 ### Doppelt so viel, doppelt so teuer

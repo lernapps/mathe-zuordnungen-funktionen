@@ -82,6 +82,6 @@ Wenn das nicht klappt: Wiederhole den Baustein „Einheiten umrechnen“ auf der
 
 ### Du bist bereit, wenn du …
 
-- Punkt vor Strich und Klammern richtig anwendest,
-- Stunden in Minuten und Minuten in Stunden umrechnen kannst,
+- Punkt vor Strich richtig anwendest,
+- eine Zeitspanne in Minuten ausrechnest,
 - Meter in Zentimeter, Zentimeter in Meter und Kilometer in Meter umrechnen kannst.

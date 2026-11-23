@@ -61,7 +61,7 @@ $x$-Achse, der Preis auf der $y$-Achse.
 **Merke: Merke**
 
 Ein Graph ist **kein Bild vom Weg**. Er zeigt, welcher Preis zu welcher Strecke gehört. Verbinde die Punkte nur, wenn
-auch die Werte dazwischen vorkommen, wie 2,5 km. Bei ganzen Karten gibt es nur einzelne Punkte.
+auch die Werte dazwischen vorkommen, wie 2,5 km. Bei Dingen, die du nur ganz kaufen kannst (zum Beispiel Karten oder Äpfel), gibt es nur einzelne Punkte.
 
 ### Beispiel
 
@@ -97,7 +97,7 @@ entdeckst du, woran du erkennst, ob eine Zuordnung proportional ist.
 
 ### Aufgabe punkte-verbinden
 
-- Aufgabe: Der Graph zeigt die Zuordnung „Anzahl Äpfel → Preis“. Du kannst nur ganze Äpfel kaufen. Was zeichnest du?
+- Aufgabe: Du zeichnest den Graphen der Zuordnung „Anzahl Äpfel → Preis“. Du kannst nur ganze Äpfel kaufen. Was zeichnest du?
 - Antwortformat: eine Antwort wählen
 - Antworten zur Wahl (✓ richtig, ✗ falsch, mit der Meldung der App):
   - ✓ Einzelne Punkte – Zwischen zwei ganzen Äpfeln gibt es keinen Wert, also bleiben es einzelne Punkte.

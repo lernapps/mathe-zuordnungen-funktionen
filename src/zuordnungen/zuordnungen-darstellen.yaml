@@ -10,7 +10,7 @@ blocks:
       - type: text
         text: |
           Die Klasse fährt ein Stück mit dem Taxi. Jeder Strecke gehört ein Fahrpreis. Das nennt man eine **Zuordnung**. Nach dieser
-          Seite stellst du sie in Worten, als Tabelle und als Graph dar. Was kostet eine Fahrt von 5 km? Lies es im Graphen ab. Die Linie läuft über die Tabelle hinaus, dort darfst du auch ablesen.
+          Seite stellst du sie in Worten, als Tabelle und als Graph dar. Was kostet eine Fahrt von 5 km? Im Graphen steht die Strecke waagerecht auf der x-Achse und der Fahrpreis nach oben auf der y-Achse; zu jeder Strecke gehört ein Punkt. Lies den Preis im Graphen ab. Die Linie läuft über die Tabelle hinaus, dort darfst du auch ablesen.
       - type: vue-component
         id: taxi-graph
         component: Dreifachansicht
@@ -50,9 +50,6 @@ blocks:
           - answer: 5
             message: "5 ist die Strecke auf der x-Achse. Gesucht ist der Preis auf der y-Achse."
         explanation: "Bei 5 km steigt die Linie auf 13 €: 3 € Grundpreis und dazu 5 · 2 €."
-        links:
-          - title: "Lernlandkarte: Zuordnungen"
-            url: https://lernapps.net/apps/map/mathematik/c/zuordnungen/
   - type: section
     id: erklaerung
     title: Drei Darstellungen
@@ -126,9 +123,6 @@ blocks:
             correct: false
             info: "Dafür gibt es hier keinen Grund: Mit mehr Äpfeln wird der Preis nie wieder kleiner."
         explanation: "Du verbindest Punkte nur, wenn auch die Zwischenwerte vorkommen."
-        links:
-          - title: "Lernlandkarte: Zuordnungen"
-            url: https://lernapps.net/apps/map/mathematik/c/zuordnungen/
       - type: single-choice
         id: wort-zu-tabelle
         text: "In Worten: Jede Stunde Schwimmbad kostet 3 €. Welche Tabelle gehört dazu? (Stunden, Preis)"
@@ -143,9 +137,6 @@ blocks:
             correct: false
             info: "Hier sind Preis und Stunden vertauscht. In der ersten Zeile stehen die Stunden."
         explanation: "Die Beschreibung sagt, dass zu jeder Stunde 3 € dazukommen."
-        links:
-          - title: "Lernlandkarte: Zuordnungen"
-            url: https://lernapps.net/apps/map/mathematik/c/zuordnungen/
       - type: generated
         id: taxi-preis
         given:
@@ -167,9 +158,6 @@ blocks:
         text: "Ein Graph „Zeit → Strecke“ zeigt den Weg, den jemand gegangen ist, wie eine Landkarte."
         answer: false
         explanation: "Der Graph zeigt, welche Strecke zu welcher Zeit gehört. Die Zeit steht auf der $x$-Achse, die Strecke auf der $y$-Achse. Eine Landkarte zeigt dagegen den Ort."
-        links:
-          - title: "Lernlandkarte: Zuordnungen"
-            url: https://lernapps.net/apps/map/mathematik/c/zuordnungen/
       - type: text
         text: |
           **Das kannst du jetzt:** Du stellst Zuordnungen in Worten, als Tabelle und als Graph dar und liest Werte ab. Als Nächstes

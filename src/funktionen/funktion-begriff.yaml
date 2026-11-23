@@ -31,9 +31,6 @@ blocks:
             correct: false
             info: "Von jedem Schüler geht ein Pfeil aus, auch von Elif."
         explanation: "Zu jedem Schüler gehört genau ein Monat."
-        links:
-          - title: "Lernlandkarte: Funktionsbegriff"
-            url: https://lernapps.net/apps/map/mathematik/c/funktionsbegriff/
   - type: section
     id: erklaerung
     title: Genau ein y zu jedem x
@@ -85,9 +82,6 @@ blocks:
         text: "Bei einer Funktion dürfen zwei verschiedene $x$ denselben $y$-Wert haben."
         answer: true
         explanation: "Das ist erlaubt. Mia und Ben haben beide Mai. Nicht erlaubt ist nur, dass ein $x$ zwei verschiedene $y$ hat."
-        links:
-          - title: "Lernlandkarte: Funktionsbegriff"
-            url: https://lernapps.net/apps/map/mathematik/c/funktionsbegriff/
       - type: multiple-choice
         id: welche-funktionen
         text: "Welche Zuordnungen sind Funktionen? Wähle alle richtigen."
@@ -105,9 +99,6 @@ blocks:
             correct: false
             info: "Ein Mensch kann mehrere Geschwister haben, oder keines. Das ist kein einzelner Wert."
         explanation: "Prüfe, ob zu jedem Wert links genau ein Wert rechts gehört."
-        links:
-          - title: "Lernlandkarte: Funktionsbegriff"
-            url: https://lernapps.net/apps/map/mathematik/c/funktionsbegriff/
       - type: number
         id: zwei-y
         text: "Eine Zuordnung hat die Paare (1|5), (2|6), (2|7), (3|8). Wie viele $y$-Werte gehören zu $x$ = 2?"
@@ -117,9 +108,6 @@ blocks:
           - answer: 1
             message: "Schau noch einmal in die Paare: zu x = 2 stehen (2|6) und (2|7). Das sind zwei verschiedene y-Werte."
         explanation: "Zu $x$ = 2 gehören 6 und 7. Das sind zwei $y$-Werte, also ist die Zuordnung keine Funktion."
-        links:
-          - title: "Lernlandkarte: Funktionsbegriff"
-            url: https://lernapps.net/apps/map/mathematik/c/funktionsbegriff/
       - type: single-choice
         id: tabelle-funktion
         text: "Welche Tabelle gehört zu einer Funktion? (Paare $x$ | $y$)"
@@ -134,9 +122,6 @@ blocks:
             correct: false
             info: "Zu $x$ = 2 gehören 1 und 2. Das ist keine Funktion."
         explanation: "Entscheidend ist, dass jedes $x$ nur ein $y$ hat."
-        links:
-          - title: "Lernlandkarte: Funktionsbegriff"
-            url: https://lernapps.net/apps/map/mathematik/c/funktionsbegriff/
       - type: text
         text: |
           **Das kannst du jetzt:** Du prüfst, ob eine Zuordnung eine Funktion ist: Jedes $x$ hat genau ein $y$. Als Nächstes lernst du, wie du

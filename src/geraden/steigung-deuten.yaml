@@ -87,9 +87,6 @@ blocks:
           - answer: -20
             message: "−20 ist Δy, die Änderung insgesamt. Teile noch durch Δx = 4 Minuten."
         explanation: "$\\Delta y = 60 - 80 = -20$ Liter in $\\Delta x = 4$ Minuten: $m = -20 : 4 = -5$."
-        links:
-          - title: "Lernlandkarte: Lineare Funktionen"
-            url: https://lernapps.net/apps/map/mathematik/c/lineare-funktionen/
       - type: single-choice
         id: m-deuten
         text: "Bei einem Wasserbecken ist $m$ = −3 (Liter pro Minute). Was bedeutet das?"
@@ -104,9 +101,6 @@ blocks:
             correct: false
             info: "Die Anfangsmenge ist der $y$-Achsenabschnitt $b$, nicht die Steigung $m$."
         explanation: "$m$ sagt, wie $y$ sich pro Einheit von $x$ ändert, mit Vorzeichen."
-        links:
-          - title: "Lernlandkarte: Lineare Funktionen"
-            url: https://lernapps.net/apps/map/mathematik/c/lineare-funktionen/
       - type: text
         text: |
           **Das kannst du jetzt:** Du bestimmst die Steigung mit dem Steigungsdreieck und deutest $m$ im Sachzusammenhang. Als Nächstes stellst du

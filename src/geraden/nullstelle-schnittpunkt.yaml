@@ -109,17 +109,11 @@ blocks:
           - answer: 4
             message: "Du hast nur 2 · 2 gerechnet. Die +1 gehört dazu: 2 · 2 + 1."
         explanation: "$y = 2 \\cdot 2 + 1 = 5$. Probe mit der anderen Gleichung: $-2 + 7 = 5$."
-        links:
-          - title: "Lernlandkarte: Geradengleichungen"
-            url: https://lernapps.net/apps/map/mathematik/c/geradengleichungen/
       - type: true-false
         id: nullstelle-b
         text: "Die Nullstelle einer Geraden ist immer gleich ihrem $y$-Achsenabschnitt $b$."
         answer: false
         explanation: "Die Nullstelle ist der $x$-Wert bei $y$ = 0, $b$ ist der $y$-Wert bei $x$ = 0. Bei $y$ = −2 · $x$ + 10 ist $b$ = 10, die Nullstelle aber 5."
-        links:
-          - title: "Lernlandkarte: Geradengleichungen"
-            url: https://lernapps.net/apps/map/mathematik/c/geradengleichungen/
       - type: text
         text: |
           **Das kannst du jetzt:** Du stellst Geradengleichungen aus zwei Punkten oder aus Punkt und Steigung auf und berechnest Nullstelle und

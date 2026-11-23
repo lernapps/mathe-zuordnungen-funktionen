@@ -104,9 +104,6 @@ blocks:
             correct: false
             info: "Auch 1 km, 2,5 km und alle Werte dazwischen kannst du einsetzen."
         explanation: "$x$ ist die Strecke, $y$ der Preis. Die Definitionsmenge gehört zu $x$."
-        links:
-          - title: "Lernlandkarte: Funktionsbegriff"
-            url: https://lernapps.net/apps/map/mathematik/c/funktionsbegriff/
       - type: single-choice
         id: wertemenge
         text: "Welche Preise kommen beim Taxi bei 0 bis 6 km heraus (Wertemenge)?"
@@ -121,9 +118,6 @@ blocks:
             correct: false
             info: "Kein Preis ist kleiner als 3 €, der Grundpreis wird immer bezahlt."
         explanation: "Setze den kleinsten und den größten $x$-Wert ein: 3 € und 15 €."
-        links:
-          - title: "Lernlandkarte: Funktionsbegriff"
-            url: https://lernapps.net/apps/map/mathematik/c/funktionsbegriff/
       - type: single-choice
         id: kreis-graph
         text: "Ist das der Graph einer Funktion?"
@@ -145,9 +139,6 @@ blocks:
             correct: false
             info: "Geschlossen oder nicht spielt keine Rolle. Es zählt, ob eine senkrechte Linie den Graphen mehr als einmal trifft."
         explanation: "Zu $x$ = 3 gehören zwei $y$-Werte. Damit ist der Kreis kein Graph einer Funktion."
-        links:
-          - title: "Lernlandkarte: Funktionsbegriff"
-            url: https://lernapps.net/apps/map/mathematik/c/funktionsbegriff/
       - type: text
         text: |
           **Das kannst du jetzt:** Du beschreibst Funktionen mit Term und Graph, gibst Definitions- und Wertemenge an und erkennst, wann ein

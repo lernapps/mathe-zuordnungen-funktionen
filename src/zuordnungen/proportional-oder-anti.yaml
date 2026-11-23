@@ -118,9 +118,6 @@ blocks:
           - left: "Alter eines Kindes und seine Körpergröße"
             right: "weder y : x noch x · y bleibt gleich"
         explanation: "Hefte: doppelt so viele, doppelt so teuer. Arbeiter: doppelt so viele, halb so viele Tage. Alter und Größe folgen keiner dieser Regeln."
-        links:
-          - title: "Lernlandkarte: Antiproportionale Zuordnungen"
-            url: https://lernapps.net/apps/map/mathematik/c/antiproportionale-zuordnungen/
       - type: single-choice
         id: tabelle-pruefen
         text: "Die Tabelle: $x$ = 2, 4, 8 und $y$ = 12, 6, 3. Welche Zuordnung liegt vor?"
@@ -135,9 +132,6 @@ blocks:
             correct: false
             info: "Das Produkt $x$ · $y$ ist in jeder Spalte 24, also gibt es eine feste Regel."
         explanation: "Prüfe Quotient und Produkt in jeder Spalte."
-        links:
-          - title: "Lernlandkarte: Antiproportionale Zuordnungen"
-            url: https://lernapps.net/apps/map/mathematik/c/antiproportionale-zuordnungen/
       - type: multiple-choice
         id: welche-anti
         text: "Welche Zuordnungen sind antiproportional? Wähle alle richtigen."
@@ -155,9 +149,6 @@ blocks:
             correct: false
             info: "Mit der Strecke steigt der Preis, und der Grundpreis stört den gleichen Quotienten. Keins von beiden."
         explanation: "Antiproportional ist nur, wenn das Produkt gleich bleibt."
-        links:
-          - title: "Lernlandkarte: Antiproportionale Zuordnungen"
-            url: https://lernapps.net/apps/map/mathematik/c/antiproportionale-zuordnungen/
       - type: number
         id: anti-oder-proportional-wert
         text: "Ein Zusammenhang ist antiproportional. Zu $x$ = 4 gehört $y$ = 15. Welches $y$ gehört zu $x$ = 6?"
@@ -169,9 +160,6 @@ blocks:
           - answer: 17
             message: "Du hast 2 addiert. Rechne das Produkt aus und teile es durch den neuen x-Wert."
         explanation: "Das Produkt ist $4 \\cdot 15 = 60$. Dann $y = 60 : 6 = 10$."
-        links:
-          - title: "Lernlandkarte: Antiproportionale Zuordnungen"
-            url: https://lernapps.net/apps/map/mathematik/c/antiproportionale-zuordnungen/
       - type: text
         text: |
           **Das kannst du jetzt:** Du stellst Zuordnungen in Tabelle und Graph dar und erkennst, ob sie proportional (Quotient gleich),

@@ -100,9 +100,6 @@ blocks:
           - left: "Gefäß 3 (oben schmal)"
             right: "Graph C (erst langsam, dann schnell)"
         explanation: "Je breiter das Gefäß an der Wasserlinie, desto langsamer steigt der Spiegel. Oben breit heißt: erst schnell, dann langsamer. Oben schmal heißt: erst langsam, dann schneller."
-        links:
-          - title: "Lernlandkarte: Darstellungen von Funktionen"
-            url: https://lernapps.net/apps/map/mathematik/c/funktionen-darstellung/
       - type: number
         id: ben-nach-sechs
         text: "Wie weit ist Ben nach 6 Minuten gekommen? Lies im Graphen von Bens Weg ab."
@@ -122,9 +119,6 @@ blocks:
           - answer: 300
             message: "Bei 6 Minuten verläuft der Graph waagerecht. Gehe von 6 min senkrecht nach oben bis zum Graphen und lies den Weg nach links ab."
         explanation: "Bei 6 min ist Ben schon seit 4 min bei 200 m angekommen und wartet dort."
-        links:
-          - title: "Lernlandkarte: Darstellungen von Funktionen"
-            url: https://lernapps.net/apps/map/mathematik/c/funktionen-darstellung/
       - type: ordering
         id: bens-weg-reihenfolge
         text: "Bring Bens Weg in die richtige Reihenfolge (zuerst oben)."
@@ -140,17 +134,11 @@ blocks:
           - "Ben bleibt stehen und wartet."
           - "Ben rennt schneller als vorher."
         explanation: "Erst steigt der Graph mäßig, dann ist er waagerecht (Stillstand), dann steigt er steiler (schneller)."
-        links:
-          - title: "Lernlandkarte: Darstellungen von Funktionen"
-            url: https://lernapps.net/apps/map/mathematik/c/funktionen-darstellung/
       - type: true-false
         id: steiler-schneller
         text: "Je steiler ein Weg-Zeit-Graph, desto schneller bewegt sich jemand."
         answer: true
         explanation: "Steil heißt: in kurzer Zeit ein langer Weg. Waagerecht heißt: Stillstand."
-        links:
-          - title: "Lernlandkarte: Darstellungen von Funktionen"
-            url: https://lernapps.net/apps/map/mathematik/c/funktionen-darstellung/
       - type: text
         text: |
           **Das kannst du jetzt:** Du übersetzt zwischen Situation, Tabelle und Graph und liest Formen von Graphen. Als Nächstes kommt

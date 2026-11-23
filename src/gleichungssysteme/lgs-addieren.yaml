@@ -96,9 +96,6 @@ blocks:
             correct: false
             info: "Du musst beide Seiten malnehmen, sonst ändert sich die Gleichung. Das Ergebnis wäre falsch."
         explanation: "Damit 2 · $y$ wegfällt, braucht II ein −2 · $y$. Das erreichst du mit −2 auf beiden Seiten."
-        links:
-          - title: "Lernlandkarte: Lineare Gleichungssysteme: rechnerisch"
-            url: https://lernapps.net/apps/map/mathematik/c/lgs-rechnerisch/
       - type: number
         id: addieren-umformen-x
         text: "I: $x$ + 2 · $y$ = 8, II: 3 · $x$ + $y$ = 9. Löse das System. Wie groß ist $x$?"
@@ -110,9 +107,6 @@ blocks:
           - answer: 17
             message: "17 ist die Summe der rechten Seiten, aber da fällt noch keine Unbekannte weg. Multipliziere II zuerst mit −2."
         explanation: "II · (−2): −6 · $x$ − 2 · $y$ = −18. Addiert mit I: −5 · $x$ = −10, also $x$ = 2. Dann $y$ = 3. Probe in II: 3 · 2 + 3 = 9."
-        links:
-          - title: "Lernlandkarte: Lineare Gleichungssysteme: rechnerisch"
-            url: https://lernapps.net/apps/map/mathematik/c/lgs-rechnerisch/
       - type: text
         text: |
           **Das kannst du jetzt:** Du löst Gleichungssysteme mit dem Additionsverfahren, auch mit Umformen. Als Nächstes deutest du die Lösung in einer

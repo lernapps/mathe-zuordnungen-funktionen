@@ -91,9 +91,6 @@ blocks:
           - answer: 5
             message: "5 ist y, nicht x. Gefragt ist x: Löse 4 · x − (x + 2) = 7, also 3 · x − 2 = 7."
         explanation: "$4 \\cdot x - (x + 2) = 7$, also $3 \\cdot x - 2 = 7$, $3 \\cdot x = 9$, $x = 3$. Dann $y = 5$."
-        links:
-          - title: "Lernlandkarte: Lineare Gleichungssysteme: rechnerisch"
-            url: https://lernapps.net/apps/map/mathematik/c/lgs-rechnerisch/
       - type: single-choice
         id: einsetzen-klammer-wahl
         text: "I: $y$ = 2 · $x$ − 3, II: 5 · $x$ − $y$ = 6. Wie sieht II nach dem Einsetzen aus?"
@@ -108,9 +105,6 @@ blocks:
             correct: false
             info: "So wird nicht eingesetzt. Du setzt den Term anstelle von $y$ in II ein, die rechte Seite bleibt 6."
         explanation: "Beim Einsetzen immer Klammern um den eingesetzten Term."
-        links:
-          - title: "Lernlandkarte: Lineare Gleichungssysteme: rechnerisch"
-            url: https://lernapps.net/apps/map/mathematik/c/lgs-rechnerisch/
       - type: text
         text: |
           **Das kannst du jetzt:** Du löst ein Gleichungssystem mit dem Einsetzungsverfahren, mit Klammern und Probe. Als Nächstes addierst du die

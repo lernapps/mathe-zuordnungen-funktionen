@@ -97,9 +97,6 @@ blocks:
           - answer: 15
             message: "15 Liter sind es nach 1 Minute. Gefragt sind 7 Minuten, also noch mal 7."
         explanation: "In 1 Minute laufen $60 : 4 = 15$ Liter ein. In 7 Minuten sind es $15 \\cdot 7 = 105$ Liter."
-        links:
-          - title: "Lernlandkarte: Dreisatz"
-            url: https://lernapps.net/apps/map/mathematik/c/dreisatz/
       - type: number
         id: becken-rueckwaerts
         text: "Der Schlauch füllt weiter 15 Liter pro Minute ein. Nach wie vielen Minuten sind 90 Liter im Becken?"
@@ -112,9 +109,6 @@ blocks:
           - answer: 75
             message: "Du hast 15 von 90 abgezogen. Wie oft passen 15 Liter in 90 Liter? Das ist eine Division."
         explanation: "Pro Minute 15 Liter. Für 90 Liter brauchst du $90 : 15 = 6$ Minuten."
-        links:
-          - title: "Lernlandkarte: Dreisatz"
-            url: https://lernapps.net/apps/map/mathematik/c/dreisatz/
       - type: single-choice
         id: welcher-weg
         text: "5 Hefte kosten 15 €. Wie berechnest du den Preis für 8 Hefte?"
@@ -129,9 +123,6 @@ blocks:
             correct: false
             info: "Du hast den Preis für 5 Hefte mit 8 malgenommen. So wären es 40 Hefte."
         explanation: "Über die Eins: $15 : 5 = 3$, dann $3 \\cdot 8 = 24$."
-        links:
-          - title: "Lernlandkarte: Dreisatz"
-            url: https://lernapps.net/apps/map/mathematik/c/dreisatz/
       - type: text
         text: |
           **Das kannst du jetzt:** Du löst jede Dreisatzaufgabe, auch wenn der Faktor nicht glatt aufgeht: erst auf 1, dann auf die

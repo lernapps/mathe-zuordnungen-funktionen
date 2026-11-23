@@ -144,6 +144,7 @@ const showB2 = computed(() => two.value && props.b2Name !== undefined);
       <span class="dreifach-title">{{ name2 }}:</span> <strong>{{ term(p2) }}</strong>
     </p>
 
+    <p v-if="!fixed" class="dreifach-hint">Bewege einen Regler: Term, Tabelle und Graph ändern sich gleichzeitig.</p>
     <div v-if="!fixed" class="dreifach-sliders">
       <label v-if="!fixedA" class="dreifach-slider">
         <span>{{ aName }} = {{ format(a) }}</span>
@@ -274,6 +275,12 @@ const showB2 = computed(() => two.value && props.b2Name !== undefined);
   padding: 0.75rem 1rem;
   border: 1px solid var(--page-border);
   border-radius: 0.4rem;
+}
+
+.dreifach-hint {
+  margin: 0.5rem 0 0;
+  font-size: 0.9rem;
+  color: var(--page-muted);
 }
 
 .dreifach-sliders {

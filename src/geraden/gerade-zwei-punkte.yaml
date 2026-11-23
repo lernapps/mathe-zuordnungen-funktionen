@@ -117,9 +117,6 @@ blocks:
           - answer: 50
             message: "Du hast (2 + 3) · 10 gerechnet. Mal geht vor plus: erst 2 · 10, dann + 3."
         explanation: "$y = 2 \\cdot 10 + 3 = 23$."
-        links:
-          - title: "Lernlandkarte: Geradengleichungen"
-            url: https://lernapps.net/apps/map/mathematik/c/geradengleichungen/
       - type: single-choice
         id: welche-gleichung-ab
         text: "Welche Gleichung gehört zur Geraden durch A (1|4) und B (3|10)?"
@@ -134,9 +131,6 @@ blocks:
             correct: false
             info: "6 ist $\\Delta y$, nicht die Steigung. Teile durch $\\Delta x$ = 2: $m$ = 3."
         explanation: "Erst $m$ aus dem Steigungsdreieck, dann $b$ durch Einsetzen eines Punktes."
-        links:
-          - title: "Lernlandkarte: Geradengleichungen"
-            url: https://lernapps.net/apps/map/mathematik/c/geradengleichungen/
       - type: text
         text: |
           **Das kannst du jetzt:** Du stellst aus zwei Punkten die Gleichung $y$ = $m$ · $x$ + $b$ auf und prüfst sie. Als Nächstes ist nur ein Punkt

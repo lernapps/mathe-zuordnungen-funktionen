@@ -66,9 +66,6 @@ blocks:
           - answer: 15
             message: "Du hast durch 1000 geteilt. Ein Meter hat 100 Zentimeter, nicht 1000."
         explanation: "$3 \\cdot 5000 = 15 000$ cm, und $15 000 : 100 = 150$ m."
-        links:
-          - title: "Lernlandkarte: Maßstab"
-            url: https://lernapps.net/apps/map/mathematik/c/massstab/
       - type: generated
         id: karte-zu-wirklichkeit
         given:
@@ -113,9 +110,6 @@ blocks:
             correct: false
             info: "Bei 1 : 2000 sind 1 cm auf der Karte 2000 cm, das sind 20 m."
         explanation: "Die erste Zahl gehört zur Karte, die zweite zur Wirklichkeit."
-        links:
-          - title: "Lernlandkarte: Maßstab"
-            url: https://lernapps.net/apps/map/mathematik/c/massstab/
       - type: text
         text: |
           **Das kannst du jetzt:** Du rechnest mit dem Maßstab von der Karte in die Wirklichkeit und zurück. Als Nächstes zeichnest du

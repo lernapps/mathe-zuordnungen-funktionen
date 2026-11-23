@@ -10,7 +10,7 @@ blocks:
       - type: text
         text: |
           Die Klasse vergleicht zwei Handytarife. **Tarif A:** 6 € Grundpreis und 1 € je Stunde. **Tarif B:** 2 € Grundpreis und 2 € je Stunde.
-          Beide sind Geraden. Wo schneiden sie sich? Lies es im Graphen ab.
+          Beide sind Geraden. Wo schneiden sie sich? Der Schnittpunkt ist der Punkt, in dem sich beide Geraden treffen. Lies es im Graphen ab.
       - type: vue-component
         id: tarife-graph
         component: Dreifachansicht
@@ -51,9 +51,6 @@ blocks:
           - answer: 10
             message: "10 ist der Preis am Schnittpunkt (y-Achse). Gefragt ist die Zeit auf der x-Achse."
         explanation: "Die Geraden schneiden sich bei $x$ = 4. Dort kosten beide 10 €."
-        links:
-          - title: "Lernlandkarte: Lineare Gleichungssysteme: grafisch"
-            url: https://lernapps.net/apps/map/mathematik/c/lineare-gleichungssysteme/
   - type: section
     id: erklaerung
     title: Die Lösung ist der Schnittpunkt
@@ -121,17 +118,11 @@ blocks:
             correct: false
             info: "Bei $x$ = 4 ergeben beide Gleichungen $y$ = 10, nicht 8: 4 + 6 = 10 und 2 · 4 + 2 = 10."
         explanation: "Eine Lösung muss beide Gleichungen erfüllen."
-        links:
-          - title: "Lernlandkarte: Lineare Gleichungssysteme: grafisch"
-            url: https://lernapps.net/apps/map/mathematik/c/lineare-gleichungssysteme/
       - type: true-false
         id: nur-x-wert
         text: "Zur Lösung eines Gleichungssystems mit zwei Gleichungen reicht der $x$-Wert des Schnittpunkts."
         answer: false
         explanation: "Die Lösung ist ein Paar ($x$|$y$). Im Beispiel (4|10): nach 4 Stunden und für 10 €."
-        links:
-          - title: "Lernlandkarte: Lineare Gleichungssysteme: grafisch"
-            url: https://lernapps.net/apps/map/mathematik/c/lineare-gleichungssysteme/
       - type: single-choice
         id: wann-b-teurer
         text: "Tarif A: $y$ = $x$ + 6, Tarif B: $y$ = 2 · $x$ + 2. Wann ist B teurer als A?"
@@ -146,9 +137,6 @@ blocks:
             correct: false
             info: "Bei 0 Stunden kostet B 2 €, A 6 €. B ist am Anfang billiger."
         explanation: "Bei 4 Stunden sind beide gleich. Danach ist B teurer, weil B steiler steigt."
-        links:
-          - title: "Lernlandkarte: Lineare Gleichungssysteme: grafisch"
-            url: https://lernapps.net/apps/map/mathematik/c/lineare-gleichungssysteme/
       - type: text
         text: |
           **Das kannst du jetzt:** Du löst ein Gleichungssystem zeichnerisch: Schnittpunkt ablesen, Lösung als Paar ($x$|$y$) angeben und prüfen.

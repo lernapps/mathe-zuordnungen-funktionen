@@ -68,17 +68,11 @@ blocks:
           - answer: 6
             message: "Der Preis bleibt nicht gleich. Mit mehr Karten steigt auch der Preis."
         explanation: "Von 3 auf 6 Karten ist mal 2. Der Preis wird mit 2 malgenommen: $6 \\cdot 2 = 12$."
-        links:
-          - title: "Lernlandkarte: Dreisatz"
-            url: https://lernapps.net/apps/map/mathematik/c/dreisatz/
       - type: true-false
         id: plus-oder-mal
         text: "3 Karten kosten 6 €. Weil 3 Karten mehr dazukommen, kommen auch 3 € dazu: 6 Karten kosten 9 €. Stimmt das?"
         answer: false
         explanation: "Von 3 auf 6 Karten ist mal 2, nicht plus 3. Der Preis wird auch mal 2 genommen: 6 Karten kosten 12 €."
-        links:
-          - title: "Lernlandkarte: Dreisatz"
-            url: https://lernapps.net/apps/map/mathematik/c/dreisatz/
       - type: generated
         id: preis-malnehmen
         given:
@@ -125,9 +119,6 @@ blocks:
             correct: false
             info: "Mit 4 Karten kaufst du weniger als mit 12, also zahlst du weniger. Du musst teilen, nicht malnehmen."
         explanation: "12 : 3 = 4, deshalb auch 18 : 3 = 6."
-        links:
-          - title: "Lernlandkarte: Dreisatz"
-            url: https://lernapps.net/apps/map/mathematik/c/dreisatz/
       - type: text
         text: |
           **Das kannst du jetzt:** Du löst Dreisatzaufgaben mit einer Tabelle und Pfeilen, wenn die Zahl links glatt malgenommen oder

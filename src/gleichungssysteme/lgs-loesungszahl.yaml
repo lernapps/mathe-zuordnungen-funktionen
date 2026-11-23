@@ -98,9 +98,6 @@ blocks:
           - left: "y = 2 · x + 1 und y = 2 · x + 1"
             right: "unendlich viele Lösungen"
         explanation: "Gleiches $m$ und verschiedenes $b$: parallel, keine Lösung. Verschiedenes $m$: genau ein Schnittpunkt. Gleiches $m$ und gleiches $b$: dieselbe Gerade."
-        links:
-          - title: "Lernlandkarte: Lineare Gleichungssysteme: grafisch"
-            url: https://lernapps.net/apps/map/mathematik/c/lineare-gleichungssysteme/
       - type: single-choice
         id: parallele-geraden
         text: "Die Geraden $y$ = 3 · $x$ + 2 und $y$ = 3 · $x$ − 4 sind gegeben. Wie viele Lösungen hat das System?"
@@ -115,9 +112,6 @@ blocks:
             correct: false
             info: "Dafür müssten auch die $b$ gleich sein. Hier sind sie verschieden: 2 und −4."
         explanation: "Gleiches $m$, verschiedenes $b$: die Geraden sind parallel."
-        links:
-          - title: "Lernlandkarte: Lineare Gleichungssysteme: grafisch"
-            url: https://lernapps.net/apps/map/mathematik/c/lineare-gleichungssysteme/
       - type: single-choice
         id: verschiedene-steigung
         text: "Die Geraden $y$ = $x$ + 7 und $y$ = 4 · $x$ + 7 sind gegeben. Wie viele Lösungen hat das System?"
@@ -132,17 +126,11 @@ blocks:
             correct: false
             info: "Unendlich viele gibt es nur, wenn es dieselbe Gerade ist. Hier sind die Steigungen verschieden."
         explanation: "Verschiedene Steigungen führen immer zu genau einem Schnittpunkt."
-        links:
-          - title: "Lernlandkarte: Lineare Gleichungssysteme: grafisch"
-            url: https://lernapps.net/apps/map/mathematik/c/lineare-gleichungssysteme/
       - type: true-false
         id: parallele-schneiden
         text: "Zwei Geraden mit der gleichen Steigung und verschiedenem $y$-Achsenabschnitt schneiden sich genau einmal."
         answer: false
         explanation: "Sie sind parallel und haben keinen gemeinsamen Punkt, also keine Lösung."
-        links:
-          - title: "Lernlandkarte: Lineare Gleichungssysteme: grafisch"
-            url: https://lernapps.net/apps/map/mathematik/c/lineare-gleichungssysteme/
       - type: text
         text: |
           **Das kannst du jetzt:** Du löst ein Gleichungssystem zeichnerisch und sagst, ob es keine, eine oder unendlich viele Lösungen hat. Als

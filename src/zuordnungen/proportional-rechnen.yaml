@@ -110,9 +110,6 @@ blocks:
           - answer: 48
             message: "Du hast 6 mal 8 gerechnet. Der Faktor ist 6 : 4 = 1,5, nicht der Preis selbst."
         explanation: "Von 4 auf 8 Kugeln ist mal 2, also $6 \\cdot 2 = 12$. Mit dem Faktor: $1{,}5 \\cdot 8 = 12$."
-        links:
-          - title: "Lernlandkarte: Proportionale Zuordnungen"
-            url: https://lernapps.net/apps/map/mathematik/c/proportionale-zuordnungen/
       - type: number
         id: minuten-aus-preis
         text: "Eine Minute kostet 3 ct. Wie viele Minuten kannst du für 27 ct telefonieren?"
@@ -125,9 +122,6 @@ blocks:
           - answer: 24
             message: "Du hast 3 abgezogen. Teile 27 ct durch den Preis pro Minute."
         explanation: "$x = y : k = 27 : 3 = 9$ Minuten."
-        links:
-          - title: "Lernlandkarte: Proportionale Zuordnungen"
-            url: https://lernapps.net/apps/map/mathematik/c/proportionale-zuordnungen/
       - type: single-choice
         id: term-zur-tabelle
         text: "Die Tabelle: $x$ = 2, 4, 6 und $y$ = 10, 20, 30. Welcher Term gehört zur proportionalen Zuordnung?"
@@ -142,9 +136,6 @@ blocks:
             correct: false
             info: "Das wäre für $x$ = 2 schon 20, nicht 10. $k$ ist $y$ : $x$ = 10 : 2 = 5."
         explanation: "Aus einem Paar bestimmst du $k$ = $y$ : $x$ und prüfst es an den anderen Paaren."
-        links:
-          - title: "Lernlandkarte: Proportionale Zuordnungen"
-            url: https://lernapps.net/apps/map/mathematik/c/proportionale-zuordnungen/
       - type: text
         text: |
           **Das kannst du jetzt:** Du bestimmst den Proportionalitätsfaktor $k$ = $y$ : $x$ und rechnest damit $y$ = $k$ · $x$ und $x$ = $y$ : $k$.

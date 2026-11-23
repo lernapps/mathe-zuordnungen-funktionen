@@ -66,9 +66,6 @@ blocks:
           - answer: 58
             message: "Du hast 50 addiert. Beim Maßstab wird malgenommen: 8 mal 50."
         explanation: "$8 \\cdot 50 = 400$ cm, und $400 : 100 = 4$ m."
-        links:
-          - title: "Lernlandkarte: Maßstab"
-            url: https://lernapps.net/apps/map/mathematik/c/massstab/
       - type: generated
         id: zeichnung-anfertigen
         given:
@@ -115,17 +112,11 @@ blocks:
             correct: false
             info: "500 cm : 500 = 1 cm. Das passt zwar aufs Blatt, aber du würdest fast nichts erkennen."
         explanation: "Ein guter Maßstab macht die Zeichnung so groß, dass sie gerade noch aufs Blatt passt."
-        links:
-          - title: "Lernlandkarte: Maßstab"
-            url: https://lernapps.net/apps/map/mathematik/c/massstab/
       - type: true-false
         id: massstab-verkleinert
         text: "Beim Maßstab 1 : 100 ist die Zeichnung 100-mal größer als das Original."
         answer: false
         explanation: "Es ist umgekehrt: Beim Maßstab 1 : 100 sind Strecken in der Zeichnung 100-mal kürzer als in Wirklichkeit. 100 cm in Wirklichkeit sind 1 cm auf dem Plan."
-        links:
-          - title: "Lernlandkarte: Maßstab"
-            url: https://lernapps.net/apps/map/mathematik/c/massstab/
       - type: text
         text: |
           **Das kannst du jetzt:** Du rechnest zwischen Plan und Wirklichkeit, zeichnest im Maßstab und findest den Maßstab selbst.

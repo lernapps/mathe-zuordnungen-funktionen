@@ -29,20 +29,27 @@ blocks:
         id: test-vorrang
         component: Kurztest
         props:
-          question: "Was ergibt 5 + 2 · 6?"
+          question: "Was ergibt 18 + 6 · 7 − 4 · 5?"
           options:
-            - { text: "17", correct: true, info: "Erst 2 · 6 = 12, dann 5 + 12 = 17 (Punkt vor Strich)." }
             - {
-                text: "42",
+                text: "820",
                 correct: false,
-                info: "Du hast von links gerechnet: 5 + 2 = 7, dann 7 · 6. Mal geht vor plus.",
+                info: "Du hast von links nach rechts gerechnet: (18 + 6) · 7 − 4 und dann · 5. Mal geht vor plus und minus, rechne erst die Malaufgaben aus.",
               }
-            - { text: "30", correct: false, info: "Das wäre 5 · 6 = 30. Gerechnet wird 2 · 6 und danach plus 5." }
+            - {
+                text: "40",
+                correct: true,
+                info: "Erst 6 · 7 = 42 und 4 · 5 = 20, dann 18 + 42 − 20 = 40 (Punkt vor Strich).",
+              }
+            - {
+                text: "60",
+                correct: false,
+                info: "Du hast 18 + 42 = 60 gerechnet und die Aufgabe − 4 · 5 vergessen. Von 60 gehen noch 20 ab.",
+              }
           right: "Richtig."
           wrong: "Nicht richtig."
         nojs: |
-          Kurztest: Was ergibt 5 + 2 · 6? Antwort: 17. Erst 2 · 6 = 12, dann 5 + 12 = 17 (Punkt vor Strich). Wer 42 rechnet, hat von
-          links gerechnet.
+          Kurztest: Was ergibt 18 + 6 · 7 − 4 · 5? Antwort: 40. Erst 6 · 7 = 42 und 4 · 5 = 20, dann 18 + 42 − 20 = 40. Wer 820 rechnet, hat von links nach rechts gerechnet; wer 60 rechnet, hat − 4 · 5 vergessen.
       - type: text
         text: "Wenn das nicht klappt: Wiederhole den Baustein „Vorrangregeln und Rechengesetze“ auf der Lernlandkarte: [Kartenseite](https://lernapps.net/apps/map/mathematik/c/grundrechenarten-rechengesetze/)."
   - type: section
@@ -59,19 +66,27 @@ blocks:
         id: test-zeit
         component: Kurztest
         props:
-          question: "Ein Film dauert 1 h 40 min. Wie viele Minuten sind das?"
+          question: "Ein Film beginnt um 17:45 Uhr und endet um 19:20 Uhr. Wie viele Minuten dauert er?"
           options:
-            - { text: "100 min", correct: true, info: "1 h sind 60 min, dazu 40 min: 60 + 40 = 100." }
             - {
-                text: "140 min",
+                text: "175 Minuten",
                 correct: false,
-                info: "Das ist 1 und 40 nebeneinander. Eine Stunde hat 60 Minuten, nicht 100.",
+                info: "Du hast wie bei Dezimalzahlen 19,20 − 17,45 = 1,75 gerechnet. Eine Stunde hat aber 60 Minuten, nicht 100. Rechne in Schritten: bis 18:00 Uhr, bis 19:00 Uhr, bis 19:20 Uhr.",
               }
-            - { text: "160 min", correct: false, info: "Du hast 2 h gerechnet. Es ist 1 h und 40 min, also 60 + 40." }
+            - {
+                text: "125 Minuten",
+                correct: false,
+                info: "Du hast 60 + 45 + 20 gerechnet. Von 17:45 Uhr bis 18:00 Uhr sind es nur 15 Minuten, nicht 45.",
+              }
+            - {
+                text: "95 Minuten",
+                correct: true,
+                info: "Von 17:45 Uhr bis 18:00 Uhr sind es 15 Minuten, bis 19:00 Uhr weitere 60, bis 19:20 Uhr weitere 20: 15 + 60 + 20 = 95.",
+              }
           right: "Richtig."
           wrong: "Nicht richtig."
         nojs: |
-          Kurztest: Ein Film dauert 1 h 40 min. Wie viele Minuten sind das? Antwort: 100 min, denn 1 h sind 60 min und dazu kommen 40 min.
+          Kurztest: Ein Film beginnt um 17:45 Uhr und endet um 19:20 Uhr. Wie viele Minuten dauert er? Antwort: 95 Minuten, denn bis 18:00 Uhr sind es 15 Minuten, bis 19:00 Uhr 60 und bis 19:20 Uhr 20 Minuten.
       - type: text
         text: "Wenn das nicht klappt: Wiederhole den Baustein „Länge, Masse, Geld und Zeit“ auf der Lernlandkarte: [Kartenseite](https://lernapps.net/apps/map/mathematik/c/messen-laenge-masse-geld-zeit/)."
   - type: section
@@ -88,36 +103,44 @@ blocks:
         id: test-umrechnen
         component: Kurztest
         props:
-          question: "Wie viele Meter sind 4 km?"
+          question: "Wie viele Meter sind 2,5 km?"
           options:
-            - { text: "4000 m", correct: true, info: "1 km = 1000 m, also 4 · 1000 = 4000." }
-            - { text: "400 m", correct: false, info: "Du hast mit 100 gerechnet. Ein Kilometer hat 1000 Meter." }
             - {
-                text: "40 m",
+                text: "250 m",
+                correct: false,
+                info: "Du hast mit 100 gerechnet. Ein Kilometer hat 1000 Meter: 2,5 · 1000.",
+              }
+            - {
+                text: "2500 m",
+                correct: true,
+                info: "1 km = 1000 m, also 2,5 · 1000 = 2500. Das Komma wandert drei Stellen nach rechts.",
+              }
+            - {
+                text: "25 m",
                 correct: false,
                 info: "Du hast mit 10 gerechnet. Von km nach m multiplizierst du mit 1000.",
               }
           right: "Richtig."
           wrong: "Nicht richtig."
         nojs: |
-          Kurztest: Wie viele Meter sind 4 km? Antwort: 4000 m, denn 1 km = 1000 m und 4 · 1000 = 4000.
+          Kurztest: Wie viele Meter sind 2,5 km? Antwort: 2500 m, denn 1 km = 1000 m und 2,5 · 1000 = 2500.
       - type: vue-component
         id: test-umrechnen-zurueck
         component: Kurztest
         props:
-          question: "Wie viele Meter sind 300 cm?"
+          question: "Wie viele Meter sind 340 cm?"
           options:
+            - { text: "34 m", correct: false, info: "Du hast durch 10 geteilt. Von cm nach m teilst du durch 100." }
+            - { text: "3,4 m", correct: true, info: "100 cm = 1 m, also 340 : 100 = 3,4." }
             - {
-                text: "300 m",
+                text: "340 m",
                 correct: false,
                 info: "Du hast die Zahl nicht umgerechnet. 100 cm sind 1 m, also wird die Zahl kleiner.",
               }
-            - { text: "30 m", correct: false, info: "Du hast durch 10 geteilt. Von cm nach m teilst du durch 100." }
-            - { text: "3 m", correct: true, info: "100 cm = 1 m, also 300 : 100 = 3." }
           right: "Richtig."
           wrong: "Nicht richtig."
         nojs: |
-          Kurztest: Wie viele Meter sind 300 cm? Antwort: 3 m, denn 100 cm = 1 m und 300 : 100 = 3.
+          Kurztest: Wie viele Meter sind 340 cm? Antwort: 3,4 m, denn 100 cm = 1 m und 340 : 100 = 3,4.
       - type: text
         text: "Wenn das nicht klappt: Wiederhole den Baustein „Einheiten umrechnen“ auf der Lernlandkarte: [Kartenseite](https://lernapps.net/apps/map/mathematik/c/umrechnung-groessen/)."
   - type: section

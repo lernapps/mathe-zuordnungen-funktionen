@@ -58,7 +58,7 @@ blocks:
         blocks:
           - type: text
             text: |
-              „Je mehr, desto weniger“ reicht nicht. Bei einem Preis von 40 € bleibt nach $x$ Gutscheinen zu 5 € noch $y$ = 40 − 5 · $x$ zu zahlen. Das Produkt
+              „Je mehr, desto weniger“ reicht nicht. Bei einem Preis von 40 € bleibt nach $x$ Gutscheinen zu 5 € noch $y$ = 40 − 5 · $x$ zu zahlen. Das Produkt
               bleibt dabei nicht gleich. Prüfe immer, ob $x$ · $y$ gleich bleibt.
   - type: section
     id: beispiel
@@ -87,9 +87,6 @@ blocks:
           - answer: 2
             message: "Du hast die 4 zusätzlichen Pumpen von der Zeit abgezogen (6 − 4). Rechne das Produkt aus: 4 · 6 = 24. Dann 24 : 8."
         explanation: "Das Produkt ist $4 \\cdot 6 = 24$. Mit 8 Pumpen: $24 : 8 = 3$ Stunden."
-        links:
-          - title: "Lernlandkarte: Antiproportionale Zuordnungen"
-            url: https://lernapps.net/apps/map/mathematik/c/antiproportionale-zuordnungen/
       - type: generated
         id: antiproportional-wert
         given:
@@ -118,17 +115,11 @@ blocks:
             correct: false
             info: "Hier ist $y$ jedes Mal um 2 kleiner. Das Produkt ändert sich: 12, 16, 12."
         explanation: "Bei antiproportional ist $x$ · $y$ in jeder Spalte gleich."
-        links:
-          - title: "Lernlandkarte: Antiproportionale Zuordnungen"
-            url: https://lernapps.net/apps/map/mathematik/c/antiproportionale-zuordnungen/
       - type: true-false
         id: je-mehr-desto-weniger
         text: "Ein Taxi kostet 3 € Grundpreis und 2 € je km. Bei weniger Kilometern kostet es weniger. Die Zuordnung ist deshalb antiproportional."
         answer: false
         explanation: "Weniger Kilometer, weniger Preis: Beides wird kleiner, nicht gegenläufig. Antiproportional ist nur, wenn mit größerem $x$ das $y$ kleiner wird und das Produkt gleich bleibt."
-        links:
-          - title: "Lernlandkarte: Antiproportionale Zuordnungen"
-            url: https://lernapps.net/apps/map/mathematik/c/antiproportionale-zuordnungen/
       - type: text
         text: |
           **Das kannst du jetzt:** Du erkennst antiproportionale Zuordnungen am gleichen Produkt $x$ · $y$ und rechnest mit $y$ = $c$ : $x$. Als

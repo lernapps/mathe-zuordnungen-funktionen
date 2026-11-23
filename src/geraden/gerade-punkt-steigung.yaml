@@ -98,9 +98,6 @@ blocks:
           - answer: -7
             message: "Das Vorzeichen stimmt nicht. Aus 3 = −4 + b folgt b = 3 + 4 = 7."
         explanation: "$3 = (-2) \\cdot 2 + b$, also $3 = -4 + b$ und $b = 7$."
-        links:
-          - title: "Lernlandkarte: Geradengleichungen"
-            url: https://lernapps.net/apps/map/mathematik/c/geradengleichungen/
       - type: single-choice
         id: gleichung-punkt-steigung
         text: "Eine Gerade geht durch P (2|9) und hat die Steigung $m$ = 3. Welche Gleichung stimmt?"
@@ -115,9 +112,6 @@ blocks:
             correct: false
             info: "Die Steigung ist 3, nicht 9. $m$ und $b$ sind vertauscht."
         explanation: "Setze P und $m$ ein und löse nach $b$ auf."
-        links:
-          - title: "Lernlandkarte: Geradengleichungen"
-            url: https://lernapps.net/apps/map/mathematik/c/geradengleichungen/
       - type: text
         text: |
           **Das kannst du jetzt:** Du stellst auch aus einem Punkt und der Steigung die Gleichung auf. Als Nächstes berechnest du Nullstelle und

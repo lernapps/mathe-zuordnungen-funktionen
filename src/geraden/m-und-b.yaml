@@ -116,9 +116,6 @@ blocks:
           - answer: 3
             message: "3 ist die Steigung m. Der y-Achsenabschnitt ist die Zahl ohne x."
         explanation: "Bei $x$ = 0 ist $y = 3 \\cdot 0 - 2 = -2$. Die Gerade schneidet die $y$-Achse bei −2."
-        links:
-          - title: "Lernlandkarte: Lineare Funktionen"
-            url: https://lernapps.net/apps/map/mathematik/c/lineare-funktionen/
       - type: matching
         id: gleichung-beschreibung
         text: "Ordne jeder Gleichung die passende Beschreibung zu."
@@ -130,17 +127,11 @@ blocks:
           - left: "y = 3 · x − 2"
             right: "steigt und schneidet die y-Achse bei −2"
         explanation: "Das Vorzeichen von $m$ sagt steigend (positiv) oder fallend (negativ). $b$ ist der $y$-Wert bei $x$ = 0."
-        links:
-          - title: "Lernlandkarte: Lineare Funktionen"
-            url: https://lernapps.net/apps/map/mathematik/c/lineare-funktionen/
       - type: true-false
         id: groesseres-b-steiler
         text: "Je größer $b$ ist, desto steiler ist die Gerade."
         answer: false
         explanation: "$b$ verschiebt die Gerade nach oben oder unten, ohne sie zu drehen. Steil oder flach macht $m$."
-        links:
-          - title: "Lernlandkarte: Lineare Funktionen"
-            url: https://lernapps.net/apps/map/mathematik/c/lineare-funktionen/
       - type: text
         text: |
           **Das kannst du jetzt:** Du weißt, dass $m$ die Gerade dreht und $b$ sie verschiebt, und liest $m$ und $b$ aus der Gleichung. Als Nächstes

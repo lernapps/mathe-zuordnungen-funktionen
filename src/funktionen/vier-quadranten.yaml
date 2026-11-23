@@ -101,9 +101,6 @@ blocks:
             correct: true
             info: "$x$ ist positiv (nach rechts), $y$ negativ (nach unten): rechts unten, Quadrant IV."
         explanation: "Positives $x$, negatives $y$ gehört zum Quadranten IV."
-        links:
-          - title: "Lernlandkarte: Darstellungen von Funktionen"
-            url: https://lernapps.net/apps/map/mathematik/c/funktionen-darstellung/
       - type: matching
         id: punkte-quadranten
         text: "Ordne jedem Punkt seinen Quadranten zu."
@@ -117,9 +114,6 @@ blocks:
           - left: "(1|−6)"
             right: "Quadrant IV"
         explanation: "Achte auf die Vorzeichen. Erster Wert $x$: negativ heißt links. Zweiter Wert $y$: negativ heißt unten."
-        links:
-          - title: "Lernlandkarte: Darstellungen von Funktionen"
-            url: https://lernapps.net/apps/map/mathematik/c/funktionen-darstellung/
       - type: number
         id: abstand-y-achse
         text: "Wie viele Einheiten liegt der Punkt (−3|2) von der $y$-Achse entfernt?"
@@ -131,9 +125,6 @@ blocks:
           - answer: -3
             message: "Ein Abstand ist nie negativ. Das Minus sagt nur, dass der Punkt links liegt."
         explanation: "Der Abstand zur $y$-Achse ist der Betrag des $x$-Werts: 3 Einheiten, nach links."
-        links:
-          - title: "Lernlandkarte: Darstellungen von Funktionen"
-            url: https://lernapps.net/apps/map/mathematik/c/funktionen-darstellung/
       - type: number
         id: klammer-rechnung
         text: "Rechne: 5 + (−3)"
@@ -143,17 +134,11 @@ blocks:
           - answer: 8
             message: "Du hast 5 + 3 gerechnet. (−3) heißt: 3 wird abgezogen."
         explanation: "Plus eine negative Zahl ist wie minus: 5 − 3 = 2."
-        links:
-          - title: "Lernlandkarte: Darstellungen von Funktionen"
-            url: https://lernapps.net/apps/map/mathematik/c/funktionen-darstellung/
       - type: true-false
         id: vorzeichen-quadrant
         text: "Ein Punkt mit negativem $x$-Wert und negativem $y$-Wert liegt links unten, im Quadranten III."
         answer: true
         explanation: "Negatives $x$: links. Negatives $y$: unten. Das ist links unten, Quadrant III."
-        links:
-          - title: "Lernlandkarte: Darstellungen von Funktionen"
-            url: https://lernapps.net/apps/map/mathematik/c/funktionen-darstellung/
       - type: text
         text: |
           **Das kannst du jetzt:** Du liest Punkte in allen vier Quadranten und kennst die Vorzeichen der Koordinaten. Als Nächstes

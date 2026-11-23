@@ -100,9 +100,6 @@ blocks:
         text: Wenn $x$ größer wird und $y$ auch größer wird, ist die Zuordnung immer proportional.
         answer: false
         explanation: "Proportional heißt: doppeltes $x$ gibt doppeltes $y$. Bei $x = 1, 2, 3$ und $y = 3, 5, 7$ wird $y$ auch größer, aber nicht doppelt so groß."
-        links:
-          - title: "Lernlandkarte: Proportionale Zuordnungen"
-            url: https://lernapps.net/apps/map/mathematik/c/proportionale-zuordnungen/
       - type: single-choice
         id: welche-tabelle
         text: "Welche Tabelle gehört zu einer proportionalen Zuordnung? Gegeben sind die Werte von $x$ und $y$."
@@ -120,9 +117,6 @@ blocks:
             correct: false
             info: "Aus 1 → 2 und 2 → 4 passt es, aber 3 → 7 nicht. Bei proportional müsste zu 3 die 6 gehören."
         explanation: "Bei einer proportionalen Zuordnung ist der Quotient $y : x$ in jeder Spalte gleich."
-        links:
-          - title: "Lernlandkarte: Proportionale Zuordnungen"
-            url: https://lernapps.net/apps/map/mathematik/c/proportionale-zuordnungen/
       - type: multiple-choice
         id: proportional-situationen
         text: "Welche dieser Zuordnungen sind proportional? Wähle alle richtigen."
@@ -140,9 +134,6 @@ blocks:
             correct: false
             info: "Bei 0 km kostet die Fahrt schon 3 €, die Gerade geht nicht durch den Ursprung. Nicht proportional."
         explanation: "Prüfe, ob zum Doppelten das Doppelte gehört, und ob bei 0 auch 0 herauskommt."
-        links:
-          - title: "Lernlandkarte: Proportionale Zuordnungen"
-            url: https://lernapps.net/apps/map/mathematik/c/proportionale-zuordnungen/
       - type: number
         id: doppelte-minuten
         text: "Zu 4 Minuten gehören 8 €. Die Zuordnung ist proportional. Wie viel Euro gehören zu 8 Minuten?"
@@ -157,9 +148,6 @@ blocks:
           - answer: 32
             message: "Du hast 8 mal 4 gerechnet. Die Minuten verdoppeln sich, also verdoppeln sich auch die Kosten."
         explanation: "Aus 4 Minuten werden 8 Minuten, mal 2. Dann auch die Kosten mal 2: 8 € · 2 = 16 €."
-        links:
-          - title: "Lernlandkarte: Proportionale Zuordnungen"
-            url: https://lernapps.net/apps/map/mathematik/c/proportionale-zuordnungen/
       - type: generated
         id: anderes-x
         given:

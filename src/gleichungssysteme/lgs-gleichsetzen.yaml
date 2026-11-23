@@ -9,7 +9,7 @@ blocks:
     blocks:
       - type: text
         text: |
-          Aus dem Graphen hast du für Tarif A ($y$ = $x$ + 6) und Tarif B ($y$ = 2 · $x$ + 2) den Schnittpunkt abgelesen. Das war nur so genau, wie du den
+          Auf der Seite davor hast du aus dem Graphen für Tarif A ($y$ = $x$ + 6) und Tarif B ($y$ = 2 · $x$ + 2) den Schnittpunkt abgelesen. Das war nur so genau, wie du den
           Graphen lesen kannst. Jetzt berechnest du ihn. Beide Gleichungen sind schon nach $y$ aufgelöst. Dann müssen die rechten Seiten gleich
           sein, wenn die Kosten gleich sind. Für A und B: $x$ + 6 = 2 · $x$ + 2.
   - type: section
@@ -60,9 +60,6 @@ blocks:
           - "x in eine Gleichung einsetzen und y berechnen."
           - "Die Probe in beiden Gleichungen machen."
         explanation: "Erst gleichsetzen, dann $x$ bestimmen, dann $y$ berechnen, am Ende prüfen."
-        links:
-          - title: "Lernlandkarte: Lineare Gleichungssysteme: rechnerisch"
-            url: https://lernapps.net/apps/map/mathematik/c/lgs-rechnerisch/
       - type: generated
         id: gleichsetzen-x
         given:
@@ -103,9 +100,6 @@ blocks:
           - answer: 6
             message: "6 ist der Preis, also y. Gefragt ist x: Setze die Terme gleich, 2 · x + 4 = 4 · x + 2, und löse nach x."
         explanation: "$2 \\cdot x + 4 = 4 \\cdot x + 2$, also $2 = 2 \\cdot x$ und $x = 1$. Dann $y = 6$."
-        links:
-          - title: "Lernlandkarte: Lineare Gleichungssysteme: rechnerisch"
-            url: https://lernapps.net/apps/map/mathematik/c/lgs-rechnerisch/
       - type: single-choice
         id: gleichsetzen-erster-schritt
         text: "Das System lautet $y$ = 3 · $x$ + 1 und $y$ = $x$ + 7. Was ist der erste Schritt beim Gleichsetzen?"
@@ -120,9 +114,6 @@ blocks:
             correct: false
             info: "$y$ = 0 liefert die Nullstelle, nicht die Lösung des Systems."
         explanation: "Beim Gleichsetzen schreibst du beide Terme als Gleichung auf."
-        links:
-          - title: "Lernlandkarte: Lineare Gleichungssysteme: rechnerisch"
-            url: https://lernapps.net/apps/map/mathematik/c/lgs-rechnerisch/
       - type: text
         text: |
           **Das kannst du jetzt:** Du löst ein Gleichungssystem mit dem Gleichsetzungsverfahren und machst die Probe. Als Nächstes setzt du einen Term in die

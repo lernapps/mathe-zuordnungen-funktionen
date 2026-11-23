@@ -25,9 +25,6 @@ blocks:
             correct: false
             info: "Du hast die Tarife vertauscht. A: 3 + 6 = 9. B: 2 · 3 + 2 = 8."
         explanation: "Rechne beide Preise aus und vergleiche."
-        links:
-          - title: "Lernlandkarte: Lineare Gleichungssysteme: rechnerisch"
-            url: https://lernapps.net/apps/map/mathematik/c/lgs-rechnerisch/
   - type: section
     id: erklaerung
     title: Was die Lösung bedeutet
@@ -99,9 +96,6 @@ blocks:
             correct: false
             info: "Ab 4 Stunden ist B teurer, weil B steiler steigt. A ist dann billiger."
         explanation: "Die Lösung ($x$|$y$) ist ein Zeitpunkt und ein Preis: Dort kosten beide gleich viel."
-        links:
-          - title: "Lernlandkarte: Lineare Gleichungssysteme: rechnerisch"
-            url: https://lernapps.net/apps/map/mathematik/c/lgs-rechnerisch/
       - type: single-choice
         id: welches-verfahren
         text: "I: $y$ = 3 · $x$ − 2, II: 2 · $x$ + $y$ = 13. Welches Verfahren geht am schnellsten?"
@@ -116,9 +110,6 @@ blocks:
             correct: false
             info: "Rechnen geht immer. Zeichnen ist nur so genau, wie du den Graphen lesen kannst."
         explanation: "Ist eine Gleichung schon nach $y$ aufgelöst, ist Einsetzen oder Gleichsetzen der kürzeste Weg."
-        links:
-          - title: "Lernlandkarte: Lineare Gleichungssysteme: rechnerisch"
-            url: https://lernapps.net/apps/map/mathematik/c/lgs-rechnerisch/
       - type: text
         text: |
           **Das kannst du jetzt:** Du löst Gleichungssysteme grafisch und rechnerisch mit den drei Verfahren, wählst ein passendes aus und deutest die

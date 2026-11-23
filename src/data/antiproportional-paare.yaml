@@ -1,0 +1,9 @@
+# Antiproportional: x1 · y1 = c = x2 · y2. y1 ist durch x1 teilbar (die Fehlrechnung "wie proportional" bleibt ganzzahlig).
+- { x1: 2, y1: 6, c: 12, x2: 3, y2: 4 }
+- { x1: 3, y1: 12, c: 36, x2: 4, y2: 9 }
+- { x1: 4, y1: 6, c: 24, x2: 8, y2: 3 }
+- { x1: 4, y1: 8, c: 32, x2: 2, y2: 16 }
+- { x1: 2, y1: 10, c: 20, x2: 4, y2: 5 }
+- { x1: 3, y1: 9, c: 27, x2: 9, y2: 3 }
+- { x1: 5, y1: 10, c: 50, x2: 2, y2: 25 }
+- { x1: 6, y1: 4, c: 24, x2: 3, y2: 8 }

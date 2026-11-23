@@ -296,8 +296,8 @@ vergleicht Tarife (Handyvertrag, Taxi, Schwimmbad-Eintritt); die Schlussseite K5
       Creator: Orchestrator in Vertretung: Musterseite angenommen, übrige Seiten dürfen folgen; Änderungen nach Prüferlauf als nicht erneut geprüft eintragen
 - [x] Kapitel 1: Komponente Kurztest, Recap-Seite, dreisatz-pfeile, dreisatz-ueber-eins (Pfeiltabelle, generated mit Mistakes).
 - [x] Kapitel 1: massstab-rechnen, massstab-zeichnung (SVG-Plan mit Maßstabsleiste), Rückblick.
-- [ ] Kapitel 2: Recap Koordinatensystem, zuordnungen-darstellen.
-- [ ] Kapitel 2: proportional-rechnen, antiproportional (Rechtecke gleicher Fläche), proportional-oder-anti, Rückblick.
+- [x] Kapitel 2: Recap Koordinatensystem, zuordnungen-darstellen.
+- [x] Kapitel 2: proportional-rechnen, antiproportional (Rechtecke gleicher Fläche), proportional-oder-anti, Rückblick.
 - [ ] Kapitel 3: funktion-begriff, keine-funktion.
 - [ ] Kapitel 3: vier-quadranten, situation-tabelle-graph (Füllgraphen als SVG), graph-term-wechseln, Rückblick.
 - [ ] Kapitel 4: Recap lineare Gleichungen, m-und-b, steigung-deuten.

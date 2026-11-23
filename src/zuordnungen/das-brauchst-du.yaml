@@ -1,0 +1,83 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Das brauchst du hier
+description: "Das Koordinatensystem aus der Grundschule und Klasse 5-6: Achsen, Koordinaten, Punkte ablesen und eintragen."
+recap: [mathematik/koordinatensystem]
+blocks:
+  - type: section
+    id: einstieg
+    title: Das brauchst du für dieses Kapitel
+    blocks:
+      - type: text
+        text: |
+          Die Klasse vergleicht Tarife für die Klassenfahrt. Dafür zeichnest du bald Graphen. Dazu musst du Punkte im
+          Koordinatensystem ablesen und eintragen können. Hier ein kurzer Test dazu.
+  - type: section
+    id: koordinatensystem
+    title: Koordinatensystem
+    blocks:
+      - type: text
+        text: |
+          Ich kann Punkte und Figuren im Koordinatensystem eintragen und ablesen.
+      - type: definition
+        term: Koordinaten
+        explanation: "Die Koordinaten eines Punktes sind zwei Zahlen. Die erste sagt, wie weit der Punkt nach rechts liegt (x-Wert), die zweite, wie weit nach oben (y-Wert). Beispiel: Der Punkt (3|2) liegt 3 nach rechts und 2 nach oben."
+      - type: definition
+        term: Achse
+        explanation: "Die x-Achse läuft waagerecht, die y-Achse senkrecht. Sie schneiden sich im Ursprung (0|0). Auf jeder Achse stehen Zahlen in gleichen Abständen."
+      - type: vue-component
+        id: test-punkt
+        component: Kurztest
+        props:
+          question: "Wo liegt der Punkt (4|1)?"
+          options:
+            - {
+                text: "1 nach rechts, 4 nach oben",
+                correct: false,
+                info: "Du hast die Reihenfolge vertauscht. Die erste Zahl gehört zur x-Achse, also zuerst nach rechts.",
+              }
+            - {
+                text: "4 nach rechts, 1 nach oben",
+                correct: true,
+                info: "Erst der x-Wert (nach rechts), dann der y-Wert (nach oben).",
+              }
+            - {
+                text: "4 nach oben, 1 nach links",
+                correct: false,
+                info: "Nach links geht es erst bei negativen x-Werten. Die erste Zahl 4 gibt den Weg nach rechts an.",
+              }
+          right: "Richtig."
+          wrong: "Nicht richtig."
+        nojs: |
+          Kurztest: Wo liegt der Punkt (4|1)? Antwort: 4 nach rechts und 1 nach oben, denn erst kommt der x-Wert, dann der y-Wert.
+      - type: vue-component
+        id: test-ursprung
+        component: Kurztest
+        props:
+          question: "Welche Koordinaten hat der Ursprung?"
+          options:
+            - {
+                text: "(1|1)",
+                correct: false,
+                info: "Das ist der Punkt eine Einheit rechts und eine nach oben. Der Ursprung liegt dort, wo die Achsen sich schneiden: bei 0.",
+              }
+            - {
+                text: "(0|1)",
+                correct: false,
+                info: "Der Punkt liegt auf der y-Achse, einen Schritt über dem Ursprung.",
+              }
+            - { text: "(0|0)", correct: true, info: "Der Ursprung ist der Schnittpunkt der Achsen: x = 0 und y = 0." }
+          right: "Richtig."
+          wrong: "Nicht richtig."
+        nojs: |
+          Kurztest: Welche Koordinaten hat der Ursprung? Antwort: (0|0), der Schnittpunkt der beiden Achsen.
+      - type: text
+        text: "Wenn das nicht klappt: Wiederhole den Baustein „Koordinatensystem“ auf der Lernlandkarte: [Kartenseite](https://lernapps.net/apps/map/mathematik/c/koordinatensystem/)."
+  - type: section
+    id: bereit
+    title: Du bist bereit, wenn du …
+    blocks:
+      - type: text
+        text: |
+          - die Koordinaten eines Punktes angeben kannst (erst x, dann y),
+          - einen Punkt mit gegebenen Koordinaten einträgst,
+          - weißt, was die Achsen und der Ursprung sind.

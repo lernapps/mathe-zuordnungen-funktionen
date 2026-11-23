@@ -1,0 +1,151 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Mit dem Proportionalitätsfaktor rechnen
+description: "Du bestimmst den Proportionalitätsfaktor k und rechnest damit Werte einer proportionalen Zuordnung aus."
+competencies: [proportionale-zuordnungen]
+blocks:
+  - type: section
+    id: einstieg
+    title: Der Minutenpreis als Faktor
+    blocks:
+      - type: text
+        text: |
+          Bei Jonas' Handytarif gehört zu jeder Minute der gleiche Preis. Dieser Preis ist ein fester Faktor. Nach dieser Seite
+          berechnest du ihn und rechnest damit. Stelle den Regler auf k = 2 und schau in die Tabelle: Was ergibt y geteilt durch x?
+      - type: vue-component
+        id: faktor-regler
+        component: Dreifachansicht
+        props:
+          kind: proportional
+          xLabel: Minuten (min)
+          yLabel: Kosten (€)
+          xUnit: min
+          yUnit: €
+          xs: [1, 2, 3, 4]
+          xMin: 0
+          xMax: 5
+          yMin: 0
+          yMax: 10
+          tickX: 1
+          tickY: 1
+          a: 1
+          aMin: 0.5
+          aMax: 2
+          aStep: 0.5
+          aName: k (Preis pro Minute in €)
+        nojs: |
+          Für k = 2 gehören zu 1, 2, 3, 4 Minuten die Kosten 2 €, 4 €, 6 €, 8 €. In jeder Spalte ist y geteilt durch x gleich 2. Für
+          k = 1 sind es 1 €, 2 €, 3 €, 4 €: y geteilt durch x ist 1.
+  - type: section
+    id: erklaerung
+    title: Faktor und Gleichung
+    blocks:
+      - type: definition
+        term: Proportionalitätsfaktor
+        explanation: "Der Proportionalitätsfaktor k ist der gleiche Quotient y : x einer proportionalen Zuordnung. Beispiel: 3 Minuten kosten 6 €, also k = 6 : 3 = 2 € je Minute."
+      - type: formula
+        formula: 'k = y : x \qquad y = k \cdot x'
+      - type: text
+        text: |
+          Mit k berechnest du jeden Wert: y = k · x. Willst du x ausrechnen, teilst du: x = y : k. Du brauchst nur **ein** Paar, um k zu
+          finden.
+      - type: note
+        title: Merke
+        blocks:
+          - type: text
+            text: |
+              k ist y : x, nicht x : y. Die Einheit von k ist Einheit von y pro Einheit von x, hier € je Minute.
+  - type: section
+    id: beispiel
+    title: Beispiel
+    blocks:
+      - type: example
+        title: Eiskugeln
+        blocks:
+          - type: text
+            text: Der Preis für Eis ist proportional zur Zahl der Kugeln. 4 Kugeln kosten 6 €. Was kosten 10 Kugeln?
+          - type: text
+            text: "Faktor: $k = 6 : 4 = 1{,}5$ € je Kugel. Dann $y = 1{,}5 \\cdot 10 = 15$. 10 Kugeln kosten 15 €."
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: generated
+        id: faktor-bestimmen
+        given:
+          e: { pick: 1, from: { data: proportional-paare } }
+        task:
+          text: "Eine proportionale Zuordnung hat das Paar x = {{e.x1}} und y = {{e.y1}}. Wie groß ist der Proportionalitätsfaktor k?"
+        answer: { value: "e.k", compare: { number: { format: integer } } }
+        mistakes:
+          - value: "e.y1 - e.x1"
+            message: "Du hast subtrahiert. Der Faktor ist der Quotient: y geteilt durch x."
+          - value: "e.y1 + e.x1"
+            message: "Du hast addiert. Der Faktor ist der Quotient: y geteilt durch x."
+        hint: "k = y : x. Teile den y-Wert durch den x-Wert."
+        steps:
+          - "k = y : x = {{e.y1}} : {{e.x1}} = {{answer}}."
+      - type: generated
+        id: wert-mit-faktor
+        given:
+          k: { int: [3, 9] }
+          x: { int: [3, 9] }
+        task:
+          text: "Eine Minute telefonieren kostet {{k}} ct. Wie viele Cent kosten {{x}} Minuten?"
+        answer: { value: "k * x", compare: { number: { format: integer, unit: ct } } }
+        mistakes:
+          - value: "k + x"
+            message: "Du hast addiert. Der Preis pro Minute ist der Faktor: y = k · x."
+        hint: "y = k · x. Nimm den Minutenpreis mal die Minuten."
+        steps:
+          - "y = k · x = {{k}} · {{x}} = {{answer}} ct."
+      - type: number
+        id: eis-zehn
+        text: "Der Preis für Eis ist proportional zur Zahl der Kugeln. 4 Kugeln kosten 6 €. Was kosten 8 Kugeln?"
+        answer: 12
+        tolerance: 0
+        unit: €
+        mistakes:
+          - answer: 10
+            message: "Du hast 4 addiert, weil 8 − 4 = 4. Bei proportional wird mit dem Faktor k = 1,5 malgenommen."
+          - answer: 48
+            message: "Du hast 6 mal 8 gerechnet. Der Faktor ist 6 : 4 = 1,5, nicht der Preis selbst."
+        explanation: "Von 4 auf 8 Kugeln ist mal 2, also $6 \\cdot 2 = 12$. Mit dem Faktor: $1{,}5 \\cdot 8 = 12$."
+        links:
+          - title: "Lernlandkarte: Proportionale Zuordnungen"
+            url: https://lernapps.net/apps/map/mathematik/c/proportionale-zuordnungen/
+      - type: number
+        id: minuten-aus-preis
+        text: "Eine Minute kostet 3 ct. Wie viele Minuten kannst du für 27 ct telefonieren?"
+        answer: 9
+        tolerance: 0
+        unit: Minuten
+        mistakes:
+          - answer: 81
+            message: "Du hast malgenommen. Gesucht ist x: x = y : k, also 27 geteilt durch 3."
+          - answer: 24
+            message: "Du hast 3 abgezogen. Teile 27 ct durch den Preis pro Minute."
+        explanation: "$x = y : k = 27 : 3 = 9$ Minuten."
+        links:
+          - title: "Lernlandkarte: Proportionale Zuordnungen"
+            url: https://lernapps.net/apps/map/mathematik/c/proportionale-zuordnungen/
+      - type: single-choice
+        id: term-zur-tabelle
+        text: "Die Tabelle: x = 2, 4, 6 und y = 10, 20, 30. Welcher Term gehört zur proportionalen Zuordnung?"
+        options:
+          - text: "y = x + 8"
+            correct: false
+            info: "Für x = 2 ergibt das 10, für x = 4 aber 12 und nicht 20."
+          - text: "y = 5 · x"
+            correct: true
+            info: "k = 10 : 2 = 5. Für x = 4 gilt 5 · 4 = 20, für x = 6 gilt 5 · 6 = 30."
+          - text: "y = 10 · x"
+            correct: false
+            info: "Das wäre für x = 2 schon 20, nicht 10. k ist y : x = 10 : 2 = 5."
+        explanation: "Aus einem Paar bestimmst du k = y : x und prüfst es an den anderen Paaren."
+        links:
+          - title: "Lernlandkarte: Proportionale Zuordnungen"
+            url: https://lernapps.net/apps/map/mathematik/c/proportionale-zuordnungen/
+      - type: text
+        text: |
+          **Das kannst du jetzt:** Du bestimmst den Proportionalitätsfaktor k = y : x und rechnest damit y = k · x und x = y : k.
+          Als Nächstes lernst du die Zuordnung kennen, bei der das Produkt gleich bleibt.

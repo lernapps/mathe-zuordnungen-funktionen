@@ -1,0 +1,177 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Proportional oder antiproportional?
+description: "Du unterscheidest proportionale und antiproportionale Zuordnungen an Tabelle, Quotient, Produkt und Graph."
+competencies: [antiproportionale-zuordnungen]
+blocks:
+  - type: section
+    id: einstieg
+    title: Zwei Graphen im Vergleich
+    blocks:
+      - type: text
+        text: |
+          Die Klasse hat zwei Zuordnungen. Links: Zahl der Karten und Preis (2 € je Karte). Rechts: Zahl der Pumpen und Zeit für ein
+          Becken. Beide werden mit mehr x anders. Schau dir die Graphen an: Was ist gleich, was anders?
+      - type: vue-component
+        id: graph-proportional
+        component: Dreifachansicht
+        props:
+          kind: proportional
+          xLabel: Karten
+          yLabel: Preis (€)
+          xUnit: Karten
+          yUnit: €
+          xs: [1, 2, 3, 4]
+          xMin: 0
+          xMax: 6
+          yMin: 0
+          yMax: 12
+          tickX: 1
+          tickY: 2
+          a: 2
+          aMin: 2
+          aMax: 2
+          aStep: 1
+          aName: k
+          fixed: true
+          hideTerm: true
+        nojs: |
+          Proportional: 1, 2, 3, 4 Karten kosten 2 €, 4 €, 6 €, 8 €. Der Graph ist eine steigende Gerade durch den Ursprung.
+      - type: vue-component
+        id: graph-antiproportional
+        component: Dreifachansicht
+        props:
+          kind: antiproportional
+          xLabel: Pumpen
+          yLabel: Zeit (h)
+          xUnit: Pumpen
+          yUnit: h
+          xs: [1, 2, 3, 4]
+          xMin: 0
+          xMax: 6
+          yMin: 0
+          yMax: 12
+          tickX: 1
+          tickY: 2
+          a: 12
+          aMin: 12
+          aMax: 12
+          aStep: 1
+          aName: c
+          fixed: true
+          hideTerm: true
+        nojs: |
+          Antiproportional: 1, 2, 3, 4 Pumpen brauchen 12 h, 6 h, 4 h, 3 h. Der Graph ist eine fallende Kurve, die den Achsen nahe kommt.
+  - type: section
+    id: erklaerung
+    title: Quotient oder Produkt
+    blocks:
+      - type: table
+        caption: Proportional und antiproportional im Vergleich
+        header: ["Merkmal", "proportional", "antiproportional"]
+        rowHeaders: true
+        rows:
+          - ["Doppeltes x", "Doppeltes y", "Halbes y"]
+          - ["Gleich bleibt", "y : x", "x · y"]
+          - ["Graph", "Gerade durch den Ursprung", "fallende Kurve"]
+      - type: text
+        text: |
+          Prüfe so: Rechne in der Tabelle in jeder Spalte y : x und x · y. Bleibt der Quotient gleich, ist es proportional. Bleibt das
+          Produkt gleich, ist es antiproportional. Bleibt keins von beiden gleich, ist es keins von beiden.
+      - type: note
+        title: Merke
+        blocks:
+          - type: text
+            text: |
+              Beides kann „je mehr, desto …“ lauten. Entscheidend ist nicht die Richtung, sondern was gleich bleibt.
+  - type: section
+    id: beispiel
+    title: Beispiel
+    blocks:
+      - type: example
+        title: Drei Tabellen prüfen
+        blocks:
+          - type: table
+            caption: x und y in drei Zuordnungen
+            rowHeaders: true
+            rows:
+              - ["A: x", "2", "3", "6"]
+              - ["A: y", "4", "6", "12"]
+              - ["B: x", "2", "3", "6"]
+              - ["B: y", "6", "4", "2"]
+              - ["C: x", "2", "3", "6"]
+              - ["C: y", "4", "5", "9"]
+          - type: text
+            text: "A: $y : x$ ist immer 2, also proportional. B: $x \\cdot y$ ist immer 12, also antiproportional. C: $y : x$ ist 2; 1,67; 1,5 und $x \\cdot y$ ist 8; 15; 54, also keins von beiden."
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: matching
+        id: situation-art
+        text: "Ordne jeder Situation zu, was gleich bleibt."
+        pairs:
+          - left: "Anzahl gleich teurer Hefte und Gesamtpreis"
+            right: "y : x ist immer gleich (proportional)"
+          - left: "Anzahl Arbeiter und Tage für dieselbe Arbeit"
+            right: "x · y ist immer gleich (antiproportional)"
+          - left: "Alter eines Kindes und seine Körpergröße"
+            right: "weder y : x noch x · y bleibt gleich"
+        explanation: "Hefte: doppelt so viele, doppelt so teuer. Arbeiter: doppelt so viele, halb so viele Tage. Alter und Größe folgen keiner dieser Regeln."
+        links:
+          - title: "Lernlandkarte: Antiproportionale Zuordnungen"
+            url: https://lernapps.net/apps/map/mathematik/c/antiproportionale-zuordnungen/
+      - type: single-choice
+        id: tabelle-pruefen
+        text: "Die Tabelle: x = 2, 4, 8 und y = 12, 6, 3. Welche Zuordnung liegt vor?"
+        options:
+          - text: "proportional"
+            correct: false
+            info: "Dann müsste y mit x wachsen. Hier wird y kleiner: 12, 6, 3."
+          - text: "antiproportional"
+            correct: true
+            info: "Das Produkt ist immer 24: 2 · 12, 4 · 6, 8 · 3."
+          - text: "weder noch"
+            correct: false
+            info: "Das Produkt x · y ist in jeder Spalte 24, also gibt es eine feste Regel."
+        explanation: "Prüfe Quotient und Produkt in jeder Spalte."
+        links:
+          - title: "Lernlandkarte: Antiproportionale Zuordnungen"
+            url: https://lernapps.net/apps/map/mathematik/c/antiproportionale-zuordnungen/
+      - type: multiple-choice
+        id: welche-anti
+        text: "Welche Zuordnungen sind antiproportional? Wähle alle richtigen."
+        options:
+          - text: "Anzahl Pumpen → Zeit, um ein Becken zu füllen"
+            correct: true
+            info: "Doppelt so viele Pumpen brauchen halb so lange: Pumpen mal Zeit bleibt gleich."
+          - text: "Zahl der Kugeln Eis → Preis"
+            correct: false
+            info: "Mehr Kugeln, mehr Preis, und y : x bleibt gleich: proportional."
+          - text: "Geschwindigkeit → Fahrzeit für 60 km"
+            correct: true
+            info: "Doppelt so schnell, halb so lange. Geschwindigkeit mal Zeit ist immer 60."
+          - text: "Taxi: Strecke → Preis mit Grundpreis"
+            correct: false
+            info: "Mit der Strecke steigt der Preis, und der Grundpreis stört den gleichen Quotienten. Keins von beiden."
+        explanation: "Antiproportional ist nur, wenn das Produkt gleich bleibt."
+        links:
+          - title: "Lernlandkarte: Antiproportionale Zuordnungen"
+            url: https://lernapps.net/apps/map/mathematik/c/antiproportionale-zuordnungen/
+      - type: number
+        id: anti-oder-proportional-wert
+        text: "Ein Zusammenhang ist antiproportional. Zu x = 4 gehört y = 15. Welches y gehört zu x = 6?"
+        answer: 10
+        tolerance: 0
+        mistakes:
+          - answer: 22.5
+            message: "Du hast wie bei proportional gerechnet (mal 6 : 4). Bei antiproportional bleibt das Produkt gleich: 4 · 15 = 60, dann 60 : 6."
+          - answer: 17
+            message: "Du hast 2 addiert. Rechne das Produkt aus und teile es durch den neuen x-Wert."
+        explanation: "Das Produkt ist $4 \\cdot 15 = 60$. Dann $y = 60 : 6 = 10$."
+        links:
+          - title: "Lernlandkarte: Antiproportionale Zuordnungen"
+            url: https://lernapps.net/apps/map/mathematik/c/antiproportionale-zuordnungen/
+      - type: text
+        text: |
+          **Das kannst du jetzt:** Du stellst Zuordnungen in Tabelle und Graph dar und erkennst, ob sie proportional (Quotient gleich),
+          antiproportional (Produkt gleich) oder keins von beiden sind. Im nächsten Kapitel fragst du, was eine Funktion ist.

@@ -36,6 +36,12 @@ const props = defineProps<{
   /** The names of the sliders, e.g. "k", "m", "b". */
   aName: string;
   bName?: string;
+  /** No sliders: the view shows one fixed relation. */
+  fixed?: boolean;
+  /** No term line, for a page that does not name the term yet. */
+  hideTerm?: boolean;
+  /** Only the points of the table in the graph, no line between them (values that exist only at the table's x). */
+  pointsOnly?: boolean;
 }>();
 
 const a = ref(props.a);
@@ -43,7 +49,13 @@ const b = ref(props.b ?? 0);
 const p = computed<Params>(() => ({ kind: props.kind, a: a.value, b: b.value }));
 
 const rows = computed(() => table(p.value, props.xs));
-const words = computed(() => describe(p.value, props.xUnit, props.yUnit));
+const words = computed(() =>
+  props.hideTerm
+    ? props.pointsOnly
+      ? "Der Graph zeigt nur die Punkte der Tabelle."
+      : "Der Graph zeigt die Punkte der Tabelle und eine Linie durch sie."
+    : describe(p.value, props.xUnit, props.yUnit),
+);
 
 const W = 320;
 const H = 240;
@@ -82,11 +94,11 @@ const showB = computed(() => props.kind === "linear" && props.bName !== undefine
 
 <template>
   <div class="dreifach">
-    <p class="dreifach-term" aria-live="polite">
+    <p v-if="!hideTerm" class="dreifach-term" aria-live="polite">
       <span class="dreifach-title">Term:</span> <strong>{{ term(p) }}</strong>
     </p>
 
-    <div class="dreifach-sliders">
+    <div v-if="!fixed" class="dreifach-sliders">
       <label class="dreifach-slider">
         <span>{{ aName }} = {{ format(a) }}</span>
         <input
@@ -159,7 +171,7 @@ const showB = computed(() => props.kind === "linear" && props.bName !== undefine
         <text :x="W - padR" :y="H - 4" text-anchor="end">{{ xLabel }}</text>
         <text :x="padL - 30" :y="padT - 12">{{ yLabel }}</text>
       </g>
-      <polyline v-if="line" class="dreifach-line" :points="line" fill="none" />
+      <polyline v-if="line && !pointsOnly" class="dreifach-line" :points="line" fill="none" />
       <circle v-for="(d, i) in dots" :key="i" class="dreifach-dot" :cx="d.cx" :cy="d.cy" r="4" />
     </svg>
 

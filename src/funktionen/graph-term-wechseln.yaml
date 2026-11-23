@@ -143,4 +143,4 @@ blocks:
       - type: text
         text: |
           **Das kannst du jetzt:** Du wechselst zwischen Gleichung, Wertetabelle und Graph und prüfst Punkte. Als Nächstes verstellst du in
-          Kapitel 4 eine Gerade mit zwei Reglern, m und b.
+          Kapitel 4 eine Gerade mit zwei Reglern, m und $b$.

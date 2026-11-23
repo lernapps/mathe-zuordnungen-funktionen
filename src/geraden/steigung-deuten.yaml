@@ -10,7 +10,7 @@ blocks:
       - type: text
         text: |
           Der Handyvertrag von Jonas ist eine Gerade: Sie steigt von links unten nach rechts oben. Wie steil, sagt die Steigung $m$. Nach dieser Seite liest du
-          m mit einem **Steigungsdreieck** aus dem Graphen und sagst, was m bedeutet.
+          $m$ mit einem **Steigungsdreieck** aus dem Graphen und sagst, was $m$ bedeutet.
       - type: figure
         image: images/steigungsdreieck.svg
         alt: "Koordinatensystem mit einer steigenden Geraden. Ein gestricheltes Dreieck liegt an der Geraden: zwei Einheiten nach rechts, vier nach oben."
@@ -32,7 +32,7 @@ blocks:
         blocks:
           - type: text
             text: |
-              Geht die Gerade nach rechts **nach unten**, ist $\Delta y$ negativ und m negativ. In Sachaufgaben sagt m, wie sich $y$ **pro Einheit von $x$**
+              Geht die Gerade nach rechts **nach unten**, ist $\Delta y$ negativ und $m$ negativ. In Sachaufgaben sagt $m$, wie sich $y$ **pro Einheit von $x$**
               ändert, zum Beispiel Liter pro Minute.
   - type: section
     id: beispiel
@@ -96,18 +96,18 @@ blocks:
         options:
           - text: "Das Becken verliert 3 Liter pro Minute."
             correct: true
-            info: "Negatives m heißt: $y$ wird kleiner, hier der Wasserstand."
+            info: "Negatives $m$ heißt: $y$ wird kleiner, hier der Wasserstand."
           - text: "Das Becken füllt sich mit 3 Litern pro Minute."
             correct: false
-            info: "Beim Füllen wäre m positiv. Das Minus heißt: Es geht abwärts."
+            info: "Beim Füllen wäre $m$ positiv. Das Minus heißt: Es geht abwärts."
           - text: "Das Becken hat anfangs 3 Liter."
             correct: false
             info: "Die Anfangsmenge ist der $y$-Achsenabschnitt $b$, nicht die Steigung $m$."
-        explanation: "m sagt, wie $y$ sich pro Einheit von $x$ ändert, mit Vorzeichen."
+        explanation: "$m$ sagt, wie $y$ sich pro Einheit von $x$ ändert, mit Vorzeichen."
         links:
           - title: "Lernlandkarte: Lineare Funktionen"
             url: https://lernapps.net/apps/map/mathematik/c/lineare-funktionen/
       - type: text
         text: |
-          **Das kannst du jetzt:** Du bestimmst die Steigung mit dem Steigungsdreieck und deutest m im Sachzusammenhang. Als Nächstes stellst du
+          **Das kannst du jetzt:** Du bestimmst die Steigung mit dem Steigungsdreieck und deutest $m$ im Sachzusammenhang. Als Nächstes stellst du
           selbst Geradengleichungen auf.

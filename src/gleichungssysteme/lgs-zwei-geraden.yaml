@@ -134,7 +134,7 @@ blocks:
             url: https://lernapps.net/apps/map/mathematik/c/lineare-gleichungssysteme/
       - type: single-choice
         id: wann-b-teurer
-        text: "Tarif A: $y$ = $x$ + 6, Tarif B: $y$ = 2 · $x$ + 2. Ab wie vielen Stunden ist B teurer als A?"
+        text: "Tarif A: $y$ = $x$ + 6, Tarif B: $y$ = 2 · $x$ + 2. Wann ist B teurer als A?"
         options:
           - text: "wenn sie länger als 4 Stunden telefonieren"
             correct: true

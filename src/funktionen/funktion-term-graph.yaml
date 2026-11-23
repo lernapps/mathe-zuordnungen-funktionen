@@ -116,7 +116,7 @@ blocks:
             info: "Kleinster Preis bei 0 km: 3 €. Größter bei 6 km: 2 · 6 + 3 = 15 €."
           - text: "alle Preise von 0 € bis 6 €"
             correct: false
-            info: "0 bis 6 sind die Strecken in km, also die x-Werte. Der Preis geht erst bei 3 € los, wegen des Grundpreises."
+            info: "0 bis 6 sind die Strecken in km, also die $x$-Werte. Der Preis geht erst bei 3 € los, wegen des Grundpreises."
           - text: "alle Preise von 0 € bis 15 €"
             correct: false
             info: "Kein Preis ist kleiner als 3 €, der Grundpreis wird immer bezahlt."

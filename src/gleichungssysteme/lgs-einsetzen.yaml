@@ -27,7 +27,7 @@ blocks:
         blocks:
           - type: text
             text: |
-              Setze den Term immer in **Klammern** ein. Bei 3 · $x$ + (2 · $x$ + 1) steht alles in der Klammer, was für y steht, auch das Plus. Ohne Klammer kommt es zu
+              Setze den Term immer in **Klammern** ein. Bei 3 · $x$ + (2 · $x$ + 1) steht alles in der Klammer, was für $y$ steht, auch das Plus. Ohne Klammer kommt es zu
               Vorzeichenfehlern, vor allem bei einem Minus.
   - type: section
     id: beispiel

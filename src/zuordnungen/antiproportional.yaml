@@ -58,7 +58,7 @@ blocks:
         blocks:
           - type: text
             text: |
-              „Je mehr, desto weniger“ reicht nicht. Je mehr 5-€-Gutscheine du einlöst, desto weniger bleibt zu zahlen ($y$ = 40 − 5 · $x$). Das Produkt
+              „Je mehr, desto weniger“ reicht nicht. Bei einem Preis von 40 € bleibt nach $x$ Gutscheinen zu 5 € noch $y$ = 40 − 5 · $x$ zu zahlen. Das Produkt
               bleibt dabei nicht gleich. Prüfe immer, ob $x$ · $y$ gleich bleibt.
   - type: section
     id: beispiel

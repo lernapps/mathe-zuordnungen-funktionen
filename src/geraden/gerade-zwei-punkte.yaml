@@ -41,7 +41,7 @@ blocks:
             - { x: 2, y: 7, name: A }
             - { x: 5, y: 13, name: B }
         nojs: |
-          Die Punkte A (2|7) und B (5|13) sind markiert. Mit den Reglern m und $b$ wird die Gerade $y$ = $m$ · $x$ + $b$ so verschoben und gedreht, dass sie
+          Die Punkte A (2|7) und B (5|13) sind markiert. Mit den Reglern $m$ und $b$ wird die Gerade $y$ = $m$ · $x$ + $b$ so verschoben und gedreht, dass sie
           durch beide Punkte geht. Zu Beginn ist $m$ = 1 und $b$ = 0: Für $x$ = 0, 2, 4 ist $y$ = 0, 2, 4. Die Tabelle ändert sich mit den Reglern.
   - type: section
     id: erklaerung
@@ -53,7 +53,7 @@ blocks:
       - type: text
         text: |
           **Schritt 1, die Steigung:** $m$ = ($y_2$ − $y_1$) : ($x_2$ − $x_1$), das ist das Steigungsdreieck von A nach B. **Schritt 2, der Achsenabschnitt:**
-          Setze einen der Punkte und m in $y$ = $m$ · $x$ + $b$ ein und löse nach $b$ auf.
+          Setze einen der Punkte und $m$ in $y$ = $m$ · $x$ + $b$ ein und löse nach $b$ auf.
       - type: formula
         formula: 'm = \frac{y_2 - y_1}{x_2 - x_1} \qquad b = y_1 - m \cdot x_1'
       - type: note
@@ -61,7 +61,7 @@ blocks:
         blocks:
           - type: text
             text: |
-              Zuerst m, dann $b$. Zum Schluss die **Probe** mit dem anderen Punkt: Setze B ein. Stimmt es, ist die Gleichung richtig.
+              Zuerst $m$, dann $b$. Zum Schluss die **Probe** mit dem anderen Punkt: Setze B ein. Stimmt es, ist die Gleichung richtig.
   - type: section
     id: beispiel
     title: Beispiel
@@ -103,7 +103,7 @@ blocks:
             message: "Du hast nur m abgezogen. Setze A ein: y₁ = m · x₁ + b, also b = y₁ − m · x₁. Dabei x₁ = {{e.x1}} nicht vergessen."
         hint: "Berechne zuerst m. Dann b = y₁ − m · x₁."
         steps:
-          - "Erst m aus beiden Punkten."
+          - "Erst $m$ aus beiden Punkten."
           - "$b$ = {{e.y1}} − $m$ · {{e.x1}}."
       - type: number
         id: preis-zehn-km
@@ -133,7 +133,7 @@ blocks:
           - text: "y = 6 · x − 2"
             correct: false
             info: "6 ist $\\Delta y$, nicht die Steigung. Teile durch $\\Delta x$ = 2: $m$ = 3."
-        explanation: "Erst m aus dem Steigungsdreieck, dann $b$ durch Einsetzen eines Punktes."
+        explanation: "Erst $m$ aus dem Steigungsdreieck, dann $b$ durch Einsetzen eines Punktes."
         links:
           - title: "Lernlandkarte: Geradengleichungen"
             url: https://lernapps.net/apps/map/mathematik/c/geradengleichungen/

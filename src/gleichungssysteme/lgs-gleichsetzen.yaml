@@ -11,7 +11,7 @@ blocks:
         text: |
           Aus dem Graphen hast du für Tarif A ($y$ = $x$ + 6) und Tarif B ($y$ = 2 · $x$ + 2) den Schnittpunkt abgelesen. Das war nur so genau, wie du den
           Graphen lesen kannst. Jetzt berechnest du ihn. Beide Gleichungen sind schon nach $y$ aufgelöst. Dann müssen die rechten Seiten gleich
-          sein, wenn die Kosten gleich sind. Für A und B: x + 6 = 2 · x + 2.
+          sein, wenn die Kosten gleich sind. Für A und B: $x$ + 6 = 2 · $x$ + 2.
   - type: section
     id: erklaerung
     title: Gleichsetzen in drei Schritten

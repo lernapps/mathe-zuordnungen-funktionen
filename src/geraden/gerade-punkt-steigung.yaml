@@ -113,8 +113,8 @@ blocks:
             info: "9 ist der $y$-Wert von P, nicht der Achsenabschnitt. Probe mit P: 3 · 2 + 9 = 15."
           - text: "y = 9 · x + 3"
             correct: false
-            info: "Die Steigung ist 3, nicht 9. m und $b$ sind vertauscht."
-        explanation: "Setze P und m ein und löse nach $b$ auf."
+            info: "Die Steigung ist 3, nicht 9. $m$ und $b$ sind vertauscht."
+        explanation: "Setze P und $m$ ein und löse nach $b$ auf."
         links:
           - title: "Lernlandkarte: Geradengleichungen"
             url: https://lernapps.net/apps/map/mathematik/c/geradengleichungen/

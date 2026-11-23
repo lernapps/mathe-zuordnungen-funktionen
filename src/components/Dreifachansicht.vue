@@ -46,19 +46,42 @@ const props = defineProps<{
   pointsOnly?: boolean;
   /** Given points to show in the graph with their names, e.g. the two points a line must pass through. */
   marks?: { x: number; y: number; name: string }[];
+  /** A second line (kind linear only): start values, limits and names of its sliders, shown unless the view is fixed. */
+  a2?: number;
+  a2Min?: number;
+  a2Max?: number;
+  a2Step?: number;
+  b2?: number;
+  b2Min?: number;
+  b2Max?: number;
+  b2Step?: number;
+  a2Name?: string;
+  b2Name?: string;
+  /** The names of the two lines, e.g. "Tarif A" and "Tarif B". */
+  lineName?: string;
+  line2Name?: string;
 }>();
 
 const a = ref(props.a);
 const b = ref(props.b ?? 0);
 const p = computed<Params>(() => ({ kind: props.kind, a: a.value, b: b.value }));
+const two = computed(() => props.kind === "linear" && props.a2 !== undefined && props.b2 !== undefined);
+const a2 = ref(props.a2 ?? 0);
+const b2 = ref(props.b2 ?? 0);
+const p2 = computed<Params>(() => ({ kind: "linear", a: a2.value, b: b2.value }));
+const name1 = computed(() => props.lineName ?? "Gerade 1");
+const name2 = computed(() => props.line2Name ?? "Gerade 2");
 
 const rows = computed(() => table(p.value, props.xs));
+const rows2 = computed(() => (two.value ? table(p2.value, props.xs) : []));
 const words = computed(() =>
   props.hideTerm
     ? props.pointsOnly
       ? "Der Graph zeigt nur die Punkte der Tabelle."
       : "Der Graph zeigt die Punkte der Tabelle und eine Linie durch sie."
-    : describe(p.value, props.xUnit, props.yUnit),
+    : two.value
+      ? `${name1.value}: ${describe(p.value, props.xUnit, props.yUnit)} ${name2.value}: ${describe(p2.value, props.xUnit, props.yUnit)}`
+      : describe(p.value, props.xUnit, props.yUnit),
 );
 
 const W = 320;
@@ -85,6 +108,13 @@ const line = computed(() =>
     .map((q) => `${sx(q.x).toFixed(1)},${sy(q.y).toFixed(1)}`)
     .join(" "),
 );
+const line2 = computed(() =>
+  two.value
+    ? visible(p2.value, props.xMin, props.xMax, props.yMin, props.yMax)
+        .map((q) => `${sx(q.x).toFixed(1)},${sy(q.y).toFixed(1)}`)
+        .join(" ")
+    : "",
+);
 const dots = computed(() =>
   rows.value
     .filter((r) => r.y !== undefined && r.y >= props.yMin && r.y <= props.yMax)
@@ -94,16 +124,24 @@ const markList = computed(() => props.marks ?? []);
 const marksText = computed(() =>
   markList.value.length === 0 ? "" : ` Markiert: ${markList.value.map((m) => markName(m)).join(", ")}.`,
 );
+const pointsOf = (list: { x: number; y: number | undefined }[]) =>
+  list.map((r) => `(${format(r.x)}|${r.y === undefined ? "kein Wert" : format(r.y)})`).join(", ");
 const pointsText = computed(() =>
-  rows.value.map((r) => `(${format(r.x)}|${r.y === undefined ? "kein Wert" : format(r.y)})`).join(", "),
+  two.value ? `${name1.value} ${pointsOf(rows.value)}; ${name2.value} ${pointsOf(rows2.value)}` : pointsOf(rows.value),
 );
 const showB = computed(() => props.kind === "linear" && props.bName !== undefined);
+const showB2 = computed(() => two.value && props.b2Name !== undefined);
 </script>
 
 <template>
   <div class="dreifach">
-    <p v-if="!hideTerm" class="dreifach-term" aria-live="polite">
+    <p v-if="!hideTerm && !two" class="dreifach-term" aria-live="polite">
       <span class="dreifach-title">Term:</span> <strong>{{ term(p) }}</strong>
+    </p>
+    <p v-if="!hideTerm && two" class="dreifach-term" aria-live="polite">
+      <span class="dreifach-title">{{ name1 }}:</span> <strong>{{ term(p) }}</strong
+      ><br />
+      <span class="dreifach-title">{{ name2 }}:</span> <strong>{{ term(p2) }}</strong>
     </p>
 
     <div v-if="!fixed" class="dreifach-sliders">
@@ -137,6 +175,36 @@ const showB = computed(() => props.kind === "linear" && props.bName !== undefine
           ><span>{{ format(bMax ?? 5) }}</span></span
         >
       </label>
+      <label v-if="two && a2Name" class="dreifach-slider">
+        <span>{{ a2Name }} = {{ format(a2) }}</span>
+        <input
+          v-model.number="a2"
+          type="range"
+          :min="a2Min ?? -5"
+          :max="a2Max ?? 5"
+          :step="a2Step ?? 1"
+          :aria-valuetext="valueText(a2Name, a2)"
+        />
+        <span class="dreifach-ends"
+          ><span>{{ format(a2Min ?? -5) }}</span
+          ><span>{{ format(a2Max ?? 5) }}</span></span
+        >
+      </label>
+      <label v-if="showB2" class="dreifach-slider">
+        <span>{{ b2Name }} = {{ format(b2) }}</span>
+        <input
+          v-model.number="b2"
+          type="range"
+          :min="b2Min ?? -5"
+          :max="b2Max ?? 5"
+          :step="b2Step ?? 1"
+          :aria-valuetext="valueText(b2Name ?? 'b', b2)"
+        />
+        <span class="dreifach-ends"
+          ><span>{{ format(b2Min ?? -5) }}</span
+          ><span>{{ format(b2Max ?? 5) }}</span></span
+        >
+      </label>
     </div>
 
     <div class="dreifach-scroll" tabindex="0" role="region" aria-label="Tabelle der Werte">
@@ -150,8 +218,12 @@ const showB = computed(() => props.kind === "linear" && props.bName !== undefine
             <td v-for="r in rows" :key="r.x">{{ format(r.x) }}</td>
           </tr>
           <tr>
-            <th scope="row">{{ yLabel }}</th>
+            <th scope="row">{{ two ? `${yLabel}, ${name1}` : yLabel }}</th>
             <td v-for="r in rows" :key="r.x">{{ r.y === undefined ? "–" : format(r.y) }}</td>
+          </tr>
+          <tr v-if="two">
+            <th scope="row">{{ `${yLabel}, ${name2}` }}</th>
+            <td v-for="r in rows2" :key="r.x">{{ r.y === undefined ? "–" : format(r.y) }}</td>
           </tr>
         </tbody>
       </table>
@@ -182,6 +254,7 @@ const showB = computed(() => props.kind === "linear" && props.bName !== undefine
         <text :x="padL - 30" :y="padT - 12">{{ yLabel }}</text>
       </g>
       <polyline v-if="line && !pointsOnly" class="dreifach-line" :points="line" fill="none" />
+      <polyline v-if="line2" class="dreifach-line dreifach-line2" :points="line2" fill="none" />
       <circle v-for="(d, i) in dots" :key="i" class="dreifach-dot" :cx="d.cx" :cy="d.cy" r="4" />
       <g v-for="(m, i) in markList" :key="'m' + i" class="dreifach-mark">
         <line :x1="sx(m.x) - 6" :x2="sx(m.x) + 6" :y1="sy(m.y) - 6" :y2="sy(m.y) + 6" />
@@ -190,6 +263,7 @@ const showB = computed(() => props.kind === "linear" && props.bName !== undefine
       </g>
     </svg>
 
+    <p v-if="two" class="dreifach-legend">Durchgezogen: {{ name1 }}. Gestrichelt: {{ name2 }}.</p>
     <p class="dreifach-words" aria-live="polite">{{ words }}</p>
   </div>
 </template>
@@ -282,6 +356,17 @@ const showB = computed(() => props.kind === "linear" && props.bName !== undefine
 .dreifach-line {
   stroke: var(--page-accent);
   stroke-width: 3;
+}
+
+.dreifach-line2 {
+  stroke: var(--page-text);
+  stroke-dasharray: 8 5;
+}
+
+.dreifach-legend {
+  margin: 0.25rem 0 0;
+  font-size: 0.9rem;
+  color: var(--page-muted);
 }
 
 .dreifach-dot {

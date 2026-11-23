@@ -1,0 +1,7 @@
+# Eintritt: I: 1 Kind und 1 Erwachsener zahlen s €, II: 2 Kinder und 1 Erwachsener zahlen t €. Kinderpreis k = t - s, Erwachsenenpreis e = s - k.
+- { s: 8, t: 11, k: 3, e: 5 }
+- { s: 10, t: 14, k: 4, e: 6 }
+- { s: 7, t: 9, k: 2, e: 5 }
+- { s: 13, t: 18, k: 5, e: 8 }
+- { s: 10, t: 13, k: 3, e: 7 }
+- { s: 9, t: 13, k: 4, e: 5 }

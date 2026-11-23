@@ -1,0 +1,119 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Das Additionsverfahren
+description: "Du löst ein Gleichungssystem rechnerisch, indem du die beiden Gleichungen addierst, damit eine Unbekannte wegfällt."
+competencies: [lgs-rechnerisch]
+blocks:
+  - type: section
+    id: einstieg
+    title: Plus und Minus heben sich auf
+    blocks:
+      - type: text
+        text: |
+          **I:** x + y = 7. **II:** 2 · x − y = 8. In I steht + y, in II steht − y. Was passiert mit dem y, wenn du beide Gleichungen untereinander
+          schreibst und die linken Seiten addierst? Nach dieser Seite nutzt du das, um eine Unbekannte wegfallen zu lassen.
+  - type: section
+    id: erklaerung
+    title: Addieren, damit y verschwindet
+    blocks:
+      - type: definition
+        term: Additionsverfahren
+        explanation: "Beim Additionsverfahren addierst du die beiden Gleichungen so, dass eine Unbekannte wegfällt. Beispiel: (x + y) + (2 · x − y) = 7 + 8 gibt 3 · x = 15."
+      - type: text
+        text: |
+          **Schritt 1:** Beide Gleichungen untereinander schreiben und seitenweise addieren (links mit links, rechts mit rechts). **Schritt 2:** Nach x
+          lösen. **Schritt 3:** x einsetzen und y berechnen. Probe in beiden.
+      - type: note
+        title: Merke
+        blocks:
+          - type: text
+            text: |
+              Fällt keine Unbekannte weg, multiplizierst du eine Gleichung vorher mit einer Zahl. Aber **ganz**: beide Seiten, sonst stimmt die
+              Gleichung nicht mehr.
+  - type: section
+    id: beispiel
+    title: Beispiel
+    blocks:
+      - type: example
+        title: "I: x + y = 7, II: 2 · x − y = 8"
+        blocks:
+          - type: table
+            caption: Rechenweg zeilenweise
+            header: ["Schritt", "Rechnung", "Begründung"]
+            rows:
+              - ["1", "(x + y) + (2 · x − y) = 7 + 8", "linke und rechte Seiten addieren"]
+              - ["2", "3 · x = 15", "+ y und − y heben sich auf"]
+              - ["3", "x = 5", "durch 3 teilen"]
+              - ["4", "y = 7 − 5 = 2", "x in I einsetzen"]
+              - ["5", "2 · 5 − 2 = 8", "Probe in II"]
+          - type: text
+            text: "Die Lösung ist (5|2)."
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: generated
+        id: addieren-x
+        given:
+          e: { pick: 1, from: { data: lgs-addieren } }
+        task:
+          text: "Löse mit dem Additionsverfahren: I: x + y = {{e.s}} und II: {{e.p}} · x − y = {{e.t}}. Wie groß ist x?"
+        answer: { value: "e.x", compare: { number: { format: integer } } }
+        mistakes:
+          - value: "e.r"
+            message: "Du hast die Gleichung nicht ganz gelöst. {{e.q}} · x = {{e.r}}, jetzt noch durch {{e.q}} teilen."
+          - value: "e.y"
+            message: "Das ist y. Gefragt ist x: Addiere die Gleichungen und löse nach x."
+        hint: "Addiere I und II. Was passiert mit y?"
+        steps:
+          - "(x + y) + ({{e.p}} · x − y) = {{e.s}} + {{e.t}}"
+          - "{{e.q}} · x = {{e.r}}"
+          - "x = {{e.r}} : {{e.q}} = {{answer}}."
+      - type: generated
+        id: addieren-y
+        given:
+          e: { pick: 1, from: { data: lgs-addieren } }
+        task:
+          text: "Das System I: x + y = {{e.s}} und II: {{e.p}} · x − y = {{e.t}} hat bei x = {{e.x}} seine Lösung. Berechne y."
+        answer: { value: "e.y", compare: { number: { format: integer } } }
+        mistakes:
+          - value: "e.s + e.x"
+            message: "Du hast x addiert. Aus x + y = {{e.s}} folgt y = {{e.s}} − x."
+        hint: "Setze x in Gleichung I ein: x + y = {{e.s}}."
+        steps:
+          - "{{e.x}} + y = {{e.s}}, also y = {{e.s}} − {{e.x}} = {{answer}}."
+          - "Probe in II: {{e.p}} · {{e.x}} − {{answer}} = {{e.t}}."
+      - type: single-choice
+        id: addieren-umformen
+        text: "I: x + 2 · y = 8, II: 3 · x + y = 9. Wie kannst du erreichen, dass beim Addieren y wegfällt?"
+        options:
+          - text: "II mit −2 malnehmen, dann addieren"
+            correct: true
+            info: "II wird −6 · x − 2 · y = −18. Addiert mit I fällt 2 · y gegen −2 · y weg."
+          - text: "I und II direkt addieren"
+            correct: false
+            info: "Dann steht 4 · x + 3 · y = 17. Es fällt nichts weg: + 2 · y und + y addieren sich zu 3 · y."
+          - text: "nur die rechte Seite von II mit −2 malnehmen"
+            correct: false
+            info: "Du musst beide Seiten malnehmen, sonst ändert sich die Gleichung. Das Ergebnis wäre falsch."
+        explanation: "Damit 2 · y wegfällt, braucht II ein −2 · y. Das erreichst du mit −2 auf beiden Seiten."
+        links:
+          - title: "Lernlandkarte: Lineare Gleichungssysteme: rechnerisch"
+            url: https://lernapps.net/apps/map/mathematik/c/lgs-rechnerisch/
+      - type: number
+        id: addieren-umformen-x
+        text: "I: x + 2 · y = 8, II: 3 · x + y = 9. Löse das System. Wie groß ist x?"
+        answer: 2
+        tolerance: 0
+        mistakes:
+          - answer: 3
+            message: "3 ist y. Gefragt ist x. Setze y = 3 zum Beispiel in II ein: 3 · x + 3 = 9."
+          - answer: 17
+            message: "17 ist die Summe der rechten Seiten, aber da fällt noch keine Unbekannte weg. Multipliziere II zuerst mit −2."
+        explanation: "II · (−2): −6 · x − 2 · y = −18. Addiert mit I: −5 · x = −10, also x = 2. Dann y = 3. Probe in II: 3 · 2 + 3 = 9."
+        links:
+          - title: "Lernlandkarte: Lineare Gleichungssysteme: rechnerisch"
+            url: https://lernapps.net/apps/map/mathematik/c/lgs-rechnerisch/
+      - type: text
+        text: |
+          **Das kannst du jetzt:** Du löst Gleichungssysteme mit dem Additionsverfahren, auch mit Umformen. Als Nächstes deutest du die Lösung in einer
+          Sachaufgabe.

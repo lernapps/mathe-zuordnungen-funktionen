@@ -1,0 +1,125 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Die Lösung im Sachzusammenhang
+description: "Du löst Sachaufgaben mit Gleichungssystemen, wählst ein Verfahren und deutest die Lösung im Zusammenhang."
+competencies: [lgs-rechnerisch]
+blocks:
+  - type: section
+    id: einstieg
+    title: Die Klasse entscheidet
+    blocks:
+      - type: text
+        text: |
+          Die Klasse hat das System aus Tarif A (y = x + 6) und Tarif B (y = 2 · x + 2) gelöst: (4|10). Aber was sagt das? Und welchen Tarif nimmt die
+          Klasse, wenn sie 3 Stunden telefoniert? Nach dieser Seite deutest du die Lösung im Sachzusammenhang.
+      - type: single-choice
+        id: tarif-drei-stunden
+        text: "Wie viel kostet Tarif B bei 3 Stunden, und wie viel Tarif A?"
+        options:
+          - text: "B kostet 8 €, A kostet 9 €. B ist billiger."
+            correct: true
+            info: "B: 2 · 3 + 2 = 8. A: 3 + 6 = 9. Links vom Schnittpunkt (x < 4) ist B billiger."
+          - text: "B kostet 10 €, A kostet 10 €."
+            correct: false
+            info: "Das gilt nur bei 4 Stunden, am Schnittpunkt. Bei 3 Stunden sind die Preise verschieden."
+          - text: "B kostet 9 €, A kostet 8 €."
+            correct: false
+            info: "Du hast die Tarife vertauscht. A: 3 + 6 = 9. B: 2 · 3 + 2 = 8."
+        explanation: "Rechne beide Preise aus und vergleiche."
+        links:
+          - title: "Lernlandkarte: Lineare Gleichungssysteme: rechnerisch"
+            url: https://lernapps.net/apps/map/mathematik/c/lgs-rechnerisch/
+  - type: section
+    id: erklaerung
+    title: Was die Lösung bedeutet
+    blocks:
+      - type: text
+        text: |
+          Ein Gleichungssystem aus einer Sachaufgabe löst du in vier Schritten: **1.** Unbekannte benennen, **2.** Gleichungen aufstellen, **3.**
+          Verfahren wählen und lösen, **4.** Antwort in einem **Satz** mit Einheiten schreiben und prüfen, ob sie zur Aufgabe passt.
+      - type: note
+        title: Merke
+        blocks:
+          - type: text
+            text: |
+              Welches Verfahren? Steht ein y schon allein, nimm Gleichsetzen oder Einsetzen. Sind x und y mit entgegengesetzten Vorzeichen da, nimm
+              Addieren. Alle drei führen zur selben Lösung.
+  - type: section
+    id: beispiel
+    title: Beispiel
+    blocks:
+      - type: example
+        title: Eintritt für Kinder und Erwachsene
+        blocks:
+          - type: text
+            text: "I: 1 Kind und 1 Erwachsener zahlen 8 €. II: 2 Kinder und 1 Erwachsener zahlen 11 €. Mit k für Kinder und e für Erwachsene: $k + e = 8$ und $2k + e = 11$. II minus I: $k = 3$. Dann $e = 8 - 3 = 5$. Antwort: Ein Kind zahlt 3 €, ein Erwachsener 5 €."
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: generated
+        id: eintritt-kind
+        given:
+          e: { pick: 1, from: { data: eintritt } }
+        task:
+          text: "1 Kind und 1 Erwachsener zahlen zusammen {{e.s}} €. 2 Kinder und 1 Erwachsener zahlen zusammen {{e.t}} €. Wie viel Euro zahlt ein Kind?"
+        answer: { value: "e.k", compare: { number: { format: integer, unit: € } } }
+        mistakes:
+          - value: "e.s"
+            message: "{{e.s}} € zahlen ein Kind und ein Erwachsener zusammen. Du musst die beiden Gleichungen voneinander abziehen."
+          - value: "e.e"
+            message: "Das ist der Preis für einen Erwachsenen. Gefragt ist der Preis für ein Kind."
+        hint: "Der Unterschied der beiden Rechnungen ist genau ein Kind."
+        steps:
+          - "k + e = {{e.s}} und 2 · k + e = {{e.t}}"
+          - "II − I: k = {{e.t}} − {{e.s}} = {{answer}}. Ein Kind zahlt {{answer}} €."
+      - type: generated
+        id: eintritt-erwachsene
+        given:
+          e: { pick: 1, from: { data: eintritt } }
+        task:
+          text: "Ein Kind zahlt {{e.k}} €. 1 Kind und 1 Erwachsener zahlen zusammen {{e.s}} €. Wie viel Euro zahlt ein Erwachsener?"
+        answer: { value: "e.e", compare: { number: { format: integer, unit: € } } }
+        mistakes:
+          - value: "e.s + e.k"
+            message: "Du hast addiert. Der Erwachsene zahlt den Rest: {{e.s}} € minus den Preis für das Kind."
+        hint: "Von der Summe ziehst du den Preis für das Kind ab."
+        steps:
+          - "e = {{e.s}} − {{e.k}} = {{answer}}. Ein Erwachsener zahlt {{answer}} €."
+      - type: single-choice
+        id: schnittpunkt-deuten
+        text: "Tarif A: y = x + 6, Tarif B: y = 2 · x + 2 (x in Stunden, y in €). Die Lösung ist (4|10). Welcher Satz deutet sie richtig?"
+        options:
+          - text: "Nach 4 Stunden kosten beide Tarife 10 €."
+            correct: true
+            info: "x = 4 ist die Zeit, y = 10 der gemeinsame Preis. Das ist der Tarif-Wechsel."
+          - text: "Nach 10 Stunden kosten beide Tarife 4 €."
+            correct: false
+            info: "x und y sind vertauscht. Erst kommt x (Stunden), dann y (Euro)."
+          - text: "Tarif A ist ab 4 Stunden immer teurer."
+            correct: false
+            info: "Ab 4 Stunden ist B teurer, weil B steiler steigt. A ist dann billiger."
+        explanation: "Die Lösung (x|y) ist ein Zeitpunkt und ein Preis: Dort kosten beide gleich viel."
+        links:
+          - title: "Lernlandkarte: Lineare Gleichungssysteme: rechnerisch"
+            url: https://lernapps.net/apps/map/mathematik/c/lgs-rechnerisch/
+      - type: single-choice
+        id: welches-verfahren
+        text: "I: y = 3 · x − 2, II: 2 · x + y = 13. Welches Verfahren geht am schnellsten?"
+        options:
+          - text: "Einsetzen: y aus I in II einsetzen"
+            correct: true
+            info: "In I steht y schon allein. Du setzt 3 · x − 2 in II ein. Sofort bleibt nur noch x."
+          - text: "Addieren, ohne vorher umzuformen"
+            correct: false
+            info: "Beim Addieren müsstest du erst umformen, weil y in I allein steht und in II mit + y. Einsetzen geht hier direkt."
+          - text: "Nur zeichnen, rechnen geht nicht"
+            correct: false
+            info: "Rechnen geht immer. Zeichnen ist nur so genau, wie du den Graphen lesen kannst."
+        explanation: "Ist eine Gleichung schon nach y aufgelöst, ist Einsetzen oder Gleichsetzen der kürzeste Weg."
+        links:
+          - title: "Lernlandkarte: Lineare Gleichungssysteme: rechnerisch"
+            url: https://lernapps.net/apps/map/mathematik/c/lgs-rechnerisch/
+      - type: text
+        text: |
+          **Das kannst du jetzt:** Du löst Gleichungssysteme grafisch und rechnerisch mit den drei Verfahren, wählst ein passendes aus und deutest die
+          Lösung in einem Satz. Das ist der Schluss des Explainers: Von der Zuordnung bis zum Tarif-Wechsel hast du Term, Tabelle und Graph genutzt.

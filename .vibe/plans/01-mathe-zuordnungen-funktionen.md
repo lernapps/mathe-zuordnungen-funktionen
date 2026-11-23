@@ -304,7 +304,7 @@ vergleicht Tarife (Handyvertrag, Taxi, Schwimmbad-Eintritt); die Schlussseite K5
 - [x] Kapitel 4: gerade-zwei-punkte, gerade-punkt-steigung, nullstelle-schnittpunkt, Rückblick.
 - [x] Kapitel 5: lgs-zwei-geraden, lgs-loesungszahl (Dreifachansicht mit zwei Geraden).
 - [x] Kapitel 5: lgs-gleichsetzen, lgs-einsetzen, lgs-addieren, lgs-deuten, Rückblick der App.
-- [ ] Glossar und Selbstbeurteilung (selbsttest je Kapitel) prüfen, Recap-Begriffe im Glossar; Schreibweisen (Abschnitt 2 der Regeln) per Suche über alle Seiten.
+- [x] Glossar und Selbstbeurteilung (selbsttest je Kapitel) prüfen, Recap-Begriffe im Glossar; Schreibweisen (Abschnitt 2 der Regeln) per Suche über alle Seiten.
 - [ ] Lernenden-Prüfer (Klasse 8, Unteragent) über alle Seiten; Fachprüfer rechnet alle Aufgaben nach; Befunde im Plan unter Notes (Review), Änderungen danach hier nennen.
 <!-- tasks: pages (12 added): the other pages or screens, after the pattern -->
 - [ ] Update the content guide so that it describes the app as built (`app-content-matches`).

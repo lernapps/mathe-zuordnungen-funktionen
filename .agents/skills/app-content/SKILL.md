@@ -97,9 +97,17 @@ Zufallsaufgaben: Division durch 0 und krumme Größen mit `where` ausschließen;
 - Graphen: Achsen mit Pfeilspitze und Beschriftung (*x* in Einheit, *y* in Einheit), Gitter, Zahlengerade-Beschriftung;
   Kapitel 1 und 2 nur erster Quadrant, ab Kapitel 3 vier Quadranten. Farbe nie allein: Linienart oder Beschriftung dazu.
 - Alt-Text sagt, was die Figur zeigt; Bildunterschrift sagt, worauf zu achten ist; bei Aufgaben nie die Antwort (`explainer-figure-hides-answer`).
-- `Dreifachansicht` (`src/components/Dreifachansicht.vue`): Props `kind` (`proportional`, `linear`, `antiproportional`), Startwerte,
-  Grenzen, Beschriftung von *x* und *y*, `nojs`-Text mit Tabelle und Beschreibung. Regler `type="range"` mit Pfeiltasten, `aria-valuetext`,
-  `aria-live`-Satz. Farben nur über `--page-*`-Variablen.
+- `Dreifachansicht` (`src/components/Dreifachansicht.vue`, Logik `Dreifachansicht.ts`, Test `Dreifachansicht.test.ts`): zeigt Term, Wertetabelle und Graph
+  (Gitter, Achsen mit Zahlengerade-Beschriftung, vier Quadranten möglich) und Regler. Pflicht-Props: `kind` (`proportional`, `linear`, `antiproportional`),
+  `xLabel`, `yLabel`, `xUnit`, `yUnit`, `xs` (x-Werte der Tabelle), Fenster `xMin xMax yMin yMax`, Marken `tickX tickY`, Regler `a aMin aMax aStep aName`
+  (k, m oder c). Optional: `b bMin bMax bStep bName` (zweiter Regler, linear), `fixed` (keine Regler), `fixedA` (nur Regler b), `hideTerm` (kein Term, die Seite
+  nennt ihn noch nicht), `pointsOnly` (nur Punkte der Tabelle, keine Linie), `marks` (gegebene Punkte mit Namen, z. B. A und B), eine zweite Gerade
+  (`a2 b2 a2Min a2Max a2Step b2Min b2Max b2Step a2Name b2Name lineName line2Name`, dargestellt gestrichelt). Regler sind `type="range"` mit Pfeiltasten,
+  Beschriftung, `aria-valuetext`; der Satz unter dem Graphen (`aria-live`) und das `aria-label` des Graphen beschreiben Linie und Punkte. Die Tabelle liegt in einem
+  fokussierbaren, scrollbaren Bereich. Der Schnittpunkt zweier Geraden wird nie angezeigt (er ist die Antwort der Aufgaben). Farben nur über `--page-*`.
+  Jeder Block braucht `nojs` mit Tabelle und Beschreibung. Ein neues Verhalten gehört hierher, nicht in eine zweite Komponente.
+- `Kurztest` (`src/components/Kurztest.*`, kopiert aus den gemeinsamen Dateien des Epics): eine Frage mit Optionen, Rückmeldung sofort, genau eine richtige Option, Grund
+  in `info`. Nur auf den Recap-Seiten (`das-brauchst-du`); jeder Block hat `nojs` mit Frage, Antwort und Grund.
 - Bildherkunft: alles selbst gezeichnet (SVG), Lizenz CC BY 4.0 wie der Text.
 
 ## Sources
@@ -107,6 +115,13 @@ Zufallsaufgaben: Division durch 0 und krumme Größen mit `where` ausschließen;
 - Lernlandkarte Mathematik, Issue lernapps/apps#395, gemeinsame Regeln des Epics. Keine Schulbücher, keine fremden Aufgaben,
   keine Dritt-Inhalte, keine externen Links (Aufgaben verlinken die Kartenseite des Bausteins, wo das Werkzeug einen Link verlangt).
 - Fakten (Dreisatz, Steigung, Verfahren für Gleichungssysteme) selbst hergeleitet und nachgerechnet; der fachliche Prüfer rechnet nach.
+
+## Data files
+
+Alle in `src/data/`, je Datensatz ganzzahlig und mit Rechenprobe (die Prüfung steht im Plan): `proportional-paare` (k = y : x), `antiproportional-paare` (x · y = c),
+`dreisatz-malnehmen`, `dreisatz-teilen`, `dreisatz-ueber-eins`, `massstab-wege`, `massstab-zeichnen`, `massstab-bestimmen`, `taxi-fahrten`, `steigung-dreiecke`,
+`gerade-zwei-punkte`, `gerade-punkt-steigung`, `nullstellen`, `schnittpunkte`, `lgs-einsetzen`, `lgs-addieren`, `eintritt`. Jede Zeile gibt, was Rechenwege und
+`mistakes` brauchen (Faktor, Zwischenwerte), damit `steps` jede Zahl zeigen. Ein Fehlerwert darf nie gleich der Antwort sein (der Build prüft es).
 
 ## Adding a chapter or round
 
@@ -117,5 +132,10 @@ Zufallsaufgaben: Division durch 0 und krumme Größen mit `where` ausschließen;
 5. `npx vp build` nach jeder Seite, `npx vp check --fix` vor dem Commit, `npx --no -- lernapps check`, Commit.
 
 ## Rules learned from mistakes
+
+- Zahlen in `generated`, die negativ sein können, erscheinen als Bindestrich (`-3`) statt als Minuszeichen (`−3`): das Minus von Hand in den Text schreiben
+  (`x = −{{a}}`) und nur positive Zahlen ziehen. Rechenzeichen in `steps` nicht mit negativen Werten füllen.
+- Überschriften (`title`) ohne geschützte Leerzeichen und ohne gruppierte Zahlen, sonst scheitert der Test der Überschriftenebenen.
+- Nicht in Klartext-Zeilen: ein `: ` in einem `text`, `title` oder `caption` ohne Anführungszeichen bricht das YAML.
 
 - Eine Plan-Aufgabe nie abhaken, bevor ihr Text im Plan steht (Skript brach ab, `plan done` lief trotzdem).

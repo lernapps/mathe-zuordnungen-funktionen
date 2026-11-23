@@ -1,0 +1,114 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Das brauchst du hier
+description: "Drei Dinge aus früheren Klassen, die du für Dreisatz und Maßstab brauchst: Rechenregeln, Größen und Umrechnen."
+recap:
+  [mathematik/grundrechenarten-rechengesetze, mathematik/messen-laenge-masse-geld-zeit, mathematik/umrechnung-groessen]
+blocks:
+  - type: section
+    id: einstieg
+    title: Das brauchst du für dieses Kapitel
+    blocks:
+      - type: text
+        text: |
+          Die Klasse plant eine Klassenfahrt. Jonas kauft Postkarten, Elif liest einen Stadtplan. Dafür musst du drei Dinge
+          sicher können. Zu jedem gibt es einen kurzen Test. Du siehst sofort, ob es klappt.
+  - type: section
+    id: rechengesetze
+    title: Vorrangregeln und Rechengesetze
+    blocks:
+      - type: text
+        text: |
+          Ich kann Klammern und Vorrangregeln beachten und Rechengesetze für vorteilhaftes Rechnen nutzen.
+      - type: definition
+        term: Vorrangregel
+        explanation: "Punkt vor Strich: Mal und geteilt rechnest du vor plus und minus. Beispiel: $3 + 4 \\cdot 2 = 3 + 8 = 11$."
+      - type: definition
+        term: Klammer
+        explanation: "Was in der Klammer steht, rechnest du zuerst. Beispiel: $(3 + 4) \\cdot 2 = 7 \\cdot 2 = 14$."
+      - type: vue-component
+        id: test-vorrang
+        component: Kurztest
+        props:
+          question: "Was ergibt 5 + 2 · 6?"
+          options:
+            - { text: "17", correct: true, info: "Erst 2 · 6 = 12, dann 5 + 12 = 17 (Punkt vor Strich)." }
+            - {
+                text: "42",
+                correct: false,
+                info: "Du hast von links gerechnet: 5 + 2 = 7, dann 7 · 6. Mal geht vor plus.",
+              }
+            - { text: "30", correct: false, info: "Das wäre 5 · 6 = 30. Gerechnet wird 2 · 6 und danach plus 5." }
+          right: "Richtig."
+          wrong: "Nicht richtig."
+        nojs: |
+          Kurztest: Was ergibt 5 + 2 · 6? Antwort: 17. Erst 2 · 6 = 12, dann 5 + 12 = 17 (Punkt vor Strich). Wer 42 rechnet, hat von
+          links gerechnet.
+      - type: text
+        text: "Wenn das nicht klappt: Wiederhole den Baustein „Vorrangregeln und Rechengesetze“ auf der Lernlandkarte: [Kartenseite](https://lernapps.net/apps/map/mathematik/c/grundrechenarten-rechengesetze/)."
+  - type: section
+    id: groessen
+    title: Länge, Masse, Geld und Zeit
+    blocks:
+      - type: text
+        text: |
+          Ich kann Länge, Masse, Geld und Zeit messen und damit in Sachaufgaben rechnen.
+      - type: definition
+        term: Einheit
+        explanation: "Die Einheit sagt, womit gemessen wird: cm für Länge, kg für Masse, € für Geld, min für Zeit. Beispiel: 3 cm, 2 kg, 5 €."
+      - type: vue-component
+        id: test-zeit
+        component: Kurztest
+        props:
+          question: "Ein Film dauert 1 h 40 min. Wie viele Minuten sind das?"
+          options:
+            - { text: "100 min", correct: true, info: "1 h sind 60 min, dazu 40 min: 60 + 40 = 100." }
+            - {
+                text: "140 min",
+                correct: false,
+                info: "Das ist 1 und 40 nebeneinander. Eine Stunde hat 60 Minuten, nicht 100.",
+              }
+            - { text: "160 min", correct: false, info: "Du hast 2 h gerechnet. Es ist 1 h und 40 min, also 60 + 40." }
+          right: "Richtig."
+          wrong: "Nicht richtig."
+        nojs: |
+          Kurztest: Ein Film dauert 1 h 40 min. Wie viele Minuten sind das? Antwort: 100 min, denn 1 h sind 60 min und dazu kommen 40 min.
+      - type: text
+        text: "Wenn das nicht klappt: Wiederhole den Baustein „Länge, Masse, Geld und Zeit“ auf der Lernlandkarte: [Kartenseite](https://lernapps.net/apps/map/mathematik/c/messen-laenge-masse-geld-zeit/)."
+  - type: section
+    id: umrechnen
+    title: Einheiten umrechnen
+    blocks:
+      - type: text
+        text: |
+          Ich kann Größen in andere Einheiten umrechnen und passende Einheiten wählen.
+      - type: definition
+        term: Umrechnungszahl
+        explanation: "Die Umrechnungszahl sagt, wie viele kleine Einheiten in einer größeren stecken: 1 m = 100 cm, 1 km = 1000 m, 1 kg = 1000 g. Beispiel: 3 m = 3 · 100 cm = 300 cm."
+      - type: vue-component
+        id: test-umrechnen
+        component: Kurztest
+        props:
+          question: "Wie viele Meter sind 4 km?"
+          options:
+            - { text: "4000 m", correct: true, info: "1 km = 1000 m, also 4 · 1000 = 4000." }
+            - { text: "400 m", correct: false, info: "Du hast mit 100 gerechnet. Ein Kilometer hat 1000 Meter." }
+            - {
+                text: "40 m",
+                correct: false,
+                info: "Du hast mit 10 gerechnet. Von km nach m multiplizierst du mit 1000.",
+              }
+          right: "Richtig."
+          wrong: "Nicht richtig."
+        nojs: |
+          Kurztest: Wie viele Meter sind 4 km? Antwort: 4000 m, denn 1 km = 1000 m und 4 · 1000 = 4000.
+      - type: text
+        text: "Wenn das nicht klappt: Wiederhole den Baustein „Einheiten umrechnen“ auf der Lernlandkarte: [Kartenseite](https://lernapps.net/apps/map/mathematik/c/umrechnung-groessen/)."
+  - type: section
+    id: bereit
+    title: Du bist bereit, wenn du …
+    blocks:
+      - type: text
+        text: |
+          - Punkt vor Strich und Klammern richtig anwendest,
+          - Stunden in Minuten und Minuten in Stunden umrechnen kannst,
+          - Meter in Zentimeter und Kilometer in Meter umrechnen kannst.

@@ -1,0 +1,6 @@
+# Maßstab bestimmen: wirklich in cm, zeichnung in cm, scale = wirklich : zeichnung.
+- { wirklich: 600, zeichnung: 12, scale: 50 }
+- { wirklich: 800, zeichnung: 4, scale: 200 }
+- { wirklich: 450, zeichnung: 9, scale: 50 }
+- { wirklich: 1000, zeichnung: 5, scale: 200 }
+- { wirklich: 300, zeichnung: 3, scale: 100 }

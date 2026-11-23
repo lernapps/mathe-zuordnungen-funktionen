@@ -1,0 +1,9 @@
+# Dreisatz über 1 (Postkarten): y1 = u · x1, y2 = u · x2; x2 : x1 ist nie eine ganze Zahl, u ist der Preis für 1 Karte.
+- { x1: 4, y1: 12, u: 3, x2: 7, y2: 21 }
+- { x1: 3, y1: 12, u: 4, x2: 5, y2: 20 }
+- { x1: 5, y1: 20, u: 4, x2: 8, y2: 32 }
+- { x1: 4, y1: 20, u: 5, x2: 7, y2: 35 }
+- { x1: 6, y1: 18, u: 3, x2: 11, y2: 33 }
+- { x1: 8, y1: 24, u: 3, x2: 5, y2: 15 }
+- { x1: 3, y1: 21, u: 7, x2: 4, y2: 28 }
+- { x1: 9, y1: 36, u: 4, x2: 5, y2: 20 }

@@ -1,0 +1,122 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Mit dem Maßstab rechnen
+description: "Du rechnest mit dem Maßstab von der Karte in die Wirklichkeit und zurück. Der Maßstab ist eine Dreisatz-Tabelle."
+competencies: [massstab]
+blocks:
+  - type: section
+    id: einstieg
+    title: Der Weg zur Haltestelle
+    blocks:
+      - type: text
+        text: |
+          Elif schaut auf den Plan der Klassenfahrt. Der Weg von der Schule zur Haltestelle ist auf der Karte 6 cm lang. Wie weit
+          ist das wirklich? Nach dieser Seite rechnest du das mit dem **Maßstab** aus.
+      - type: figure
+        image: images/stadtplan-weg.svg
+        alt: "Einfacher Stadtplan mit mehreren Häuserblöcken. Links die Schule, rechts die Haltestelle, dazwischen ein gestrichelter Weg, der auf der Karte 6 cm lang ist. Unten steht der Maßstab 1 zu 5000 und eine Strecke, die 1 cm auf der Karte zeigt."
+        caption: "Der Weg ist auf der Karte 6 cm lang. Der Maßstab steht unten: 1 : 5000. Wie lang ist der Weg in Wirklichkeit?"
+        source: eigene Zeichnung
+        licence: CC-BY-4.0
+  - type: section
+    id: erklaerung
+    title: "Was 1 : 5000 bedeutet"
+    blocks:
+      - type: definition
+        term: Maßstab
+        explanation: "Der Maßstab sagt, wie viel Mal kleiner die Karte als die Wirklichkeit ist. Bei 1 : 5000 sind 1 cm auf der Karte in Wirklichkeit 5000 cm. Beispiel: 2 cm auf der Karte sind 10 000 cm, das sind 100 m."
+      - type: text
+        text: |
+          Der Maßstab ist eine Tabelle wie beim Dreisatz: Karte links, Wirklichkeit rechts. 1 cm auf der Karte sind 5000 cm in
+          Wirklichkeit. Für 6 cm rechnest du mal 6 und wandelst am Ende in Meter um.
+      - type: note
+        title: Merke
+        blocks:
+          - type: text
+            text: |
+              Die Wirklichkeit kommt erst in **Zentimetern** heraus. Das Ergebnis ist oft sehr groß, darum rechnest du in Meter
+              (durch 100) oder Kilometer (durch 100 000) um.
+  - type: section
+    id: beispiel
+    title: Beispiel
+    blocks:
+      - type: example
+        title: 6 cm auf der Karte
+        blocks:
+          - type: table
+            caption: Karte und Wirklichkeit bei 1 zu 5000
+            rowHeaders: true
+            rows:
+              - ["Karte in cm", "1", "6"]
+              - ["Wirklichkeit in cm", "5000", "30 000"]
+          - type: text
+            text: "Mal 6: $5000 \\cdot 6 = 30 000$ cm. In Meter: $30 000 : 100 = 300$ m. Der Weg ist 300 m lang."
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: number
+        id: weg-in-meter
+        text: "Auf einem Plan mit dem Maßstab 1 : 5000 ist ein Weg 3 cm lang. Wie lang ist der Weg in Wirklichkeit in Metern?"
+        answer: 150
+        tolerance: 0
+        unit: m
+        mistakes:
+          - answer: 15000
+            message: "Das sind 15 000 cm. Du hast die Einheit nicht umgerechnet. 100 cm sind 1 m, also durch 100."
+          - answer: 15
+            message: "Du hast durch 1000 geteilt. Ein Meter hat 100 Zentimeter, nicht 1000."
+        explanation: "$3 \\cdot 5000 = 15 000$ cm, und $15 000 : 100 = 150$ m."
+        links:
+          - title: "Lernlandkarte: Maßstab"
+            url: https://lernapps.net/apps/map/mathematik/c/massstab/
+      - type: generated
+        id: karte-zu-wirklichkeit
+        given:
+          e: { pick: 1, from: { data: massstab-wege } }
+        task:
+          text: "Auf einer Karte mit dem Maßstab 1 : {{e.scale}} ist ein Weg {{e.karte}} cm lang. Wie lang ist er in Wirklichkeit in Metern?"
+        answer: { value: "e.wirklich", compare: { number: { format: integer, unit: m } } }
+        mistakes:
+          - value: "e.karte * e.scale"
+            message: "Das Ergebnis ist in Zentimetern. 100 cm sind 1 m, du musst noch durch 100 teilen."
+          - value: "e.karte * 100"
+            message: "Du hast nur mit 100 malgenommen. Der Maßstab 1 : {{e.scale}} heißt: mal {{e.scale}}."
+        hint: "Erst mal den Maßstab, dann von Zentimetern in Meter umrechnen."
+        steps:
+          - "Wirklichkeit in cm: {{e.karte}} · {{e.scale}}"
+          - "In Meter (durch 100): {{answer}} m."
+      - type: generated
+        id: wirklichkeit-zu-karte
+        given:
+          e: { pick: 1, from: { data: massstab-wege } }
+        task:
+          text: "Eine Strecke ist in Wirklichkeit {{e.wirklich}} m lang. Wie viele Zentimeter ist sie auf einer Karte mit dem Maßstab 1 : {{e.scale}} lang?"
+        answer: { value: "e.karte", compare: { number: { format: integer, unit: cm } } }
+        mistakes:
+          - value: "e.wirklich * e.scale / 100"
+            message: "Du hast mit dem Maßstab malgenommen. Von der Wirklichkeit zur Karte wird es kleiner: Du teilst durch {{e.scale}}."
+        hint: "Rechne die Wirklichkeit erst in Zentimeter um. Dann teile durch den Maßstab."
+        steps:
+          - "Wirklichkeit in cm: {{e.wirklich}} · 100"
+          - "Auf der Karte (durch {{e.scale}}): {{answer}} cm."
+      - type: single-choice
+        id: was-bedeutet-massstab
+        text: "Was bedeutet der Maßstab 1 : 2000 auf einer Karte?"
+        options:
+          - text: "1 cm auf der Karte sind 2000 cm in Wirklichkeit."
+            correct: true
+            info: "So wird der Maßstab gelesen: Erst Karte, dann Wirklichkeit."
+          - text: "1 cm in Wirklichkeit sind 2000 cm auf der Karte."
+            correct: false
+            info: "Das ist umgekehrt. Die Karte zeigt die Wirklichkeit verkleinert."
+          - text: "1 cm auf der Karte ist 1 m in Wirklichkeit."
+            correct: false
+            info: "Bei 1 : 2000 sind 1 cm auf der Karte 2000 cm, das sind 20 m."
+        explanation: "Die erste Zahl gehört zur Karte, die zweite zur Wirklichkeit."
+        links:
+          - title: "Lernlandkarte: Maßstab"
+            url: https://lernapps.net/apps/map/mathematik/c/massstab/
+      - type: text
+        text: |
+          **Das kannst du jetzt:** Du rechnest mit dem Maßstab von der Karte in die Wirklichkeit und zurück. Als Nächstes zeichnest du
+          selbst einen Plan im passenden Maßstab.

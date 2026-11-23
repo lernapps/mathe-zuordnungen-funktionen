@@ -290,11 +290,12 @@ vergleicht Tarife (Handyvertrag, Taxi, Schwimmbad-Eintritt); die Schlussseite K5
 - [x] App-Grundgerüst: src/app.yaml (strand mathematik/algebra, 5 Kapitel, Quellen, Glossar-Begriffe), chapter.yaml je Kapitel, Platzhalter ersetzen.
 - [x] Musterseite zuordnungen/proportional-erkennen: Pfeiltabelle (SVG), Dreifachansicht mit k, Merke, mindestens vier Aufgaben (true-false, single-choice, generated mit mistakes), Rückblick.
 <!-- tasks: pattern (3 added): the one page or screen that is the pattern for the others -->
-- [ ] **Checkpoint:** the pattern page. Load skill `lernapps-learner-check` and do its learner check on the page. Fix
+- [x] **Checkpoint:** the pattern page. Load skill `lernapps-learner-check` and do its learner check on the page. Fix
       what it finds. Then show the creator the page and ask whether the others may follow it. Stop and wait. A
       change: change the pattern first.
-- [ ] Kapitel 1: Komponente Kurztest, Recap-Seite, dreisatz-pfeile, dreisatz-ueber-eins (Pfeiltabelle, generated mit Mistakes).
-- [ ] Kapitel 1: massstab-rechnen, massstab-zeichnung (SVG-Plan mit Maßstabsleiste), Rückblick.
+      Creator: Orchestrator in Vertretung: Musterseite angenommen, übrige Seiten dürfen folgen; Änderungen nach Prüferlauf als nicht erneut geprüft eintragen
+- [x] Kapitel 1: Komponente Kurztest, Recap-Seite, dreisatz-pfeile, dreisatz-ueber-eins (Pfeiltabelle, generated mit Mistakes).
+- [x] Kapitel 1: massstab-rechnen, massstab-zeichnung (SVG-Plan mit Maßstabsleiste), Rückblick.
 - [ ] Kapitel 2: Recap Koordinatensystem, zuordnungen-darstellen.
 - [ ] Kapitel 2: proportional-rechnen, antiproportional (Rechtecke gleicher Fläche), proportional-oder-anti, Rückblick.
 - [ ] Kapitel 3: funktion-begriff, keine-funktion.

@@ -1,0 +1,13 @@
+# Weg auf dem Plan: karte in cm, Maßstab 1 : scale, wirklich in m (= karte · scale : 100).
+- { scale: 500, karte: 4, wirklich: 20 }
+- { scale: 500, karte: 8, wirklich: 40 }
+- { scale: 500, karte: 12, wirklich: 60 }
+- { scale: 1000, karte: 3, wirklich: 30 }
+- { scale: 1000, karte: 5, wirklich: 50 }
+- { scale: 1000, karte: 9, wirklich: 90 }
+- { scale: 2000, karte: 2, wirklich: 40 }
+- { scale: 2000, karte: 6, wirklich: 120 }
+- { scale: 2000, karte: 11, wirklich: 220 }
+- { scale: 5000, karte: 2, wirklich: 100 }
+- { scale: 5000, karte: 3, wirklich: 150 }
+- { scale: 5000, karte: 7, wirklich: 350 }

@@ -42,6 +42,9 @@ Schicht 3, Tiefe 5 des Mathe-Epics (#402).
   Kapitel 1 nutzt nur nicht-negative Zahlen und sagt „Zahlenstrahl“ (Regeln Abschnitt 2).
 - Schreibweisen nach Regeln Abschnitt 2 (Komma, −, ·, :, geschütztes Leerzeichen); Funktionsterme als Formel gesetzt.
 - Keine externen Links, keine Dritt-Inhalte; Bilder als SVG im Explainer.
+- Kein `scope` in `src/app.yaml`: keine `open-task`, kein Material des Menschen (Skill: optional) (guess).
+- Fragen verlangen `links`; sie zeigen auf die Kartenseite des Bausteins (`https://lernapps.net/apps/map/mathematik/c/<id>/`), nie Wikipedia (Regeln Abschnitt 4).
+- `Kurztest` aus `/tmp/epic/docs/mathe-epic/components/` kopiert (Freigabe des Orchestrators); `Dreifachansicht` eigene Entwicklung.
 
 ## Notes
 
@@ -273,14 +276,14 @@ vergleicht Tarife (Handyvertrag, Taxi, Schwimmbad-Eintritt); die Schlussseite K5
       `npx --no -- lernapps create --archetype explainer`.
 - [x] Fill the content guide `.agents/skills/app-content/SKILL.md` from "Notes" and "Content method": every heading,
       no "FILL IN" left. Commit it before any content.
-- [ ] Load skill `lernapps-explainer`.
-- [ ] Load skill `lernapps-content-questions`. Read whole, with your file tool:
+- [x] Load skill `lernapps-explainer`.
+- [x] Load skill `lernapps-content-questions`. Read whole, with your file tool:
       `.agents/skills/lernapps-explainer/references/blocks.md` and
       `.agents/skills/lernapps-explainer/references/exercises.md`. A foreign language: also
       `references/language-tasks.md` in the same folder. A component in the plan: also `references/components.md`.
-- [ ] Decide whether the app needs `scope`, as "`scope`" in
+- [x] Decide whether the app needs `scope`, as "`scope`" in
       `.agents/skills/lernapps-explainer/references/structure.md` says. Write the choice under "Key decisions".
-- [ ] Komponente Dreifachansicht (.vue, .ts, Test): Wertetabelle, Term, Beschreibung, Graph mit Reglern k bzw. m und b, Tastatur, aria-live-Text, nojs.
+- [x] Komponente Dreifachansicht (.vue, .ts, Test): Wertetabelle, Term, Beschreibung, Graph mit Reglern k bzw. m und b, Tastatur, aria-live-Text, nojs.
 - [ ] App-Grundgerüst: src/app.yaml (strand mathematik/algebra, 5 Kapitel, Quellen, Glossar-Begriffe), chapter.yaml je Kapitel, Platzhalter ersetzen.
 - [ ] Musterseite zuordnungen/proportional-erkennen: Pfeiltabelle (SVG), Dreifachansicht mit k, Merke, mindestens vier Aufgaben (true-false, single-choice, generated mit mistakes), Rückblick.
 <!-- tasks: pattern (3 added): the one page or screen that is the pattern for the others -->

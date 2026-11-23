@@ -1,0 +1,4 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Geraden mit Schiebereglern
+summary: Mit zwei Reglern, m und b, bewegst du eine Gerade. Du beschreibst lineare Funktionen und stellst Geradengleichungen auf.
+pages: [das-brauchst-du, m-und-b, steigung-deuten]

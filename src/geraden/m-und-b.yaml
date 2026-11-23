@@ -1,0 +1,143 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Steigung m und Achsenabschnitt b
+description: "Mit den Reglern m und b bewegst du eine Gerade. Du erkennst, was m und b in Term, Tabelle und Graph bedeuten."
+competencies: [lineare-funktionen]
+blocks:
+  - type: section
+    id: einstieg
+    title: Zwei Regler für eine Gerade
+    blocks:
+      - type: text
+        text: |
+          Jonas' Handytarif hat einen Grundpreis und einen Minutenpreis. Das ist eine **lineare Funktion**: y = m · x + b. Nach dieser Seite
+          weißt du, was m und b bedeuten. Schiebe jeden Regler einzeln und beobachte Term, Tabelle und Graph: Was macht m? Was macht b?
+      - type: vue-component
+        id: m-b-regler
+        component: Dreifachansicht
+        props:
+          kind: linear
+          xLabel: x
+          yLabel: y
+          xUnit: ""
+          yUnit: ""
+          xs: [-2, -1, 0, 1, 2]
+          xMin: -4
+          xMax: 4
+          yMin: -8
+          yMax: 8
+          tickX: 1
+          tickY: 2
+          a: 2
+          aMin: -3
+          aMax: 3
+          aStep: 0.5
+          aName: m (Steigung)
+          b: 1
+          bMin: -4
+          bMax: 4
+          bStep: 1
+          bName: b (y-Achsenabschnitt)
+        nojs: |
+          Die Gleichung y = m · x + b mit den Reglern m (von −3 bis 3) und b (von −4 bis 4). Für m = 2 und b = 1 gehören zu x = −2, −1, 0, 1, 2 die
+          y-Werte −3, −1, 1, 3, 5. m dreht die Gerade: Für größeres m wird sie steiler, für negatives m fällt sie. b verschiebt sie nach oben oder
+          unten: Sie schneidet die y-Achse bei b.
+  - type: section
+    id: erklaerung
+    title: Was m und b bewirken
+    blocks:
+      - type: definition
+        term: Steigung
+        explanation: "Die Steigung m sagt, wie sich y ändert, wenn x um 1 größer wird. Beispiel: Bei m = 2 steigt y um 2 pro Schritt nach rechts. Ist m negativ, fällt die Gerade."
+      - type: definition
+        term: y-Achsenabschnitt
+        explanation: "Der y-Achsenabschnitt b ist der y-Wert bei x = 0. Dort schneidet die Gerade die y-Achse. Beispiel: Bei b = 1 geht die Gerade durch (0|1)."
+      - type: note
+        title: Merke
+        blocks:
+          - type: text
+            text: |
+              m **dreht** die Gerade, b **verschiebt** sie. Bei m = 0 ist die Gerade waagerecht. Der y-Achsenabschnitt b ist nicht die Nullstelle,
+              sondern der Punkt auf der y-Achse.
+  - type: section
+    id: beispiel
+    title: Beispiel
+    blocks:
+      - type: example
+        title: Handytarif
+        blocks:
+          - type: text
+            text: "Der Tarif kostet 5 € im Monat (b = 5) und 2 € je Stunde (m = 2): $y = 2 \\cdot x + 5$. Bei 0 Stunden zahlst du 5 €, bei 3 Stunden $2 \\cdot 3 + 5 = 11$ €."
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: generated
+        id: steigung-ablesen
+        given:
+          m: { int: [2, 5] }
+          b: { int: [1, 6] }
+        where: ["m != b"]
+        task:
+          text: "Eine Gerade hat die Gleichung y = {{m}} · x + {{b}}. Wie groß ist die Steigung m?"
+        answer: { value: "m", compare: { number: { format: integer } } }
+        mistakes:
+          - value: "b"
+            message: "{{b}} ist der y-Achsenabschnitt b. Die Steigung m ist die Zahl, die mit x malgenommen wird."
+        hint: "Die Steigung steht vor dem x."
+        steps:
+          - "In y = m · x + b ist m die Zahl vor x: m = {{m}}."
+      - type: generated
+        id: achsenabschnitt-ablesen
+        given:
+          m: { int: [2, 5] }
+          b: { int: [1, 6] }
+        where: ["m != b"]
+        task:
+          text: "Eine Gerade hat die Gleichung y = {{m}} · x + {{b}}. Bei welchem y-Wert schneidet sie die y-Achse?"
+        answer: { value: "b", compare: { number: { format: integer } } }
+        mistakes:
+          - value: "m"
+            message: "{{m}} ist die Steigung. Der y-Achsenabschnitt ist die Zahl, die ohne x dasteht."
+        hint: "Setze x = 0 ein. Was bleibt übrig?"
+        steps:
+          - "Bei x = 0 ist y = {{m}} · 0 + {{b}} = {{b}}."
+      - type: number
+        id: b-negativ
+        text: "Eine Gerade hat die Gleichung y = 3 · x − 2. Wie groß ist der y-Achsenabschnitt b?"
+        answer: -2
+        tolerance: 0
+        mistakes:
+          - answer: 2
+            message: "Das Vorzeichen gehört zu b. In y = 3 · x − 2 steht ein Minus, also ist b = −2."
+          - answer: 3
+            message: "3 ist die Steigung m. Der y-Achsenabschnitt ist die Zahl ohne x."
+        explanation: "Bei x = 0 ist $y = 3 \\cdot 0 - 2 = -2$. Die Gerade schneidet die y-Achse bei −2."
+        links:
+          - title: "Lernlandkarte: Lineare Funktionen"
+            url: https://lernapps.net/apps/map/mathematik/c/lineare-funktionen/
+      - type: matching
+        id: gleichung-beschreibung
+        text: "Ordne jeder Gleichung die passende Beschreibung zu."
+        pairs:
+          - left: "y = 2 · x"
+            right: "steigt und geht durch den Ursprung"
+          - left: "y = −x + 3"
+            right: "fällt und schneidet die y-Achse bei 3"
+          - left: "y = 3 · x − 2"
+            right: "steigt und schneidet die y-Achse bei −2"
+        explanation: "Das Vorzeichen von m sagt steigend (positiv) oder fallend (negativ). b ist der y-Wert bei x = 0."
+        links:
+          - title: "Lernlandkarte: Lineare Funktionen"
+            url: https://lernapps.net/apps/map/mathematik/c/lineare-funktionen/
+      - type: true-false
+        id: groesseres-b-steiler
+        text: "Je größer b ist, desto steiler ist die Gerade."
+        answer: false
+        explanation: "b verschiebt die Gerade nach oben oder unten, ohne sie zu drehen. Steil oder flach macht m."
+        links:
+          - title: "Lernlandkarte: Lineare Funktionen"
+            url: https://lernapps.net/apps/map/mathematik/c/lineare-funktionen/
+      - type: text
+        text: |
+          **Das kannst du jetzt:** Du weißt, dass m die Gerade dreht und b sie verschiebt, und liest m und b aus der Gleichung. Als Nächstes
+          zeichnest du ein Steigungsdreieck.

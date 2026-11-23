@@ -1,0 +1,113 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Das Steigungsdreieck
+description: "Du bestimmst die Steigung einer Geraden mit einem Steigungsdreieck und deutest sie im Sachzusammenhang."
+competencies: [lineare-funktionen]
+blocks:
+  - type: section
+    id: einstieg
+    title: Wie steil ist die Gerade?
+    blocks:
+      - type: text
+        text: |
+          Der Tarif von Jonas: Die Gerade steigt von links unten nach rechts oben. Wie steil, sagt die Steigung m. Nach dieser Seite liest du
+          m mit einem **Steigungsdreieck** aus dem Graphen und sagst, was m bedeutet.
+      - type: figure
+        image: images/steigungsdreieck.svg
+        alt: "Koordinatensystem mit einer steigenden Geraden. Ein gestricheltes Dreieck liegt an der Geraden: zwei Einheiten nach rechts, vier nach oben."
+        caption: "Das gestrichelte Dreieck: Δx = 2 nach rechts, Δy = 4 nach oben."
+        source: eigene Zeichnung
+        licence: CC-BY-4.0
+  - type: section
+    id: erklaerung
+    title: Δy durch Δx
+    blocks:
+      - type: text
+        text: |
+          Gehe auf der Geraden von einem Punkt ein Stück nach rechts (Δx) und miss, wie weit es nach oben geht (Δy). Die Steigung ist
+          m = Δy : Δx. Im Bild: 4 : 2 = 2. Bei jedem Schritt nach rechts steigt die Gerade um 2.
+      - type: formula
+        formula: 'm = \frac{\Delta y}{\Delta x}'
+      - type: note
+        title: Merke
+        blocks:
+          - type: text
+            text: |
+              Geht die Gerade nach rechts **nach unten**, ist Δy negativ und m negativ. In Sachaufgaben sagt m, wie sich y **pro Einheit von x**
+              ändert, zum Beispiel Liter pro Minute.
+  - type: section
+    id: beispiel
+    title: Beispiel
+    blocks:
+      - type: example
+        title: Das Becken leert sich
+        blocks:
+          - type: text
+            text: "Ein Becken hat 60 Liter. Nach 2 Minuten sind es 50 Liter. Δx = 2 min, Δy = −10 Liter. Also $m = -10 : 2 = -5$. Das Becken verliert 5 Liter pro Minute."
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: generated
+        id: steigung-steigend
+        given:
+          e: { pick: 1, from: { data: steigung-dreiecke } }
+        task:
+          text: "Ein Steigungsdreieck geht {{e.dx}} nach rechts und {{e.dy}} nach oben. Wie groß ist die Steigung m?"
+        answer: { value: "e.m", compare: { number: { format: integer } } }
+        mistakes:
+          - value: "e.dy - e.dx"
+            message: "Du hast subtrahiert. Die Steigung ist der Quotient: Δy geteilt durch Δx."
+          - value: "e.dx * e.dy"
+            message: "Du hast malgenommen. Die Steigung ist Δy geteilt durch Δx."
+        hint: "m = Δy : Δx. Welche Zahl gehört nach oben, welche nach rechts?"
+        steps:
+          - "m = Δy : Δx = {{e.dy}} : {{e.dx}} = {{e.m}}."
+      - type: generated
+        id: steigung-fallend
+        given:
+          e: { pick: 1, from: { data: steigung-dreiecke } }
+        task:
+          text: "Eine Gerade fällt: Von einem Punkt geht es {{e.dx}} nach rechts und {{e.dy}} nach unten. Wie groß ist die Steigung m?"
+        answer: { value: "0 - e.m", compare: { number: { format: integer } } }
+        mistakes:
+          - value: "e.m"
+            message: "Die Gerade fällt, also ist m negativ. Es geht nach unten: Δy ist negativ."
+        hint: "Nach unten heißt: Δy ist negativ. Teile Δy durch Δx."
+        steps:
+          - "Δy ist negativ, Δx ist positiv. Der Quotient hat ein Minus."
+      - type: number
+        id: becken-steigung
+        text: "Ein Tank hat 80 Liter. Nach 4 Minuten sind es 60 Liter. Wie groß ist die Steigung m in Liter pro Minute?"
+        answer: -5
+        tolerance: 0
+        unit: Liter pro Minute
+        mistakes:
+          - answer: 5
+            message: "Der Tank wird leerer, y wird kleiner: Δy = −20. Darum ist m negativ."
+          - answer: -20
+            message: "−20 ist Δy, die Änderung insgesamt. Teile noch durch Δx = 4 Minuten."
+        explanation: "$\\Delta y = 60 - 80 = -20$ Liter in $\\Delta x = 4$ Minuten: $m = -20 : 4 = -5$."
+        links:
+          - title: "Lernlandkarte: Lineare Funktionen"
+            url: https://lernapps.net/apps/map/mathematik/c/lineare-funktionen/
+      - type: single-choice
+        id: m-deuten
+        text: "Bei einem Wasserbecken ist m = −3 (Liter pro Minute). Was bedeutet das?"
+        options:
+          - text: "Das Becken verliert 3 Liter pro Minute."
+            correct: true
+            info: "Negatives m heißt: y wird kleiner, hier der Wasserstand."
+          - text: "Das Becken füllt sich mit 3 Litern pro Minute."
+            correct: false
+            info: "Beim Füllen wäre m positiv. Das Minus heißt: Es geht abwärts."
+          - text: "Das Becken hat anfangs 3 Liter."
+            correct: false
+            info: "Die Anfangsmenge ist der y-Achsenabschnitt b, nicht die Steigung m."
+        explanation: "m sagt, wie y sich pro Einheit von x ändert, mit Vorzeichen."
+        links:
+          - title: "Lernlandkarte: Lineare Funktionen"
+            url: https://lernapps.net/apps/map/mathematik/c/lineare-funktionen/
+      - type: text
+        text: |
+          **Das kannst du jetzt:** Du bestimmst die Steigung mit dem Steigungsdreieck und deutest m im Sachzusammenhang. Als Nächstes stellst du
+          selbst Geradengleichungen auf.

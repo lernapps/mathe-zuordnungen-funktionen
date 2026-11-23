@@ -105,3 +105,8 @@ export function visible(p: Params, xMin: number, xMax: number, yMin: number, yMa
   if (from > to) return [];
   return [from, to].map((x) => ({ x, y: y(p, x) ?? 0 }));
 }
+
+/** A marked point as text: its name and its coordinates, e.g. "A (2|7)". */
+export function markName(m: { x: number; y: number; name: string }): string {
+  return `${m.name} (${format(m.x)}|${format(m.y)})`;
+}

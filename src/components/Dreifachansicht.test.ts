@@ -1,5 +1,5 @@
 import { expect, test } from "vite-plus/test";
-import { curve, describe, format, sliderOk, table, term, valueText, visible } from "./Dreifachansicht.ts";
+import { curve, describe, format, markName, sliderOk, table, term, valueText, visible } from "./Dreifachansicht.ts";
 
 const prop = (a: number) => ({ kind: "proportional" as const, a, b: 0 });
 const lin = (a: number, b: number) => ({ kind: "linear" as const, a, b });
@@ -69,4 +69,9 @@ test("a slider start value must lie on its step between its limits", () => {
   expect(sliderOk(2.2, 0, 5, 0.5)).toBe(false);
   expect(sliderOk(6, 0, 5, 1)).toBe(false);
   expect(sliderOk(1, 0, 5, 0)).toBe(false);
+});
+
+test("a marked point is named with its coordinates in German writing", () => {
+  expect(markName({ x: 2, y: 7, name: "A" })).toBe("A (2|7)");
+  expect(markName({ x: -1, y: 2.5, name: "B" })).toBe("B (\u22121|2,5)");
 });

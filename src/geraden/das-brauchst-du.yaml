@@ -1,0 +1,71 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Das brauchst du hier
+description: "Lineare Gleichungen lösen: Äquivalenzumformung und Probe. Das brauchst du, um Geradengleichungen und Gleichungssysteme zu lösen."
+recap: [mathematik/lineare-gleichungen]
+blocks:
+  - type: section
+    id: einstieg
+    title: Das brauchst du für dieses Kapitel
+    blocks:
+      - type: text
+        text: |
+          In diesem und im nächsten Kapitel stellst du Gleichungen auf und löst sie, um zum Beispiel einen Tarif-Wechsel zu finden. Dafür
+          musst du lineare Gleichungen sicher lösen. Hier ein kurzer Test dazu.
+  - type: section
+    id: lineare-gleichungen
+    title: Lineare Gleichungen
+    blocks:
+      - type: text
+        text: |
+          Ich kann lineare Gleichungen lösen und die Lösungsverfahren vergleichen.
+      - type: definition
+        term: Gleichung
+        explanation: "Eine Gleichung sagt, dass zwei Terme gleich groß sind, zum Beispiel $2 \\cdot x + 3 = 11$. Die Lösung ist die Zahl für x, bei der die Gleichung stimmt."
+      - type: definition
+        term: Äquivalenzumformung
+        explanation: "Du darfst eine Gleichung umformen, wenn du auf beiden Seiten dasselbe tust. Beispiel: $2 \\cdot x + 3 = 11$, minus 3 auf beiden Seiten gibt $2 \\cdot x = 8$, geteilt durch 2 gibt $x = 4$."
+      - type: definition
+        term: Probe
+        explanation: "Bei der Probe setzt du die Lösung in die Gleichung ein. Beispiel: $2 \\cdot 4 + 3 = 11$ stimmt, also ist x = 4 die Lösung."
+      - type: vue-component
+        id: test-gleichung
+        component: Kurztest
+        props:
+          question: "Wie lautet die Lösung von 3 · x − 4 = 11?"
+          options:
+            - { text: "x = 5", correct: true, info: "11 + 4 = 15, 15 : 3 = 5. Probe: 3 · 5 − 4 = 11." }
+            - {
+                text: "x = 7",
+                correct: false,
+                info: "Du hast 4 und 11 subtrahiert gerechnet (11 − 4). Die 4 steht mit Minus links, du musst sie addieren.",
+              }
+            - { text: "x = 15", correct: false, info: "Du hast nur 11 + 4 gerechnet. Du musst noch durch 3 teilen." }
+          right: "Richtig."
+          wrong: "Nicht richtig."
+        nojs: |
+          Kurztest: Wie lautet die Lösung von 3 · x − 4 = 11? Antwort: x = 5. Erst plus 4 auf beiden Seiten (3 · x = 15), dann geteilt durch 3. Probe:
+          3 · 5 − 4 = 11.
+      - type: vue-component
+        id: test-probe
+        component: Kurztest
+        props:
+          question: "Ist x = 3 die Lösung von 4 · x − 5 = 7?"
+          options:
+            - { text: "Nein, 4 · 3 − 5 = 17", correct: false, info: "4 · 3 ist 12, nicht 22. Dann 12 − 5 = 7." }
+            - { text: "Ja, 4 · 3 − 5 = 7", correct: true, info: "4 · 3 = 12, 12 − 5 = 7. Die Probe stimmt." }
+            - { text: "Nein, 3 + 4 − 5 = 2", correct: false, info: "Zwischen 4 und x steht ein Malzeichen, kein Plus." }
+          right: "Richtig."
+          wrong: "Nicht richtig."
+        nojs: |
+          Kurztest: Ist x = 3 die Lösung von 4 · x − 5 = 7? Antwort: Ja, denn 4 · 3 − 5 = 12 − 5 = 7.
+      - type: text
+        text: "Wenn das nicht klappt: Wiederhole den Baustein „Lineare Gleichungen“ auf der Lernlandkarte: [Kartenseite](https://lernapps.net/apps/map/mathematik/c/lineare-gleichungen/)."
+  - type: section
+    id: bereit
+    title: Du bist bereit, wenn du …
+    blocks:
+      - type: text
+        text: |
+          - eine Gleichung wie 3 · x − 4 = 11 mit Umformungen löst,
+          - die Probe durch Einsetzen machst,
+          - weißt, dass du auf beiden Seiten dasselbe tun musst.

@@ -7,7 +7,7 @@ intro: |
   und antiproportionale Zuordnungen, stellst Geradengleichungen auf und löst Gleichungssysteme zeichnerisch und
   rechnerisch. Für die Klassen 5 bis 8.
 languages: [de]
-chapters: [dreisatz-massstab, zuordnungen, funktionen]
+chapters: [dreisatz-massstab, zuordnungen, funktionen, geraden]
 sources:
   - title: Lernlandkarte Mathematik
     url: https://lernapps.net/apps/map/mathematik/

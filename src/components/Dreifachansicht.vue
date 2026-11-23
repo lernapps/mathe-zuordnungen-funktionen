@@ -3,7 +3,7 @@
 // three at once. The words under the graph say the same as the graph (aria-live), so that the view works without seeing
 // it. Logic: Dreifachansicht.ts. The page's German texts name the quantities; the app is German only.
 import { computed, ref } from "vue";
-import { describe, format, table, term, valueText, visible, type Params } from "./Dreifachansicht.ts";
+import { describe, format, markName, table, term, valueText, visible, type Params } from "./Dreifachansicht.ts";
 
 const props = defineProps<{
   /** proportional: y = k · x; linear: y = m · x + b; antiproportional: y = c : x. */
@@ -42,6 +42,8 @@ const props = defineProps<{
   hideTerm?: boolean;
   /** Only the points of the table in the graph, no line between them (values that exist only at the table's x). */
   pointsOnly?: boolean;
+  /** Given points to show in the graph with their names, e.g. the two points a line must pass through. */
+  marks?: { x: number; y: number; name: string }[];
 }>();
 
 const a = ref(props.a);
@@ -85,6 +87,10 @@ const dots = computed(() =>
   rows.value
     .filter((r) => r.y !== undefined && r.y >= props.yMin && r.y <= props.yMax)
     .map((r) => ({ cx: sx(r.x), cy: sy(r.y as number) })),
+);
+const markList = computed(() => props.marks ?? []);
+const marksText = computed(() =>
+  markList.value.length === 0 ? "" : ` Markiert: ${markList.value.map((m) => markName(m)).join(", ")}.`,
 );
 const pointsText = computed(() =>
   rows.value.map((r) => `(${format(r.x)}|${r.y === undefined ? "kein Wert" : format(r.y)})`).join(", "),
@@ -153,7 +159,7 @@ const showB = computed(() => props.kind === "linear" && props.bName !== undefine
       class="dreifach-graph"
       :viewBox="`0 0 ${W} ${H}`"
       role="img"
-      :aria-label="`Graph. ${words} Punkte: ${pointsText}`"
+      :aria-label="`Graph. ${words} Punkte: ${pointsText}.${marksText}`"
     >
       <g class="dreifach-grid">
         <line v-for="m in xMarks" :key="'gx' + m" :x1="sx(m)" :x2="sx(m)" :y1="padT" :y2="H - padB" />
@@ -175,6 +181,11 @@ const showB = computed(() => props.kind === "linear" && props.bName !== undefine
       </g>
       <polyline v-if="line && !pointsOnly" class="dreifach-line" :points="line" fill="none" />
       <circle v-for="(d, i) in dots" :key="i" class="dreifach-dot" :cx="d.cx" :cy="d.cy" r="4" />
+      <g v-for="(m, i) in markList" :key="'m' + i" class="dreifach-mark">
+        <line :x1="sx(m.x) - 6" :x2="sx(m.x) + 6" :y1="sy(m.y) - 6" :y2="sy(m.y) + 6" />
+        <line :x1="sx(m.x) - 6" :x2="sx(m.x) + 6" :y1="sy(m.y) + 6" :y2="sy(m.y) - 6" />
+        <text :x="sx(m.x) + 8" :y="sy(m.y) - 8">{{ m.name }}</text>
+      </g>
     </svg>
 
     <p class="dreifach-words" aria-live="polite">{{ words }}</p>
@@ -275,6 +286,17 @@ const showB = computed(() => props.kind === "linear" && props.bName !== undefine
   fill: var(--page-background);
   stroke: var(--page-accent);
   stroke-width: 2;
+}
+
+.dreifach-mark line {
+  stroke: var(--page-text);
+  stroke-width: 2.5;
+}
+
+.dreifach-mark text {
+  fill: var(--page-text);
+  font-size: 13px;
+  font-weight: 600;
 }
 
 .dreifach-words {

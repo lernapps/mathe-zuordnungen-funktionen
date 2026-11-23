@@ -54,9 +54,9 @@ Ich kann Punkte und Figuren im Koordinatensystem eintragen und ablesen.
 
 - **Achse**: Die $x$-Achse läuft waagerecht, die $y$-Achse senkrecht. Sie schneiden sich im Ursprung (0|0). Auf jeder Achse stehen Zahlen in gleichen Abständen.
 
-Interaktiv: Kurztest: Wo liegt der Punkt (4|1)? Antwort: 4 nach rechts und 1 nach oben, denn erst kommt der $x$-Wert, dann der $y$-Wert.
+Interaktiv: Kurztest: Welcher Punkt liegt von (2|1) aus 5 nach rechts und 3 nach oben? Antwort: (7|4), denn 2 + 5 = 7 für den x-Wert und 1 + 3 = 4 für den y-Wert.
 
-Interaktiv: Kurztest: Welche Koordinaten hat der Ursprung? Antwort: (0|0), der Schnittpunkt der beiden Achsen.
+Interaktiv: Kurztest: Der Punkt P hat die Koordinaten (0|5). Wo liegt P? Antwort: auf der y-Achse, 5 Einheiten über dem Ursprung (0|0).
 
 Wenn das nicht klappt: Wiederhole den Baustein „Koordinatensystem“ auf der Lernlandkarte: [Kartenseite](https://lernapps.net/apps/map/mathematik/c/koordinatensystem/).
 

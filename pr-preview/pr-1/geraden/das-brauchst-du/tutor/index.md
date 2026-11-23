@@ -56,9 +56,9 @@ Ich kann lineare Gleichungen lösen und die Lösungsverfahren vergleichen.
 
 - **Probe**: Bei der Probe setzt du die Lösung in die Gleichung ein. Beispiel: $2 \cdot 4 + 3 = 11$ stimmt, also ist $x$ = 4 die Lösung.
 
-Interaktiv: Kurztest: Wie lautet die Lösung von 3 · $x$ − 4 = 11? Antwort: $x$ = 5. Erst plus 4 auf beiden Seiten (3 · $x$ = 15), dann geteilt durch 3. Probe: 3 · 5 − 4 = 11.
+Interaktiv: Kurztest: Wie lautet die Lösung von 5 · x − 9 = 2 · x + 12? Antwort: x = 7. Minus 2 · x und plus 9 auf beiden Seiten gibt 3 · x = 21. Probe: 5 · 7 − 9 = 26 und 2 · 7 + 12 = 26.
 
-Interaktiv: Kurztest: Ist $x$ = 3 die Lösung von 4 · $x$ − 5 = 7? Antwort: Ja, denn 4 · 3 − 5 = 12 − 5 = 7.
+Interaktiv: Kurztest: Ist x = 4 die Lösung von 3 · (x − 1) = 2 · x + 3? Antwort: Nein, denn links ist 3 · (4 − 1) = 9 und rechts 2 · 4 + 3 = 11.
 
 Interaktiv: Kurztest: Wie lautet die Lösung von 2 · $x$ + 1 = −$x$ + 7? Antwort: $x$ = 2. Erst plus $x$ auf beiden Seiten, 3 · $x$ + 1 = 7, dann minus 1 und geteilt durch 3. Probe: 2 · 2 + 1 = 5 und −2 + 7 = 5.
 

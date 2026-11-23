@@ -43,7 +43,7 @@ Du löst ein Gleichungssystem rechnerisch, indem du die beiden Terme für y glei
 
 ### Wann kosten beide gleich viel?
 
-Aus dem Graphen hast du für Tarif A ($y$ = $x$ + 6) und Tarif B ($y$ = 2 · $x$ + 2) den Schnittpunkt abgelesen. Das war nur so genau, wie du den
+Auf der Seite davor hast du aus dem Graphen für Tarif A ($y$ = $x$ + 6) und Tarif B ($y$ = 2 · $x$ + 2) den Schnittpunkt abgelesen. Das war nur so genau, wie du den
 Graphen lesen kannst. Jetzt berechnest du ihn. Beide Gleichungen sind schon nach $y$ aufgelöst. Dann müssen die rechten Seiten gleich
 sein, wenn die Kosten gleich sind. Für A und B: $x$ + 6 = 2 · $x$ + 2.
 

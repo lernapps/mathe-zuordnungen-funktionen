@@ -60,7 +60,7 @@ Bei der Pfeiltabelle rechnest du hier links mal 2 und rechts durch 2: Die Pfeile
 
 **Merke: Merke**
 
-„Je mehr, desto weniger“ reicht nicht. Bei einem Preis von 40 € bleibt nach $x$ Gutscheinen zu 5 € noch $y$ = 40 − 5 · $x$ zu zahlen. Das Produkt
+„Je mehr, desto weniger“ reicht nicht. Bei einem Preis von 40 € bleibt nach $x$ Gutscheinen zu 5 € noch $y$ = 40 − 5 · $x$ zu zahlen. Das Produkt
 bleibt dabei nicht gleich. Prüfe immer, ob $x$ · $y$ gleich bleibt.
 
 ### Beispiel

@@ -44,7 +44,7 @@ Du löst ein Gleichungssystem zeichnerisch: Der Schnittpunkt zweier Geraden ist 
 ### Welcher Tarif ist besser?
 
 Die Klasse vergleicht zwei Handytarife. **Tarif A:** 6 € Grundpreis und 1 € je Stunde. **Tarif B:** 2 € Grundpreis und 2 € je Stunde.
-Beide sind Geraden. Wo schneiden sie sich? Lies es im Graphen ab.
+Beide sind Geraden. Wo schneiden sie sich? Der Schnittpunkt ist der Punkt, in dem sich beide Geraden treffen. Lies es im Graphen ab.
 
 Interaktiv: Tarif A: $y$ = 1 · $x$ + 6, Tarif B: $y$ = 2 · $x$ + 2. Die Tabelle: nach 0, 1, 2, 3 Stunden kostet A 6 €, 7 €, 8 €, 9 € und B 2 €, 4 €, 6 €, 8 €. Der Graph von A ist die flachere Gerade (durchgezogen), der von B die steilere (gestrichelt).
 

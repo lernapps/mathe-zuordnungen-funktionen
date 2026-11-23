@@ -2,3 +2,17 @@
 title: Was eine Funktion ist
 summary: Zu jedem x gehört genau ein y. Du erkennst Funktionen, wechselst zwischen Situation, Tabelle, Graph und Term und nutzt alle vier Quadranten.
 pages: [funktion-begriff, funktion-term-graph, vier-quadranten, situation-tabelle-graph, graph-term-wechseln]
+selfAssessment:
+  pages:
+    - exercises:
+        - /funktionen/funktion-begriff/#zwei-y
+        - /funktionen/funktion-begriff/#welche-funktionen
+        - /funktionen/funktion-term-graph/#funktionswert
+    - exercises:
+        - /funktionen/vier-quadranten/#punkte-quadranten
+        - /funktionen/vier-quadranten/#abstand-y-achse
+        - /funktionen/situation-tabelle-graph/#ben-nach-sechs
+    - exercises:
+        - /funktionen/situation-tabelle-graph/#gefaess-graph
+        - /funktionen/graph-term-wechseln/#wert-bei-negativem-x
+        - /funktionen/graph-term-wechseln/#term-zur-wertetabelle

@@ -128,8 +128,9 @@ Alle in `src/data/`, je Datensatz ganzzahlig und mit Rechenprobe (die Prüfung s
 1. Bausteine mit ids aus der Karte (`mathematik.json`) wählen; `requires` prüfen, Voraussetzungen von außen als `recap`-Seite.
 2. Ordner `src/<kapitel>/` mit `chapter.yaml`; Kapitel in `chapters` von `src/app.yaml` eintragen.
 3. Seiten nach dem Muster `src/zuordnungen/proportional-erkennen.yaml` (Abschnitte `einstieg`, `erklaerung`, `beispiel`, `uebung`), in `pages` eintragen.
-4. Aufgaben aus den Mustern oben; `generated` mit `where` und `mistakes`; Rechenprobe im Test.
-5. `npx vp build` nach jeder Seite, `npx vp check --fix` vor dem Commit, `npx --no -- lernapps check`, Commit.
+4. 1 bis 3 ihrer Übungen in `selfAssessment` aufnehmen, wie Skill `lernapps-explainer-self-assessment` sagt (jedes Kapitel hat eine, in `chapter.yaml`: bevorzugt `generated`, sonst `number` oder `matching` ohne Verweis auf die Seite).
+5. Aufgaben aus den Mustern oben; `generated` mit `where` und `mistakes`; Rechenprobe im Test.
+6. `npx vp build` nach jeder Seite, `npx vp check --fix` vor dem Commit, `npx --no -- lernapps check`, Commit.
 
 ## Rules learned from mistakes
 

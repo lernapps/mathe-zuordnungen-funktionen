@@ -2,3 +2,17 @@
 title: Geraden mit Schiebereglern
 summary: Mit zwei Reglern, m und b, bewegst du eine Gerade. Du beschreibst lineare Funktionen und stellst Geradengleichungen auf.
 pages: [das-brauchst-du, m-und-b, steigung-deuten, gerade-zwei-punkte, gerade-punkt-steigung, nullstelle-schnittpunkt]
+selfAssessment:
+  pages:
+    - exercises:
+        - /geraden/m-und-b/#steigung-ablesen
+        - /geraden/m-und-b/#achsenabschnitt-ablesen
+        - /geraden/steigung-deuten/#steigung-steigend
+    - exercises:
+        - /geraden/steigung-deuten/#steigung-fallend
+        - /geraden/gerade-zwei-punkte/#m-aus-zwei-punkten
+        - /geraden/gerade-zwei-punkte/#b-aus-zwei-punkten
+    - exercises:
+        - /geraden/gerade-punkt-steigung/#b-aus-punkt-steigung
+        - /geraden/nullstelle-schnittpunkt/#nullstelle-berechnen
+        - /geraden/nullstelle-schnittpunkt/#schnittpunkt-berechnen

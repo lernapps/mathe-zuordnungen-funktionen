@@ -10,3 +10,17 @@ pages:
     antiproportional,
     proportional-oder-anti,
   ]
+selfAssessment:
+  pages:
+    - exercises:
+        - /zuordnungen/zuordnungen-darstellen/#taxi-preis
+        - /zuordnungen/proportional-erkennen/#anderes-x
+        - /zuordnungen/proportional-erkennen/#doppelte-minuten
+    - exercises:
+        - /zuordnungen/proportional-rechnen/#faktor-bestimmen
+        - /zuordnungen/proportional-rechnen/#wert-mit-faktor
+        - /zuordnungen/antiproportional/#antiproportional-wert
+    - exercises:
+        - /zuordnungen/antiproportional/#becken-sechs-pumpen
+        - /zuordnungen/proportional-oder-anti/#situation-art
+        - /zuordnungen/proportional-oder-anti/#anti-oder-proportional-wert

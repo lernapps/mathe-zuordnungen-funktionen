@@ -60,8 +60,8 @@ blocks:
         explanation: "Ein lineares Gleichungssystem besteht aus zwei Gleichungen mit zwei Unbekannten $x$ und $y$. Die Lösung ist ein Zahlenpaar ($x$|$y$), das beide Gleichungen erfüllt. Beispiel: $y$ = $x$ + 6 und $y$ = 2 · $x$ + 2 haben die Lösung (4|10)."
       - type: text
         text: |
-          Zeichne beide Geraden und lies den **Schnittpunkt** ab. Seine Koordinaten sind die Lösung. Mit einer Tabelle kannst du die Stelle
-          eingrenzen: Wo wechselt das Vorzeichen des Unterschieds von A und B? Mache zum Schluss die Probe in beiden Gleichungen. Der Punkt, an dem beide Tarife gleich viel kosten, ist der **Tarif-Wechsel**: davor ist der eine Tarif billiger, danach der andere.
+          Schau dir beide Geraden an und lies den **Schnittpunkt** ab. Seine Koordinaten sind die Lösung. Mit einer Tabelle kannst du die Stelle
+          eingrenzen: Wo wechselt es von „A ist teurer“ zu „B ist teurer“? Mache zum Schluss die Probe in beiden Gleichungen. Der Punkt, an dem beide Tarife gleich viel kosten, ist der **Tarif-Wechsel**: davor ist der eine Tarif billiger, danach der andere.
       - type: note
         title: Merke
         blocks:

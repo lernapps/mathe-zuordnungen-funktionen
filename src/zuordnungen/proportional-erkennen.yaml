@@ -40,7 +40,7 @@ blocks:
       - type: text
         text: |
           Du siehst Term, Tabelle und Graph zugleich. Mit dem Regler *k* stellst du den Preis pro Minute in Euro ein. Stelle
-          *k* = 2 ein und vergleiche in der Tabelle die Kosten bei 2 Minuten mit denen bei 4 Minuten. Was fällt dir auf? Die
+          *k* = 2 ein und vergleiche in der Tabelle die Kosten bei 1 Minute mit denen bei 2 Minuten. Was fällt dir auf? Die
           Antwort steht gleich unten.
   - type: section
     id: erklaerung

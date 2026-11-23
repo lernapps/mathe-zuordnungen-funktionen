@@ -33,7 +33,7 @@ blocks:
             - {
                 text: "(4|7)",
                 correct: false,
-                info: "Du hast die Reihenfolge vertauscht. Erst kommt der x-Wert (nach rechts): 2 + 5 = 7, dann der y-Wert (nach oben): 1 + 3 = 4.",
+                info: "Du hast die Reihenfolge vertauscht. Erst kommt der x-Wert (nach rechts), dann der y-Wert (nach oben).",
               }
             - {
                 text: "(5|3)",

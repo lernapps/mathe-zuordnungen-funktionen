@@ -38,7 +38,7 @@ blocks:
                 correct: false,
                 info: "Du hast 12 − 9 gerechnet. Die 9 steht links mit Minus, also addierst du 9 auf beiden Seiten: 12 + 9 = 21.",
               }
-            - { text: "x = 21", correct: false, info: "Du hast nicht durch 3 geteilt. Aus 3 · x = 21 folgt x = 7." }
+            - { text: "x = 21", correct: false, info: "Du hast nicht durch 3 geteilt." }
             - {
                 text: "x = 7",
                 correct: true,
@@ -79,12 +79,8 @@ blocks:
         props:
           question: "Wie lautet die Lösung von 2 · x + 1 = −x + 7? (x steht auf beiden Seiten.)"
           options:
-            - {
-                text: "x = 8",
-                correct: false,
-                info: "Du hast 1 zur 7 addiert (7 + 1 = 8) statt abgezogen. Richtig ist 7 − 1 = 6, also 3 · x = 6.",
-              }
-            - { text: "x = 6", correct: false, info: "Du hast nicht durch 3 geteilt. Aus 3 · x = 6 folgt x = 2." }
+            - { text: "x = 8", correct: false, info: "Du hast 1 zur 7 addiert statt abgezogen." }
+            - { text: "x = 6", correct: false, info: "Du hast nicht durch 3 geteilt." }
             - {
                 text: "x = 2",
                 correct: true,

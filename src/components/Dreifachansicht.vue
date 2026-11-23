@@ -131,6 +131,9 @@ const pointsText = computed(() =>
 );
 const showB = computed(() => props.kind === "linear" && props.bName !== undefined);
 const showB2 = computed(() => two.value && props.b2Name !== undefined);
+const sliderCount = computed(
+  () => (props.fixedA ? 0 : 1) + (showB.value ? 1 : 0) + (two.value && props.a2Name ? 1 : 0) + (showB2.value ? 1 : 0),
+);
 </script>
 
 <template>
@@ -144,7 +147,10 @@ const showB2 = computed(() => two.value && props.b2Name !== undefined);
       <span class="dreifach-title">{{ name2 }}:</span> <strong>{{ term(p2) }}</strong>
     </p>
 
-    <p v-if="!fixed" class="dreifach-hint">Bewege einen Regler: Term, Tabelle und Graph ändern sich gleichzeitig.</p>
+    <p v-if="!fixed" class="dreifach-hint">
+      {{ sliderCount === 1 ? "Bewege den Regler" : "Bewege einen Regler" }}: Term, Tabelle und Graph ändern sich
+      gleichzeitig.
+    </p>
     <div v-if="!fixed" class="dreifach-sliders">
       <label v-if="!fixedA" class="dreifach-slider">
         <span>{{ aName }} = {{ format(a) }}</span>

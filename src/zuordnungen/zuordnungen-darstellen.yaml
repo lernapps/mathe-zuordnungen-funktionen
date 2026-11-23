@@ -68,7 +68,7 @@ blocks:
           - type: text
             text: |
               Ein Graph ist **kein Bild vom Weg**. Er zeigt, welcher Preis zu welcher Strecke gehört. Verbinde die Punkte nur, wenn
-              auch die Werte dazwischen vorkommen, wie 2,5 km. Bei ganzen Karten gibt es nur einzelne Punkte.
+              auch die Werte dazwischen vorkommen, wie 2,5 km. Bei Dingen, die du nur ganz kaufen kannst (zum Beispiel Karten oder Äpfel), gibt es nur einzelne Punkte.
   - type: section
     id: beispiel
     title: Beispiel
@@ -111,7 +111,7 @@ blocks:
     blocks:
       - type: single-choice
         id: punkte-verbinden
-        text: "Der Graph zeigt die Zuordnung „Anzahl Äpfel → Preis“. Du kannst nur ganze Äpfel kaufen. Was zeichnest du?"
+        text: "Du zeichnest den Graphen der Zuordnung „Anzahl Äpfel → Preis“. Du kannst nur ganze Äpfel kaufen. Was zeichnest du?"
         options:
           - text: "Einzelne Punkte"
             correct: true

@@ -41,11 +41,7 @@ blocks:
                 correct: true,
                 info: "Erst 6 · 7 = 42 und 4 · 5 = 20, dann 18 + 42 − 20 = 40 (Punkt vor Strich).",
               }
-            - {
-                text: "60",
-                correct: false,
-                info: "Du hast 18 + 42 = 60 gerechnet und die Aufgabe − 4 · 5 vergessen. Von 60 gehen noch 20 ab.",
-              }
+            - { text: "60", correct: false, info: "Du hast die Aufgabe − 4 · 5 vergessen." }
           right: "Richtig."
           wrong: "Nicht richtig."
         nojs: |
@@ -149,6 +145,6 @@ blocks:
     blocks:
       - type: text
         text: |
-          - Punkt vor Strich und Klammern richtig anwendest,
-          - Stunden in Minuten und Minuten in Stunden umrechnen kannst,
+          - Punkt vor Strich richtig anwendest,
+          - eine Zeitspanne in Minuten ausrechnest,
           - Meter in Zentimeter, Zentimeter in Meter und Kilometer in Meter umrechnen kannst.

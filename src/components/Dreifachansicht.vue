@@ -49,7 +49,7 @@ const W = 320;
 const H = 240;
 const padL = 40;
 const padR = 14;
-const padT = 12;
+const padT = 26;
 const padB = 34;
 const sx = (x: number) => padL + ((x - props.xMin) / (props.xMax - props.xMin)) * (W - padL - padR);
 const sy = (v: number) => padT + ((props.yMax - v) / (props.yMax - props.yMin)) * (H - padT - padB);
@@ -74,6 +74,9 @@ const dots = computed(() =>
     .filter((r) => r.y !== undefined && r.y >= props.yMin && r.y <= props.yMax)
     .map((r) => ({ cx: sx(r.x), cy: sy(r.y as number) })),
 );
+const pointsText = computed(() =>
+  rows.value.map((r) => `(${format(r.x)}|${r.y === undefined ? "kein Wert" : format(r.y)})`).join(", "),
+);
 const showB = computed(() => props.kind === "linear" && props.bName !== undefined);
 </script>
 
@@ -94,6 +97,10 @@ const showB = computed(() => props.kind === "linear" && props.bName !== undefine
           :step="aStep"
           :aria-valuetext="valueText(aName, a)"
         />
+        <span class="dreifach-ends"
+          ><span>{{ format(aMin) }}</span
+          ><span>{{ format(aMax) }}</span></span
+        >
       </label>
       <label v-if="showB" class="dreifach-slider">
         <span>{{ bName }} = {{ format(b) }}</span>
@@ -105,6 +112,10 @@ const showB = computed(() => props.kind === "linear" && props.bName !== undefine
           :step="bStep ?? 1"
           :aria-valuetext="valueText(bName ?? 'b', b)"
         />
+        <span class="dreifach-ends"
+          ><span>{{ format(bMin ?? -5) }}</span
+          ><span>{{ format(bMax ?? 5) }}</span></span
+        >
       </label>
     </div>
 
@@ -124,7 +135,12 @@ const showB = computed(() => props.kind === "linear" && props.bName !== undefine
       </tbody>
     </table>
 
-    <svg class="dreifach-graph" :viewBox="`0 0 ${W} ${H}`" role="img" :aria-label="`Graph. ${words}`">
+    <svg
+      class="dreifach-graph"
+      :viewBox="`0 0 ${W} ${H}`"
+      role="img"
+      :aria-label="`Graph. ${words} Punkte: ${pointsText}`"
+    >
       <g class="dreifach-grid">
         <line v-for="m in xMarks" :key="'gx' + m" :x1="sx(m)" :x2="sx(m)" :y1="padT" :y2="H - padB" />
         <line v-for="m in yMarks" :key="'gy' + m" :x1="padL" :x2="W - padR" :y1="sy(m)" :y2="sy(m)" />
@@ -141,7 +157,7 @@ const showB = computed(() => props.kind === "linear" && props.bName !== undefine
           {{ format(m) }}
         </text>
         <text :x="W - padR" :y="H - 4" text-anchor="end">{{ xLabel }}</text>
-        <text :x="padL + 4" :y="padT + 10">{{ yLabel }}</text>
+        <text :x="padL - 30" :y="padT - 12">{{ yLabel }}</text>
       </g>
       <polyline v-if="line" class="dreifach-line" :points="line" fill="none" />
       <circle v-for="(d, i) in dots" :key="i" class="dreifach-dot" :cx="d.cx" :cy="d.cy" r="4" />
@@ -193,10 +209,17 @@ const showB = computed(() => props.kind === "linear" && props.bName !== undefine
   padding-bottom: 0.25rem;
 }
 
+.dreifach-ends {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: var(--page-muted);
+}
+
 .dreifach-table th,
 .dreifach-table td {
   border: 1px solid var(--page-border);
-  padding: 0.25rem 0.5rem;
+  padding: 0.2rem 0.35rem;
   text-align: right;
   white-space: nowrap;
 }

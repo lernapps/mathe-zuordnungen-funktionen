@@ -15,10 +15,10 @@
   <text x="140" y="130" text-anchor="middle">2</text>
   <text x="220" y="130" text-anchor="middle">4</text>
   <text x="300" y="130" text-anchor="middle">6</text>
-  <path class="arc" d="M 140 52 Q 220 12 300 52"/>
-  <path class="arc" d="M 296 47 L 300 52 L 292 53"/>
-  <text x="220" y="22" text-anchor="middle">· 3</text>
-  <path class="arc" d="M 140 142 Q 220 182 300 142"/>
-  <path class="arc" d="M 296 147 L 300 142 L 292 141"/>
-  <text x="220" y="184" text-anchor="middle">· 3</text>
+  <path class="arc" d="M 140 52 Q 180 24 216 50"/>
+  <path class="arc" d="M 210 46 L 216 50 L 208 54"/>
+  <text x="178" y="26" text-anchor="middle">· 2</text>
+  <path class="arc" d="M 140 142 Q 180 170 216 144"/>
+  <path class="arc" d="M 210 148 L 216 144 L 208 140"/>
+  <text x="178" y="176" text-anchor="middle">· 2</text>
 </svg>

@@ -10,7 +10,8 @@ blocks:
       - type: text
         text: |
           Jonas telefoniert mit einer Prepaid-Karte. Jede Minute kostet gleich viel. Nach dieser Seite erkennst du, ob eine
-          Zuordnung **proportional** ist. Du kennst schon Tabelle, Graph und Wörter für eine Zuordnung.
+          Zuordnung **proportional** ist. Du kennst schon Tabelle, Graph und Wörter für eine Zuordnung. Hier ist $x$ die
+          Zahl der Minuten und $y$ sind die Kosten in Euro.
       - type: vue-component
         id: handytarif
         component: Dreifachansicht
@@ -20,43 +21,44 @@ blocks:
           yLabel: Kosten (€)
           xUnit: min
           yUnit: €
-          xs: [0, 1, 2, 3, 4, 5]
+          xs: [0, 1, 2, 3, 4]
           xMin: 0
           xMax: 5
           yMin: 0
           yMax: 10
           tickX: 1
-          tickY: 2
+          tickY: 1
           a: 1
-          aMin: 0
+          aMin: 0.5
           aMax: 2
           aStep: 0.5
-          aName: k
+          aName: k (Preis pro Minute in €)
         nojs: |
           Term, Tabelle und Graph zu einem Handytarif: Die Kosten in Euro sind der Preis pro Minute *k* mal die Minuten *x*,
-          also *y* = *k* · *x*. Für *k* = 1 gehören zu 0, 1, 2, 3, 4, 5 Minuten die Kosten 0 €, 1 €, 2 €, 3 €, 4 €, 5 €. Der Graph
-          ist eine Gerade durch den Ursprung. Für *k* = 2 sind es 0 €, 2 €, 4 €, 6 €, 8 €, 10 €, die Gerade ist steiler.
+          also *y* = *k* · *x*. Für *k* = 1 gehören zu 0, 1, 2, 3, 4 Minuten die Kosten 0 €, 1 €, 2 €, 3 €, 4 €. Der Graph
+          ist eine Gerade durch den Ursprung. Für *k* = 2 sind es 0 €, 2 €, 4 €, 6 €, 8 €, die Gerade ist steiler.
       - type: text
         text: |
-          Du siehst Term, Tabelle und Graph zugleich. Mit dem Regler *k* stellst du den Preis pro Minute in Euro ein. Schiebe
-          ihn und achte auf die Tabelle: Was passiert mit den Kosten, wenn die Minuten sich verdoppeln?
+          Du siehst Term, Tabelle und Graph zugleich. Mit dem Regler *k* stellst du den Preis pro Minute in Euro ein. Stelle
+          *k* = 2 ein und vergleiche in der Tabelle die Kosten bei 2 Minuten mit denen bei 4 Minuten. Was fällt dir auf? Die
+          Antwort steht gleich unten.
   - type: section
     id: erklaerung
     title: Doppelt so viel, doppelt so teuer
     blocks:
       - type: figure
         image: images/pfeiltabelle-minuten.svg
-        alt: "Tabelle mit zwei Zeilen. Minuten: 1, 2, 3. Kosten in Euro: 2, 4, 6. Über der oberen Zeile ein Pfeil von 1 nach 3 mit „· 3“, unter der unteren Zeile ein Pfeil von 2 nach 6 mit „· 3“."
-        caption: "Wer links mit 3 malnimmt, nimmt rechts auch mit 3 mal: aus 1 Minute wird 3 Minuten, aus 2 € werden 6 €."
+        alt: "Tabelle mit zwei Zeilen. Minuten: 1, 2, 3. Kosten in Euro: 2, 4, 6. Über der oberen Zeile ein Pfeil von 1 nach 2 mit „· 2“, unter der unteren Zeile ein Pfeil von 2 nach 4 mit „· 2“."
+        caption: "Tabelle mit Pfeilen: Rechnest du links ·2, rechnest du rechts auch ·2. Aus 1 Minute werden 2 Minuten, aus 2 € werden 4 €."
         source: eigene Zeichnung
         licence: CC-BY-4.0
       - type: definition
         term: proportional
-        explanation: "Eine Zuordnung ist proportional, wenn zum Doppelten von $x$ das Doppelte von $y$ gehört, zum Dreifachen das Dreifache und so weiter. Der Quotient $y : x$ ist dann immer gleich."
+        explanation: "Eine Zuordnung ist proportional, wenn zum Doppelten von $x$ das Doppelte von $y$ gehört, zum Dreifachen das Dreifache und so weiter. Der Quotient $y : x$ (y geteilt durch x) ist dann immer gleich."
       - type: text
         text: |
           Der Graph einer proportionalen Zuordnung ist eine **Gerade durch den Ursprung**, den Punkt $(0|0)$. Der gleiche
-          Quotient $y : x$ heißt **Proportionalitätsfaktor** $k$. Wie du mit ihm rechnest, lernst du auf der nächsten Seite.
+          Quotient $y : x$ heißt **Proportionalitätsfaktor** $k$. Mit ihm rechnest du auf der nächsten Seite.
       - type: note
         title: Merke
         blocks:
@@ -72,7 +74,7 @@ blocks:
         title: Prepaid oder Grundgebühr
         blocks:
           - type: text
-            text: Tarif A kostet pro Minute 2 €. Tarif B hat 1 € Grundgebühr und kostet dann 2 € pro Minute. Welcher Tarif ist proportional?
+            text: "Tarif A kostet pro Minute 2 €. Tarif B hat 1 € Grundgebühr und kostet dann 2 € pro Minute. Rechne die Zeile $y : x$ in beiden Tabellen selbst nach, dann siehst du, welcher Tarif proportional ist."
           - type: table
             caption: "Tarif A: Minuten und Kosten"
             rowHeaders: true
@@ -131,9 +133,9 @@ blocks:
           - text: "Alter eines Kindes → Körpergröße"
             correct: false
             info: "Ein Kind wird mit dem doppelten Alter nicht doppelt so groß. Nicht proportional."
-          - text: "Fahrtstrecke bei gleichbleibenden 50 km pro Stunde → Fahrzeit"
+          - text: "Seitenlänge eines Quadrats → Umfang"
             correct: true
-            info: "Doppelt so viel Strecke braucht doppelt so viel Zeit, wenn die Geschwindigkeit gleich bleibt."
+            info: "Der Umfang ist 4 mal die Seitenlänge. Doppelte Seitenlänge gibt doppelten Umfang."
           - text: "Taxifahrt: 3 € Grundpreis plus 2 € je km → Fahrpreis"
             correct: false
             info: "Bei 0 km kostet die Fahrt schon 3 €, die Gerade geht nicht durch den Ursprung. Nicht proportional."
@@ -150,6 +152,8 @@ blocks:
         mistakes:
           - answer: 12
             message: "Du hast 4 addiert. Bei proportional wird mit dem gleichen Faktor malgenommen: aus 4 wird 8 Minuten, das Doppelte, also auch 8 € mal 2."
+          - answer: 8
+            message: "Du hast die Kosten übernommen. Mit mehr Minuten steigen die Kosten, sie bleiben nicht gleich."
           - answer: 32
             message: "Du hast 8 mal 4 gerechnet. Die Minuten verdoppeln sich, also verdoppeln sich auch die Kosten."
         explanation: "Aus 4 Minuten werden 8 Minuten, mal 2. Dann auch die Kosten mal 2: 8 € · 2 = 16 €."
@@ -170,8 +174,8 @@ blocks:
             message: "Du hast y mit dem neuen x malgenommen. Berechne erst den Faktor y : x aus dem ersten Paar."
         hint: "Rechne erst den Faktor aus: y geteilt durch x aus dem ersten Paar."
         steps:
-          - "Faktor: {{e.y1}} : {{e.x1}}"
-          - "Dann {{e.x2}} mal den Faktor: {{answer}}"
+          - "Faktor (der Quotient y : x) aus dem ersten Paar: {{e.y1}} : {{e.x1}} = {{e.k}}"
+          - "Dann {{e.x2}} mal den Faktor: {{e.x2}} · {{e.k}} = {{answer}}"
       - type: text
         text: |
           **Das kannst du jetzt:** Du erkennst proportionale Zuordnungen an gleichen Quotienten, an der Pfeiltabelle und an der

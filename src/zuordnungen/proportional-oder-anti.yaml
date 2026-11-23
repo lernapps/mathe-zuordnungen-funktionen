@@ -9,8 +9,8 @@ blocks:
     blocks:
       - type: text
         text: |
-          Die Klasse hat zwei Zuordnungen. Links: Zahl der Karten und Preis (2 € je Karte). Rechts: Zahl der Pumpen und Zeit für ein
-          Becken. Beide werden mit mehr x anders. Schau dir die Graphen an: Was ist gleich, was anders?
+          Die Klasse hat zwei Zuordnungen. Erste Zuordnung: Zahl der Karten und Preis (2 € je Karte). Zweite Zuordnung: Zahl der Pumpen und Zeit für ein
+          Becken. Bei mehr x verhalten sich beide anders. Schau dir die Graphen an: Was ist gleich, was anders?
       - type: vue-component
         id: graph-proportional
         component: Dreifachansicht
@@ -101,7 +101,7 @@ blocks:
               - ["C: x", "2", "3", "6"]
               - ["C: y", "4", "5", "9"]
           - type: text
-            text: "A: $y : x$ ist immer 2, also proportional. B: $x \\cdot y$ ist immer 12, also antiproportional. C: $y : x$ ist 2; 1,67; 1,5 und $x \\cdot y$ ist 8; 15; 54, also keins von beiden."
+            text: "A: $y : x$ ist immer 2, also proportional. B: $x \\cdot y$ ist immer 12, also antiproportional. C: $y : x$ ist 2; etwa 1,67; 1,5 und $x \\cdot y$ ist 8; 15; 54, also keins von beiden."
   - type: section
     id: uebung
     title: Übung

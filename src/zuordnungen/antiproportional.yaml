@@ -9,7 +9,7 @@ blocks:
     blocks:
       - type: text
         text: |
-          Ben füllt das Becken. Mit 1 Pumpe dauert es 12 Stunden, mit 2 Pumpen nur 6 Stunden. Je mehr Pumpen, desto kürzer die Zeit.
+          Ben füllt das Becken. Mit 1 Pumpe dauert es 12 Stunden, mit 2 Pumpen nur 6 Stunden. Je mehr Pumpen, desto kürzer die Zeit.
           Nach dieser Seite erkennst du solche **antiproportionalen** Zuordnungen. Schiebe den Regler und vergleiche in der Tabelle
           die Pumpenzahl mal die Zeit.
       - type: vue-component
@@ -58,8 +58,8 @@ blocks:
         blocks:
           - type: text
             text: |
-              „Je mehr, desto weniger“ reicht nicht. Ein Gutschein von 5 € auf einen Preis macht den Preis auch kleiner, doch das
-              Produkt bleibt nicht gleich. Prüfe immer, ob x · y gleich bleibt.
+              „Je mehr, desto weniger“ reicht nicht. Je mehr 5-€-Gutscheine du einlöst, desto weniger bleibt zu zahlen (y = 40 − 5 · x). Das Produkt
+              bleibt dabei nicht gleich. Prüfe immer, ob x · y gleich bleibt.
   - type: section
     id: beispiel
     title: Beispiel
@@ -68,16 +68,16 @@ blocks:
         title: Das Becken mit 6 Pumpen
         blocks:
           - type: text
-            text: 4 Pumpen füllen das Becken in 3 Stunden. Wie lange brauchen 6 Pumpen?
+            text: 4 Pumpen füllen das Becken in 3 Stunden. Wie lange brauchen 6 Pumpen?
           - type: text
-            text: "Produkt: $4 \\cdot 3 = 12$. Dann $y = 12 : 6 = 2$. 6 Pumpen brauchen 2 Stunden."
+            text: "Produkt: $4 \\cdot 3 = 12$. Dann $y = 12 : 6 = 2$. 6 Pumpen brauchen 2 Stunden."
   - type: section
     id: uebung
     title: Übung
     blocks:
       - type: number
         id: becken-sechs-pumpen
-        text: "4 Pumpen füllen ein Becken in 6 Stunden. Wie viele Stunden brauchen 8 Pumpen?"
+        text: "4 Pumpen füllen ein Becken in 6 Stunden. Wie viele Stunden brauchen 8 Pumpen?"
         answer: 3
         tolerance: 0
         unit: Stunden

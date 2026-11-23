@@ -23,7 +23,7 @@ blocks:
     blocks:
       - type: definition
         term: Dreisatz
-        explanation: "Der Dreisatz löst Aufgaben, bei denen doppelt so viel doppelt so teuer ist. Du schreibst die Werte in eine Tabelle mit zwei Zeilen und rechnest links und rechts mit demselben Faktor. Beispiel: 3 Karten kosten 6 €, 6 Karten kosten 6 € · 2 = 12 €."
+        explanation: "Der Dreisatz löst Aufgaben, bei denen die doppelte Menge den doppelten Wert hat. Du schreibst die Werte in eine Tabelle mit zwei Zeilen und rechnest links und rechts mit demselben Faktor. Beispiel: 3 Karten kosten 6 €, 6 Karten kosten 6 € · 2 = 12 €."
       - type: text
         text: |
           Zwei Schritte: Erst siehst du, womit du links rechnen musst (hier mal 2). Dann rechnest du rechts genauso. Die

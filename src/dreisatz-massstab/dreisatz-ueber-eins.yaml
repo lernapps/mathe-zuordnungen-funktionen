@@ -40,7 +40,7 @@ blocks:
         title: Ein Becken füllen
         blocks:
           - type: text
-            text: Ben füllt ein Becken. In 4 Minuten laufen 60 Liter ein. Wie viele Liter sind es nach 7 Minuten?
+            text: Ben füllt ein Becken. In 4 Minuten laufen 60 Liter ein. Wie viele Liter sind es nach 7 Minuten?
           - type: table
             caption: Minuten und Liter
             rowHeaders: true
@@ -48,7 +48,7 @@ blocks:
               - ["Minuten", "4", "1", "7"]
               - ["Liter", "60", "?", "?"]
           - type: text
-            text: "Auf 1 Minute: $60 : 4 = 15$ Liter. Auf 7 Minuten: $15 \\cdot 7 = 105$ Liter."
+            text: "Auf 1 Minute: $60 : 4 = 15$ Liter. Auf 7 Minuten: $15 \\cdot 7 = 105$ Liter."
   - type: section
     id: uebung
     title: Übung
@@ -87,31 +87,31 @@ blocks:
           - "Auf {{e.x2}} Karten: {{e.u}} · {{e.x2}} = {{answer}} €."
       - type: number
         id: becken-sieben-minuten
-        text: "Ein Schlauch füllt in 4 Minuten 60 Liter in ein Becken. Wie viele Liter sind es nach 7 Minuten?"
+        text: "Ein Schlauch füllt in 4 Minuten 60 Liter in ein Becken. Wie viele Liter sind es nach 7 Minuten?"
         answer: 105
         tolerance: 0
         unit: Liter
         mistakes:
           - answer: 63
-            message: "Du hast 3 addiert, weil 7 − 4 = 3. Rechne über 1 Minute: Erst 60 : 4, dann mal 7."
+            message: "Du hast 3 addiert, weil 7 − 4 = 3. Rechne über 1 Minute: Erst 60 : 4, dann mal 7."
           - answer: 15
-            message: "15 Liter sind es nach 1 Minute. Gefragt sind 7 Minuten, also noch mal 7."
-        explanation: "In 1 Minute laufen $60 : 4 = 15$ Liter ein. In 7 Minuten sind es $15 \\cdot 7 = 105$ Liter."
+            message: "15 Liter sind es nach 1 Minute. Gefragt sind 7 Minuten, also noch mal 7."
+        explanation: "In 1 Minute laufen $60 : 4 = 15$ Liter ein. In 7 Minuten sind es $15 \\cdot 7 = 105$ Liter."
         links:
           - title: "Lernlandkarte: Dreisatz"
             url: https://lernapps.net/apps/map/mathematik/c/dreisatz/
       - type: number
         id: becken-rueckwaerts
-        text: "Der Schlauch füllt weiter 15 Liter pro Minute ein. Nach wie vielen Minuten sind 90 Liter im Becken?"
+        text: "Der Schlauch füllt weiter 15 Liter pro Minute ein. Nach wie vielen Minuten sind 90 Liter im Becken?"
         answer: 6
         tolerance: 0
         unit: Minuten
         mistakes:
           - answer: 1350
-            message: "Du hast 90 mal 15 gerechnet. Gesucht ist, wie oft 15 Liter in 90 Liter passen: geteilt."
+            message: "Du hast 90 mal 15 gerechnet. Gesucht ist, wie oft 15 Liter in 90 Liter passen: geteilt."
           - answer: 75
-            message: "Du hast 15 von 90 abgezogen. Wie oft passen 15 Liter in 90 Liter? Das ist eine Division."
-        explanation: "Pro Minute 15 Liter. Für 90 Liter brauchst du $90 : 15 = 6$ Minuten."
+            message: "Du hast 15 von 90 abgezogen. Wie oft passen 15 Liter in 90 Liter? Das ist eine Division."
+        explanation: "Pro Minute 15 Liter. Für 90 Liter brauchst du $90 : 15 = 6$ Minuten."
         links:
           - title: "Lernlandkarte: Dreisatz"
             url: https://lernapps.net/apps/map/mathematik/c/dreisatz/

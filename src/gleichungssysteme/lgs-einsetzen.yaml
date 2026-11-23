@@ -9,8 +9,8 @@ blocks:
     blocks:
       - type: text
         text: |
-          Zwei Aussagen über Eis und Getränke: **I:** y = 2 · x + 1. **II:** 3 · x + y = 11. In der zweiten Gleichung steht das y allein.
-          Du darfst dafür den Term aus der ersten einsetzen, weil beide für dieselbe Zahl stehen. Wie sieht die zweite Gleichung dann aus?
+          **I:** y = 2 · x + 1. **II:** 3 · x + y = 11. In I steht y allein, in II steht y neben 3 · x. Du darfst in II für y den Term aus I einsetzen,
+          weil beide für dieselbe Zahl stehen. Wie sieht II dann aus?
   - type: section
     id: erklaerung
     title: Einsetzen in drei Schritten

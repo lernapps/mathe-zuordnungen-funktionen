@@ -81,7 +81,7 @@ blocks:
     blocks:
       - type: true-false
         id: gleiches-y
-        text: "Eine Zuordnung ist eine Funktion, wenn zwei verschiedene x denselben y-Wert haben dürfen."
+        text: "Bei einer Funktion dürfen zwei verschiedene x denselben y-Wert haben."
         answer: true
         explanation: "Das ist erlaubt. Mia und Ben haben beide Mai. Nicht erlaubt ist nur, dass ein x zwei verschiedene y hat."
         links:

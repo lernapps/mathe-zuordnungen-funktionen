@@ -35,8 +35,8 @@ blocks:
           b: 10
           fixed: true
         nojs: |
-          Der Term ist y = −2 · x + 10. Die Tabelle: nach 0, 1, 2, 3 Stunden sind es 10 €, 8 €, 6 €, 4 €. Der Graph ist eine fallende Gerade, die die
-          y-Achse bei 10 schneidet und die x-Achse bei 5.
+          Der Term ist y = −2 · x + 10. Die Tabelle: nach 0, 1, 2, 3 Stunden sind es 10 €, 8 €, 6 €, 4 €. Der Graph ist eine fallende Gerade, die die
+          y-Achse bei 10 schneidet.
   - type: section
     id: erklaerung
     title: y gleich null, y gleich y

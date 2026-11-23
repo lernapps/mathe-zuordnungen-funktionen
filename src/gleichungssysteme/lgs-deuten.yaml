@@ -10,17 +10,17 @@ blocks:
       - type: text
         text: |
           Die Klasse hat das System aus Tarif A (y = x + 6) und Tarif B (y = 2 · x + 2) gelöst: (4|10). Aber was sagt das? Und welchen Tarif nimmt die
-          Klasse, wenn sie 3 Stunden telefoniert? Nach dieser Seite deutest du die Lösung im Sachzusammenhang.
+          Klasse, wenn sie 3 Stunden telefoniert? Nach dieser Seite deutest du die Lösung im Sachzusammenhang.
       - type: single-choice
         id: tarif-drei-stunden
-        text: "Wie viel kostet Tarif B bei 3 Stunden, und wie viel Tarif A?"
+        text: "Wie viel kostet Tarif B bei 3 Stunden, und wie viel Tarif A?"
         options:
           - text: "B kostet 8 €, A kostet 9 €. B ist billiger."
             correct: true
             info: "B: 2 · 3 + 2 = 8. A: 3 + 6 = 9. Links vom Schnittpunkt (x < 4) ist B billiger."
           - text: "B kostet 10 €, A kostet 10 €."
             correct: false
-            info: "Das gilt nur bei 4 Stunden, am Schnittpunkt. Bei 3 Stunden sind die Preise verschieden."
+            info: "Das gilt nur bei 4 Stunden, am Schnittpunkt. Bei 3 Stunden sind die Preise verschieden."
           - text: "B kostet 9 €, A kostet 8 €."
             correct: false
             info: "Du hast die Tarife vertauscht. A: 3 + 6 = 9. B: 2 · 3 + 2 = 8."
@@ -41,7 +41,7 @@ blocks:
         blocks:
           - type: text
             text: |
-              Welches Verfahren? Steht ein y schon allein, nimm Gleichsetzen oder Einsetzen. Sind x und y mit entgegengesetzten Vorzeichen da, nimm
+              Welches Verfahren? Steht ein y schon allein, nimm Gleichsetzen oder Einsetzen. Steht dasselbe y in beiden Gleichungen mit entgegengesetztem Vorzeichen (+ y und − y), nimm
               Addieren. Alle drei führen zur selben Lösung.
   - type: section
     id: beispiel
@@ -51,7 +51,7 @@ blocks:
         title: Eintritt für Kinder und Erwachsene
         blocks:
           - type: text
-            text: "I: 1 Kind und 1 Erwachsener zahlen 8 €. II: 2 Kinder und 1 Erwachsener zahlen 11 €. Mit k für Kinder und e für Erwachsene: $k + e = 8$ und $2k + e = 11$. II minus I: $k = 3$. Dann $e = 8 - 3 = 5$. Antwort: Ein Kind zahlt 3 €, ein Erwachsener 5 €."
+            text: "I: 1 Kind und 1 Erwachsener zahlen 8 €. II: 2 Kinder und 1 Erwachsener zahlen 11 €. Mit k für den Preis eines Kindes und e für den Preis eines Erwachsenen: $k + e = 8$ und $2k + e = 11$. II minus I: $k = 3$. Dann $e = 8 - 3 = 5$. Antwort: Ein Kind zahlt 3 €, ein Erwachsener 5 €."
   - type: section
     id: uebung
     title: Übung
@@ -89,15 +89,15 @@ blocks:
         id: schnittpunkt-deuten
         text: "Tarif A: y = x + 6, Tarif B: y = 2 · x + 2 (x in Stunden, y in €). Die Lösung ist (4|10). Welcher Satz deutet sie richtig?"
         options:
-          - text: "Nach 4 Stunden kosten beide Tarife 10 €."
+          - text: "Nach 4 Stunden kosten beide Tarife 10 €."
             correct: true
             info: "x = 4 ist die Zeit, y = 10 der gemeinsame Preis. Das ist der Tarif-Wechsel."
-          - text: "Nach 10 Stunden kosten beide Tarife 4 €."
+          - text: "Nach 10 Stunden kosten beide Tarife 4 €."
             correct: false
             info: "x und y sind vertauscht. Erst kommt x (Stunden), dann y (Euro)."
-          - text: "Tarif A ist ab 4 Stunden immer teurer."
+          - text: "Tarif A ist ab 4 Stunden immer teurer."
             correct: false
-            info: "Ab 4 Stunden ist B teurer, weil B steiler steigt. A ist dann billiger."
+            info: "Ab 4 Stunden ist B teurer, weil B steiler steigt. A ist dann billiger."
         explanation: "Die Lösung (x|y) ist ein Zeitpunkt und ein Preis: Dort kosten beide gleich viel."
         links:
           - title: "Lernlandkarte: Lineare Gleichungssysteme: rechnerisch"

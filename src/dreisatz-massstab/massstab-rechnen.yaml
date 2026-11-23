@@ -23,7 +23,7 @@ blocks:
     blocks:
       - type: definition
         term: Maßstab
-        explanation: "Der Maßstab sagt, wie viel Mal kleiner die Karte als die Wirklichkeit ist. Bei 1 : 5000 sind 1 cm auf der Karte in Wirklichkeit 5000 cm. Beispiel: 2 cm auf der Karte sind 10 000 cm, das sind 100 m."
+        explanation: "Der Maßstab sagt, wie viel Mal kürzer die Strecken auf der Karte sind als in der Wirklichkeit. Bei 1 : 5000 sind 1 cm auf der Karte in Wirklichkeit 5000 cm. Beispiel: 2 cm auf der Karte sind 10 000 cm, das sind 100 m."
       - type: text
         text: |
           Der Maßstab ist eine Tabelle wie beim Dreisatz: Karte links, Wirklichkeit rechts. 1 cm auf der Karte sind 5000 cm in
@@ -34,7 +34,7 @@ blocks:
           - type: text
             text: |
               Die Wirklichkeit kommt erst in **Zentimetern** heraus. Das Ergebnis ist oft sehr groß, darum rechnest du in Meter
-              (durch 100) oder Kilometer (durch 100 000) um.
+              (durch 100) oder Kilometer (durch 100 000) um.
   - type: section
     id: beispiel
     title: Beispiel
@@ -47,9 +47,9 @@ blocks:
             rowHeaders: true
             rows:
               - ["Karte in cm", "1", "6"]
-              - ["Wirklichkeit in cm", "5000", "30 000"]
+              - ["Wirklichkeit in cm", "5000", "30 000"]
           - type: text
-            text: "Mal 6: $5000 \\cdot 6 = 30 000$ cm. In Meter: $30 000 : 100 = 300$ m. Der Weg ist 300 m lang."
+            text: "Mal 6: $5000 \\cdot 6 = 30 000$ cm. In Meter: $30 000 : 100 = 300$ m. Der Weg ist 300 m lang."
   - type: section
     id: uebung
     title: Übung
@@ -62,10 +62,10 @@ blocks:
         unit: m
         mistakes:
           - answer: 15000
-            message: "Das sind 15 000 cm. Du hast die Einheit nicht umgerechnet. 100 cm sind 1 m, also durch 100."
+            message: "Das sind 15 000 cm. Du hast die Einheit nicht umgerechnet. 100 cm sind 1 m, also durch 100."
           - answer: 15
             message: "Du hast durch 1000 geteilt. Ein Meter hat 100 Zentimeter, nicht 1000."
-        explanation: "$3 \\cdot 5000 = 15 000$ cm, und $15 000 : 100 = 150$ m."
+        explanation: "$3 \\cdot 5000 = 15 000$ cm, und $15 000 : 100 = 150$ m."
         links:
           - title: "Lernlandkarte: Maßstab"
             url: https://lernapps.net/apps/map/mathematik/c/massstab/

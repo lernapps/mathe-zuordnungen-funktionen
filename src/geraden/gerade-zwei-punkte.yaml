@@ -42,7 +42,7 @@ blocks:
             - { x: 5, y: 13, name: B }
         nojs: |
           Die Punkte A (2|7) und B (5|13) sind markiert. Mit den Reglern m und b wird die Gerade y = m · x + b so verschoben und gedreht, dass sie
-          durch beide Punkte geht. Das passt für m = 2 und b = 3.
+          durch beide Punkte geht. Zu Beginn ist m = 1 und b = 0: Für x = 0, 2, 4 ist y = 0, 2, 4. Die Tabelle ändert sich mit den Reglern.
   - type: section
     id: erklaerung
     title: Erst m, dann b
@@ -114,7 +114,7 @@ blocks:
         mistakes:
           - answer: 20
             message: "Du hast den Grundpreis b = 3 vergessen."
-          - answer: 65
+          - answer: 50
             message: "Du hast (2 + 3) · 10 gerechnet. Mal geht vor plus: erst 2 · 10, dann + 3."
         explanation: "$y = 2 \\cdot 10 + 3 = 23$."
         links:

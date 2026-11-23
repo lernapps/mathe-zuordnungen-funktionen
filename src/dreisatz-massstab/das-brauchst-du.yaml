@@ -65,7 +65,7 @@ blocks:
             - {
                 text: "140 min",
                 correct: false,
-                info: "Das ist 1 und 40 nebeneinander. Eine Stunde hat 60 Minuten, nicht 100.",
+                info: "Das ist 1 und 40 nebeneinander. Eine Stunde hat 60 Minuten, nicht 100.",
               }
             - { text: "160 min", correct: false, info: "Du hast 2 h gerechnet. Es ist 1 h und 40 min, also 60 + 40." }
           right: "Richtig."
@@ -91,7 +91,7 @@ blocks:
           question: "Wie viele Meter sind 4 km?"
           options:
             - { text: "4000 m", correct: true, info: "1 km = 1000 m, also 4 · 1000 = 4000." }
-            - { text: "400 m", correct: false, info: "Du hast mit 100 gerechnet. Ein Kilometer hat 1000 Meter." }
+            - { text: "400 m", correct: false, info: "Du hast mit 100 gerechnet. Ein Kilometer hat 1000 Meter." }
             - {
                 text: "40 m",
                 correct: false,

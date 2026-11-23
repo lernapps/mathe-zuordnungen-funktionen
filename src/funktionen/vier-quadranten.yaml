@@ -36,8 +36,8 @@ blocks:
           fixed: true
           hideTerm: true
         nojs: |
-          Tabelle zur Temperatur: um 10 Uhr (x = −2) 4 °C, um 11 Uhr 3 °C, um 12 Uhr 2 °C, um 13 Uhr 1 °C, um 14 Uhr 0 °C, um 15 Uhr
-          −1 °C. Der Graph ist eine fallende Linie. Sie liegt links oben und rechts unten.
+          Tabelle zur Temperatur: um 10 Uhr (x = −2) 4 °C, um 11 Uhr 3 °C, um 12 Uhr 2 °C, um 13 Uhr 1 °C, um 14 Uhr 0 °C, um 15 Uhr
+          −1 °C. Der Graph ist eine fallende Linie. Sie liegt links oben und rechts unten.
   - type: section
     id: erklaerung
     title: Vier Quadranten
@@ -89,7 +89,7 @@ blocks:
     blocks:
       - type: single-choice
         id: quadrant-um-sechzehn
-        text: "Um 16 Uhr (x = 4) sind es −2 °C. In welchem Quadranten liegt der Punkt (4|−2)?"
+        text: "Um 16 Uhr (x = 4) sind es −2 °C. In welchem Quadranten liegt der Punkt (4|−2)?"
         options:
           - text: "Quadrant I"
             correct: false

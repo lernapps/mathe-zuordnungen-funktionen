@@ -37,7 +37,7 @@ blocks:
           hideTerm: true
         nojs: |
           Tabelle zum Taxi: Bei 0 km kostet die Fahrt 3 €, bei 1 km 5 €, bei 2 km 7 €, bei 3 km 9 €. Der Graph ist eine Linie, die bei
-          3 € auf der y-Achse beginnt und mit jedem Kilometer um 2 € steigt. Bei 5 km kostet die Fahrt 13 €.
+          3 € auf der y-Achse beginnt und mit jedem Kilometer um 2 € steigt.
       - type: number
         id: fahrt-fuenf-km
         text: "Lies im Graphen ab: Was kostet eine Taxifahrt von 5 km?"
@@ -80,7 +80,7 @@ blocks:
         title: Karten für das Schwimmbad
         blocks:
           - type: text
-            text: "Eine Eintrittskarte kostet 2 €. In Worten: Jeder Karte gehört der doppelte Preis. Du kannst nur ganze Karten kaufen."
+            text: "Eine Eintrittskarte kostet 2 €. In Worten: Jede Karte kostet 2 €. Du kannst nur ganze Karten kaufen."
           - type: vue-component
             id: karten-graph
             component: Dreifachansicht
@@ -135,7 +135,7 @@ blocks:
         options:
           - text: "1 | 3, 2 | 6, 3 | 9"
             correct: true
-            info: "Pro Stunde 3 €: Bei 2 Stunden sind es 6 €, bei 3 Stunden 9 €."
+            info: "Pro Stunde 3 €: Bei 2 Stunden sind es 6 €, bei 3 Stunden 9 €."
           - text: "1 | 3, 2 | 4, 3 | 5"
             correct: false
             info: "Hier steigt der Preis nur um 1 € je Stunde. Gesagt war: 3 € je Stunde."
@@ -160,7 +160,7 @@ blocks:
             message: "Du hast nur für 1 km gerechnet. Die Fahrt hat {{e.n}} km, also kommt der Kilometerpreis {{e.n}}-mal dazu."
         hint: "Rechne erst die Kosten für die Kilometer, dann addiere den Grundpreis."
         steps:
-          - "Kilometer: {{e.n}} · {{e.p}} = {{e.n}} mal {{e.p}} €"
+          - "Kosten der Kilometer: {{e.n}} km mal {{e.p}} € je km"
           - "Dazu der Grundpreis {{e.g}} €: Gesamt {{answer}} €."
       - type: true-false
         id: graph-ist-weg

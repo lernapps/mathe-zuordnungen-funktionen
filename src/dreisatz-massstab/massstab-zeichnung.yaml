@@ -5,11 +5,11 @@ competencies: [massstab]
 blocks:
   - type: section
     id: einstieg
-    title: Elif zeichnet das Klassenzimmer
+    title: Elif zeichnet das Zimmer in der Herberge
     blocks:
       - type: text
         text: |
-          Elif zeichnet das Klassenzimmer auf. Auf dem Plan ist es 8 cm lang und 6 cm breit. Nach dieser Seite weißt du, wie groß es
+          Elif zeichnet ihr Zimmer in der Herberge auf. Auf dem Plan ist es 8 cm lang und 6 cm breit. Nach dieser Seite weißt du, wie groß es
           in Wirklichkeit ist und wie du selbst eine passende Zeichnung machst.
       - type: figure
         image: images/zimmerplan.svg
@@ -32,7 +32,7 @@ blocks:
           - type: text
             text: |
               Bei 1 : 50 wird **verkleinert**. Die Zeichnung ist kleiner als das Original. Wähle den Maßstab so, dass die Zeichnung
-              aufs Blatt passt. Ein A4-Blatt ist etwa 29 cm lang.
+              aufs Blatt passt. Ein A4-Blatt ist knapp 30 cm lang.
   - type: section
     id: beispiel
     title: Beispiel
@@ -56,7 +56,7 @@ blocks:
     blocks:
       - type: number
         id: zimmer-lang
-        text: "Das Klassenzimmer ist auf dem Plan 8 cm lang. Der Maßstab ist 1 : 50. Wie lang ist es in Wirklichkeit in Metern?"
+        text: "Das Zimmer ist auf dem Plan 8 cm lang. Der Maßstab ist 1 : 50. Wie lang ist es in Wirklichkeit in Metern?"
         answer: 4
         tolerance: 0
         unit: m
@@ -103,18 +103,18 @@ blocks:
           - "{{e.wirklich}} : {{e.zeichnung}} = {{answer}}, der Maßstab ist 1 : {{answer}}."
       - type: single-choice
         id: passender-massstab
-        text: "Das Klassenzimmer ist 5 m lang. Du willst es auf ein A4-Blatt zeichnen (etwa 29 cm lang). Welcher Maßstab passt?"
+        text: "Das Zimmer ist 5 m lang. Du willst es auf ein A4-Blatt zeichnen (knapp 30 cm lang). Welcher Maßstab nutzt das Blatt gut aus?"
         options:
-          - text: "1 : 50"
-            correct: true
-            info: "500 cm : 50 = 10 cm. Das passt gut auf das Blatt."
           - text: "1 : 5"
             correct: false
             info: "500 cm : 5 = 100 cm. Die Zeichnung wäre länger als das Blatt."
+          - text: "1 : 20"
+            correct: true
+            info: "500 cm : 20 = 25 cm. Das passt aufs Blatt und nutzt es gut aus."
           - text: "1 : 500"
             correct: false
-            info: "500 cm : 500 = 1 cm. Das passt, aber du würdest fast nichts erkennen."
-        explanation: "Ein guter Maßstab macht die Zeichnung groß genug, aber nicht größer als das Blatt."
+            info: "500 cm : 500 = 1 cm. Das passt zwar aufs Blatt, aber du würdest fast nichts erkennen."
+        explanation: "Ein guter Maßstab macht die Zeichnung so groß, dass sie gerade noch aufs Blatt passt."
         links:
           - title: "Lernlandkarte: Maßstab"
             url: https://lernapps.net/apps/map/mathematik/c/massstab/
@@ -122,7 +122,7 @@ blocks:
         id: massstab-verkleinert
         text: "Beim Maßstab 1 : 100 ist die Zeichnung 100-mal größer als das Original."
         answer: false
-        explanation: "Es ist umgekehrt: Beim Maßstab 1 : 100 ist die Zeichnung 100-mal kleiner. 100 cm in Wirklichkeit sind 1 cm auf dem Plan."
+        explanation: "Es ist umgekehrt: Beim Maßstab 1 : 100 sind Strecken in der Zeichnung 100-mal kürzer als in Wirklichkeit. 100 cm in Wirklichkeit sind 1 cm auf dem Plan."
         links:
           - title: "Lernlandkarte: Maßstab"
             url: https://lernapps.net/apps/map/mathematik/c/massstab/

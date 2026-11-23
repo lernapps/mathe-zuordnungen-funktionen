@@ -46,7 +46,7 @@ blocks:
               - ["4", "y = 4 + 6 = 10", "x = 4 in die erste Gleichung einsetzen"]
               - ["5", "2 · 4 + 2 = 10", "Probe in der zweiten Gleichung"]
           - type: text
-            text: "Die Lösung ist (4|10): Nach 4 Stunden kosten beide Tarife 10 €."
+            text: "Die Lösung ist (4|10): Nach 4 Stunden kosten beide Tarife 10 €."
   - type: section
     id: uebung
     title: Übung

@@ -50,8 +50,8 @@ blocks:
           lineName: Taxi A
           line2Name: Taxi B
         nojs: |
-          Zwei Geraden mit je zwei Reglern: Taxi A (m und b) und Taxi B (m und b). Sind beide m gleich und die b verschieden, laufen die Geraden parallel und
-          berühren sich nie. Sind m und b beide gleich, liegen sie aufeinander. Sonst schneiden sie sich in genau einem Punkt.
+          Zwei Geraden mit je zwei Reglern: Taxi A (m und b) und Taxi B (m und b). Zu Beginn ist Taxi A y = 2 · x + 1 und Taxi B y = x + 5. Für x = 0, 1, 2, 3 ist y bei Taxi A 1, 3, 5, 7 und bei Taxi B 5, 6, 7, 8. Sind beide m gleich und die b verschieden, laufen die Geraden parallel und
+          haben keinen gemeinsamen Punkt. Sind m und b beide gleich, liegen sie aufeinander. Sonst schneiden sie sich in genau einem Punkt.
   - type: section
     id: erklaerung
     title: Keine, eine oder unendlich viele
@@ -66,7 +66,7 @@ blocks:
           - ["aufeinander", "gleich", "gleich", "unendlich viele"]
       - type: text
         text: |
-          Jeder Punkt, in dem sich die Geraden berühren, ist eine Lösung. Bei Parallelen gibt es keinen gemeinsamen Punkt. Liegen die Geraden
+          Jeder gemeinsame Punkt der beiden Geraden ist eine Lösung. Bei Parallelen gibt es keinen gemeinsamen Punkt. Liegen die Geraden
           aufeinander, ist jeder Punkt der Geraden eine Lösung.
       - type: note
         title: Merke

@@ -35,7 +35,7 @@ blocks:
           fixed: true
           hideTerm: true
         nojs: |
-          Tabelle: Nach 0, 1, 2, 3, 4 Minuten steht das Wasser 0, 3, 6, 9, 12 cm hoch. Der Graph ist eine Gerade durch den Ursprung.
+          Tabelle: Nach 0, 1, 2, 3, 4 Minuten steht das Wasser 0, 3, 6, 9, 12 cm hoch. Der Graph ist eine Gerade durch den Ursprung.
   - type: section
     id: erklaerung
     title: Was die Form des Graphen sagt
@@ -66,7 +66,7 @@ blocks:
         blocks:
           - type: figure
             image: images/weg-zeit.svg
-            alt: "Weg-Zeit-Graph. Der Weg in Metern steigt in 4 Minuten auf 200 m, bleibt von Minute 4 bis 7 bei 200 m und steigt dann bis Minute 9 auf 500 m."
+            alt: "Weg-Zeit-Graph. Der Weg in Metern steigt in 4 Minuten auf 200 m, bleibt von Minute 4 bis 7 bei 200 m und steigt dann bis Minute 9 auf 500 m."
             caption: "Weg in Metern über der Zeit in Minuten."
             source: eigene Zeichnung
             licence: CC-BY-4.0
@@ -105,7 +105,7 @@ blocks:
             url: https://lernapps.net/apps/map/mathematik/c/funktionen-darstellung/
       - type: number
         id: ben-nach-sechs
-        text: "Wie weit ist Ben nach 6 Minuten gekommen? Lies im Graphen von Bens Weg ab."
+        text: "Wie weit ist Ben nach 6 Minuten gekommen? Lies im Graphen von Bens Weg ab."
         material:
           - type: figure
             image: images/weg-zeit.svg
@@ -120,7 +120,7 @@ blocks:
           - answer: 6
             message: "6 ist die Zeit auf der x-Achse. Gesucht ist der Weg auf der y-Achse."
           - answer: 300
-            message: "Bei 6 Minuten verläuft der Graph waagerecht. Gehe von 6 min senkrecht nach oben bis zum Graphen und lies den Weg nach links ab."
+            message: "Bei 6 Minuten verläuft der Graph waagerecht. Gehe von 6 min senkrecht nach oben bis zum Graphen und lies den Weg nach links ab."
         explanation: "Bei 6 min ist Ben schon seit 4 min bei 200 m angekommen und wartet dort."
         links:
           - title: "Lernlandkarte: Darstellungen von Funktionen"

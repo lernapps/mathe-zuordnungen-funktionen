@@ -35,12 +35,12 @@ blocks:
           aName: k (Preis pro Minute in €)
         nojs: |
           Term, Tabelle und Graph zu einem Handytarif: Die Kosten in Euro sind der Preis pro Minute *k* mal die Minuten *x*,
-          also *y* = *k* · *x*. Für *k* = 1 gehören zu 0, 1, 2, 3, 4 Minuten die Kosten 0 €, 1 €, 2 €, 3 €, 4 €. Der Graph
+          also *y* = *k* · *x*. Für *k* = 1 gehören zu 0, 1, 2, 3, 4 Minuten die Kosten 0 €, 1 €, 2 €, 3 €, 4 €. Der Graph
           ist eine Gerade durch den Ursprung. Für *k* = 2 sind es 0 €, 2 €, 4 €, 6 €, 8 €, die Gerade ist steiler.
       - type: text
         text: |
           Du siehst Term, Tabelle und Graph zugleich. Mit dem Regler *k* stellst du den Preis pro Minute in Euro ein. Stelle
-          *k* = 2 ein und vergleiche in der Tabelle die Kosten bei 2 Minuten mit denen bei 4 Minuten. Was fällt dir auf? Die
+          *k* = 2 ein und vergleiche in der Tabelle die Kosten bei 2 Minuten mit denen bei 4 Minuten. Was fällt dir auf? Die
           Antwort steht gleich unten.
   - type: section
     id: erklaerung
@@ -49,7 +49,7 @@ blocks:
       - type: figure
         image: images/pfeiltabelle-minuten.svg
         alt: "Tabelle mit zwei Zeilen. Minuten: 1, 2, 3. Kosten in Euro: 2, 4, 6. Über der oberen Zeile ein Pfeil von 1 nach 2 mit „· 2“, unter der unteren Zeile ein Pfeil von 2 nach 4 mit „· 2“."
-        caption: "Tabelle mit Pfeilen: Rechnest du links ·2, rechnest du rechts auch ·2. Aus 1 Minute werden 2 Minuten, aus 2 € werden 4 €."
+        caption: "Tabelle mit Pfeilen: Rechnest du links · 2, rechnest du rechts auch · 2. Aus 1 Minute werden 2 Minuten, aus 2 € werden 4 €."
         source: eigene Zeichnung
         licence: CC-BY-4.0
       - type: definition
@@ -88,7 +88,7 @@ blocks:
             rows:
               - ["Minuten $x$", "1", "2", "3", "4"]
               - ["Kosten $y$ in €", "3", "5", "7", "9"]
-              - ["$y : x$", "3", "2,5", "2,33", "2,25"]
+              - ["$y : x$ (gerundet)", "3", "2,5", "2,33", "2,25"]
           - type: text
             text: "Bei Tarif A ist $y : x$ immer 2, die Zuordnung ist proportional. Bei Tarif B ändert sich der Quotient, sie ist nicht proportional."
   - type: section
@@ -109,10 +109,10 @@ blocks:
         options:
           - text: "x: 1, 2, 3 und y: 3, 6, 9"
             correct: true
-            info: "Der Quotient $y : x$ ist immer 3. Aus 2 wird 4, das Doppelte, und aus 6 wird 12."
+            info: "Der Quotient $y : x$ ist immer 3. Von x = 1 auf x = 2 ist mal 2, und y wird von 3 auf 6 auch mal 2. Bei x = 3 ist y = 9."
           - text: "x: 1, 2, 3 und y: 3, 5, 7"
             correct: false
-            info: "Hier wird $y$ jedes Mal um 2 größer, der Quotient $y : x$ ändert sich: 3, 2,5, 2,33. Das ist nicht proportional."
+            info: "Hier wird $y$ jedes Mal um 2 größer, der Quotient $y : x$ ändert sich: 3, 2,5, 2,33 (gerundet). Das ist nicht proportional."
           - text: "x: 1, 2, 3 und y: 6, 3, 2"
             correct: false
             info: "Wenn $x$ größer wird, wird $y$ kleiner. Das Produkt $x \\cdot y$ bleibt 6: eine andere Art von Zuordnung, nicht proportional."
@@ -145,18 +145,18 @@ blocks:
             url: https://lernapps.net/apps/map/mathematik/c/proportionale-zuordnungen/
       - type: number
         id: doppelte-minuten
-        text: "Zu 4 Minuten gehören 8 €. Die Zuordnung ist proportional. Wie viel Euro gehören zu 8 Minuten?"
+        text: "Zu 4 Minuten gehören 8 €. Die Zuordnung ist proportional. Wie viel Euro gehören zu 8 Minuten?"
         answer: 16
         tolerance: 0
         unit: €
         mistakes:
           - answer: 12
-            message: "Du hast 4 addiert. Bei proportional wird mit dem gleichen Faktor malgenommen: aus 4 wird 8 Minuten, das Doppelte, also auch 8 € mal 2."
+            message: "Du hast 4 addiert. Bei proportional wird mit dem gleichen Faktor malgenommen: aus 4 wird 8 Minuten, das Doppelte, also auch 8 € mal 2."
           - answer: 8
             message: "Du hast die Kosten übernommen. Mit mehr Minuten steigen die Kosten, sie bleiben nicht gleich."
           - answer: 32
             message: "Du hast 8 mal 4 gerechnet. Die Minuten verdoppeln sich, also verdoppeln sich auch die Kosten."
-        explanation: "Aus 4 Minuten werden 8 Minuten, mal 2. Dann auch die Kosten mal 2: 8 € · 2 = 16 €."
+        explanation: "Aus 4 Minuten werden 8 Minuten, mal 2. Dann auch die Kosten mal 2: 8 € · 2 = 16 €."
         links:
           - title: "Lernlandkarte: Proportionale Zuordnungen"
             url: https://lernapps.net/apps/map/mathematik/c/proportionale-zuordnungen/

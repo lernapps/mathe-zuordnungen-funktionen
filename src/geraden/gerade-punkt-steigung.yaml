@@ -41,7 +41,7 @@ blocks:
           marks:
             - { x: 3, y: 10, name: P }
         nojs: |
-          Der Punkt P (3|10) ist markiert, die Steigung ist m = 2. Mit dem Regler b wird die Gerade y = 2 · x + b verschoben. Sie geht durch P für b = 4.
+          Der Punkt P (3|10) ist markiert, die Steigung ist m = 2. Mit dem Regler b wird die Gerade y = 2 · x + b verschoben. Zu Beginn ist b = 0: Für x = 0, 2, 4 ist y = 0, 4, 8. Die Tabelle ändert sich mit dem Regler.
   - type: section
     id: erklaerung
     title: Punkt einsetzen, b ausrechnen

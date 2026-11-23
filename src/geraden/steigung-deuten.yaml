@@ -42,7 +42,7 @@ blocks:
         title: Das Becken leert sich
         blocks:
           - type: text
-            text: "Ein Becken hat 60 Liter. Nach 2 Minuten sind es 50 Liter. Δx = 2 min, Δy = −10 Liter. Also $m = -10 : 2 = -5$. Das Becken verliert 5 Liter pro Minute."
+            text: "Ein Becken hat 60 Liter. Nach 2 Minuten sind es 50 Liter. Δx = 2 min, Δy = −10 Liter. Also $m = -10 : 2 = -5$. Das Becken verliert 5 Liter pro Minute."
   - type: section
     id: uebung
     title: Übung
@@ -77,7 +77,7 @@ blocks:
           - "Δy ist negativ, Δx ist positiv. Der Quotient hat ein Minus."
       - type: number
         id: becken-steigung
-        text: "Ein Tank hat 80 Liter. Nach 4 Minuten sind es 60 Liter. Wie groß ist die Steigung m in Liter pro Minute?"
+        text: "Ein Tank hat 80 Liter. Nach 4 Minuten sind es 60 Liter. Wie groß ist die Steigung m in Liter pro Minute?"
         answer: -5
         tolerance: 0
         unit: Liter pro Minute
@@ -85,7 +85,7 @@ blocks:
           - answer: 5
             message: "Der Tank wird leerer, y wird kleiner: Δy = −20. Darum ist m negativ."
           - answer: -20
-            message: "−20 ist Δy, die Änderung insgesamt. Teile noch durch Δx = 4 Minuten."
+            message: "−20 ist Δy, die Änderung insgesamt. Teile noch durch Δx = 4 Minuten."
         explanation: "$\\Delta y = 60 - 80 = -20$ Liter in $\\Delta x = 4$ Minuten: $m = -20 : 4 = -5$."
         links:
           - title: "Lernlandkarte: Lineare Funktionen"
@@ -94,13 +94,13 @@ blocks:
         id: m-deuten
         text: "Bei einem Wasserbecken ist m = −3 (Liter pro Minute). Was bedeutet das?"
         options:
-          - text: "Das Becken verliert 3 Liter pro Minute."
+          - text: "Das Becken verliert 3 Liter pro Minute."
             correct: true
             info: "Negatives m heißt: y wird kleiner, hier der Wasserstand."
           - text: "Das Becken füllt sich mit 3 Litern pro Minute."
             correct: false
             info: "Beim Füllen wäre m positiv. Das Minus heißt: Es geht abwärts."
-          - text: "Das Becken hat anfangs 3 Liter."
+          - text: "Das Becken hat anfangs 3 Liter."
             correct: false
             info: "Die Anfangsmenge ist der y-Achsenabschnitt b, nicht die Steigung m."
         explanation: "m sagt, wie y sich pro Einheit von x ändert, mit Vorzeichen."

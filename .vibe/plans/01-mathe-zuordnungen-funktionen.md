@@ -301,7 +301,7 @@ vergleicht Tarife (Handyvertrag, Taxi, Schwimmbad-Eintritt); die Schlussseite K5
 - [x] Kapitel 3: funktion-begriff, keine-funktion.
 - [x] Kapitel 3: vier-quadranten, situation-tabelle-graph (Füllgraphen als SVG), graph-term-wechseln, Rückblick.
 - [x] Kapitel 4: Recap lineare Gleichungen, m-und-b, steigung-deuten.
-- [ ] Kapitel 4: gerade-zwei-punkte, gerade-punkt-steigung, nullstelle-schnittpunkt, Rückblick.
+- [x] Kapitel 4: gerade-zwei-punkte, gerade-punkt-steigung, nullstelle-schnittpunkt, Rückblick.
 - [ ] Kapitel 5: lgs-zwei-geraden, lgs-loesungszahl (Dreifachansicht mit zwei Geraden).
 - [ ] Kapitel 5: lgs-gleichsetzen, lgs-einsetzen, lgs-addieren, lgs-deuten, Rückblick der App.
 - [ ] Glossar und Selbstbeurteilung (selbsttest je Kapitel) prüfen, Recap-Begriffe im Glossar; Schreibweisen (Abschnitt 2 der Regeln) per Suche über alle Seiten.

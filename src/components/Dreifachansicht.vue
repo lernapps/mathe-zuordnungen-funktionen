@@ -38,6 +38,8 @@ const props = defineProps<{
   bName?: string;
   /** No sliders: the view shows one fixed relation. */
   fixed?: boolean;
+  /** Only the slider b: m stays as given (for a line through a point with a known slope). */
+  fixedA?: boolean;
   /** No term line, for a page that does not name the term yet. */
   hideTerm?: boolean;
   /** Only the points of the table in the graph, no line between them (values that exist only at the table's x). */
@@ -105,7 +107,7 @@ const showB = computed(() => props.kind === "linear" && props.bName !== undefine
     </p>
 
     <div v-if="!fixed" class="dreifach-sliders">
-      <label class="dreifach-slider">
+      <label v-if="!fixedA" class="dreifach-slider">
         <span>{{ aName }} = {{ format(a) }}</span>
         <input
           v-model.number="a"

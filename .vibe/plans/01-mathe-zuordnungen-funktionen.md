@@ -4,7 +4,7 @@
 # Archetype, null until chosen in Explore. Allowed values: explainer, interactive, quiz.
 archetype: explainer
 # Current phase. Allowed values: explore, plan, code, commit.
-phase: explore
+phase: plan
 # prePushFailures: failed pre-push runs, written by the hook.
 prePushFailures: 0
 # failedChecks: failed rules and runs, written by lernapps check and the hooks.
@@ -138,9 +138,10 @@ Die Zahl der Seiten kann sich im Plan ändern; Pflicht bleibt: jeder der 11 Baus
       off), and which misconception the feedback catches.
 - [x] Write under "Notes" the scope: what is in, what is out and why, the data range (for example "all main-group
       elements", never a silent "1–20"), the languages.
-- [ ] **Checkpoint:** research. Show in plain words: the strand or why none, the competencies by chapter, the didactic
+- [x] **Checkpoint:** research. Show in plain words: the strand or why none, the competencies by chapter, the didactic
       approach, the scope, every "(guess)", the sources and what is unchecked, the archetype and its reason. Stop and
       wait. Changes: change them, then ask again.
+      Creator: Orchestrator in Vertretung des Menschen: Recherche freigegeben, weiter mit dem Plan; Musterseite begründen, Lernenden-Prüfer Klasse 8 vorher
 
 ### Answers
 
@@ -168,17 +169,17 @@ Antworten des Orchestrators in Vertretung des Menschen (Auftrag und Issue lernap
 
 ### Tasks
 
-- [ ] Map the content as "Map the content" of skill `lernapps-explainer-design` says, and write the result under
+- [x] Map the content as "Map the content" of skill `lernapps-explainer-design` says, and write the result under
       "Content method".
-- [ ] Choose a pattern per competency as skill `lernapps-exercise-patterns` says, and add it to "Content method".
-- [ ] Add to "Content method" one line per page, as "Engagement" of skill `lernapps-explainer-design` says: the
+- [x] Choose a pattern per competency as skill `lernapps-exercise-patterns` says, and add it to "Content method".
+- [x] Add to "Content method" one line per page, as "Engagement" of skill `lernapps-explainer-design` says: the
       opening task, the change of activity, the reward, the story.
-- [ ] Add the tasks of Code, each one a piece of work that ends in a commit. First the pattern: one complete page or
+- [x] Add the tasks of Code, each one a piece of work that ends in a commit. First the pattern: one complete page or
       screen, `npx --no -- lernapps plan add --at pattern "<task>"`. Then the others, one call each:
       `npx --no -- lernapps plan add --at pages "<task>"`. Each task says what it builds and what it shows.
-- [ ] Draw a sketch of each screen, component or interactive exercise: a static SVG or image, or the steps with what
+- [x] Draw a sketch of each screen, component or interactive exercise: a static SVG or image, or the steps with what
       learners see after each. Keep the files in `.vibe/sketches/`.
-- [ ] Show the creator, short: goal, competencies by chapter, the Code tasks, the sketches, and the content method in
+- [x] Show the creator, short: goal, competencies by chapter, the Code tasks, the sketches, and the content method in
       plain words (what learners see and do, what the app cannot do). At most 2 questions.
 - [ ] **Checkpoint:** confirm the plan and the content method. Stop and wait for an explicit yes. Changes: change
       them, then ask again.
@@ -190,6 +191,70 @@ checks and what it cannot; how a later agent adds a chapter. It becomes the cont
 <!-- An explainer: per figure, model and component its learning action in two to four sentences
 (`explainer-representation-explained`); per page its prerequisites the app does not practise, and which get a recap
 page, which a link. -->
+
+**Geschichte (Szenen, keine Personen nötig):** Wiederkehrende Fälle (Issue): Handytarife, Taxifahrten, Füllen eines Beckens. K1 (5-6): kurze Szenen mit
+erfundenen Kindern (Mia, Ben, Elif, Jonas; gemischt, ohne Marken), „Klassenfahrt-Stadtplan“. K2 bis K5 (7-8): Situation als
+kurze Nachrichten oder Fallbeschreibung, Bilder nur wo sie etwas zeigen. Erzählfaden: Eine Klasse plant eine Klassenfahrt und
+vergleicht Tarife (Handyvertrag, Taxi, Schwimmbad-Eintritt); die Schlussseite K5 löst die Tarif-Frage. Namen, Alter, Orte stehen einmal im Inhaltsleitfaden.
+
+**Muster je Kompetenz (Name · Art · Form · Beispiel):**
+1. *Pfeiltabelle* · berechnen/zuordnen · `table` + SVG-`image` mit Pfeilen (·k links, ·k rechts) · „3 Hefte kosten 4,50 €, ergänze“ · `generated` mit Mistake „+ statt ·“.
+2. *Messen am Plan* · berechnen · SVG-Plan mit Maßstabsleiste (`image`), Strecke in cm gegeben, `generated` Wirklichkeit/Karte, Mistake „Einheit nicht umgerechnet“.
+3. *Dreifachansicht* · lesen/deuten · Komponente `Dreifachansicht` (Regler, Tabelle, Graph, Term, Textalternative) + `nojs` mit Tabelle und Beschreibung.
+4. *Erkennen* (proportional, antiproportional, Funktion) · beurteilen · `true-false`, `single-choice` mit `info` je Option, `matching` Situation–Graph.
+5. *Herleiten* (Faktor, Steigung) · berechnen · `generated` mit Rechenweg in `steps`, `mistakes` je typischem Fehler.
+6. *Aufstellen* (Geradengleichung, LGS) · berechnen · `generated` mit Zahlen aus der Aufgabe, Ergebnis als `number` je Teil, Probe im Test.
+7. *Selbsttest im Recap* · Komponente `Kurztest` (Anzeige, kein Prüfen-Block): 1–2 Kurzaufgaben mit sofortiger Rückmeldung, Komma und Punkt, nojs-Text mit Lösungen.
+
+**Komponenten (Begründung nach `prefer-built-in-block`):**
+- `Dreifachansicht` (`.vue`, `.ts`, Test): zeigt eine Zuordnung zugleich als Term, Wertetabelle und Graph; Regler für *k* (proportional) bzw. *m* und *b* (linear); jede Änderung wirkt in allen drei Ansichten. Kein Block kann das. Regler sind `<input type="range">` mit Beschriftung, Pfeiltasten, `aria-valuetext`; ein `aria-live`-Satz fasst Term, Tabellenwerte und Graph in Worten zusammen („Die Gerade steigt: pro 1 nach rechts 2 nach oben und schneidet die y-Achse bei 1“). Graph: SVG mit Achsen, Gitter, Zahlengerade-Beschriftung, vier Quadranten ab Kapitel 3. Die Logik (Wertetabelle, Term als Text, Beschreibung) steht in `Dreifachansicht.ts` und wird getestet. Sie zeigt nichts, was eine Aufgabe löst.
+- `Kurztest`: `recap` erlaubt keine Aufgaben, Regeln §7 verlangt Selbsttest. Eigenentwicklung (nicht von `mathe-saetze-entdecken` kopiert: Auftrag „liest deren Apps nicht“, das Repo gehört nicht zu meinem Zugriff).
+- Weitere Komponenten nur nach Bedarf (Plan ergänzen). Zeichnen einer Geraden per Ziehen ist nicht geplant.
+
+**Engagement je Seite (Eröffnung · Wechsel · Belohnung · Geschichte):** Jede Seite beginnt mit einer leichten Handlung (Tabelle ergänzen, Regler verschieben, Aussage beurteilen) vor der Erklärung; danach wechseln Ansehen, Tun, Lesen; höchstens 4 Textblöcke in Folge; jedes Kapitel endet mit einem Rückblick („Das kannst du jetzt“, Checkliste aus den Ich-kann-Sätzen) und der nächsten Frage der Geschichte. Abschnitts-ids auf allen Seiten gleich: `einstieg`, `erklaerung`, `beispiel`, `uebung`.
+
+**Voraussetzungen von außen je Seite (Recap):** K1-Recap (`recap: [arithmetik/grundrechenarten-rechengesetze, groessen-und-messen/messen-laenge-masse-geld-zeit, groessen-und-messen/umrechnung-groessen]`) vor `dreisatz-pfeile`; K2-Recap `geometrie/koordinatensystem` vor `zuordnungen-darstellen`; K4-Recap `algebra/lineare-gleichungen` vor `geradengleichungen` (K5 nennt es im Text mit Link auf die Kartenseite). Fachbegriffe fett mit Beispiel und im Glossar (Regeln §7.2): Distributivgesetz, Klammer, Einheit, Umrechnungszahl, Koordinaten, x-/y-Achse, Gleichung, Lösung, Äquivalenzumformung.
+
+**Seiten: Eröffnung · Wechsel · Belohnung · Geschichte** (Reihenfolge der Kapitel; Recap = `recap:` mit `Kurztest`):
+- K1 Recap · Kurztest zuerst („Kannst du das?“) · Begriff, Beispiel, Kurztest je Baustein · Checkliste „Du bist bereit, wenn du …“ · Klasse plant Fahrt.
+- `dreisatz-pfeile` · Tabelle ergänzen (Hefte, Preis), eine Zeile fehlt · Tabelle, Pfeile, Rechnen · du kannst „links mal 3 = rechts mal 3“ · Mia kauft Hefte.
+- `dreisatz-ueber-eins` · „Was kostet 1 Heft?“ · Pfeil nach 1, dann Pfeil nach n · Dreisatz in drei Zeilen · Ben füllt ein Becken.
+- `massstab-rechnen` · Strecke auf dem Plan messen (gegeben) · Maßstabsleiste, Tabelle Karte–Wirklichkeit · Weg in Metern · Weg zur Haltestelle.
+- `massstab-zeichnung` · Zeichnung im Maßstab 1 : 50 lesen · Verkleinern, Vergrößern, Maßstab bestimmen · Zimmerplan · Elif zeichnet das Klassenzimmer.
+- K2 Recap · Punkt im Koordinatensystem ablesen · Begriffe Achse, Koordinaten · Checkliste · Tarife kommen ins Spiel.
+- `zuordnungen-darstellen` · Tabelle zur Wortbeschreibung passen · Tabelle, Graph, Wörter · du wechselst zwischen den drei · Taxi: Fahrpreis.
+- `proportional-erkennen` (Muster) · Regler *k* bewegen: Was bleibt gleich? · Pfeiltabelle, Dreifachansicht, Merke · Gerade durch den Ursprung · Handy: Minutenpreis.
+- `proportional-rechnen` · Preis für 7 Minuten ausrechnen · Faktor, Dreisatz über Faktor · Proportionalitätsfaktor · Taxi pro km.
+- `antiproportional` · Rechtecke mit gleicher Fläche legen · Produkt bleibt gleich, Tabelle, Graph · *x* · *y* = *c* · Becken: mehr Pumpen, weniger Zeit.
+- `proportional-oder-anti` · Drei Tabellen sortieren · Entscheidungsfragen · du erkennst, welche Zuordnung vorliegt · Schwimmbad.
+- K3 `funktion-begriff` · Pfeildiagramm: Eindeutigkeit prüfen · Definition, Beispiele, Merke · du erklärst Funktion in einem Satz · Fahrpreis.
+- `keine-funktion` · Zuordnung finden, die keine Funktion ist · Definitions-/Wertemenge, Gegenbeispiele · Funktion ja/nein begründet · Telefonnummern.
+- `vier-quadranten` · Punkt mit negativen Koordinaten setzen · Zahlengerade zum Koordinatensystem erweitern · alle vier Quadranten lesen · Temperatur-Zeit.
+- `situation-tabelle-graph` · Füllgraph zu Gefäß passen · Situation, Tabelle, Graph, Wörter · Wechsel zwischen den vier Ansichten · Becken füllen.
+- `graph-term-wechseln` · Wertetabelle zum Term ergänzen · Term → Tabelle → Graph (Regler) · du wechselst beliebig · Taxi-Term.
+- K4 Recap · Gleichung lösen, Probe machen · Begriffe Lösung, Äquivalenzumformung · Checkliste · Tarif-Frage kommt näher.
+- `m-und-b` · Regler *m*, *b* bewegen: Was dreht, was verschiebt? · Dreifachansicht, Merke · du deutest *m* und *b* · Handytarif: Grundpreis und Minutenpreis.
+- `steigung-deuten` · Steigungsdreieck ablesen · negative Steigung, Sachbezug · *m* in Worten · Becken leert sich.
+- `gerade-zwei-punkte` · zwei Punkte in der Dreifachansicht, Gerade ziehen · Steigung aus Δ*y* : Δ*x*, *b* bestimmen · *y* = *m*·*x* + *b* aufstellen · Tarif aus zwei Messwerten.
+- `gerade-punkt-steigung` · ein Punkt und *m* gegeben · Einsetzen und *b* bestimmen · Gleichung aus Punkt und Steigung · Taxi.
+- `nullstelle-schnittpunkt` · Wo schneidet die Gerade die *x*-Achse? · Nullstelle, Schnittpunkt zweier Geraden berechnen · Nullstelle und Schnittpunkt · Wo ist der Tarif 0?
+- K5 `lgs-zwei-geraden` · zwei Tarife im selben Koordinatensystem · Schnittpunkt ablesen, Tabelle eingrenzen · Tarif-Wechsel finden · Handytarif A gegen B.
+- `lgs-loesungszahl` · Parallele Geraden erkennen · 0, 1 oder unendlich viele Lösungen · du sagst, wie viele Lösungen · Taxi A gegen Taxi B.
+- `lgs-gleichsetzen` · Beide Terme gleichsetzen: „Wann kosten sie gleich viel?“ · Rechenweg zeilenweise · Gleichsetzungsverfahren · Tarif-Wechsel genau.
+- `lgs-einsetzen` · Eine Gleichung nach *y* auflösen · Einsetzen, Probe · Einsetzungsverfahren · Preise von Eis und Getränk.
+- `lgs-addieren` · Gleichungen untereinander addieren · Multiplizieren zum Ausgleichen · Additionsverfahren · Eintrittspreise Kinder/Erwachsene.
+- `lgs-deuten` · Lösung im Sachzusammenhang sagen · drei Wege vergleichen · Entscheidung treffen · Die Klasse wählt den Tarif.
+
+**Musterseite:** `zuordnungen/proportional-erkennen` (K2). Begründung: Sie trägt alles Neue zugleich: Pfeiltabelle, Dreifachansicht mit Regler (k), Gerade durch den Ursprung, die Fehlvorstellung „je mehr, desto mehr“, die Aufgabentypen `true-false`, `single-choice`, `generated`. Alle weiteren Seiten übernehmen daraus Aufbau und Komponente. K1 braucht nur Tabelle und Pfeile.
+
+**Abhängigkeiten (Veröffentlichen erst nach):** #385, #393, #397, #398 (laut Auftrag); #396 und #399 bauen auf diesem Explainer auf.
+
+**Baustein → Seite (Pflicht: je mindestens 3 Aufgaben):** `dreisatz`: dreisatz-pfeile, dreisatz-ueber-eins · `massstab`: massstab-rechnen, massstab-zeichnung · `zuordnungen`: zuordnungen-darstellen · `proportionale-zuordnungen`: proportional-erkennen, proportional-rechnen · `antiproportionale-zuordnungen`: antiproportional, proportional-oder-anti · `funktionsbegriff`: funktion-begriff, keine-funktion · `funktionen-darstellung`: vier-quadranten, situation-tabelle-graph, graph-term-wechseln · `lineare-funktionen`: m-und-b, steigung-deuten · `geradengleichungen`: gerade-zwei-punkte, gerade-punkt-steigung, nullstelle-schnittpunkt · `lineare-gleichungssysteme`: lgs-zwei-geraden, lgs-loesungszahl · `lgs-rechnerisch`: lgs-gleichsetzen, lgs-einsetzen, lgs-addieren, lgs-deuten.
+
+**Schreibweisen-Zählung:** Stellen mit `a/b` in Rückmeldungen von `generated`/`mistakes` (Fund W28): bisher 0, werden hier gezählt.
+
+**Wie ein späterer Agent ein Kapitel ergänzt:** Seite nach dem Muster der Musterseite; Zahlen in `generated` mit `where` und `mistakes`; Komponente `Dreifachansicht` mit `kind`, Wertebereich und Reglern; Inhaltsleitfaden `.agents/skills/app-content/SKILL.md`.
+
 
 ## Code
 
@@ -214,11 +279,26 @@ page, which a link. -->
       `references/language-tasks.md` in the same folder. A component in the plan: also `references/components.md`.
 - [ ] Decide whether the app needs `scope`, as "`scope`" in
       `.agents/skills/lernapps-explainer/references/structure.md` says. Write the choice under "Key decisions".
-<!-- tasks: pattern: the one page or screen that is the pattern for the others -->
+- [ ] Komponente Dreifachansicht (.vue, .ts, Test): Wertetabelle, Term, Beschreibung, Graph mit Reglern k bzw. m und b, Tastatur, aria-live-Text, nojs.
+- [ ] App-Grundgerüst: src/app.yaml (strand mathematik/algebra, 5 Kapitel, Quellen, Glossar-Begriffe), chapter.yaml je Kapitel, Platzhalter ersetzen.
+- [ ] Musterseite zuordnungen/proportional-erkennen: Pfeiltabelle (SVG), Dreifachansicht mit k, Merke, mindestens vier Aufgaben (true-false, single-choice, generated mit mistakes), Rückblick.
+<!-- tasks: pattern (3 added): the one page or screen that is the pattern for the others -->
 - [ ] **Checkpoint:** the pattern page. Load skill `lernapps-learner-check` and do its learner check on the page. Fix
       what it finds. Then show the creator the page and ask whether the others may follow it. Stop and wait. A
       change: change the pattern first.
-<!-- tasks: pages: the other pages or screens, after the pattern -->
+- [ ] Kapitel 1: Komponente Kurztest, Recap-Seite, dreisatz-pfeile, dreisatz-ueber-eins (Pfeiltabelle, generated mit Mistakes).
+- [ ] Kapitel 1: massstab-rechnen, massstab-zeichnung (SVG-Plan mit Maßstabsleiste), Rückblick.
+- [ ] Kapitel 2: Recap Koordinatensystem, zuordnungen-darstellen.
+- [ ] Kapitel 2: proportional-rechnen, antiproportional (Rechtecke gleicher Fläche), proportional-oder-anti, Rückblick.
+- [ ] Kapitel 3: funktion-begriff, keine-funktion.
+- [ ] Kapitel 3: vier-quadranten, situation-tabelle-graph (Füllgraphen als SVG), graph-term-wechseln, Rückblick.
+- [ ] Kapitel 4: Recap lineare Gleichungen, m-und-b, steigung-deuten.
+- [ ] Kapitel 4: gerade-zwei-punkte, gerade-punkt-steigung, nullstelle-schnittpunkt, Rückblick.
+- [ ] Kapitel 5: lgs-zwei-geraden, lgs-loesungszahl (Dreifachansicht mit zwei Geraden).
+- [ ] Kapitel 5: lgs-gleichsetzen, lgs-einsetzen, lgs-addieren, lgs-deuten, Rückblick der App.
+- [ ] Glossar und Selbstbeurteilung (selbsttest je Kapitel) prüfen, Recap-Begriffe im Glossar; Schreibweisen (Abschnitt 2 der Regeln) per Suche über alle Seiten.
+- [ ] Lernenden-Prüfer (Klasse 8, Unteragent) über alle Seiten; Fachprüfer rechnet alle Aufgaben nach; Befunde im Plan unter Notes (Review), Änderungen danach hier nennen.
+<!-- tasks: pages (12 added): the other pages or screens, after the pattern -->
 - [ ] Update the content guide so that it describes the app as built (`app-content-matches`).
 - [ ] Run `npx --no -- lernapps check` until it passes.
 - [ ] Look at every screen and state, at 360 px and on a desktop, as "Look at the app" of skill `lernapps-cli` says.

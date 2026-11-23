@@ -8,7 +8,7 @@ phase: code
 # prePushFailures: failed pre-push runs, written by the hook.
 prePushFailures: 4
 # failedChecks: failed rules and runs, written by lernapps check and the hooks.
-failedChecks: { accessible: 2, checks-pass: 3 }
+failedChecks: { accessible: 2, checks-pass: 4 }
 ---
 
 # Plan: mathe-zuordnungen-funktionen, first version

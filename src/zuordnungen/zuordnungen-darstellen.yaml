@@ -10,7 +10,7 @@ blocks:
       - type: text
         text: |
           Die Klasse fährt ein Stück mit dem Taxi. Jeder Strecke gehört ein Fahrpreis. Das nennt man eine **Zuordnung**. Nach dieser
-          Seite stellst du sie in Worten, als Tabelle und als Graph dar. Was kostet eine Fahrt von 5 km? Lies es im Graphen ab.
+          Seite stellst du sie in Worten, als Tabelle und als Graph dar. Was kostet eine Fahrt von 5 km? Lies es im Graphen ab. Die Linie läuft über die Tabelle hinaus, dort darfst du auch ablesen.
       - type: vue-component
         id: taxi-graph
         component: Dreifachansicht
@@ -122,9 +122,9 @@ blocks:
           - text: "Eine durchgehende Linie"
             correct: false
             info: "Eine Linie würde Werte wie 2,5 Äpfel zeigen. Die gibt es hier nicht."
-          - text: "Eine Treppe aus Stufen"
+          - text: "Eine Linie, die erst steigt und dann fällt"
             correct: false
-            info: "Eine Treppe wird erst gezeichnet, wenn ein Wert über ein Stück gleich bleibt. Das ist hier nicht so."
+            info: "Dafür gibt es hier keinen Grund: Mit mehr Äpfeln wird der Preis nie wieder kleiner."
         explanation: "Du verbindest Punkte nur, wenn auch die Zwischenwerte vorkommen."
         links:
           - title: "Lernlandkarte: Zuordnungen"

@@ -64,7 +64,7 @@ blocks:
       - type: text
         text: |
           Zeichne beide Geraden und lies den **Schnittpunkt** ab. Seine Koordinaten sind die Lösung. Mit einer Tabelle kannst du die Stelle
-          eingrenzen: Wo wechselt das Vorzeichen des Unterschieds von A und B? Mache zum Schluss die Probe in beiden Gleichungen.
+          eingrenzen: Wo wechselt das Vorzeichen des Unterschieds von A und B? Mache zum Schluss die Probe in beiden Gleichungen. Der Punkt, an dem beide Tarife gleich viel kosten, ist der **Tarif-Wechsel**: davor ist der eine Tarif billiger, danach der andere.
       - type: note
         title: Merke
         blocks:
@@ -136,7 +136,7 @@ blocks:
         id: wann-b-teurer
         text: "Tarif A: $y$ = $x$ + 6, Tarif B: $y$ = 2 · $x$ + 2. Ab wie vielen Stunden ist B teurer als A?"
         options:
-          - text: "ab mehr als 4 Stunden"
+          - text: "wenn sie länger als 4 Stunden telefonieren"
             correct: true
             info: "Rechts vom Schnittpunkt liegt die steilere Gerade B oben, also kostet B dort mehr."
           - text: "bis zu 4 Stunden"

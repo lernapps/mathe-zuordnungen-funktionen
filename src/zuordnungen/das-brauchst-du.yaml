@@ -79,5 +79,4 @@ blocks:
       - type: text
         text: |
           - die Koordinaten eines Punktes angeben kannst (erst $x$, dann $y$),
-          - einen Punkt mit gegebenen Koordinaten einträgst,
           - weißt, was die Achsen und der Ursprung sind.

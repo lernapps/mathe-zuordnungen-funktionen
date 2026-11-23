@@ -11,7 +11,7 @@ blocks:
         text: |
           Aus dem Graphen hast du für Tarif A ($y$ = $x$ + 6) und Tarif B ($y$ = 2 · $x$ + 2) den Schnittpunkt abgelesen. Das war nur so genau, wie du den
           Graphen lesen kannst. Jetzt berechnest du ihn. Beide Gleichungen sind schon nach $y$ aufgelöst. Dann müssen die rechten Seiten gleich
-          sein, wenn die Kosten gleich sind. Schreibe diese Gleichung für A und B auf.
+          sein, wenn die Kosten gleich sind. Für A und B: x + 6 = 2 · x + 2.
   - type: section
     id: erklaerung
     title: Gleichsetzen in drei Schritten
@@ -110,13 +110,13 @@ blocks:
         id: gleichsetzen-erster-schritt
         text: "Das System lautet $y$ = 3 · $x$ + 1 und $y$ = $x$ + 7. Was ist der erste Schritt beim Gleichsetzen?"
         options:
-          - text: "3 · $x$ + 1 = $x$ + 7 aufschreiben"
+          - text: "3 · x + 1 = x + 7 aufschreiben"
             correct: true
             info: "Beide Terme sind für das gleiche $y$ gleich groß. Daraus entsteht eine Gleichung nur mit $x$."
-          - text: "3 · $x$ + 1 + $x$ + 7 rechnen"
+          - text: "3 · x + 1 + x + 7 rechnen"
             correct: false
             info: "Addieren gehört zu einem anderen Verfahren. Hier setzt du die Terme gleich."
-          - text: "$y$ = 0 setzen"
+          - text: "y = 0 setzen"
             correct: false
             info: "$y$ = 0 liefert die Nullstelle, nicht die Lösung des Systems."
         explanation: "Beim Gleichsetzen schreibst du beide Terme als Gleichung auf."

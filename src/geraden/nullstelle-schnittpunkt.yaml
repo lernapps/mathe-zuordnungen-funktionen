@@ -9,7 +9,7 @@ blocks:
     blocks:
       - type: text
         text: |
-          Jonas hat 10 € Handy-Guthaben. Jede Stunde Telefonieren kostet 2 €. Das Guthaben fällt mit $x$, der Zeit in Stunden. Wann ist es
+          Jonas hat auf seiner Prepaid-Karte 10 € Guthaben. Jede Stunde Telefonieren kostet 2 €. Das Guthaben fällt mit $x$, der Zeit in Stunden. Wann ist es
           aufgebraucht? Schau auf den Graphen: Wo schneidet die Gerade die $x$-Achse? Nach dieser Seite berechnest du diesen Punkt.
       - type: vue-component
         id: guthaben-graph
@@ -60,10 +60,10 @@ blocks:
     title: Beispiel
     blocks:
       - type: example
-        title: Zwei Tarife schneiden sich
+        title: Zwei Geraden schneiden sich
         blocks:
           - type: text
-            text: "Tarif A: $y = 2 \\cdot x + 1$. Tarif B: $y = -x + 7$. Gleichsetzen: $2 \\cdot x + 1 = -x + 7$, also $3 \\cdot x = 6$ und $x = 2$. Dann $y = 2 \\cdot 2 + 1 = 5$. Der Schnittpunkt ist (2|5)."
+            text: "Gerade A: $y = 2 \\cdot x + 1$. Gerade B: $y = -x + 7$. Gleichsetzen: $2 \\cdot x + 1 = -x + 7$, also $3 \\cdot x = 6$ und $x = 2$. Dann $y = 2 \\cdot 2 + 1 = 5$. Der Schnittpunkt ist (2|5)."
   - type: section
     id: uebung
     title: Übung

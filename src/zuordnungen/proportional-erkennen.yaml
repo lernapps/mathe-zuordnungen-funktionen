@@ -9,9 +9,9 @@ blocks:
     blocks:
       - type: text
         text: |
-          Jonas telefoniert mit einer Prepaid-Karte. Jede Minute kostet gleich viel. Nach dieser Seite erkennst du, ob eine
+          Jonas telefoniert mit einer Prepaid-Karte. Jede Minute kostet gleich viel. Das kennst du vom Dreisatz in Kapitel 1: doppelt so viele Minuten, doppelt so viel Geld. Nach dieser Seite erkennst du, ob eine
           Zuordnung **proportional** ist. Du kennst schon Tabelle, Graph und Wörter für eine Zuordnung. Hier ist $x$ die
-          Zahl der Minuten und $y$ sind die Kosten in Euro.
+          Zahl der Minuten und $y$ sind die Kosten in Euro. Der **Term** $y$ = $k$ · $x$ sagt, wie du aus $x$ das $y$ rechnest.
       - type: vue-component
         id: handytarif
         component: Dreifachansicht
@@ -107,16 +107,16 @@ blocks:
         id: welche-tabelle
         text: "Welche Tabelle gehört zu einer proportionalen Zuordnung? Gegeben sind die Werte von $x$ und $y$."
         options:
-          - text: "$x$: 1, 2, 3 und $y$: 3, 6, 9"
+          - text: "x: 1, 2, 3 und y: 3, 6, 9"
             correct: true
             info: "Der Quotient $y : x$ ist immer 3. Von $x$ = 1 auf $x$ = 2 ist mal 2, und $y$ wird von 3 auf 6 auch mal 2. Bei $x$ = 3 ist $y$ = 9."
-          - text: "$x$: 1, 2, 3 und $y$: 3, 5, 7"
+          - text: "x: 1, 2, 3 und y: 3, 5, 7"
             correct: false
             info: "Hier wird $y$ jedes Mal um 2 größer, der Quotient $y : x$ ändert sich: 3, 2,5, 2,33 (gerundet). Das ist nicht proportional."
-          - text: "$x$: 1, 2, 3 und $y$: 6, 3, 2"
+          - text: "x: 1, 2, 3 und y: 6, 3, 2"
             correct: false
             info: "Wenn $x$ größer wird, wird $y$ kleiner. Das Produkt $x \\cdot y$ bleibt 6: eine andere Art von Zuordnung, nicht proportional."
-          - text: "$x$: 1, 2, 3 und $y$: 2, 4, 7"
+          - text: "x: 1, 2, 3 und y: 2, 4, 7"
             correct: false
             info: "Aus 1 → 2 und 2 → 4 passt es, aber 3 → 7 nicht. Bei proportional müsste zu 3 die 6 gehören."
         explanation: "Bei einer proportionalen Zuordnung ist der Quotient $y : x$ in jeder Spalte gleich."

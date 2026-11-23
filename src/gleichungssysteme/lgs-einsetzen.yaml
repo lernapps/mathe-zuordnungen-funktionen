@@ -27,7 +27,7 @@ blocks:
         blocks:
           - type: text
             text: |
-              Setze den Term immer in **Klammern** ein. Bei 3 · $x$ + (2 · $x$ + 1) gehört das Plus zur Klammer. Ohne Klammer kommt es zu
+              Setze den Term immer in **Klammern** ein. Bei 3 · $x$ + (2 · $x$ + 1) steht alles in der Klammer, was für y steht, auch das Plus. Ohne Klammer kommt es zu
               Vorzeichenfehlern, vor allem bei einem Minus.
   - type: section
     id: beispiel
@@ -98,13 +98,13 @@ blocks:
         id: einsetzen-klammer-wahl
         text: "I: $y$ = 2 · $x$ − 3, II: 5 · $x$ − $y$ = 6. Wie sieht II nach dem Einsetzen aus?"
         options:
-          - text: "5 · $x$ − (2 · $x$ − 3) = 6"
+          - text: "5 · x − (2 · x − 3) = 6"
             correct: true
             info: "$y$ wird als Ganzes durch 2 · $x$ − 3 ersetzt, deshalb steht es in Klammern."
-          - text: "5 · $x$ − 2 · $x$ − 3 = 6"
+          - text: "5 · x − 2 · x − 3 = 6"
             correct: false
             info: "Ohne Klammer wird nur das 2 · $x$ abgezogen. Das Minus muss auch für die 3 gelten."
-          - text: "5 · $x$ − $y$ = 2 · $x$ − 3"
+          - text: "5 · x − y = 2 · x − 3"
             correct: false
             info: "So wird nicht eingesetzt. Du setzt den Term anstelle von $y$ in II ein, die rechte Seite bleibt 6."
         explanation: "Beim Einsetzen immer Klammern um den eingesetzten Term."

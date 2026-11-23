@@ -44,7 +44,8 @@ blocks:
       - type: text
         text: |
           Zwei verschiedene $x$ dürfen **dasselbe** $y$ haben (Mia und Ben haben beide Mai). Ein $x$ darf aber **nicht zwei verschiedene** $y$
-          haben. Dreht man die Pfeile um, gehen von „Mai“ zwei Pfeile aus. Das ist keine Funktion.
+          haben. Dreht man die Pfeile um, gehen von „Mai“ zwei Pfeile aus. Das ist keine Funktion. Die proportionalen und antiproportionalen
+          Zuordnungen aus Kapitel 2 sind dagegen Funktionen: Zu jedem Wert links gehört genau ein Wert rechts.
       - type: figure
         image: images/pfeildiagramm-monat.svg
         alt: "Pfeildiagramm. Links die Monate März, Mai und Juli, rechts die Schüler Mia, Ben, Elif und Jonas. Von Mai gehen zwei Pfeile aus, zu Mia und zu Ben."

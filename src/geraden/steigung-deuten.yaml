@@ -9,7 +9,7 @@ blocks:
     blocks:
       - type: text
         text: |
-          Der Tarif von Jonas: Die Gerade steigt von links unten nach rechts oben. Wie steil, sagt die Steigung $m$. Nach dieser Seite liest du
+          Der Handyvertrag von Jonas ist eine Gerade: Sie steigt von links unten nach rechts oben. Wie steil, sagt die Steigung $m$. Nach dieser Seite liest du
           m mit einem **Steigungsdreieck** aus dem Graphen und sagst, was m bedeutet.
       - type: figure
         image: images/steigungsdreieck.svg

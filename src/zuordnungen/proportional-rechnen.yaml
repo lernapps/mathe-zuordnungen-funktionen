@@ -9,7 +9,7 @@ blocks:
     blocks:
       - type: text
         text: |
-          Bei Jonas' Handytarif gehört zu jeder Minute der gleiche Preis. Dieser Preis ist ein fester Faktor. Nach dieser Seite
+          Bei Jonas' Prepaid-Karte gehört zu jeder Minute der gleiche Preis. Dieser Preis ist ein fester Faktor: der Preis für 1 Minute, wie beim Dreisatz über 1 in Kapitel 1. Nach dieser Seite
           berechnest du ihn und rechnest damit. Stelle den Regler auf $k$ = 2 und schau in die Tabelle: Was ergibt $y$ geteilt durch $x$?
       - type: vue-component
         id: faktor-regler
@@ -132,13 +132,13 @@ blocks:
         id: term-zur-tabelle
         text: "Die Tabelle: $x$ = 2, 4, 6 und $y$ = 10, 20, 30. Welcher Term gehört zur proportionalen Zuordnung?"
         options:
-          - text: "$y$ = $x$ + 8"
+          - text: "y = x + 8"
             correct: false
             info: "Für $x$ = 2 ergibt das 10, für $x$ = 4 aber 12 und nicht 20."
-          - text: "$y$ = 5 · $x$"
+          - text: "y = 5 · x"
             correct: true
             info: "$k$ = 10 : 2 = 5. Für $x$ = 4 gilt 5 · 4 = 20, für $x$ = 6 gilt 5 · 6 = 30."
-          - text: "$y$ = 10 · $x$"
+          - text: "y = 10 · x"
             correct: false
             info: "Das wäre für $x$ = 2 schon 20, nicht 10. $k$ ist $y$ : $x$ = 10 : 2 = 5."
         explanation: "Aus einem Paar bestimmst du $k$ = $y$ : $x$ und prüfst es an den anderen Paaren."

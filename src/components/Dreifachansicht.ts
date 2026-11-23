@@ -89,7 +89,15 @@ export function sliderOk(value: number, min: number, max: number, step: number):
 /** The part of the graph inside the window [xMin, xMax] × [yMin, yMax]: a line is cut at the edges, a curve keeps its points inside. */
 export function visible(p: Params, xMin: number, xMax: number, yMin: number, yMax: number): { x: number; y: number }[] {
   if (p.kind === "antiproportional") {
-    return curve(p, xMin, xMax).filter((q) => q.y >= yMin && q.y <= yMax);
+    // start where the curve enters the window at the top, so that it passes the point (c : yMax | yMax) exactly
+    const start = Math.max(xMin, p.a > 0 && yMax > 0 ? p.a / yMax : 0.05, 0.05);
+    const points: { x: number; y: number }[] = [];
+    for (let i = 0; i <= 120; i++) {
+      const x = start + ((xMax - start) * i) / 120;
+      const value = y(p, x);
+      if (value !== undefined && value >= yMin && value <= yMax + 1e-9) points.push({ x, y: Math.min(value, yMax) });
+    }
+    return points;
   }
   let from = xMin;
   let to = xMax;

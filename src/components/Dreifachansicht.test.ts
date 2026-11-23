@@ -75,3 +75,11 @@ test("a marked point is named with its coordinates in German writing", () => {
   expect(markName({ x: 2, y: 7, name: "A" })).toBe("A (2|7)");
   expect(markName({ x: -1, y: 2.5, name: "B" })).toBe("B (\u22121|2,5)");
 });
+
+test("the curve of an antiproportional relation starts at the top edge of the window and ends at the right edge", () => {
+  const pts = visible(anti(12), 0, 12, 0, 12);
+  expect(pts[0]?.x).toBeCloseTo(1, 6);
+  expect(pts[0]?.y).toBeCloseTo(12, 6);
+  expect(pts[pts.length - 1]?.x).toBeCloseTo(12, 6);
+  expect(pts.every((q) => q.y <= 12 + 1e-9 && q.y >= 0)).toBe(true);
+});

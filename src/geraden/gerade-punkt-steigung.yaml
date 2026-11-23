@@ -57,7 +57,7 @@ blocks:
         blocks:
           - type: text
             text: |
-              Bei negativem m den Malpunkt mit Klammer: 3 = (−2) · 2 + $b$. Dann ist $b$ = 3 + 4 = 7.
+              Bei negativer Steigung setzt du die Zahl in Klammern: 3 = (−2) · 2 + $b$. Dann ist $b$ = 3 + 4 = 7.
   - type: section
     id: beispiel
     title: Beispiel
@@ -105,13 +105,13 @@ blocks:
         id: gleichung-punkt-steigung
         text: "Eine Gerade geht durch P (2|9) und hat die Steigung $m$ = 3. Welche Gleichung stimmt?"
         options:
-          - text: "$y$ = 3 · $x$ + 3"
+          - text: "y = 3 · x + 3"
             correct: true
             info: "9 = 3 · 2 + $b$, also $b$ = 3. Probe: 3 · 2 + 3 = 9."
-          - text: "$y$ = 3 · $x$ + 9"
+          - text: "y = 3 · x + 9"
             correct: false
             info: "9 ist der $y$-Wert von P, nicht der Achsenabschnitt. Probe mit P: 3 · 2 + 9 = 15."
-          - text: "$y$ = 9 · $x$ + 3"
+          - text: "y = 9 · x + 3"
             correct: false
             info: "Die Steigung ist 3, nicht 9. m und $b$ sind vertauscht."
         explanation: "Setze P und m ein und löse nach $b$ auf."

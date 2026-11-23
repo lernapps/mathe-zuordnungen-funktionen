@@ -32,7 +32,7 @@ blocks:
           aMin: 6
           aMax: 24
           aStep: 6
-          aName: c (Pumpenstunden)
+          aName: c (Pumpen mal Stunden)
         nojs: |
           Für $c$ = 12 gehören zu 1, 2, 3, 4, 6 Pumpen die Zeiten 12 h, 6 h, 4 h, 3 h, 2 h. Pumpen mal Zeit ist immer 12. Der Graph ist eine
           fallende Kurve, keine Gerade. Für $c$ = 24 sind alle Zeiten doppelt so lang.
@@ -51,8 +51,8 @@ blocks:
         explanation: "Eine Zuordnung ist antiproportional, wenn zum Doppelten von $x$ die Hälfte von $y$ gehört. Das Produkt $x$ · $y$ ist dann immer gleich. Beispiel: 2 Pumpen brauchen 6 h, 4 Pumpen brauchen 3 h, beide Male 12."
       - type: text
         text: |
-          Der Graph ist eine **fallende Kurve**, keine Gerade. Du rechnest mit dem Produkt $c$ = $x$ · $y$. Dann gilt $y$ = $c$ : $x$.
-          Im Dreisatz rechnest du links mal 2, rechts durch 2: Die Pfeile laufen **gegeneinander**.
+          Der Graph ist eine **fallende Kurve**, keine Gerade. Die Kurve verbindet die Punkte, auch wenn es nur ganze Pumpen gibt: Sie zeigt die Form. Du rechnest mit dem Produkt $c$ = $x$ · $y$. Dann gilt $y$ = $c$ : $x$.
+          Bei der Pfeiltabelle rechnest du hier links mal 2 und rechts durch 2: Die Pfeile laufen **gegeneinander**. Beim Dreisatz aus Kapitel 1 waren sie gleich.
       - type: note
         title: Merke
         blocks:
@@ -108,13 +108,13 @@ blocks:
         id: welche-tabelle-anti
         text: "Welche Tabelle gehört zu einer antiproportionalen Zuordnung? ($x$ und $y$)"
         options:
-          - text: "$x$: 1, 2, 3 und $y$: 8, 4, 2"
+          - text: "x: 1, 2, 3 und y: 8, 4, 2"
             correct: false
             info: "Bei 1 und 2 passt es (8, 4), aber bei 3 müsste $y$ = 8 : 3 sein, nicht 2."
-          - text: "$x$: 2, 3, 4 und $y$: 12, 8, 6"
+          - text: "x: 2, 3, 4 und y: 12, 8, 6"
             correct: true
             info: "Das Produkt ist immer 24: 2 · 12, 3 · 8, 4 · 6."
-          - text: "$x$: 2, 4, 6 und $y$: 6, 4, 2"
+          - text: "x: 2, 4, 6 und y: 6, 4, 2"
             correct: false
             info: "Hier ist $y$ jedes Mal um 2 kleiner. Das Produkt ändert sich: 12, 16, 12."
         explanation: "Bei antiproportional ist $x$ · $y$ in jeder Spalte gleich."

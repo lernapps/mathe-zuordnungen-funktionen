@@ -15,7 +15,7 @@ blocks:
         id: tarif-drei-stunden
         text: "Wie viel kostet Tarif B bei 3 Stunden, und wie viel Tarif A?"
         options:
-          - text: "B kostet 8 €, A kostet 9 €. B ist billiger."
+          - text: "B kostet 8 €, A kostet 9 €."
             correct: true
             info: "B: 2 · 3 + 2 = 8. A: 3 + 6 = 9. Links vom Schnittpunkt ($x$ < 4) ist B billiger."
           - text: "B kostet 10 €, A kostet 10 €."
@@ -106,7 +106,7 @@ blocks:
         id: welches-verfahren
         text: "I: $y$ = 3 · $x$ − 2, II: 2 · $x$ + $y$ = 13. Welches Verfahren geht am schnellsten?"
         options:
-          - text: "Einsetzen: $y$ aus I in II einsetzen"
+          - text: "Einsetzen: y aus I in II einsetzen"
             correct: true
             info: "In I steht $y$ schon allein. Du setzt 3 · $x$ − 2 in II ein. Sofort bleibt nur noch $x$."
           - text: "Addieren, ohne vorher umzuformen"
@@ -122,4 +122,4 @@ blocks:
       - type: text
         text: |
           **Das kannst du jetzt:** Du löst Gleichungssysteme grafisch und rechnerisch mit den drei Verfahren, wählst ein passendes aus und deutest die
-          Lösung in einem Satz. Das ist der Schluss des Explainers: Von der Zuordnung bis zum Tarif-Wechsel hast du Term, Tabelle und Graph genutzt.
+          Lösung in einem Satz. Das ist der Schluss dieser App: Von der Zuordnung bis zum Tarif-Wechsel hast du Term, Tabelle und Graph genutzt.

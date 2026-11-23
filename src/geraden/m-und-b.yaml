@@ -9,7 +9,7 @@ blocks:
     blocks:
       - type: text
         text: |
-          Jonas' Handytarif hat einen Grundpreis und einen Minutenpreis. Das ist eine **lineare Funktion**: $y$ = $m$ · $x$ + $b$. Nach dieser Seite
+          Jonas wechselt zu einem Handyvertrag. Er hat einen Grundpreis und einen Minutenpreis. Das ist eine **lineare Funktion**: $y$ = $m$ · $x$ + $b$. Nach dieser Seite
           weißt du, was m und $b$ bedeuten. Schiebe jeden Regler einzeln und beobachte Term, Tabelle und Graph: Was macht m? Was macht $b$?
       - type: vue-component
         id: m-b-regler
@@ -59,8 +59,9 @@ blocks:
         blocks:
           - type: text
             text: |
-              m **dreht** die Gerade, $b$ **verschiebt** sie. Bei $m$ = 0 ist die Gerade waagerecht. Der $y$-Achsenabschnitt $b$ ist nicht die Nullstelle,
-              sondern der $y$-Wert des Punktes (0|$b$) auf der $y$-Achse.
+              $m$ **dreht** die Gerade, $b$ **verschiebt** sie. Bei $m$ = 0 ist die Gerade waagerecht. Der $y$-Achsenabschnitt $b$ ist nicht die Steigung,
+              sondern der $y$-Wert des Punktes (0|$b$) auf der $y$-Achse. Bei $b$ = 0 gilt $y$ = $m$ · $x$: Das ist die proportionale Zuordnung aus
+              Kapitel 2, mit $k$ = $m$.
   - type: section
     id: beispiel
     title: Beispiel
@@ -122,11 +123,11 @@ blocks:
         id: gleichung-beschreibung
         text: "Ordne jeder Gleichung die passende Beschreibung zu."
         pairs:
-          - left: "$y$ = 2 · $x$"
+          - left: "y = 2 · x"
             right: "steigt und geht durch den Ursprung"
-          - left: "$y$ = −$x$ + 3"
+          - left: "y = −x + 3"
             right: "fällt und schneidet die y-Achse bei 3"
-          - left: "$y$ = 3 · $x$ − 2"
+          - left: "y = 3 · x − 2"
             right: "steigt und schneidet die y-Achse bei −2"
         explanation: "Das Vorzeichen von m sagt steigend (positiv) oder fallend (negativ). $b$ ist der $y$-Wert bei $x$ = 0."
         links:

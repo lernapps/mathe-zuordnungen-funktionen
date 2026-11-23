@@ -91,11 +91,11 @@ blocks:
         id: system-anzahl
         text: "Ordne jedem Gleichungssystem die Zahl der Lösungen zu."
         pairs:
-          - left: "$y$ = 2 · $x$ + 1 und $y$ = 2 · $x$ + 5"
+          - left: "y = 2 · x + 1 und y = 2 · x + 5"
             right: "keine Lösung"
-          - left: "$y$ = 2 · $x$ + 1 und $y$ = 3 · $x$ + 1"
+          - left: "y = 2 · x + 1 und y = 3 · x + 1"
             right: "genau eine Lösung"
-          - left: "$y$ = 2 · $x$ + 1 und $y$ = 2 · $x$ + 1"
+          - left: "y = 2 · x + 1 und y = 2 · x + 1"
             right: "unendlich viele Lösungen"
         explanation: "Gleiches m und verschiedenes $b$: parallel, keine Lösung. Verschiedenes m: genau ein Schnittpunkt. Gleiches m und gleiches $b$: dieselbe Gerade."
         links:

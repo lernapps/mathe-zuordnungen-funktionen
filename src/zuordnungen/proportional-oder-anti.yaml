@@ -34,6 +34,7 @@ blocks:
           aName: k
           fixed: true
           hideTerm: true
+          pointsOnly: true
         nojs: |
           Proportional: 1, 2, 3, 4 Karten kosten 2 €, 4 €, 6 €, 8 €. Der Graph ist eine steigende Gerade durch den Ursprung.
       - type: vue-component

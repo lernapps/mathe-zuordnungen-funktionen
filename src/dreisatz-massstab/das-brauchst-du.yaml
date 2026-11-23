@@ -10,7 +10,7 @@ blocks:
     blocks:
       - type: text
         text: |
-          Die Klasse plant eine Klassenfahrt. Jonas kauft Postkarten, Elif liest einen Stadtplan. Dafür musst du drei Dinge
+          Mia, Ben, Elif und Jonas (alle 12 Jahre alt) planen mit ihrer Klasse eine Klassenfahrt in eine Jugendherberge. Jonas kauft Postkarten, Elif liest einen Stadtplan. Dafür musst du drei Dinge
           sicher können. Zu jedem gibt es einen kurzen Test. Du siehst sofort, ob es klappt.
   - type: section
     id: rechengesetze
@@ -101,6 +101,23 @@ blocks:
           wrong: "Nicht richtig."
         nojs: |
           Kurztest: Wie viele Meter sind 4 km? Antwort: 4000 m, denn 1 km = 1000 m und 4 · 1000 = 4000.
+      - type: vue-component
+        id: test-umrechnen-zurueck
+        component: Kurztest
+        props:
+          question: "Wie viele Meter sind 300 cm?"
+          options:
+            - {
+                text: "300 m",
+                correct: false,
+                info: "Du hast die Zahl nicht umgerechnet. 100 cm sind 1 m, also wird die Zahl kleiner.",
+              }
+            - { text: "30 m", correct: false, info: "Du hast durch 10 geteilt. Von cm nach m teilst du durch 100." }
+            - { text: "3 m", correct: true, info: "100 cm = 1 m, also 300 : 100 = 3." }
+          right: "Richtig."
+          wrong: "Nicht richtig."
+        nojs: |
+          Kurztest: Wie viele Meter sind 300 cm? Antwort: 3 m, denn 100 cm = 1 m und 300 : 100 = 3.
       - type: text
         text: "Wenn das nicht klappt: Wiederhole den Baustein „Einheiten umrechnen“ auf der Lernlandkarte: [Kartenseite](https://lernapps.net/apps/map/mathematik/c/umrechnung-groessen/)."
   - type: section
@@ -111,4 +128,4 @@ blocks:
         text: |
           - Punkt vor Strich und Klammern richtig anwendest,
           - Stunden in Minuten und Minuten in Stunden umrechnen kannst,
-          - Meter in Zentimeter und Kilometer in Meter umrechnen kannst.
+          - Meter in Zentimeter, Zentimeter in Meter und Kilometer in Meter umrechnen kannst.

@@ -20,7 +20,7 @@ blocks:
         explanation: "Beim Additionsverfahren addierst du die beiden Gleichungen so, dass eine Unbekannte wegfällt. Beispiel: ($x$ + $y$) + (2 · $x$ − $y$) = 7 + 8 gibt 3 · $x$ = 15."
       - type: text
         text: |
-          **Schritt 1:** Beide Gleichungen untereinander schreiben und seitenweise addieren (links mit links, rechts mit rechts). **Schritt 2:** Nach $x$
+          **Schritt 1:** Beide Gleichungen untereinander schreiben und seitenweise addieren (links mit links, rechts mit rechts). Du kannst sie auch voneinander abziehen, wenn dasselbe Glied in beiden gleich vorkommt. **Schritt 2:** Nach $x$
           lösen. **Schritt 3:** $x$ einsetzen und $y$ berechnen. Probe in beiden.
       - type: note
         title: Merke

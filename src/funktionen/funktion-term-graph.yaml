@@ -116,7 +116,7 @@ blocks:
             info: "Kleinster Preis bei 0 km: 3 €. Größter bei 6 km: 2 · 6 + 3 = 15 €."
           - text: "alle Preise von 0 € bis 6 €"
             correct: false
-            info: "Das sind die Strecken. Der Preis geht erst bei 3 € los, wegen des Grundpreises."
+            info: "0 bis 6 sind die Strecken in km, also die x-Werte. Der Preis geht erst bei 3 € los, wegen des Grundpreises."
           - text: "alle Preise von 0 € bis 15 €"
             correct: false
             info: "Kein Preis ist kleiner als 3 €, der Grundpreis wird immer bezahlt."
@@ -138,7 +138,7 @@ blocks:
           - text: "Ja, jeder Punkt hat Koordinaten."
             correct: false
             info: "Das haben alle Graphen. Entscheidend ist, ob zu jedem $x$ nur ein $y$ gehört."
-          - text: "Nein, zu fast jedem $x$ gehören zwei $y$-Werte."
+          - text: "Nein, zu fast jedem x gehören zwei y-Werte."
             correct: true
             info: "Eine senkrechte Linie bei $x$ = 3 trifft den Kreis oben und unten, also zwei $y$-Werte."
           - text: "Ja, weil der Kreis geschlossen ist."

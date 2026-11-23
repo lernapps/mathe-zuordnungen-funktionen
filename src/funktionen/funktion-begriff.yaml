@@ -1,0 +1,142 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Was eine Funktion ist
+description: "Eine Funktion ordnet jedem x genau ein y zu. Du prüfst Zuordnungen auf diese Eindeutigkeit."
+competencies: [funktionsbegriff]
+blocks:
+  - type: section
+    id: einstieg
+    title: Geburtsmonate der Klasse
+    blocks:
+      - type: text
+        text: |
+          Die Klasse sammelt Geburtsmonate. Links stehen die Schüler, rechts die Monate. Jeder Pfeil verbindet einen Schüler mit seinem
+          Geburtsmonat. Nach dieser Seite weißt du, was eine **Funktion** ist.
+      - type: figure
+        image: images/pfeildiagramm-schueler.svg
+        alt: "Pfeildiagramm. Links die Schüler Mia, Ben, Elif und Jonas, rechts die Monate März, Mai und Juli. Mia und Ben zeigen auf Mai, Elif auf März, Jonas auf Juli."
+        caption: "Von jedem Schüler geht genau ein Pfeil aus. Zwei Schüler dürfen auf denselben Monat zeigen."
+        source: eigene Zeichnung
+        licence: CC-BY-4.0
+      - type: single-choice
+        id: ein-pfeil
+        text: "Wie viele Pfeile gehen von Elif aus?"
+        options:
+          - text: "Genau einer"
+            correct: true
+            info: "Elif zeigt nur auf März. Jeder Schüler hat genau einen Geburtsmonat."
+          - text: "Zwei"
+            correct: false
+            info: "Bei Elif ist nur ein Pfeil gezeichnet. Zwei Pfeile hätte jemand mit zwei Geburtsmonaten."
+          - text: "Keiner"
+            correct: false
+            info: "Von jedem Schüler geht ein Pfeil aus, auch von Elif."
+        explanation: "Zu jedem Schüler gehört genau ein Monat."
+        links:
+          - title: "Lernlandkarte: Funktionsbegriff"
+            url: https://lernapps.net/apps/map/mathematik/c/funktionsbegriff/
+  - type: section
+    id: erklaerung
+    title: Genau ein y zu jedem x
+    blocks:
+      - type: definition
+        term: Funktion
+        explanation: "Eine Funktion ist eine Zuordnung, die jedem x genau ein y zuordnet. Beispiel: Jeder Strecke wird genau ein Fahrpreis zugeordnet."
+      - type: text
+        text: |
+          Zwei verschiedene x dürfen **dasselbe** y haben (Mia und Ben haben beide Mai). Ein x darf aber **nicht zwei verschiedene** y
+          haben. Dreht man die Pfeile um, gehen von „Mai“ zwei Pfeile aus. Das ist keine Funktion.
+      - type: figure
+        image: images/pfeildiagramm-monat.svg
+        alt: "Pfeildiagramm. Links die Monate März, Mai und Juli, rechts die Schüler Mia, Ben, Elif und Jonas. Von Mai gehen zwei Pfeile aus, zu Mia und zu Ben."
+        caption: "Von Mai gehen zwei Pfeile aus: zu Mia und zu Ben. Diese Zuordnung ist keine Funktion."
+        source: eigene Zeichnung
+        licence: CC-BY-4.0
+      - type: note
+        title: Merke
+        blocks:
+          - type: text
+            text: |
+              Wichtig ist die **Richtung**. Schüler → Monat ist eine Funktion, Monat → Schüler nicht. Prüfe immer: Geht von jedem
+              Wert links genau ein Pfeil aus?
+  - type: section
+    id: beispiel
+    title: Beispiel
+    blocks:
+      - type: example
+        title: Strecke und Fahrpreis
+        blocks:
+          - type: text
+            text: Beim Taxi gehört zu 2 km genau ein Preis, zu 3 km genau ein anderer. Strecke → Preis ist eine Funktion.
+          - type: table
+            caption: Strecke und Preis
+            rowHeaders: true
+            rows:
+              - ["Strecke in km", "1", "2", "3"]
+              - ["Preis in €", "5", "7", "9"]
+          - type: text
+            text: "Jede Strecke kommt nur einmal vor und hat ein y."
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: true-false
+        id: gleiches-y
+        text: "Eine Zuordnung ist eine Funktion, wenn zwei verschiedene x denselben y-Wert haben dürfen."
+        answer: true
+        explanation: "Das ist erlaubt. Mia und Ben haben beide Mai. Nicht erlaubt ist nur, dass ein x zwei verschiedene y hat."
+        links:
+          - title: "Lernlandkarte: Funktionsbegriff"
+            url: https://lernapps.net/apps/map/mathematik/c/funktionsbegriff/
+      - type: multiple-choice
+        id: welche-funktionen
+        text: "Welche Zuordnungen sind Funktionen? Wähle alle richtigen."
+        options:
+          - text: "Schüler → Geburtsmonat"
+            correct: true
+            info: "Jeder Schüler hat genau einen Geburtsmonat."
+          - text: "Geburtsmonat → Schüler der Klasse"
+            correct: false
+            info: "Zu Mai gehören mehrere Schüler. Ein x hat mehrere y."
+          - text: "Strecke → Fahrpreis beim Taxi"
+            correct: true
+            info: "Zu jeder Strecke gehört genau ein Preis."
+          - text: "Mensch → Geschwister"
+            correct: false
+            info: "Ein Mensch kann mehrere Geschwister haben, oder keines. Das ist kein einzelner Wert."
+        explanation: "Prüfe, ob zu jedem Wert links genau ein Wert rechts gehört."
+        links:
+          - title: "Lernlandkarte: Funktionsbegriff"
+            url: https://lernapps.net/apps/map/mathematik/c/funktionsbegriff/
+      - type: number
+        id: zwei-y
+        text: "Eine Zuordnung hat die Paare (1|5), (2|6), (2|7), (3|8). Wie viele y-Werte gehören zu x = 2?"
+        answer: 2
+        tolerance: 0
+        mistakes:
+          - answer: 1
+            message: "Schau noch einmal in die Paare: zu x = 2 stehen (2|6) und (2|7). Das sind zwei verschiedene y-Werte."
+        explanation: "Zu x = 2 gehören 6 und 7. Das sind zwei y-Werte, also ist die Zuordnung keine Funktion."
+        links:
+          - title: "Lernlandkarte: Funktionsbegriff"
+            url: https://lernapps.net/apps/map/mathematik/c/funktionsbegriff/
+      - type: single-choice
+        id: tabelle-funktion
+        text: "Welche Tabelle gehört zu einer Funktion? (Paare x | y)"
+        options:
+          - text: "(1|3), (2|3), (3|3)"
+            correct: true
+            info: "Jedes x kommt nur einmal vor. Dass das y immer 3 ist, stört nicht."
+          - text: "(1|3), (1|4), (2|5)"
+            correct: false
+            info: "Zu x = 1 gehören 3 und 4. Das ist zweimal ein anderer y-Wert."
+          - text: "(2|1), (3|1), (2|2)"
+            correct: false
+            info: "Zu x = 2 gehören 1 und 2. Das ist keine Funktion."
+        explanation: "Entscheidend ist, dass jedes x nur ein y hat."
+        links:
+          - title: "Lernlandkarte: Funktionsbegriff"
+            url: https://lernapps.net/apps/map/mathematik/c/funktionsbegriff/
+      - type: text
+        text: |
+          **Das kannst du jetzt:** Du prüfst, ob eine Zuordnung eine Funktion ist: Jedes x hat genau ein y. Als Nächstes lernst du, wie du
+          eine Funktion mit Term und Graph beschreibst.

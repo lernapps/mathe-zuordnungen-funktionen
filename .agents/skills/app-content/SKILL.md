@@ -28,7 +28,7 @@ Ids und „Ich kann …“-Sätze der Karte, nicht umformuliert. Seiten liegen u
   - `antiproportionale-zuordnungen` „Ich kann antiproportionale Zuordnungen erkennen, darstellen und von proportionalen unterscheiden.“: `antiproportional`, `proportional-oder-anti`
   - Recap `das-brauchst-du`: `geometrie/koordinatensystem`
 - Kapitel `funktionen` (7-8)
-  - `funktionsbegriff` „Ich kann erklären, was eine Funktion ist, und Funktionsterm, Graph, Definitionsmenge und Wertemenge unterscheiden.“: `funktion-begriff`, `keine-funktion`
+  - `funktionsbegriff` „Ich kann erklären, was eine Funktion ist, und Funktionsterm, Graph, Definitionsmenge und Wertemenge unterscheiden.“: `funktion-begriff`, `funktion-term-graph`
   - `funktionen-darstellung` „Ich kann zwischen Funktionsgleichung, Wertetabelle und Graph wechseln.“: `vier-quadranten`, `situation-tabelle-graph`, `graph-term-wechseln`
 - Kapitel `geraden` (7-8)
   - `lineare-funktionen` „Ich kann lineare Funktionen mit Gleichung, Tabelle und Graph beschreiben und Steigung und Achsenabschnitt deuten.“: `m-und-b`, `steigung-deuten`

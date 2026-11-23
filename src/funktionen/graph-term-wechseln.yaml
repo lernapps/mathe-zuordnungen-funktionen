@@ -1,0 +1,146 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Von der Gleichung zu Tabelle und Graph
+description: "Du wechselst zwischen Funktionsgleichung, Wertetabelle und Graph: einsetzen, Punkte eintragen und mit der Punktprobe prüfen."
+competencies: [funktionen-darstellung]
+blocks:
+  - type: section
+    id: einstieg
+    title: Eine Gleichung, drei Ansichten
+    blocks:
+      - type: text
+        text: |
+          Eine Funktion mit der Gleichung y = 2 · x − 1 liefert zu jedem x genau ein y. Hier siehst du die Gleichung, die Wertetabelle und den
+          Graphen. Nach dieser Seite wechselst du zwischen den dreien. Lies zuerst im Graphen ab: Welches y gehört zu x = 3?
+      - type: vue-component
+        id: gleichung-ansichten
+        component: Dreifachansicht
+        props:
+          kind: linear
+          xLabel: x
+          yLabel: y
+          xUnit: ""
+          yUnit: ""
+          xs: [-2, -1, 0, 1, 2]
+          xMin: -3
+          xMax: 4
+          yMin: -6
+          yMax: 6
+          tickX: 1
+          tickY: 1
+          a: 2
+          aMin: 2
+          aMax: 2
+          aStep: 1
+          aName: m
+          b: -1
+          bName: b
+          bMin: -1
+          bMax: -1
+          bStep: 1
+          fixed: true
+        nojs: |
+          Die Gleichung y = 2 · x − 1. Die Tabelle: für x = −2, −1, 0, 1, 2 ist y = −5, −3, −1, 1, 3. Der Graph ist eine steigende Gerade, sie
+          schneidet die y-Achse bei −1.
+      - type: number
+        id: y-bei-drei
+        text: "Welches y gehört zu x = 3? Lies im Graphen ab."
+        answer: 5
+        tolerance: 0
+        mistakes:
+          - answer: 3
+            message: "3 ist der x-Wert. Geh von x = 3 senkrecht nach oben bis zur Geraden und lies dort den y-Wert ab."
+        explanation: "Setze ein: $y = 2 \\cdot 3 - 1 = 5$. Der Graph geht durch (3|5)."
+        links:
+          - title: "Lernlandkarte: Darstellungen von Funktionen"
+            url: https://lernapps.net/apps/map/mathematik/c/funktionen-darstellung/
+  - type: section
+    id: erklaerung
+    title: Einsetzen, eintragen, prüfen
+    blocks:
+      - type: definition
+        term: Wertetabelle
+        explanation: "Eine Wertetabelle listet zu ausgewählten x-Werten die y-Werte der Funktion. Beispiel: Für y = 2 · x − 1 gehört zu x = 2 der Wert y = 3."
+      - type: text
+        text: |
+          **Gleichung zur Tabelle:** Setze jeden x-Wert in die Gleichung ein. **Tabelle zum Graphen:** Trage jedes Paar (x|y) als Punkt ein und
+          verbinde die Punkte. **Punktprobe:** Ein Punkt liegt auf dem Graphen, wenn seine Koordinaten die Gleichung erfüllen.
+      - type: note
+        title: Merke
+        blocks:
+          - type: text
+            text: |
+              Bei negativen x-Werten die Klammer nicht vergessen: 2 · (−2) − 1 = −4 − 1 = −5. Mal geht vor minus, und plus mal minus gibt minus.
+  - type: section
+    id: beispiel
+    title: Beispiel
+    blocks:
+      - type: example
+        title: Ist (3|5) auf dem Graphen?
+        blocks:
+          - type: text
+            text: "Punktprobe für y = 2 · x − 1 mit (3|5): $2 \\cdot 3 - 1 = 5$. Das stimmt, der Punkt liegt auf dem Graphen. Für (1|3) wäre $2 \\cdot 1 - 1 = 1 \\neq 3$: Der Punkt liegt nicht darauf."
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: generated
+        id: wert-bei-negativem-x
+        given:
+          m: { int: [2, 4] }
+          b: { int: [1, 5] }
+          a: { int: [1, 4] }
+        task:
+          text: "Eine Funktion hat die Gleichung y = {{m}} · x + {{b}}. Berechne y für x = −{{a}}."
+        answer: { value: "m * (0 - a) + b", compare: { number: { format: integer } } }
+        mistakes:
+          - value: "m * a + b"
+            message: "Du hast das Minus von x vergessen. Beim Einsetzen: {{m}} · (−{{a}}) ist negativ."
+          - value: "m * (0 - a) - b"
+            message: "Du hast bei {{b}} das falsche Vorzeichen genommen. Es steht + {{b}} in der Gleichung."
+        hint: "Setze −{{a}} in Klammern ein: {{m}} · (−{{a}}) + {{b}}."
+        steps:
+          - "Einsetzen mit Klammer: {{m}} · (−{{a}}) + {{b}}"
+          - "Mal zuerst rechnen, dann {{b}} dazu."
+      - type: single-choice
+        id: term-zur-wertetabelle
+        text: "Die Wertetabelle: x = −1, 0, 1, 2 und y = −3, −1, 1, 3. Welche Gleichung gehört dazu?"
+        options:
+          - text: "y = x − 2"
+            correct: false
+            info: "Für x = 0 ergibt das −2. In der Tabelle steht aber −1."
+          - text: "y = 2 · x − 1"
+            correct: true
+            info: "Für x = 0 gilt −1, und bei jedem Schritt von x um 1 wächst y um 2: −1, 1, 3."
+          - text: "y = 2 · x + 1"
+            correct: false
+            info: "Für x = 0 ergibt das 1, in der Tabelle steht −1."
+        explanation: "Setze x = 0 ein und prüfe, wie sich y bei einem Schritt in x ändert."
+        links:
+          - title: "Lernlandkarte: Darstellungen von Funktionen"
+            url: https://lernapps.net/apps/map/mathematik/c/funktionen-darstellung/
+      - type: true-false
+        id: punktprobe-falsch
+        text: "Der Punkt (−1|−4) liegt auf dem Graphen von y = 2 · x − 1."
+        answer: false
+        explanation: "Einsetzen: 2 · (−1) − 1 = −3, nicht −4. Der Punkt (−1|−3) liegt auf dem Graphen."
+        links:
+          - title: "Lernlandkarte: Darstellungen von Funktionen"
+            url: https://lernapps.net/apps/map/mathematik/c/funktionen-darstellung/
+      - type: matching
+        id: gleichung-tabelle
+        text: "Ordne jeder Gleichung die Wertetabelle zu (x = 0, 1, 2)."
+        pairs:
+          - left: "y = x + 2"
+            right: "y = 2, 3, 4"
+          - left: "y = 2 · x"
+            right: "y = 0, 2, 4"
+          - left: "y = 3 − x"
+            right: "y = 3, 2, 1"
+        explanation: "Setze x = 0, 1, 2 ein: x + 2 gibt 2, 3, 4. 2 · x gibt 0, 2, 4. 3 − x gibt 3, 2, 1."
+        links:
+          - title: "Lernlandkarte: Darstellungen von Funktionen"
+            url: https://lernapps.net/apps/map/mathematik/c/funktionen-darstellung/
+      - type: text
+        text: |
+          **Das kannst du jetzt:** Du wechselst zwischen Gleichung, Wertetabelle und Graph und prüfst Punkte. In Kapitel 4 bewegst du die Gerade mit
+          Reglern.

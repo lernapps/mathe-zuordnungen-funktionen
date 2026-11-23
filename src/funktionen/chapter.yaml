@@ -1,0 +1,4 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Was eine Funktion ist
+summary: Zu jedem x gehört genau ein y. Du erkennst Funktionen, wechselst zwischen Situation, Tabelle, Graph und Term und nutzt alle vier Quadranten.
+pages: [funktion-begriff, funktion-term-graph, vier-quadranten, situation-tabelle-graph, graph-term-wechseln]

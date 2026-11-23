@@ -1,0 +1,178 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Proportionale Zuordnungen erkennen
+description: "Du erkennst an Tabelle, Pfeilen und Graph, ob eine Zuordnung proportional ist: doppeltes x, doppeltes y."
+competencies: [proportionale-zuordnungen]
+blocks:
+  - type: section
+    id: einstieg
+    title: Handytarif zum Ausprobieren
+    blocks:
+      - type: text
+        text: |
+          Jonas telefoniert mit einer Prepaid-Karte. Jede Minute kostet gleich viel. Nach dieser Seite erkennst du, ob eine
+          Zuordnung **proportional** ist. Du kennst schon Tabelle, Graph und Wörter für eine Zuordnung.
+      - type: vue-component
+        id: handytarif
+        component: Dreifachansicht
+        props:
+          kind: proportional
+          xLabel: Minuten (min)
+          yLabel: Kosten (€)
+          xUnit: min
+          yUnit: €
+          xs: [0, 1, 2, 3, 4, 5]
+          xMin: 0
+          xMax: 5
+          yMin: 0
+          yMax: 10
+          tickX: 1
+          tickY: 2
+          a: 1
+          aMin: 0
+          aMax: 2
+          aStep: 0.5
+          aName: k
+        nojs: |
+          Term, Tabelle und Graph zu einem Handytarif: Die Kosten in Euro sind der Preis pro Minute *k* mal die Minuten *x*,
+          also *y* = *k* · *x*. Für *k* = 1 gehören zu 0, 1, 2, 3, 4, 5 Minuten die Kosten 0 €, 1 €, 2 €, 3 €, 4 €, 5 €. Der Graph
+          ist eine Gerade durch den Ursprung. Für *k* = 2 sind es 0 €, 2 €, 4 €, 6 €, 8 €, 10 €, die Gerade ist steiler.
+      - type: text
+        text: |
+          Du siehst Term, Tabelle und Graph zugleich. Mit dem Regler *k* stellst du den Preis pro Minute in Euro ein. Schiebe
+          ihn und achte auf die Tabelle: Was passiert mit den Kosten, wenn die Minuten sich verdoppeln?
+  - type: section
+    id: erklaerung
+    title: Doppelt so viel, doppelt so teuer
+    blocks:
+      - type: figure
+        image: images/pfeiltabelle-minuten.svg
+        alt: "Tabelle mit zwei Zeilen. Minuten: 1, 2, 3. Kosten in Euro: 2, 4, 6. Über der oberen Zeile ein Pfeil von 1 nach 3 mit „· 3“, unter der unteren Zeile ein Pfeil von 2 nach 6 mit „· 3“."
+        caption: "Wer links mit 3 malnimmt, nimmt rechts auch mit 3 mal: aus 1 Minute wird 3 Minuten, aus 2 € werden 6 €."
+        source: eigene Zeichnung
+        licence: CC-BY-4.0
+      - type: definition
+        term: proportional
+        explanation: "Eine Zuordnung ist proportional, wenn zum Doppelten von $x$ das Doppelte von $y$ gehört, zum Dreifachen das Dreifache und so weiter. Der Quotient $y : x$ ist dann immer gleich."
+      - type: text
+        text: |
+          Der Graph einer proportionalen Zuordnung ist eine **Gerade durch den Ursprung**, den Punkt $(0|0)$. Der gleiche
+          Quotient $y : x$ heißt **Proportionalitätsfaktor** $k$. Wie du mit ihm rechnest, lernst du auf der nächsten Seite.
+      - type: note
+        title: Merke
+        blocks:
+          - type: text
+            text: |
+              „Je mehr, desto mehr“ reicht nicht. Bei $x = 1, 2, 3$ und $y = 3, 5, 7$ wird $y$ auch größer, aber aus doppeltem
+              $x$ wird nicht doppeltes $y$: $5 \neq 2 \cdot 3$. Diese Zuordnung ist nicht proportional.
+  - type: section
+    id: beispiel
+    title: Zwei Tarife im Vergleich
+    blocks:
+      - type: example
+        title: Prepaid oder Grundgebühr
+        blocks:
+          - type: text
+            text: Tarif A kostet pro Minute 2 €. Tarif B hat 1 € Grundgebühr und kostet dann 2 € pro Minute. Welcher Tarif ist proportional?
+          - type: table
+            caption: "Tarif A: Minuten und Kosten"
+            rowHeaders: true
+            rows:
+              - ["Minuten $x$", "1", "2", "3", "4"]
+              - ["Kosten $y$ in €", "2", "4", "6", "8"]
+              - ["$y : x$", "2", "2", "2", "2"]
+          - type: table
+            caption: "Tarif B: Minuten und Kosten"
+            rowHeaders: true
+            rows:
+              - ["Minuten $x$", "1", "2", "3", "4"]
+              - ["Kosten $y$ in €", "3", "5", "7", "9"]
+              - ["$y : x$", "3", "2,5", "2,33", "2,25"]
+          - type: text
+            text: "Bei Tarif A ist $y : x$ immer 2, die Zuordnung ist proportional. Bei Tarif B ändert sich der Quotient, sie ist nicht proportional."
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: true-false
+        id: je-mehr-desto-mehr
+        text: Wenn x größer wird und y auch größer wird, ist die Zuordnung immer proportional.
+        answer: false
+        explanation: "Proportional heißt: doppeltes $x$ gibt doppeltes $y$. Bei $x = 1, 2, 3$ und $y = 3, 5, 7$ wird $y$ auch größer, aber nicht doppelt so groß."
+        links:
+          - title: "Lernlandkarte: Proportionale Zuordnungen"
+            url: https://lernapps.net/apps/map/mathematik/c/proportionale-zuordnungen/
+      - type: single-choice
+        id: welche-tabelle
+        text: "Welche Tabelle gehört zu einer proportionalen Zuordnung? Gegeben sind die Werte von x und y."
+        options:
+          - text: "x: 1, 2, 3 und y: 3, 6, 9"
+            correct: true
+            info: "Der Quotient $y : x$ ist immer 3. Aus 2 wird 4, das Doppelte, und aus 6 wird 12."
+          - text: "x: 1, 2, 3 und y: 3, 5, 7"
+            correct: false
+            info: "Hier wird $y$ jedes Mal um 2 größer, der Quotient $y : x$ ändert sich: 3, 2,5, 2,33. Das ist nicht proportional."
+          - text: "x: 1, 2, 3 und y: 6, 3, 2"
+            correct: false
+            info: "Wenn $x$ größer wird, wird $y$ kleiner. Das Produkt $x \\cdot y$ bleibt 6: eine andere Art von Zuordnung, nicht proportional."
+          - text: "x: 1, 2, 3 und y: 2, 4, 7"
+            correct: false
+            info: "Aus 1 → 2 und 2 → 4 passt es, aber 3 → 7 nicht. Bei proportional müsste zu 3 die 6 gehören."
+        explanation: "Bei einer proportionalen Zuordnung ist der Quotient $y : x$ in jeder Spalte gleich."
+        links:
+          - title: "Lernlandkarte: Proportionale Zuordnungen"
+            url: https://lernapps.net/apps/map/mathematik/c/proportionale-zuordnungen/
+      - type: multiple-choice
+        id: proportional-situationen
+        text: "Welche dieser Zuordnungen sind proportional? Wähle alle richtigen."
+        options:
+          - text: "Anzahl gleich teurer Hefte → Preis"
+            correct: true
+            info: "Doppelt so viele Hefte kosten doppelt so viel. Der Preis pro Heft ist der Faktor."
+          - text: "Alter eines Kindes → Körpergröße"
+            correct: false
+            info: "Ein Kind wird mit dem doppelten Alter nicht doppelt so groß. Nicht proportional."
+          - text: "Fahrtstrecke bei gleichbleibenden 50 km pro Stunde → Fahrzeit"
+            correct: true
+            info: "Doppelt so viel Strecke braucht doppelt so viel Zeit, wenn die Geschwindigkeit gleich bleibt."
+          - text: "Taxifahrt: 3 € Grundpreis plus 2 € je km → Fahrpreis"
+            correct: false
+            info: "Bei 0 km kostet die Fahrt schon 3 €, die Gerade geht nicht durch den Ursprung. Nicht proportional."
+        explanation: "Prüfe, ob zum Doppelten das Doppelte gehört, und ob bei 0 auch 0 herauskommt."
+        links:
+          - title: "Lernlandkarte: Proportionale Zuordnungen"
+            url: https://lernapps.net/apps/map/mathematik/c/proportionale-zuordnungen/
+      - type: number
+        id: doppelte-minuten
+        text: "Zu 4 Minuten gehören 8 €. Die Zuordnung ist proportional. Wie viel Euro gehören zu 8 Minuten?"
+        answer: 16
+        tolerance: 0
+        unit: €
+        mistakes:
+          - answer: 12
+            message: "Du hast 4 addiert. Bei proportional wird mit dem gleichen Faktor malgenommen: aus 4 wird 8 Minuten, das Doppelte, also auch 8 € mal 2."
+          - answer: 32
+            message: "Du hast 8 mal 4 gerechnet. Die Minuten verdoppeln sich, also verdoppeln sich auch die Kosten."
+        explanation: "Aus 4 Minuten werden 8 Minuten, mal 2. Dann auch die Kosten mal 2: 8 € · 2 = 16 €."
+        links:
+          - title: "Lernlandkarte: Proportionale Zuordnungen"
+            url: https://lernapps.net/apps/map/mathematik/c/proportionale-zuordnungen/
+      - type: generated
+        id: anderes-x
+        given:
+          e: { pick: 1, from: { data: proportional-paare } }
+        task:
+          text: "Eine Zuordnung ist proportional. Zu x = {{e.x1}} gehört y = {{e.y1}}. Welches y gehört zu x = {{e.x2}}?"
+        answer: { value: "e.y2", compare: number }
+        mistakes:
+          - value: "e.y1 + e.x2 - e.x1"
+            message: "Du hast den Unterschied der x-Werte addiert. Bei proportional wird mit einem Faktor malgenommen, nicht addiert."
+          - value: "e.y1 * e.x2"
+            message: "Du hast y mit dem neuen x malgenommen. Berechne erst den Faktor y : x aus dem ersten Paar."
+        hint: "Rechne erst den Faktor aus: y geteilt durch x aus dem ersten Paar."
+        steps:
+          - "Faktor: {{e.y1}} : {{e.x1}}"
+          - "Dann {{e.x2}} mal den Faktor: {{answer}}"
+      - type: text
+        text: |
+          **Das kannst du jetzt:** Du erkennst proportionale Zuordnungen an gleichen Quotienten, an der Pfeiltabelle und an der
+          Geraden durch den Ursprung. Als Nächstes rechnest du mit dem Proportionalitätsfaktor.

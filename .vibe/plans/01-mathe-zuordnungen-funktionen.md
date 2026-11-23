@@ -284,8 +284,8 @@ vergleicht Tarife (Handyvertrag, Taxi, Schwimmbad-Eintritt); die Schlussseite K5
 - [x] Decide whether the app needs `scope`, as "`scope`" in
       `.agents/skills/lernapps-explainer/references/structure.md` says. Write the choice under "Key decisions".
 - [x] Komponente Dreifachansicht (.vue, .ts, Test): Wertetabelle, Term, Beschreibung, Graph mit Reglern k bzw. m und b, Tastatur, aria-live-Text, nojs.
-- [ ] App-Grundgerüst: src/app.yaml (strand mathematik/algebra, 5 Kapitel, Quellen, Glossar-Begriffe), chapter.yaml je Kapitel, Platzhalter ersetzen.
-- [ ] Musterseite zuordnungen/proportional-erkennen: Pfeiltabelle (SVG), Dreifachansicht mit k, Merke, mindestens vier Aufgaben (true-false, single-choice, generated mit mistakes), Rückblick.
+- [x] App-Grundgerüst: src/app.yaml (strand mathematik/algebra, 5 Kapitel, Quellen, Glossar-Begriffe), chapter.yaml je Kapitel, Platzhalter ersetzen.
+- [x] Musterseite zuordnungen/proportional-erkennen: Pfeiltabelle (SVG), Dreifachansicht mit k, Merke, mindestens vier Aufgaben (true-false, single-choice, generated mit mistakes), Rückblick.
 <!-- tasks: pattern (3 added): the one page or screen that is the pattern for the others -->
 - [ ] **Checkpoint:** the pattern page. Load skill `lernapps-learner-check` and do its learner check on the page. Fix
       what it finds. Then show the creator the page and ask whether the others may follow it. Stop and wait. A

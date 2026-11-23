@@ -1,0 +1,4 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Zuordnungen in Tabelle und Graph
+summary: Eine Größe hängt von einer anderen ab. Du stellst das als Tabelle, Graph und Term dar und erkennst, wann es proportional ist.
+pages: [proportional-erkennen]

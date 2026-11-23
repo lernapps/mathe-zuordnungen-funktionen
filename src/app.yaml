@@ -1,10 +1,13 @@
 # yaml-language-server: $schema=../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
 format: 2
-# The strand of the learning map the app stays in, <subject>/<strand> (e.g. mathematik/stochastik); then each page
-# names its competencies. none: the app is on no strand, and no page names competencies. A unit app across the strands
-# of a subject whose map allows it names subject: <subject> (e.g. franzoesisch) instead of strand.
-strand: none
-title: Platzhalter
-intro: Dieses Kapitel hält den Platz frei, bis der geplante Inhalt da ist.
+strand: mathematik/algebra
+title: Zuordnungen und lineare Funktionen
+intro: |
+  Wie hängt eine Größe von einer anderen ab? Du stellst Zuordnungen als Term, Tabelle und Graph dar, erkennst proportionale
+  und antiproportionale Zuordnungen, stellst Geradengleichungen auf und löst Gleichungssysteme zeichnerisch und
+  rechnerisch. Für die Klassen 5 bis 8.
 languages: [de]
-chapters: [thema]
+chapters: [zuordnungen]
+sources:
+  - title: Lernlandkarte Mathematik
+    url: https://lernapps.net/apps/map/mathematik/

@@ -131,21 +131,23 @@ const showB = computed(() => props.kind === "linear" && props.bName !== undefine
       </label>
     </div>
 
-    <table class="dreifach-table">
-      <caption>
-        Tabelle
-      </caption>
-      <tbody>
-        <tr>
-          <th scope="row">{{ xLabel }}</th>
-          <td v-for="r in rows" :key="r.x">{{ format(r.x) }}</td>
-        </tr>
-        <tr>
-          <th scope="row">{{ yLabel }}</th>
-          <td v-for="r in rows" :key="r.x">{{ r.y === undefined ? "–" : format(r.y) }}</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="dreifach-scroll" tabindex="0" role="region" aria-label="Tabelle der Werte">
+      <table class="dreifach-table">
+        <caption>
+          Tabelle
+        </caption>
+        <tbody>
+          <tr>
+            <th scope="row">{{ xLabel }}</th>
+            <td v-for="r in rows" :key="r.x">{{ format(r.x) }}</td>
+          </tr>
+          <tr>
+            <th scope="row">{{ yLabel }}</th>
+            <td v-for="r in rows" :key="r.x">{{ r.y === undefined ? "–" : format(r.y) }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
     <svg
       class="dreifach-graph"
@@ -207,12 +209,14 @@ const showB = computed(() => props.kind === "linear" && props.bName !== undefine
   accent-color: var(--page-accent);
 }
 
+.dreifach-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+  margin: 0.5rem 0;
+}
+
 .dreifach-table {
   border-collapse: collapse;
-  margin: 0.5rem 0;
-  max-width: 100%;
-  display: block;
-  overflow-x: auto;
 }
 
 .dreifach-table caption {

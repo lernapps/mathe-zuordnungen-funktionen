@@ -1,0 +1,9 @@
+# Zeichnung anfertigen: wirklich in cm, Maßstab 1 : scale, zeichnung in cm (= wirklich : scale, ganzzahlig).
+- { scale: 50, wirklich: 400, zeichnung: 8 }
+- { scale: 100, wirklich: 600, zeichnung: 6 }
+- { scale: 50, wirklich: 350, zeichnung: 7 }
+- { scale: 100, wirklich: 900, zeichnung: 9 }
+- { scale: 50, wirklich: 300, zeichnung: 6 }
+- { scale: 200, wirklich: 800, zeichnung: 4 }
+- { scale: 200, wirklich: 1200, zeichnung: 6 }
+- { scale: 100, wirklich: 500, zeichnung: 5 }

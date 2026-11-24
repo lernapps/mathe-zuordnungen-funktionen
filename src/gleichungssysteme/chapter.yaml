@@ -1,0 +1,18 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Zwei Geraden, ein Schnittpunkt
+summary: Zwei Tarife sind zwei Geraden. Der Schnittpunkt ist der Tarif-Wechsel. Du löst Gleichungssysteme zeichnerisch und rechnerisch.
+pages: [lgs-zwei-geraden, lgs-loesungszahl, lgs-gleichsetzen, lgs-einsetzen, lgs-addieren, lgs-deuten]
+selfAssessment:
+  pages:
+    - exercises:
+        - /gleichungssysteme/lgs-zwei-geraden/#y-am-schnittpunkt
+        - /gleichungssysteme/lgs-zwei-geraden/#loesung-paar
+        - /gleichungssysteme/lgs-loesungszahl/#system-anzahl
+    - exercises:
+        - /gleichungssysteme/lgs-gleichsetzen/#gleichsetzen-x
+        - /gleichungssysteme/lgs-gleichsetzen/#gleichsetzen-y
+        - /gleichungssysteme/lgs-einsetzen/#einsetzen-x
+    - exercises:
+        - /gleichungssysteme/lgs-einsetzen/#einsetzen-y
+        - /gleichungssysteme/lgs-addieren/#addieren-x
+        - /gleichungssysteme/lgs-deuten/#eintritt-kind

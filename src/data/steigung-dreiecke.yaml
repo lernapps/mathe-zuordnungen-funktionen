@@ -1,0 +1,8 @@
+# Steigungsdreieck: dx nach rechts, dy nach oben, Steigung m = dy : dx (ganzzahlig, dy - dx und dx · dy sind ungleich m).
+- { dx: 2, dy: 6, m: 3 }
+- { dx: 3, dy: 6, m: 2 }
+- { dx: 4, dy: 12, m: 3 }
+- { dx: 2, dy: 8, m: 4 }
+- { dx: 5, dy: 5, m: 1 }
+- { dx: 3, dy: 9, m: 3 }
+- { dx: 4, dy: 8, m: 2 }

@@ -1,0 +1,120 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Gerade aus Punkt und Steigung
+description: "Du stellst die Gleichung einer Geraden aus einem Punkt und der Steigung auf, indem du in y = m · x + b einsetzt."
+competencies: [geradengleichungen]
+blocks:
+  - type: section
+    id: einstieg
+    title: Ein Punkt und der Kilometerpreis
+    blocks:
+      - type: text
+        text: |
+          Ein anderes Taxi kostet 2 € je Kilometer, also $m$ = 2. Eine Fahrt von 3 km kostet 10 € (Punkt P). Wie groß ist der Grundpreis $b$? Stelle ihn
+          mit dem Regler $b$ so ein, dass die Gerade durch P geht. Die Steigung ist schon eingestellt.
+      - type: vue-component
+        id: p-regler
+        component: Dreifachansicht
+        props:
+          kind: linear
+          xLabel: Strecke (km)
+          yLabel: Preis (€)
+          xUnit: km
+          yUnit: €
+          xs: [0, 3, 6]
+          xMin: 0
+          xMax: 6
+          yMin: 0
+          yMax: 16
+          tickX: 1
+          tickY: 2
+          a: 2
+          aMin: 2
+          aMax: 2
+          aStep: 1
+          aName: m
+          fixedA: true
+          b: 0
+          bMin: 0
+          bMax: 8
+          bStep: 1
+          bName: b
+          marks:
+            - { x: 3, y: 10, name: P }
+        nojs: |
+          Der Punkt P (3|10) ist markiert, die Steigung ist $m$ = 2. Mit dem Regler $b$ wird die Gerade $y$ = 2 · $x$ + $b$ verschoben. Zu Beginn ist $b$ = 0: Für $x$ = 0, 3, 6 ist $y$ = 0, 6, 12. Die Tabelle ändert sich mit dem Regler.
+  - type: section
+    id: erklaerung
+    title: Punkt einsetzen, b ausrechnen
+    blocks:
+      - type: text
+        text: "Wenn du einen Preis und den Preis je Kilometer kennst, aber den Grundpreis suchst, hilft dir ein Punkt mit der Steigung."
+      - type: text
+        text: |
+          Setze den Punkt P ($x_1$|$y_1$) und die Steigung $m$ in $y$ = $m$ · $x$ + $b$ ein. Dann ist nur noch $b$ unbekannt. Das ist eine lineare Gleichung, die du
+          löst: $b$ = $y_1$ − $m$ · $x_1$.
+      - type: formula
+        formula: 'y_1 = m \cdot x_1 + b \quad \Rightarrow \quad b = y_1 - m \cdot x_1'
+      - type: note
+        title: Merke
+        blocks:
+          - type: text
+            text: |
+              Bei negativer Steigung setzt du die Zahl in Klammern: 3 = (−2) · 2 + $b$. Dann ist $b$ = 3 + 4 = 7.
+  - type: section
+    id: beispiel
+    title: Beispiel
+    blocks:
+      - type: example
+        title: P (3|10) und m = 2
+        blocks:
+          - type: text
+            text: "Einsetzen: $10 = 2 \\cdot 3 + b$, also $10 = 6 + b$ und $b = 4$. Gleichung: $y = 2 \\cdot x + 4$. Probe mit P: $2 \\cdot 3 + 4 = 10$."
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: generated
+        id: b-aus-punkt-steigung
+        given:
+          e: { pick: 1, from: { data: gerade-punkt-steigung } }
+        task:
+          text: "Eine Gerade geht durch P ({{e.x1}}|{{e.y1}}). Ihre Steigung ist $m$ = {{e.m}}. Wie groß ist der $y$-Achsenabschnitt $b$?"
+        answer: { value: "e.b", compare: { number: { format: integer } } }
+        mistakes:
+          - value: "e.y1 - e.m"
+            message: "Du hast m statt m · x₁ abgezogen. Setze P ein: y₁ = m · x₁ + b, also b = y₁ − m · x₁."
+          - value: "e.y1 + e.m * e.x1"
+            message: "Du hast m · x₁ addiert statt subtrahiert. b = y₁ − m · x₁."
+        hint: "Setze x₁, y₁ und m in y = m · x + b ein und löse nach b auf."
+        steps:
+          - "{{e.y1}} = {{e.m}} · {{e.x1}} + $b$"
+          - "$b$ = {{e.y1}} − {{e.m}} · {{e.x1}}."
+      - type: number
+        id: negatives-m
+        text: "Eine Gerade hat die Steigung $m$ = −2 und geht durch P (2|3). Wie groß ist $b$?"
+        answer: 7
+        tolerance: 0
+        mistakes:
+          - answer: -1
+            message: "Du hast 3 + (−2) gerechnet. Setze richtig ein: 3 = (−2) · 2 + b, also 3 = −4 + b."
+          - answer: -7
+            message: "Das Vorzeichen stimmt nicht. Aus 3 = −4 + b folgt b = 3 + 4 = 7."
+        explanation: "$3 = (-2) \\cdot 2 + b$, also $3 = -4 + b$ und $b = 7$."
+      - type: single-choice
+        id: gleichung-punkt-steigung
+        text: "Eine Gerade geht durch P (2|9) und hat die Steigung $m$ = 3. Welche Gleichung stimmt?"
+        options:
+          - text: "y = 3 · x + 3"
+            correct: true
+            info: "9 = 3 · 2 + $b$, also $b$ = 3. Probe: 3 · 2 + 3 = 9."
+          - text: "y = 3 · x + 9"
+            correct: false
+            info: "9 ist der $y$-Wert von P, nicht der Achsenabschnitt. Probe mit P: 3 · 2 + 9 = 15."
+          - text: "y = 9 · x + 3"
+            correct: false
+            info: "Die Steigung ist 3, nicht 9. $m$ und $b$ sind vertauscht."
+        explanation: "Setze P und $m$ ein und löse nach $b$ auf."
+      - type: text
+        text: |
+          **Das kannst du jetzt:** Du stellst auch aus einem Punkt und der Steigung die Gleichung auf. Als Nächstes berechnest du Nullstelle und
+          Schnittpunkt.

@@ -1,0 +1,122 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Das Gleichsetzungsverfahren
+description: "Du löst ein Gleichungssystem rechnerisch, indem du die beiden Terme für y gleichsetzt."
+competencies: [lgs-rechnerisch]
+blocks:
+  - type: section
+    id: einstieg
+    title: Wann kosten beide gleich viel?
+    blocks:
+      - type: text
+        text: |
+          Auf der Seite davor hast du aus dem Graphen für Tarif A ($y$ = $x$ + 6) und Tarif B ($y$ = 2 · $x$ + 2) den Schnittpunkt abgelesen. Das war nur so genau, wie du den
+          Graphen lesen kannst. Jetzt berechnest du ihn. Beide Gleichungen sind schon nach $y$ aufgelöst. Dann müssen die rechten Seiten gleich
+          sein, wenn die Kosten gleich sind. Für A und B: $x$ + 6 = 2 · $x$ + 2.
+  - type: section
+    id: erklaerung
+    title: Gleichsetzen in drei Schritten
+    blocks:
+      - type: text
+        text: "Wenn du den Tarif-Wechsel genau berechnen willst, statt ihn abzulesen, und in beiden Gleichungen schon $y$ allein steht, setzt du die Terme gleich."
+      - type: definition
+        term: Gleichsetzungsverfahren
+        explanation: "Beim Gleichsetzungsverfahren setzt du die beiden Terme für $y$ gleich, löst nach $x$ auf und rechnest $y$ aus. Beispiel: $x$ + 6 = 2 · $x$ + 2 gibt $x$ = 4, dann $y$ = 4 + 6 = 10."
+      - type: text
+        text: |
+          **Schritt 1:** Beide Terme für $y$ gleichsetzen. **Schritt 2:** Die entstandene Gleichung nach $x$ lösen. **Schritt 3:** $x$ in eine
+          Gleichung einsetzen und $y$ berechnen. Dann die **Probe** in beiden Gleichungen.
+      - type: note
+        title: Merke
+        blocks:
+          - type: text
+            text: |
+              Schreibe jede Umformung in eine neue Zeile und mache die Probe in **beiden** Gleichungen, nicht nur in einer.
+  - type: section
+    id: beispiel
+    title: Beispiel
+    blocks:
+      - type: example
+        title: Tarif A und Tarif B
+        blocks:
+          - type: table
+            caption: Rechenweg zeilenweise
+            header: ["Schritt", "Rechnung", "Begründung"]
+            rows:
+              - ["1", "$x$ + 6 = 2 · $x$ + 2", "beide Terme für $y$ gleichsetzen"]
+              - ["2", "6 = $x$ + 2", "$x$ auf beiden Seiten abziehen"]
+              - ["3", "4 = $x$", "2 auf beiden Seiten abziehen"]
+              - ["4", "$y$ = 4 + 6 = 10", "$x$ = 4 in die erste Gleichung einsetzen"]
+              - ["5", "4 + 6 = 10 und 2 · 4 + 2 = 10", "Probe in beiden Gleichungen"]
+          - type: text
+            text: "Die Lösung ist (4|10): Nach 4 Stunden kosten beide Tarife 10 €."
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: ordering
+        id: gleichsetzen-reihenfolge
+        text: "Bring die Schritte des Gleichsetzungsverfahrens in die richtige Reihenfolge."
+        items:
+          - "Beide Terme für y gleichsetzen."
+          - "Die Gleichung nach x auflösen."
+          - "x in eine Gleichung einsetzen und y berechnen."
+          - "Die Probe in beiden Gleichungen machen."
+        explanation: "Erst gleichsetzen, dann $x$ bestimmen, dann $y$ berechnen, am Ende prüfen."
+      - type: generated
+        id: gleichsetzen-x
+        given:
+          e: { pick: 1, from: { data: schnittpunkte } }
+        task:
+          text: "Löse das System mit dem Gleichsetzungsverfahren: $y$ = {{e.m1}} · $x$ + {{e.b1}} und $y$ = {{e.m2}} · $x$ + {{e.b2}}. Wie groß ist $x$?"
+        answer: { value: "e.x", compare: { number: { format: integer } } }
+        mistakes:
+          - value: "e.y"
+            message: "Das ist der y-Wert der Lösung. Gefragt ist x: Setze die Terme gleich und löse nach x."
+        hint: "Setze {{e.m1}} · x + {{e.b1}} = {{e.m2}} · x + {{e.b2}}. Bringe alle x auf eine Seite, alle Zahlen auf die andere."
+        steps:
+          - "{{e.m1}} · $x$ + {{e.b1}} = {{e.m2}} · $x$ + {{e.b2}}"
+          - "({{e.dm}}) · $x$ = {{e.db}}"
+          - "$x$ = {{e.db}} : {{e.dm}} = {{answer}}."
+      - type: generated
+        id: gleichsetzen-y
+        given:
+          e: { pick: 1, from: { data: schnittpunkte } }
+        task:
+          text: "Das System $y$ = {{e.m1}} · $x$ + {{e.b1}} und $y$ = {{e.m2}} · $x$ + {{e.b2}} hat bei $x$ = {{e.x}} seine Lösung. Berechne $y$."
+        answer: { value: "e.y", compare: { number: { format: integer } } }
+        mistakes:
+          - value: "e.x"
+            message: "{{e.x}} ist schon der x-Wert. Setze ihn in eine der Gleichungen ein, um y zu berechnen."
+          - value: "e.m2 * e.x"
+            message: "Du hast + {{e.b2}} vergessen. y = {{e.m2}} · x + {{e.b2}}."
+        hint: "Setze x in eine der beiden Gleichungen ein."
+        steps:
+          - "$y$ = {{e.m1}} · {{e.x}} + {{e.b1}}"
+          - "$y$ = {{answer}}. Probe: {{e.m2}} · {{e.x}} + {{e.b2}} = {{answer}}."
+      - type: number
+        id: tarife-gleich
+        text: "Tarif A: $y$ = 2 · $x$ + 4. Tarif B: $y$ = 4 · $x$ + 2. Bei welchem $x$ kosten beide gleich viel?"
+        answer: 1
+        tolerance: 0
+        mistakes:
+          - answer: 6
+            message: "6 ist der Preis, also y. Gefragt ist x: Setze die Terme gleich, 2 · x + 4 = 4 · x + 2, und löse nach x."
+        explanation: "$2 \\cdot x + 4 = 4 \\cdot x + 2$, also $2 = 2 \\cdot x$ und $x = 1$. Dann $y = 6$."
+      - type: single-choice
+        id: gleichsetzen-erster-schritt
+        text: "Das System lautet $y$ = 3 · $x$ + 1 und $y$ = $x$ + 7. Was ist der erste Schritt beim Gleichsetzen?"
+        options:
+          - text: "3 · x + 1 = x + 7 aufschreiben"
+            correct: true
+            info: "Beide Terme sind für das gleiche $y$ gleich groß. Daraus entsteht eine Gleichung nur mit $x$."
+          - text: "3 · x + 1 + x + 7 rechnen"
+            correct: false
+            info: "Addieren gehört zu einem anderen Verfahren. Hier setzt du die Terme gleich."
+          - text: "y = 0 setzen"
+            correct: false
+            info: "$y$ = 0 liefert die Nullstelle, nicht die Lösung des Systems."
+        explanation: "Beim Gleichsetzen schreibst du beide Terme als Gleichung auf."
+      - type: text
+        text: |
+          **Das kannst du jetzt:** Du löst ein Gleichungssystem mit dem Gleichsetzungsverfahren und machst die Probe. Als Nächstes setzt du einen Term in die
+          andere Gleichung ein.

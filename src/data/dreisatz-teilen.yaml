@@ -1,0 +1,5 @@
+# Dreisatz mit Teilen: x1 = f · x2, y1 = f · y2; gesucht ist y2 (der Preis für weniger Karten).
+- { x1: 6, y1: 12, f: 2, x2: 3, y2: 6 }
+- { x1: 12, y1: 18, f: 3, x2: 4, y2: 6 }
+- { x1: 10, y1: 16, f: 2, x2: 5, y2: 8 }
+- { x1: 9, y1: 15, f: 3, x2: 3, y2: 5 }

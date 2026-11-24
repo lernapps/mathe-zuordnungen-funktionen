@@ -1,0 +1,122 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Nullstelle und Schnittpunkt
+description: "Du berechnest die Nullstelle einer Geraden und den Schnittpunkt zweier Geraden."
+competencies: [geradengleichungen]
+blocks:
+  - type: section
+    id: einstieg
+    title: Wann ist das Guthaben aufgebraucht?
+    blocks:
+      - type: text
+        text: |
+          Jonas hat auf seiner Prepaid-Karte 10 € Guthaben. Jede Stunde Telefonieren kostet 2 €. Das Guthaben fällt mit $x$, der Zeit in Stunden. Wann ist es
+          aufgebraucht? Schau auf den Graphen: Wo schneidet die Gerade die $x$-Achse? Nach dieser Seite berechnest du diesen Punkt.
+      - type: vue-component
+        id: guthaben-graph
+        component: Dreifachansicht
+        props:
+          kind: linear
+          xLabel: Zeit (h)
+          yLabel: Guthaben (€)
+          xUnit: h
+          yUnit: €
+          xs: [0, 1, 2, 3]
+          xMin: 0
+          xMax: 6
+          yMin: -2
+          yMax: 12
+          tickX: 1
+          tickY: 2
+          a: -2
+          aMin: -2
+          aMax: -2
+          aStep: 1
+          aName: m
+          b: 10
+          fixed: true
+        nojs: |
+          Der Term ist $y$ = −2 · $x$ + 10. Die Tabelle: nach 0, 1, 2, 3 Stunden sind es 10 €, 8 €, 6 €, 4 €. Der Graph ist eine fallende Gerade, die die
+          $y$-Achse bei 10 schneidet.
+  - type: section
+    id: erklaerung
+    title: y gleich null, y gleich y
+    blocks:
+      - type: text
+        text: "Wenn du wissen willst, wann ein Guthaben aufgebraucht ist oder wann zwei Preise gleich sind, suchst du die Nullstelle oder den Schnittpunkt."
+      - type: definition
+        term: Nullstelle
+        explanation: "Die Nullstelle ist der $x$-Wert, bei dem $y$ = 0 ist. Dort schneidet der Graph die $x$-Achse. Beispiel: Bei $y$ = −2 · $x$ + 10 gilt 0 = −2 · $x$ + 10, also $x$ = 5."
+      - type: text
+        text: |
+          **Nullstelle:** Setze $y$ = 0 und löse nach $x$. **Schnittpunkt zweier Geraden:** Setze beide Terme gleich, löse nach $x$ und berechne dann $y$ mit
+          einer der Gleichungen.
+      - type: note
+        title: Merke
+        blocks:
+          - type: text
+            text: |
+              Die Nullstelle liegt auf der **$x$-Achse** ($y$ = 0). Der $y$-Achsenabschnitt $b$ liegt auf der **$y$-Achse** ($x$ = 0). Das sind zwei verschiedene
+              Punkte.
+  - type: section
+    id: beispiel
+    title: Beispiel
+    blocks:
+      - type: example
+        title: Zwei Geraden schneiden sich
+        blocks:
+          - type: text
+            text: "Gerade A: $y = 2 \\cdot x + 1$. Gerade B: $y = -x + 7$. Gleichsetzen: $2 \\cdot x + 1 = -x + 7$, also $3 \\cdot x = 6$ und $x = 2$. Dann $y = 2 \\cdot 2 + 1 = 5$. Der Schnittpunkt ist (2|5)."
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: generated
+        id: nullstelle-berechnen
+        given:
+          e: { pick: 1, from: { data: nullstellen } }
+        task:
+          text: "Berechne die Nullstelle der Funktion $y$ = {{e.m}} · $x$ − {{e.c}}."
+        answer: { value: "e.x0", compare: { number: { format: integer } } }
+        mistakes:
+          - value: "e.c"
+            message: "Du hast nur y = 0 gesetzt und die Gleichung nicht ganz gelöst. {{e.c}} ist der Wert von {{e.m}} · x. Teile noch durch {{e.m}}."
+          - value: "e.c * e.m"
+            message: "Du hast malgenommen. Aus {{e.m}} · x = {{e.c}} folgt x = {{e.c}} : {{e.m}}."
+        hint: "Setze y = 0: 0 = m · x − c. Addiere c auf beiden Seiten und teile durch m."
+        steps:
+          - "0 = {{e.m}} · $x$ − {{e.c}}, also {{e.m}} · $x$ = {{e.c}}."
+          - "$x$ = {{e.c}} : {{e.m}} = {{answer}}."
+      - type: generated
+        id: schnittpunkt-berechnen
+        given:
+          e: { pick: 1, from: { data: schnittpunkte } }
+        task:
+          text: "Zwei Geraden: $y$ = {{e.m1}} · $x$ + {{e.b1}} und $y$ = {{e.m2}} · $x$ + {{e.b2}}. Bei welchem $x$ schneiden sie sich?"
+        answer: { value: "e.x", compare: { number: { format: integer } } }
+        mistakes:
+          - value: "e.y"
+            message: "Das ist der y-Wert des Schnittpunkts. Gefragt ist der x-Wert: Der kommt beim Gleichsetzen heraus."
+        hint: "Setze die beiden Terme gleich und löse nach x."
+        steps:
+          - "{{e.m1}} · $x$ + {{e.b1}} = {{e.m2}} · $x$ + {{e.b2}}"
+          - "({{e.dm}}) · $x$ = {{e.db}}, also $x$ = {{answer}}."
+      - type: number
+        id: schnittpunkt-y
+        text: "Die Geraden $y$ = 2 · $x$ + 1 und $y$ = −$x$ + 7 schneiden sich bei $x$ = 2. Welchen $y$-Wert hat der Schnittpunkt?"
+        answer: 5
+        tolerance: 0
+        mistakes:
+          - answer: 2
+            message: "2 ist der x-Wert. Setze x = 2 in eine der beiden Gleichungen ein."
+          - answer: 4
+            message: "Du hast nur 2 · 2 gerechnet. Die +1 gehört dazu: 2 · 2 + 1."
+        explanation: "$y = 2 \\cdot 2 + 1 = 5$. Probe mit der anderen Gleichung: $-2 + 7 = 5$."
+      - type: true-false
+        id: nullstelle-b
+        text: "Die Nullstelle einer Geraden ist immer gleich ihrem $y$-Achsenabschnitt $b$."
+        answer: false
+        explanation: "Die Nullstelle ist der $x$-Wert bei $y$ = 0, $b$ ist der $y$-Wert bei $x$ = 0. Bei $y$ = −2 · $x$ + 10 ist $b$ = 10, die Nullstelle aber 5."
+      - type: text
+        text: |
+          **Das kannst du jetzt:** Du stellst Geradengleichungen aus zwei Punkten oder aus Punkt und Steigung auf und berechnest Nullstelle und
+          Schnittpunkt. Im nächsten Kapitel suchst du den Schnittpunkt zweier Tarife.

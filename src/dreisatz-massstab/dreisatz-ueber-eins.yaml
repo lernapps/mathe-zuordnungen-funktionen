@@ -1,0 +1,131 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Dreisatz über 1
+description: "Wenn der Faktor nicht glatt aufgeht, rechnest du erst auf 1 und dann auf die gesuchte Zahl. So entstehen die drei Sätze des Dreisatzes."
+competencies: [dreisatz]
+blocks:
+  - type: section
+    id: einstieg
+    title: Es geht nicht glatt auf
+    blocks:
+      - type: text
+        text: |
+          Jonas hat 4 Postkarten für 12 € gekauft. Elif will 7 Karten gleicher Art. Von 4 auf 7 gibt es keinen glatten Faktor. Nach
+          dieser Seite weißt du, wie du trotzdem rechnest: erst auf **1 Karte**, dann auf 7.
+  - type: section
+    id: erklaerung
+    title: Der Weg über die Eins
+    blocks:
+      - type: text
+        text: "Wenn die Kartenzahl nicht glatt auf die gesuchte Zahl passt (von 4 auf 7), brauchst du einen Zwischenschritt: den Preis für eine Karte."
+      - type: figure
+        image: images/dreisatz-ueber-eins.svg
+        alt: "Tabelle mit zwei Zeilen und drei Spalten. Karten: 4, 1, 7. Preis in Euro: 12, Fragezeichen, Fragezeichen. Pfeile über und unter der Tabelle: von 4 nach 1 mit „: 4“, von 1 nach 7 mit „· 7“."
+        caption: "Erst durch 4 auf eine Karte, dann mal 7 auf sieben Karten. Links und rechts rechnest du das Gleiche."
+        source: eigene Zeichnung
+        licence: CC-BY-4.0
+      - type: text
+        text: |
+          Der Dreisatz hat drei Sätze: **Gegeben:** 4 Karten kosten 12 €. **Auf 1:** 1 Karte kostet 12 € : 4 = 3 €. **Gesucht:**
+          7 Karten kosten 3 € · 7 = 21 €. Das ist der Weg über die Eins.
+      - type: note
+        title: Merke
+        blocks:
+          - type: text
+            text: |
+              Teilen auf 1 geht immer. Danach ist mal jede beliebige Zahl möglich. Der Preis für 1 Karte heißt auch **Preis pro
+              Karte**.
+  - type: section
+    id: beispiel
+    title: Beispiel
+    blocks:
+      - type: example
+        title: Ein Becken füllen
+        blocks:
+          - type: text
+            text: Ben füllt ein Becken. In 4 Minuten laufen 60 Liter ein. Wie viele Liter sind es nach 7 Minuten?
+          - type: table
+            caption: Minuten und Liter
+            rowHeaders: true
+            rows:
+              - ["Minuten", "4", "1", "7"]
+              - ["Liter", "60", "?", "?"]
+          - type: text
+            text: "Auf 1 Minute: $60 : 4 = 15$ Liter. Auf 7 Minuten: $15 \\cdot 7 = 105$ Liter."
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: generated
+        id: preis-pro-karte
+        given:
+          e: { pick: 1, from: { data: dreisatz-ueber-eins } }
+        task:
+          text: "{{e.x1}} Postkarten kosten {{e.y1}} €. Wie viel Euro kostet 1 Postkarte?"
+        answer: { value: "e.u", compare: { number: { format: integer, unit: € } } }
+        mistakes:
+          - value: "e.y1 * e.x1"
+            message: "Du hast malgenommen. Auf 1 Karte kommst du durch Teilen: Der Preis wird durch {{e.x1}} geteilt."
+          - value: "e.y1 - e.x1"
+            message: "Du hast subtrahiert. Auf 1 Karte kommst du mit demselben Faktor: links durch {{e.x1}}, also rechts auch."
+        hint: "Du teilst links durch die Zahl der Karten. Was musst du dann rechts tun?"
+        steps:
+          - "Links geteilt durch {{e.x1}}: {{e.x1}} : {{e.x1}} = 1."
+          - "Rechts auch: {{e.y1}} : {{e.x1}} = {{answer}} €."
+      - type: generated
+        id: dreisatz-ueber-eins-ueben
+        given:
+          e: { pick: 1, from: { data: dreisatz-ueber-eins } }
+        task:
+          text: "{{e.x1}} Postkarten kosten {{e.y1}} €. Wie viel Euro kosten {{e.x2}} Postkarten?"
+        answer: { value: "e.y2", compare: { number: { format: integer, unit: € } } }
+        mistakes:
+          - value: "e.y1 + e.x2 - e.x1"
+            message: "Du hast den Unterschied der Kartenzahlen zum Preis addiert. Rechne über 1: erst durch {{e.x1}}, dann mal {{e.x2}}."
+          - value: "e.u"
+            message: "Das ist der Preis für 1 Karte. Du musst noch mit {{e.x2}} malnehmen."
+        hint: "Rechne erst den Preis für 1 Karte aus. Dann nimm ihn mal die gesuchte Kartenzahl."
+        steps:
+          - "Auf 1 Karte: {{e.y1}} : {{e.x1}} = {{e.u}} €."
+          - "Auf {{e.x2}} Karten: {{e.u}} · {{e.x2}} = {{answer}} €."
+      - type: number
+        id: becken-sieben-minuten
+        text: "Ein Schlauch füllt in 4 Minuten 60 Liter in ein Becken. Wie viele Liter sind es nach 7 Minuten?"
+        answer: 105
+        tolerance: 0
+        unit: Liter
+        mistakes:
+          - answer: 63
+            message: "Du hast 3 addiert, weil 7 − 4 = 3. Rechne über 1 Minute: Erst 60 : 4, dann mal 7."
+          - answer: 15
+            message: "15 Liter sind es nach 1 Minute. Gefragt sind 7 Minuten, also noch mal 7."
+        explanation: "In 1 Minute laufen $60 : 4 = 15$ Liter ein. In 7 Minuten sind es $15 \\cdot 7 = 105$ Liter."
+      - type: number
+        id: becken-rueckwaerts
+        text: "Der Schlauch füllt weiter 15 Liter pro Minute ein. Nach wie vielen Minuten sind 90 Liter im Becken?"
+        answer: 6
+        tolerance: 0
+        unit: Minuten
+        mistakes:
+          - answer: 1350
+            message: "Du hast 90 mal 15 gerechnet. Gesucht ist, wie oft 15 Liter in 90 Liter passen: geteilt."
+          - answer: 75
+            message: "Du hast 15 von 90 abgezogen. Wie oft passen 15 Liter in 90 Liter? Das ist eine Division."
+        explanation: "Pro Minute 15 Liter. Für 90 Liter brauchst du $90 : 15 = 6$ Minuten."
+      - type: single-choice
+        id: welcher-weg
+        text: "5 Hefte kosten 15 €. Wie berechnest du den Preis für 8 Hefte?"
+        options:
+          - text: "15 € : 5 = 3 €, dann 3 € · 8"
+            correct: true
+            info: "Erst der Preis für 1 Heft (3 €), dann mal 8. Das ist der Weg über die Eins."
+          - text: "15 € + 3 = 18 €"
+            correct: false
+            info: "Es kommen 3 Hefte dazu, aber der Preis steigt nicht um 3 €, sondern um 3 Hefte zu je 3 €."
+          - text: "15 € · 8 = 120 €"
+            correct: false
+            info: "Du hast den Preis für 5 Hefte mit 8 malgenommen. So wären es 40 Hefte."
+        explanation: "Über die Eins: $15 : 5 = 3$, dann $3 \\cdot 8 = 24$."
+      - type: text
+        text: |
+          **Das kannst du jetzt:** Du löst jede Dreisatzaufgabe, auch wenn der Faktor nicht glatt aufgeht: erst auf 1, dann auf die
+          gesuchte Zahl. Als Nächstes brauchst du das für Pläne und Karten: den Maßstab.

@@ -1,0 +1,10 @@
+# Proportionale Zuordnungen für die Aufgabe "Wert für anderes x": Zu x1 gehört y1, gesucht ist y2 zu x2.
+# Der Faktor k = y1 : x1 ist immer eine ganze Zahl von 2 bis 6, y2 = k · x2.
+- { x1: 2, y1: 6, k: 3, x2: 5, y2: 15 }
+- { x1: 3, y1: 12, k: 4, x2: 7, y2: 28 }
+- { x1: 4, y1: 20, k: 5, x2: 9, y2: 45 }
+- { x1: 2, y1: 8, k: 4, x2: 6, y2: 24 }
+- { x1: 3, y1: 9, k: 3, x2: 8, y2: 24 }
+- { x1: 2, y1: 10, k: 5, x2: 7, y2: 35 }
+- { x1: 4, y1: 8, k: 2, x2: 10, y2: 20 }
+- { x1: 3, y1: 18, k: 6, x2: 5, y2: 30 }

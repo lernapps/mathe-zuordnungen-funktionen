@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Zuordnungen in Tabelle und Graph
+summary: Eine Größe hängt von einer anderen ab. Du stellst das als Tabelle, Graph und Term dar und erkennst, wann es proportional ist.
+pages:
+  [
+    das-brauchst-du,
+    zuordnungen-darstellen,
+    proportional-erkennen,
+    proportional-rechnen,
+    antiproportional,
+    proportional-oder-anti,
+  ]
+selfAssessment:
+  pages:
+    - exercises:
+        - /zuordnungen/zuordnungen-darstellen/#taxi-preis
+        - /zuordnungen/proportional-erkennen/#anderes-x
+        - /zuordnungen/proportional-erkennen/#doppelte-minuten
+    - exercises:
+        - /zuordnungen/proportional-rechnen/#faktor-bestimmen
+        - /zuordnungen/proportional-rechnen/#wert-mit-faktor
+        - /zuordnungen/antiproportional/#antiproportional-wert
+    - exercises:
+        - /zuordnungen/antiproportional/#becken-sechs-pumpen
+        - /zuordnungen/proportional-oder-anti/#situation-art
+        - /zuordnungen/proportional-oder-anti/#anti-oder-proportional-wert

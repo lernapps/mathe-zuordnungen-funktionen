@@ -1,0 +1,147 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Situation, Tabelle und Graph
+description: "Du wechselst zwischen einer Situation, einer Wertetabelle und einem Graphen, am Beispiel von Füllgraphen und Weg-Zeit-Graphen."
+competencies: [funktionen-darstellung]
+blocks:
+  - type: section
+    id: einstieg
+    title: Ein Gefäß füllt sich
+    blocks:
+      - type: text
+        text: |
+          Ben füllt ein Gefäß mit Wasser. Jede Minute steigt der Wasserspiegel um 3 cm. Hier siehst du die Situation als Tabelle und als
+          Graph. Nach dieser Seite wechselst du zwischen **Situation, Tabelle und Graph**.
+      - type: vue-component
+        id: zylinder-graph
+        component: Dreifachansicht
+        props:
+          kind: proportional
+          xLabel: Zeit (min)
+          yLabel: Höhe (cm)
+          xUnit: min
+          yUnit: cm
+          xs: [0, 1, 2, 3, 4]
+          xMin: 0
+          xMax: 6
+          yMin: 0
+          yMax: 18
+          tickX: 1
+          tickY: 3
+          a: 3
+          aMin: 3
+          aMax: 3
+          aStep: 1
+          aName: k
+          fixed: true
+          hideTerm: true
+        nojs: |
+          Tabelle: Nach 0, 1, 2, 3, 4 Minuten steht das Wasser 0, 3, 6, 9, 12 cm hoch. Der Graph ist eine Gerade durch den Ursprung.
+  - type: section
+    id: erklaerung
+    title: Was die Form des Graphen sagt
+    blocks:
+      - type: text
+        text: "Wenn du eine Geschichte als Graph zeigen willst, zum Beispiel ein Gefäß, das sich füllt, hilft dir die Form des Graphen."
+      - type: text
+        text: |
+          Ein **steiler** Graph heißt: Der Wert ändert sich schnell. Ein **flacher** Graph heißt: Er ändert sich langsam. Ein **waagerechtes**
+          Stück heißt: Er ändert sich gar nicht. Jede Situation hat so ihre eigene Form.
+      - type: figure
+        image: images/gefaesse.svg
+        alt: "Drei Gefäße nebeneinander. Gefäß 1 hat senkrechte Wände. Gefäß 2 ist unten schmal und oben breit. Gefäß 3 ist unten breit und oben schmal."
+        caption: "Drei Gefäße. Wasser läuft gleichmäßig ein. Der Graph zeigt die Füllhöhe über der Zeit."
+        source: eigene Zeichnung
+        licence: CC-BY-4.0
+      - type: note
+        title: Merke
+        blocks:
+          - type: text
+            text: |
+              Ein Graph ist **kein Bild vom Gefäß** und kein Bild vom Weg. Er zeigt, welcher Wert zu welcher Zeit gehört. Die Zeit steht auf der
+              $x$-Achse.
+  - type: section
+    id: beispiel
+    title: Beispiel
+    blocks:
+      - type: example
+        title: Bens Weg zur Haltestelle
+        blocks:
+          - type: figure
+            image: images/weg-zeit.svg
+            alt: "Weg-Zeit-Graph. Der Weg in Metern steigt in 4 Minuten auf 200 m, bleibt von Minute 4 bis 7 bei 200 m und steigt dann bis Minute 9 auf 500 m."
+            caption: "Weg in Metern über der Zeit in Minuten."
+            source: eigene Zeichnung
+            licence: CC-BY-4.0
+          - type: text
+            text: "Von 0 bis 4 min geht Ben 200 m. Von 4 bis 7 min wartet er (waagerecht). Von 7 bis 9 min rennt er: 300 m in 2 min, steiler als zuvor."
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: matching
+        id: gefaess-graph
+        text: "Ordne jedem Gefäß den Graphen seiner Füllhöhe zu. Das Wasser läuft gleichmäßig ein."
+        material:
+          - type: figure
+            image: images/gefaesse.svg
+            alt: "Drei Gefäße: Gefäß 1 mit senkrechten Wänden, Gefäß 2 unten schmal und oben breit, Gefäß 3 unten breit und oben schmal."
+            caption: "Die drei Gefäße."
+            source: eigene Zeichnung
+            licence: CC-BY-4.0
+          - type: figure
+            image: images/fuellgraphen.svg
+            alt: "Drei Graphen der Füllhöhe über der Zeit. Graph A ist eine Gerade, Graph B steigt erst schnell und dann langsamer, Graph C steigt erst langsam und dann schneller."
+            caption: "Die drei Graphen A, B und C."
+            source: eigene Zeichnung
+            licence: CC-BY-4.0
+        pairs:
+          - left: "Gefäß 1 (senkrechte Wände)"
+            right: "Graph A (gerade)"
+          - left: "Gefäß 2 (oben breit)"
+            right: "Graph B (erst schnell, dann langsam)"
+          - left: "Gefäß 3 (oben schmal)"
+            right: "Graph C (erst langsam, dann schnell)"
+        explanation: "Je breiter das Gefäß an der Wasserlinie, desto langsamer steigt der Spiegel. Oben breit heißt: erst schnell, dann langsamer. Oben schmal heißt: erst langsam, dann schneller."
+      - type: number
+        id: ben-nach-sechs
+        text: "Wie weit ist Ben nach 6 Minuten gekommen? Lies im Graphen von Bens Weg ab."
+        material:
+          - type: figure
+            image: images/weg-zeit.svg
+            alt: "Weg-Zeit-Graph mit Zeit in Minuten auf der x-Achse und Weg in Metern auf der y-Achse."
+            caption: "Der Weg von Ben über der Zeit."
+            source: eigene Zeichnung
+            licence: CC-BY-4.0
+        answer: 200
+        tolerance: 0
+        unit: m
+        mistakes:
+          - answer: 6
+            message: "6 ist die Zeit auf der x-Achse. Gesucht ist der Weg auf der y-Achse."
+          - answer: 300
+            message: "Bei 6 Minuten verläuft der Graph waagerecht. Gehe von 6 min senkrecht nach oben bis zum Graphen und lies den Weg nach links ab."
+        explanation: "Bei 6 min ist Ben schon seit 4 min bei 200 m angekommen und wartet dort."
+      - type: ordering
+        id: bens-weg-reihenfolge
+        text: "Bring Bens Weg in die richtige Reihenfolge (zuerst oben)."
+        material:
+          - type: figure
+            image: images/weg-zeit.svg
+            alt: "Weg-Zeit-Graph von Ben mit Zeit in Minuten auf der x-Achse und Weg in Metern auf der y-Achse."
+            caption: "Der Weg von Ben über der Zeit."
+            source: eigene Zeichnung
+            licence: CC-BY-4.0
+        items:
+          - "Ben geht gleichmäßig los."
+          - "Ben bleibt stehen und wartet."
+          - "Ben rennt schneller als vorher."
+        explanation: "Erst steigt der Graph mäßig, dann ist er waagerecht (Stillstand), dann steigt er steiler (schneller)."
+      - type: true-false
+        id: steiler-schneller
+        text: "Je steiler ein Weg-Zeit-Graph, desto schneller bewegt sich jemand."
+        answer: true
+        explanation: "Steil heißt: in kurzer Zeit ein langer Weg. Waagerecht heißt: Stillstand."
+      - type: text
+        text: |
+          **Das kannst du jetzt:** Du übersetzt zwischen Situation, Tabelle und Graph und liest Formen von Graphen. Als Nächstes kommt
+          der Term dazu.

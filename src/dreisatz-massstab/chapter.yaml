@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Dreisatz und Maßstab
+summary: Wer links verdoppelt, verdoppelt rechts. Damit löst du Dreisatzaufgaben und rechnest zwischen Plan und Wirklichkeit.
+pages: [das-brauchst-du, dreisatz-pfeile, dreisatz-ueber-eins, massstab-rechnen, massstab-zeichnung]
+selfAssessment:
+  pages:
+    - exercises:
+        - /dreisatz-massstab/dreisatz-pfeile/#preis-malnehmen
+        - /dreisatz-massstab/dreisatz-pfeile/#preis-teilen
+        - /dreisatz-massstab/dreisatz-ueber-eins/#dreisatz-ueber-eins-ueben
+    - exercises:
+        - /dreisatz-massstab/dreisatz-ueber-eins/#preis-pro-karte
+        - /dreisatz-massstab/massstab-rechnen/#karte-zu-wirklichkeit
+        - /dreisatz-massstab/massstab-rechnen/#wirklichkeit-zu-karte
+    - exercises:
+        - /dreisatz-massstab/massstab-zeichnung/#zeichnung-anfertigen
+        - /dreisatz-massstab/massstab-zeichnung/#massstab-finden

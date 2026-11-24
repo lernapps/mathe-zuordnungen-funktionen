@@ -1,0 +1,9 @@
+# Taxifahrt: Grundpreis g in €, Preis p je km in €, n km, Gesamtpreis preis = g + p · n (ganze Euro).
+- { g: 3, p: 2, n: 4, preis: 11 }
+- { g: 3, p: 2, n: 6, preis: 15 }
+- { g: 4, p: 2, n: 5, preis: 14 }
+- { g: 2, p: 3, n: 4, preis: 14 }
+- { g: 3, p: 3, n: 5, preis: 18 }
+- { g: 4, p: 3, n: 3, preis: 13 }
+- { g: 2, p: 2, n: 7, preis: 16 }
+- { g: 5, p: 2, n: 3, preis: 11 }

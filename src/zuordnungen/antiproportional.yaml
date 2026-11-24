@@ -1,0 +1,128 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Antiproportionale Zuordnungen
+description: "Bei einer antiproportionalen Zuordnung bleibt das Produkt aus x und y gleich. Du erkennst und rechnest sie, auch mit Rechtecken."
+competencies: [antiproportionale-zuordnungen]
+blocks:
+  - type: section
+    id: einstieg
+    title: Mehr Pumpen, weniger Zeit
+    blocks:
+      - type: text
+        text: |
+          Ben füllt das Becken. Mit 1 Pumpe dauert es 12 Stunden, mit 2 Pumpen nur 6 Stunden. Je mehr Pumpen, desto kürzer die Zeit.
+          Nach dieser Seite erkennst du solche **antiproportionalen** Zuordnungen. Schiebe den Regler und vergleiche in der Tabelle
+          die Pumpenzahl mal die Zeit.
+      - type: vue-component
+        id: pumpen-regler
+        component: Dreifachansicht
+        props:
+          kind: antiproportional
+          xLabel: Pumpen
+          yLabel: Zeit (h)
+          xUnit: Pumpen
+          yUnit: h
+          xs: [1, 2, 3, 4, 6]
+          xMin: 0
+          xMax: 12
+          yMin: 0
+          yMax: 24
+          tickX: 2
+          tickY: 4
+          a: 12
+          aMin: 6
+          aMax: 24
+          aStep: 6
+          aName: c (Pumpen mal Stunden)
+        nojs: |
+          Für $c$ = 12 gehören zu 1, 2, 3, 4, 6 Pumpen die Zeiten 12 h, 6 h, 4 h, 3 h, 2 h. Pumpen mal Zeit ist immer 12. Der Graph ist eine
+          fallende Kurve, keine Gerade. Für $c$ = 24 sind alle Zeiten doppelt so lang.
+  - type: section
+    id: erklaerung
+    title: Das Produkt bleibt gleich
+    blocks:
+      - type: text
+        text: "Wenn mehr von der einen Sache weniger von der anderen bedeutet, zum Beispiel mehr Pumpen und weniger Zeit, brauchst du eine andere Regel als bei proportionalen Zuordnungen."
+      - type: figure
+        image: images/rechtecke-gleiche-flaeche.svg
+        alt: "Vier Rechtecke aus Kästchen. Das erste ist 2 breit und 6 hoch, das zweite 3 breit und 4 hoch, das dritte 4 breit und 3 hoch, das vierte 6 breit und 2 hoch. Alle bestehen aus 12 Kästchen."
+        caption: "Vier Rechtecke mit der gleichen Fläche. Wird eine Seite länger, wird die andere kürzer."
+        source: eigene Zeichnung
+        licence: CC-BY-4.0
+      - type: definition
+        term: antiproportional
+        explanation: "Eine Zuordnung ist antiproportional, wenn zum Doppelten von $x$ die Hälfte von $y$ gehört. Das Produkt $x$ · $y$ ist dann immer gleich. Beispiel: 2 Pumpen brauchen 6 h, 4 Pumpen brauchen 3 h, beide Male 12."
+      - type: text
+        text: |
+          Der Graph ist eine **fallende Kurve**, keine Gerade. Die Kurve verbindet die Punkte, auch wenn es nur ganze Pumpen gibt: Sie zeigt die Form. Du rechnest mit dem Produkt $c$ = $x$ · $y$. Dann gilt $y$ = $c$ : $x$.
+          Bei der Pfeiltabelle rechnest du hier links mal 2 und rechts durch 2: Die Pfeile laufen **gegeneinander**. Beim Dreisatz aus Kapitel 1 waren sie gleich.
+      - type: note
+        title: Merke
+        blocks:
+          - type: text
+            text: |
+              „Je mehr, desto weniger“ reicht nicht. Bei einem Preis von 40 € bleibt nach $x$ Gutscheinen zu 5 € noch $y$ = 40 − 5 · $x$ zu zahlen. Das Produkt
+              bleibt dabei nicht gleich. Prüfe immer, ob $x$ · $y$ gleich bleibt.
+  - type: section
+    id: beispiel
+    title: Beispiel
+    blocks:
+      - type: example
+        title: Das Becken mit 6 Pumpen
+        blocks:
+          - type: text
+            text: 4 Pumpen füllen das Becken in 3 Stunden. Wie lange brauchen 6 Pumpen?
+          - type: text
+            text: "Produkt: $4 \\cdot 3 = 12$. Dann $y = 12 : 6 = 2$. 6 Pumpen brauchen 2 Stunden."
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: number
+        id: becken-sechs-pumpen
+        text: "4 Pumpen füllen ein Becken in 6 Stunden. Wie viele Stunden brauchen 8 Pumpen?"
+        answer: 3
+        tolerance: 0
+        unit: Stunden
+        mistakes:
+          - answer: 12
+            message: "Du hast wie bei proportional mit 2 malgenommen. Mit mehr Pumpen wird die Zeit kürzer, du teilst durch 2."
+          - answer: 2
+            message: "Du hast die 4 zusätzlichen Pumpen von der Zeit abgezogen (6 − 4). Rechne das Produkt aus: 4 · 6 = 24. Dann 24 : 8."
+        explanation: "Das Produkt ist $4 \\cdot 6 = 24$. Mit 8 Pumpen: $24 : 8 = 3$ Stunden."
+      - type: generated
+        id: antiproportional-wert
+        given:
+          e: { pick: 1, from: { data: antiproportional-paare } }
+        task:
+          text: "Eine Zuordnung ist antiproportional. Zu $x$ = {{e.x1}} gehört $y$ = {{e.y1}}. Welches $y$ gehört zu $x$ = {{e.x2}}?"
+        answer: { value: "e.y2", compare: { number: { format: integer } } }
+        mistakes:
+          - value: "e.y1 * e.x2 / e.x1"
+            message: "Du hast wie bei proportional gerechnet. Bei antiproportional bleibt das Produkt x · y gleich, es wird nicht mit dem gleichen Faktor malgenommen."
+        hint: "Rechne erst das Produkt x mal y aus dem ersten Paar. Teile es dann durch den neuen x-Wert."
+        steps:
+          - "Produkt: {{e.x1}} · {{e.y1}} = {{e.c}}"
+          - "$y$ = {{e.c}} : {{e.x2}} = {{answer}}."
+      - type: single-choice
+        id: welche-tabelle-anti
+        text: "Welche Tabelle gehört zu einer antiproportionalen Zuordnung? ($x$ und $y$)"
+        options:
+          - text: "x: 1, 2, 3 und y: 8, 4, 2"
+            correct: false
+            info: "Bei 1 und 2 passt es (8, 4), aber bei 3 müsste $y$ = 8 : 3 sein, nicht 2."
+          - text: "x: 2, 3, 4 und y: 12, 8, 6"
+            correct: true
+            info: "Das Produkt ist immer 24: 2 · 12, 3 · 8, 4 · 6."
+          - text: "x: 2, 4, 6 und y: 6, 4, 2"
+            correct: false
+            info: "Hier ist $y$ jedes Mal um 2 kleiner. Das Produkt ändert sich: 12, 16, 12."
+        explanation: "Bei antiproportional ist $x$ · $y$ in jeder Spalte gleich."
+      - type: true-false
+        id: je-mehr-desto-weniger
+        text: "Ein Taxi kostet 3 € Grundpreis und 2 € je km. Bei weniger Kilometern kostet es weniger. Die Zuordnung ist deshalb antiproportional."
+        answer: false
+        explanation: "Weniger Kilometer, weniger Preis: Beides wird kleiner, nicht gegenläufig. Antiproportional ist nur, wenn mit größerem $x$ das $y$ kleiner wird und das Produkt gleich bleibt."
+      - type: text
+        text: |
+          **Das kannst du jetzt:** Du erkennst antiproportionale Zuordnungen am gleichen Produkt $x$ · $y$ und rechnest mit $y$ = $c$ : $x$. Als
+          Nächstes unterscheidest du beide Arten.

@@ -1,0 +1,13 @@
+# yaml-language-server: $schema=../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+format: 2
+strand: mathematik/algebra
+title: Zuordnungen und lineare Funktionen
+intro: |
+  Wie hängt eine Größe von einer anderen ab? Du stellst Zuordnungen als Term, Tabelle und Graph dar, erkennst proportionale
+  und antiproportionale Zuordnungen, stellst Geradengleichungen auf und löst Gleichungssysteme zeichnerisch und
+  rechnerisch. Für die Klassen 5 bis 8.
+languages: [de]
+chapters: [dreisatz-massstab, zuordnungen, funktionen, geraden, gleichungssysteme]
+sources:
+  - title: Lernlandkarte Mathematik
+    url: https://lernapps.net/apps/map/mathematik/

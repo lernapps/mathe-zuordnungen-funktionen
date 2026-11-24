@@ -1,0 +1,10 @@
+# Zwei steigende Geraden y = m1 · x + b1 und y = m2 · x + b2 mit m1 > m2 und b1 < b2, Schnittpunkt (x|y) ganzzahlig.
+# dm = m1 - m2, db = b2 - b1, x = db : dm, y = m1 · x + b1.
+- { m1: 3, b1: 0, m2: 1, b2: 6, dm: 2, db: 6, x: 3, y: 9 }
+- { m1: 2, b1: 1, m2: 1, b2: 4, dm: 1, db: 3, x: 3, y: 7 }
+- { m1: 4, b1: 2, m2: 2, b2: 6, dm: 2, db: 4, x: 2, y: 10 }
+- { m1: 3, b1: 1, m2: 1, b2: 5, dm: 2, db: 4, x: 2, y: 7 }
+- { m1: 5, b1: 0, m2: 2, b2: 6, dm: 3, db: 6, x: 2, y: 10 }
+- { m1: 4, b1: 1, m2: 1, b2: 10, dm: 3, db: 9, x: 3, y: 13 }
+- { m1: 3, b1: 2, m2: 1, b2: 6, dm: 2, db: 4, x: 2, y: 8 }
+- { m1: 2, b1: 0, m2: 1, b2: 5, dm: 1, db: 5, x: 5, y: 10 }

@@ -1,0 +1,71 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Das brauchst du hier
+description: "Lineare Gleichungen lösen: Äquivalenzumformung und Probe. Das brauchst du, um Geradengleichungen und Gleichungssysteme zu lösen."
+recap: [mathematik/lineare-gleichungen]
+blocks:
+  - type: section
+    id: einstieg
+    title: Das brauchst du für dieses Kapitel
+    blocks:
+      - type: text
+        text: |
+          In diesem und im nächsten Kapitel suchst du zum Beispiel den Punkt, an dem zwei Tarife gleich viel kosten. Dazu stellst du Gleichungen auf und löst sie. Zwei Übungen zeigen dir am Ende, ob du lineare Gleichungen sicher lösen kannst.
+  - type: section
+    id: lineare-gleichungen
+    title: Lineare Gleichungen
+    blocks:
+      - type: text
+        text: |
+          Wenn du eine unbekannte Zahl suchst, die eine Aussage wahr macht, löst du eine Gleichung. Ich kann lineare Gleichungen lösen und die Lösungsverfahren vergleichen.
+      - type: definition
+        term: Gleichung
+        explanation: "Eine Gleichung sagt, dass zwei Terme gleich groß sind. Ein Term ist eine Rechnung mit Zahlen und $x$, wie $2 \\cdot x + 3$. Beispiel: $2 \\cdot x + 3 = 11$. Die Lösung ist die Zahl für $x$, bei der die Gleichung stimmt."
+      - type: definition
+        term: Äquivalenzumformung
+        explanation: "Du darfst eine Gleichung umformen, wenn du auf beiden Seiten dasselbe tust. Beispiel: $2 \\cdot x + 3 = 11$, minus 3 auf beiden Seiten gibt $2 \\cdot x = 8$, geteilt durch 2 gibt $x = 4$."
+      - type: definition
+        term: Probe
+        explanation: "Bei der Probe setzt du die Lösung in die Gleichung ein. Beispiel: $2 \\cdot 4 + 3 = 11$ stimmt, also ist $x$ = 4 die Lösung."
+  - type: section
+    id: selbsttest
+    title: Kannst du das?
+    blocks:
+      - type: number
+        id: test-gleichung
+        text: "Wie lautet die Lösung von 5 · $x$ − 9 = 2 · $x$ + 12?"
+        answer: 7
+        tolerance: 0
+        mistakes:
+          - answer: 1
+            message: "Du hast 12 − 9 gerechnet. Die 9 steht links mit Minus, also addierst du 9 auf beiden Seiten."
+          - answer: 21
+            message: "Du hast nicht durch 3 geteilt."
+          - answer: -7
+            message: "Du hast die Vorzeichen vertauscht: Die 12 und die 9 gehören beide auf die rechte Seite und werden dort addiert."
+          - answer: 3
+            message: "Du hast 2 · x zu 5 · x addiert. Bring 2 · x auf die linke Seite, indem du es auf beiden Seiten abziehst."
+        explanation: "Minus 2 · $x$ und plus 9 auf beiden Seiten gibt 3 · $x$ = 21, also $x$ = 7. Probe: 5 · 7 − 9 = 26 und 2 · 7 + 12 = 26."
+      - type: single-choice
+        id: test-probe
+        text: "Ist $x$ = 4 die Lösung von 3 · ($x$ − 1) = 2 · $x$ + 3?"
+        options:
+          - text: "Ja, beide Seiten sind 9"
+            correct: false
+            info: "Die rechte Seite ist 2 · 4 + 3 = 11, nicht 9. Nur die linke Seite ist 3 · 3 = 9."
+          - text: "Nein, links 9 und rechts 11"
+            correct: true
+            info: "Links: 3 · (4 − 1) = 3 · 3 = 9. Rechts: 2 · 4 + 3 = 11. Die Seiten sind verschieden, $x$ = 4 ist keine Lösung."
+          - text: "Nein, links 11 und rechts 9"
+            correct: false
+            info: "Die Seiten sind vertauscht: Links steht 3 · (4 − 1) = 9, rechts 2 · 4 + 3 = 11."
+        explanation: "Bei der Probe rechnest du beide Seiten getrennt aus und vergleichst sie."
+      - type: text
+        text: "Wenn das nicht klappt, wiederhole den Baustein „Lineare Gleichungen“ auf der Lernlandkarte: [Kartenseite](https://lernapps.net/apps/map/mathematik/c/lineare-gleichungen/)."
+  - type: section
+    id: bereit
+    title: Du bist bereit, wenn du …
+    blocks:
+      - type: text
+        text: |
+          - eine Gleichung wie 5 · $x$ − 9 = 2 · $x$ + 12 mit Umformungen löst und
+          - die Probe durch Einsetzen machst und damit prüfst, ob eine Zahl die Lösung ist.

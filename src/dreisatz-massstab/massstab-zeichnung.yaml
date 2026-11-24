@@ -1,0 +1,126 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Zeichnungen im Maßstab
+description: "Du liest Zeichnungen im Maßstab, fertigst eine Zeichnung an und findest den passenden Maßstab."
+competencies: [massstab]
+blocks:
+  - type: section
+    id: einstieg
+    title: Elif zeichnet das Zimmer in der Herberge
+    blocks:
+      - type: text
+        text: |
+          Elif zeichnet ihr Zimmer in der Herberge auf. Auf dem Plan ist es 8 cm lang und 6 cm breit. Nach dieser Seite weißt du, wie groß es
+          in Wirklichkeit ist und wie du selbst eine passende Zeichnung machst.
+      - type: figure
+        image: images/zimmerplan.svg
+        alt: "Rechteckiger Zimmerplan. Oben steht die Länge 8 cm, rechts die Breite 6 cm. Im Zimmer ist ein Bett eingezeichnet. Unten steht der Maßstab 1 zu 50."
+        caption: "Der Plan ist 8 cm lang und 6 cm breit. Der Maßstab 1 : 50 steht unten."
+        source: eigene Zeichnung
+        licence: CC-BY-4.0
+  - type: section
+    id: erklaerung
+    title: Lesen, zeichnen, Maßstab finden
+    blocks:
+      - type: text
+        text: "Wenn du ein Zimmer auf Papier zeichnen oder einen Plan lesen willst, beantwortest du drei Fragen mit dem Maßstab: Wie lang ist es in der Wirklichkeit, wie lang in der Zeichnung, und welcher Maßstab passt?"
+      - type: text
+        text: |
+          Du hast drei Fälle. **Lesen:** Zeichnung mal Maßstabszahl gibt die Wirklichkeit (die Maßstabszahl steht nach dem Doppelpunkt, bei 1 : 50 ist sie 50). Hier $8 \cdot 50 = 400$ cm, also 4 m.
+          **Zeichnen:** Wirklichkeit geteilt durch die Maßstabszahl gibt die Zeichnung. **Maßstab finden:** Wirklichkeit geteilt
+          durch Zeichnung.
+      - type: note
+        title: Merke
+        blocks:
+          - type: text
+            text: |
+              Bei 1 : 50 wird **verkleinert**. Die Zeichnung ist kleiner als das Original. Wähle den Maßstab so, dass die Zeichnung
+              aufs Blatt passt. Ein A4-Blatt ist knapp 30 cm lang.
+  - type: section
+    id: beispiel
+    title: Beispiel
+    blocks:
+      - type: example
+        title: Ein Bett zeichnen
+        blocks:
+          - type: text
+            text: "Das Bett ist in Wirklichkeit 200 cm lang. Der Plan hat den Maßstab 1 : 50. Wie lang ist das Bett auf dem Plan?"
+          - type: table
+            caption: Plan und Wirklichkeit bei 1 zu 50
+            rowHeaders: true
+            rows:
+              - ["Plan in cm", "1", "?"]
+              - ["Wirklichkeit in cm", "50", "200"]
+          - type: text
+            text: "Von 50 auf 200 ist mal 4. Auf dem Plan ist es dann $1 \\cdot 4 = 4$ cm: Du rechnest $200 : 50 = 4$. Das Bett ist auf dem Plan 4 cm lang."
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: number
+        id: zimmer-lang
+        text: "Das Zimmer ist auf dem Plan 8 cm lang. Der Maßstab ist 1 : 50. Wie lang ist es in Wirklichkeit in Metern?"
+        answer: 4
+        tolerance: 0
+        unit: m
+        mistakes:
+          - answer: 400
+            message: "Das sind 400 cm. Du hast die Einheit nicht umgerechnet. Durch 100 teilen gibt Meter."
+          - answer: 58
+            message: "Du hast 50 addiert. Beim Maßstab wird malgenommen: 8 mal 50."
+        explanation: "$8 \\cdot 50 = 400$ cm, und $400 : 100 = 4$ m."
+      - type: generated
+        id: zeichnung-anfertigen
+        given:
+          e: { pick: 1, from: { data: massstab-zeichnen } }
+        task:
+          text: "Eine Wand ist {{e.wirklich}} cm lang. Du zeichnest sie im Maßstab 1 : {{e.scale}}. Wie lang ist die Wand in der Zeichnung in Zentimetern?"
+        answer: { value: "e.zeichnung", compare: { number: { format: integer, unit: cm } } }
+        mistakes:
+          - value: "e.wirklich * e.scale"
+            message: "Du hast malgenommen. Die Zeichnung ist kleiner als die Wirklichkeit: Du teilst durch {{e.scale}}."
+          - value: "e.wirklich - e.scale"
+            message: "Du hast subtrahiert. Der Maßstab wirkt als Faktor: geteilt durch {{e.scale}}."
+        hint: "Wirklichkeit geteilt durch die Zahl nach dem Doppelpunkt."
+        steps:
+          - "Zeichnung = Wirklichkeit : Maßstabszahl"
+          - "{{e.wirklich}} : {{e.scale}} = {{answer}} cm."
+      - type: generated
+        id: massstab-finden
+        given:
+          e: { pick: 1, from: { data: massstab-bestimmen } }
+        task:
+          text: "Eine Strecke ist in Wirklichkeit {{e.wirklich}} cm lang. In der Zeichnung ist sie {{e.zeichnung}} cm lang. Die Zeichnung hat den Maßstab 1 : $x$. Wie groß ist $x$?"
+        answer: { value: "e.scale", compare: { number: { format: integer } } }
+        mistakes:
+          - value: "e.wirklich * e.zeichnung"
+            message: "Du hast malgenommen. Den Maßstab findest du, indem du die Wirklichkeit durch die Zeichnung teilst."
+          - value: "e.zeichnung"
+            message: "Das ist die Länge in der Zeichnung. Gesucht ist die Zahl, mit der du die Zeichnung malnehmen musst."
+        hint: "Wie oft passt die Zeichnungslänge in die Wirklichkeit?"
+        steps:
+          - "Maßstabszahl = Wirklichkeit : Zeichnung"
+          - "{{e.wirklich}} : {{e.zeichnung}} = {{answer}}, der Maßstab ist 1 : {{answer}}."
+      - type: single-choice
+        id: passender-massstab
+        text: "Das Zimmer ist 5 m lang. Du willst es auf ein A4-Blatt zeichnen (knapp 30 cm lang). Welcher Maßstab nutzt das Blatt gut aus?"
+        options:
+          - text: "1 : 5"
+            correct: false
+            info: "500 cm : 5 = 100 cm. Die Zeichnung wäre länger als das Blatt."
+          - text: "1 : 20"
+            correct: true
+            info: "500 cm : 20 = 25 cm. Das passt aufs Blatt und nutzt es gut aus."
+          - text: "1 : 500"
+            correct: false
+            info: "500 cm : 500 = 1 cm. Das passt zwar aufs Blatt, aber du würdest fast nichts erkennen."
+        explanation: "Ein guter Maßstab macht die Zeichnung so groß, dass sie gerade noch aufs Blatt passt."
+      - type: true-false
+        id: massstab-verkleinert
+        text: "Beim Maßstab 1 : 100 ist die Zeichnung 100-mal größer als das Original."
+        answer: false
+        explanation: "Es ist umgekehrt: Beim Maßstab 1 : 100 sind Strecken in der Zeichnung 100-mal kürzer als in Wirklichkeit. 100 cm in Wirklichkeit sind 1 cm auf dem Plan."
+      - type: text
+        text: |
+          **Das kannst du jetzt:** Du rechnest zwischen Plan und Wirklichkeit, zeichnest im Maßstab und findest den Maßstab selbst.
+          Das Kapitel zeigt: Wer links mit einem Faktor rechnet, rechnet rechts genauso. Im nächsten Kapitel wird daraus der Graph
+          einer Zuordnung, zum Beispiel für die Tarife der Klassenfahrt.

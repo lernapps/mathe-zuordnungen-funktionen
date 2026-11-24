@@ -1,0 +1,9 @@
+# Dreisatz mit ganzzahligem Faktor f (x2 = f · x1): Postkarten und Preis in ganzen Euro, y2 = f · y1.
+- { x1: 3, y1: 6, f: 2, x2: 6, y2: 12 }
+- { x1: 2, y1: 5, f: 3, x2: 6, y2: 15 }
+- { x1: 4, y1: 6, f: 3, x2: 12, y2: 18 }
+- { x1: 5, y1: 8, f: 2, x2: 10, y2: 16 }
+- { x1: 3, y1: 4, f: 4, x2: 12, y2: 16 }
+- { x1: 2, y1: 7, f: 5, x2: 10, y2: 35 }
+- { x1: 6, y1: 9, f: 3, x2: 18, y2: 27 }
+- { x1: 4, y1: 10, f: 2, x2: 8, y2: 20 }

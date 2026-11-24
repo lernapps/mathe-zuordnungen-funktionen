@@ -1,0 +1,139 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Wie viele Lösungen gibt es?
+description: "Du erkennst, ob ein Gleichungssystem keine, genau eine oder unendlich viele Lösungen hat, an der Lage der beiden Geraden."
+competencies: [lineare-gleichungssysteme]
+blocks:
+  - type: section
+    id: einstieg
+    title: Zwei Tarife mit Reglern
+    blocks:
+      - type: text
+        text: |
+          Zwei Taxis haben jeweils einen Grundpreis ($b$) und einen Preis je Kilometer ($m$). Beide Geraden kannst du mit den Reglern verändern.
+          Stelle sie so ein, dass sie **parallel** sind, und dann so, dass sie **aufeinander** liegen. Wie viele Schnittpunkte gibt es jeweils?
+      - type: vue-component
+        id: zwei-taxis
+        component: Dreifachansicht
+        props:
+          kind: linear
+          xLabel: Strecke (km)
+          yLabel: Preis (€)
+          xUnit: km
+          yUnit: €
+          xs: [0, 1, 2, 3]
+          xMin: 0
+          xMax: 6
+          yMin: 0
+          yMax: 14
+          tickX: 1
+          tickY: 2
+          a: 2
+          aMin: 0
+          aMax: 3
+          aStep: 1
+          aName: m von Taxi A
+          b: 1
+          bMin: 0
+          bMax: 8
+          bStep: 1
+          bName: b von Taxi A
+          a2: 1
+          a2Min: 0
+          a2Max: 3
+          a2Step: 1
+          a2Name: m von Taxi B
+          b2: 5
+          b2Min: 0
+          b2Max: 8
+          b2Step: 1
+          b2Name: b von Taxi B
+          lineName: Taxi A
+          line2Name: Taxi B
+        nojs: |
+          Zwei Geraden mit je zwei Reglern: Taxi A ($m$ und $b$) und Taxi B ($m$ und $b$). Zu Beginn ist Taxi A $y$ = 2 · $x$ + 1 und Taxi B $y$ = $x$ + 5. Für $x$ = 0, 1, 2, 3 ist $y$ bei Taxi A 1, 3, 5, 7 und bei Taxi B 5, 6, 7, 8. Sind beide $m$ gleich und die $b$ verschieden, laufen die Geraden parallel und
+          haben keinen gemeinsamen Punkt. Sind $m$ und $b$ beide gleich, liegen sie aufeinander. Sonst schneiden sie sich in genau einem Punkt.
+  - type: section
+    id: erklaerung
+    title: Keine, eine oder unendlich viele
+    blocks:
+      - type: text
+        text: "Wenn du zwei Tarife vergleichst, kann es sein, dass sie sich nie, genau einmal oder immer treffen. Das siehst du an der Lage der Geraden."
+      - type: table
+        caption: Lage der Geraden und Zahl der Lösungen
+        header: ["Lage", "$m$", "$b$", "Lösungen"]
+        rowHeaders: true
+        rows:
+          - ["schneiden sich", "verschieden", "egal", "genau eine"]
+          - ["parallel", "gleich", "verschieden", "keine"]
+          - ["aufeinander", "gleich", "gleich", "unendlich viele"]
+      - type: text
+        text: |
+          Jeder gemeinsame Punkt der beiden Geraden ist eine Lösung. Bei Parallelen gibt es keinen gemeinsamen Punkt. Liegen die Geraden
+          aufeinander, ist jeder Punkt der Geraden eine Lösung.
+      - type: note
+        title: Merke
+        blocks:
+          - type: text
+            text: |
+              Schaue zuerst auf $m$. Sind die Steigungen verschieden, gibt es **genau eine** Lösung. Nur bei gleichem $m$ hängt es von $b$ ab.
+  - type: section
+    id: beispiel
+    title: Beispiel
+    blocks:
+      - type: example
+        title: Zwei Taxis
+        blocks:
+          - type: text
+            text: "Taxi A: $y = 2 \\cdot x + 1$. Taxi B: $y = 2 \\cdot x + 5$. Beide haben $m$ = 2, aber $b$ = 1 und $b$ = 5. Die Geraden sind parallel: Taxi B ist immer um 4 € teurer, es gibt keine Lösung."
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: matching
+        id: system-anzahl
+        text: "Ordne jedem Gleichungssystem die Zahl der Lösungen zu."
+        pairs:
+          - left: "y = 2 · x + 1 und y = 2 · x + 5"
+            right: "keine Lösung"
+          - left: "y = 2 · x + 1 und y = 3 · x + 1"
+            right: "genau eine Lösung"
+          - left: "y = 2 · x + 1 und y = 2 · x + 1"
+            right: "unendlich viele Lösungen"
+        explanation: "Gleiches $m$ und verschiedenes $b$: parallel, keine Lösung. Verschiedenes $m$: genau ein Schnittpunkt. Gleiches $m$ und gleiches $b$: dieselbe Gerade."
+      - type: single-choice
+        id: parallele-geraden
+        text: "Die Geraden $y$ = 3 · $x$ + 2 und $y$ = 3 · $x$ − 4 sind gegeben. Wie viele Lösungen hat das System?"
+        options:
+          - text: "keine"
+            correct: true
+            info: "Beide haben $m$ = 3, aber $b$ = 2 und $b$ = −4. Sie sind parallel und treffen sich nie."
+          - text: "genau eine"
+            correct: false
+            info: "Genau eine Lösung gibt es nur bei verschiedenen Steigungen. Hier sind beide $m$ gleich 3."
+          - text: "unendlich viele"
+            correct: false
+            info: "Dafür müssten auch die $b$ gleich sein. Hier sind sie verschieden: 2 und −4."
+        explanation: "Gleiches $m$, verschiedenes $b$: die Geraden sind parallel."
+      - type: single-choice
+        id: verschiedene-steigung
+        text: "Die Geraden $y$ = $x$ + 7 und $y$ = 4 · $x$ + 7 sind gegeben. Wie viele Lösungen hat das System?"
+        options:
+          - text: "genau eine"
+            correct: true
+            info: "Die Steigungen 1 und 4 sind verschieden. Beide Geraden gehen durch (0|7): das ist die Lösung."
+          - text: "keine"
+            correct: false
+            info: "Keine Lösung gibt es nur bei Parallelen. Hier sind die Steigungen verschieden."
+          - text: "unendlich viele"
+            correct: false
+            info: "Unendlich viele gibt es nur, wenn es dieselbe Gerade ist. Hier sind die Steigungen verschieden."
+        explanation: "Verschiedene Steigungen führen immer zu genau einem Schnittpunkt."
+      - type: true-false
+        id: parallele-schneiden
+        text: "Zwei Geraden mit der gleichen Steigung und verschiedenem $y$-Achsenabschnitt schneiden sich genau einmal."
+        answer: false
+        explanation: "Sie sind parallel und haben keinen gemeinsamen Punkt, also keine Lösung."
+      - type: text
+        text: |
+          **Das kannst du jetzt:** Du löst ein Gleichungssystem zeichnerisch und sagst, ob es keine, eine oder unendlich viele Lösungen hat. Als
+          Nächstes rechnest du die Lösung genau aus.

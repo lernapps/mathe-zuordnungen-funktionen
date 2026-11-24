@@ -1,0 +1,127 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Dreisatz mit Pfeilen
+description: "Du löst Dreisatzaufgaben mit einer Tabelle und Pfeilen: Was links mit einer Zahl malgenommen wird, wird rechts genauso malgenommen."
+competencies: [dreisatz]
+blocks:
+  - type: section
+    id: einstieg
+    title: Postkarten für die Klassenfahrt
+    blocks:
+      - type: text
+        text: |
+          Jonas kauft Postkarten für die Klassenfahrt. 3 Karten kosten 6 €. Er will 6 Karten kaufen. Nach dieser Seite löst du
+          solche Aufgaben mit dem **Dreisatz**: Du rechnest mit einer Tabelle und Pfeilen.
+      - type: figure
+        image: images/pfeiltabelle-postkarten.svg
+        alt: "Tabelle mit zwei Zeilen. Postkarten: 3 und 6. Preis in Euro: 6 und ein Fragezeichen. Über der oberen Zeile ein Pfeil von 3 nach 6 mit „· 2“, unter der unteren Zeile ein Pfeil von 6 nach dem Fragezeichen mit „· 2“."
+        caption: "Von 3 auf 6 Karten ist mal 2. Der Preis muss dann auch mal 2 genommen werden. Was steht beim Fragezeichen?"
+        source: eigene Zeichnung
+        licence: CC-BY-4.0
+  - type: section
+    id: erklaerung
+    title: Links und rechts gleich
+    blocks:
+      - type: text
+        text: "Wenn du wissen willst, was 6 Karten kosten, obwohl du nur den Preis für 3 Karten kennst, musst du nicht raten. Dafür gibt es den Dreisatz."
+      - type: definition
+        term: Dreisatz
+        explanation: "Der Dreisatz löst Aufgaben, bei denen die doppelte Menge den doppelten Wert hat. Du schreibst die Werte in eine Tabelle mit zwei Zeilen und rechnest links und rechts mit demselben Faktor. Beispiel: 3 Karten kosten 6 €, 6 Karten kosten 6 € · 2 = 12 €."
+      - type: text
+        text: |
+          Zwei Schritte: Erst siehst du, womit du links rechnen musst (hier mal 2). Dann rechnest du rechts genauso. Die
+          Pfeile zeigen den Faktor.
+      - type: note
+        title: Merke
+        blocks:
+          - type: text
+            text: |
+              Links und rechts wird **malgenommen oder geteilt**, nie „plus“. Wenn die Karten um 3 mehr werden, wird der Preis nicht
+              um 3 mehr, sondern mit dem gleichen Faktor größer.
+  - type: section
+    id: beispiel
+    title: Beispiel
+    blocks:
+      - type: example
+        title: 4 Karten kosten 6 €
+        blocks:
+          - type: text
+            text: Wie viel kosten 12 Karten?
+          - type: table
+            caption: Postkarten und Preis
+            rowHeaders: true
+            rows:
+              - ["Karten", "4", "12"]
+              - ["Preis in €", "6", "?"]
+          - type: text
+            text: "Von 4 auf 12 Karten ist mal 3, denn $4 \\cdot 3 = 12$. Also auch der Preis mal 3: $6 \\cdot 3 = 18$. Antwort: 12 Karten kosten 18 €."
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: number
+        id: sechs-karten
+        text: "3 Karten kosten 6 €. Wie viel Euro kosten 6 Karten?"
+        answer: 12
+        tolerance: 0
+        unit: €
+        mistakes:
+          - answer: 9
+            message: "Du hast 3 addiert. Von 3 auf 6 Karten ist das mal 2, nicht plus 3. Der Preis wird also auch mal 2 genommen."
+          - answer: 6
+            message: "Der Preis bleibt nicht gleich. Mit mehr Karten steigt auch der Preis."
+        explanation: "Von 3 auf 6 Karten ist mal 2. Der Preis wird mit 2 malgenommen: $6 \\cdot 2 = 12$."
+      - type: true-false
+        id: plus-oder-mal
+        text: "3 Karten kosten 6 €. Weil 3 Karten mehr dazukommen, kommen auch 3 € dazu: 6 Karten kosten 9 €. Stimmt das?"
+        answer: false
+        explanation: "Von 3 auf 6 Karten ist mal 2, nicht plus 3. Der Preis wird auch mal 2 genommen: 6 Karten kosten 12 €."
+      - type: generated
+        id: preis-malnehmen
+        given:
+          e: { pick: 1, from: { data: dreisatz-malnehmen } }
+        task:
+          text: "{{e.x1}} Postkarten kosten {{e.y1}} €. Wie viel Euro kosten {{e.x2}} Postkarten?"
+        answer: { value: "e.y2", compare: { number: { format: integer, unit: € } } }
+        mistakes:
+          - value: "e.y1 + e.x2 - e.x1"
+            message: "Du hast zum Preis die fehlenden Karten addiert. Links ist mal {{e.f}}, also muss auch rechts mal {{e.f}} gerechnet werden."
+          - value: "e.x2"
+            message: "Das ist die Anzahl der Karten. Gesucht ist der Preis in Euro."
+        hint: "Wie oft passt die kleinere Kartenzahl in die größere? Mit dieser Zahl rechnest du auch beim Preis."
+        steps:
+          - "Von {{e.x1}} auf {{e.x2}} Karten ist mal {{e.f}}, denn {{e.x1}} · {{e.f}} = {{e.x2}}."
+          - "Der Preis auch mal {{e.f}}: {{e.y1}} · {{e.f}} = {{answer}} €."
+      - type: generated
+        id: preis-teilen
+        given:
+          e: { pick: 1, from: { data: dreisatz-teilen } }
+        task:
+          text: "{{e.x1}} Postkarten kosten {{e.y1}} €. Wie viel Euro kosten {{e.x2}} Postkarten?"
+        answer: { value: "e.y2", compare: { number: { format: integer, unit: € } } }
+        mistakes:
+          - value: "e.y1 - (e.x1 - e.x2)"
+            message: "Du hast die fehlenden Karten abgezogen. Links wird durch {{e.f}} geteilt, also auch rechts durch {{e.f}}."
+          - value: "e.y1 * e.f"
+            message: "Du hast malgenommen. Die Kartenzahl wird kleiner, also wird auch der Preis kleiner: geteilt durch {{e.f}}."
+        hint: "Durch welche Zahl teilst du die größere Kartenzahl, um die kleinere zu bekommen?"
+        steps:
+          - "Von {{e.x1}} auf {{e.x2}} Karten ist geteilt durch {{e.f}}, denn {{e.x1}} : {{e.f}} = {{e.x2}}."
+          - "Der Preis auch geteilt durch {{e.f}}: {{e.y1}} : {{e.f}} = {{answer}} €."
+      - type: single-choice
+        id: welche-pfeile
+        text: "12 Karten kosten 18 €. Welche Rechnung gibt den Preis für 4 Karten?"
+        options:
+          - text: "18 € : 3"
+            correct: true
+            info: "Von 12 auf 4 Karten ist geteilt durch 3, also auch der Preis geteilt durch 3: 6 €."
+          - text: "18 € − 8"
+            correct: false
+            info: "Es wird nicht subtrahiert. Karten und Preis ändern sich mit demselben Faktor, nicht mit derselben Zahl."
+          - text: "18 € · 3"
+            correct: false
+            info: "Mit 4 Karten kaufst du weniger als mit 12, also zahlst du weniger. Du musst teilen, nicht malnehmen."
+        explanation: "12 : 3 = 4, deshalb auch 18 : 3 = 6."
+      - type: text
+        text: |
+          **Das kannst du jetzt:** Du löst Dreisatzaufgaben mit einer Tabelle und Pfeilen, wenn die Zahl links glatt malgenommen oder
+          geteilt wird. Als Nächstes lernst du den Weg über 1 Karte, wenn es nicht glatt aufgeht.

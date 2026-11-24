@@ -1,0 +1,166 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Zuordnungen darstellen
+description: "Du stellst eine Zuordnung in Worten, in einer Tabelle und in einem Graphen dar und liest Werte daraus ab."
+competencies: [zuordnungen]
+blocks:
+  - type: section
+    id: einstieg
+    title: Mit dem Taxi zur Haltestelle
+    blocks:
+      - type: text
+        text: |
+          Die Klasse fährt ein Stück mit dem Taxi. Jeder Strecke gehört ein Fahrpreis. Das nennt man eine **Zuordnung**. Nach dieser
+          Seite stellst du sie in Worten, als Tabelle und als Graph dar. Was kostet eine Fahrt von 5 km? Im Graphen steht die Strecke waagerecht auf der $x$-Achse und der Fahrpreis nach oben auf der $y$-Achse; zu jeder Strecke gehört ein Punkt. Lies den Preis im Graphen ab. Die Linie läuft über die Tabelle hinaus, dort darfst du auch ablesen.
+      - type: vue-component
+        id: taxi-graph
+        component: Dreifachansicht
+        props:
+          kind: linear
+          xLabel: Strecke (km)
+          yLabel: Fahrpreis (€)
+          xUnit: km
+          yUnit: €
+          xs: [0, 1, 2, 3]
+          xMin: 0
+          xMax: 6
+          yMin: 0
+          yMax: 16
+          tickX: 1
+          tickY: 2
+          a: 2
+          aMin: 2
+          aMax: 2
+          aStep: 1
+          aName: m
+          b: 3
+          fixed: true
+          hideTerm: true
+        nojs: |
+          Tabelle zum Taxi: Bei 0 km kostet die Fahrt 3 €, bei 1 km 5 €, bei 2 km 7 €, bei 3 km 9 €. Der Graph ist eine Linie, die bei
+          3 € auf der $y$-Achse beginnt und mit jedem Kilometer um 2 € steigt.
+      - type: number
+        id: fahrt-fuenf-km
+        text: "Lies im Graphen ab: Was kostet eine Taxifahrt von 5 km?"
+        answer: 13
+        tolerance: 0
+        unit: €
+        mistakes:
+          - answer: 11
+            message: "Du hast den Wert bei 4 km abgelesen. Geh auf der x-Achse bis 5 und dann senkrecht nach oben bis zur Linie."
+          - answer: 5
+            message: "5 ist die Strecke auf der x-Achse. Gesucht ist der Preis auf der y-Achse."
+        explanation: "Bei 5 km steigt die Linie auf 13 €: 3 € Grundpreis und dazu 5 · 2 €."
+  - type: section
+    id: erklaerung
+    title: Drei Darstellungen
+    blocks:
+      - type: text
+        text: "Wenn du jemandem zeigen willst, wie der Fahrpreis von der Strecke abhängt, kannst du das auf drei Arten tun."
+      - type: definition
+        term: Zuordnung
+        explanation: "Eine Zuordnung ordnet den Werten einer Größe Werte einer anderen Größe zu. Beispiel: Jeder Strecke in km wird ein Fahrpreis in € zugeordnet."
+      - type: text
+        text: |
+          Dieselbe Zuordnung kannst du auf drei Arten zeigen. **In Worten:** 3 € Grundpreis, dazu 2 € je Kilometer. **Als
+          Tabelle:** Strecke und Preis in zwei Zeilen. **Als Graph:** Punkte im Koordinatensystem. Die Strecke steht auf der
+          $x$-Achse, der Preis auf der $y$-Achse.
+      - type: note
+        title: Merke
+        blocks:
+          - type: text
+            text: |
+              Ein Graph ist **kein Bild vom Weg**. Er zeigt, welcher Preis zu welcher Strecke gehört. Verbinde die Punkte nur, wenn
+              auch die Werte dazwischen vorkommen, wie 2,5 km. Bei Dingen, die du nur ganz kaufen kannst (zum Beispiel Karten oder Äpfel), gibt es nur einzelne Punkte.
+  - type: section
+    id: beispiel
+    title: Beispiel
+    blocks:
+      - type: example
+        title: Karten für das Schwimmbad
+        blocks:
+          - type: text
+            text: "Eine Eintrittskarte kostet 2 €. In Worten: Jede Karte kostet 2 €. Du kannst nur ganze Karten kaufen."
+          - type: vue-component
+            id: karten-graph
+            component: Dreifachansicht
+            props:
+              kind: proportional
+              xLabel: Karten
+              yLabel: Preis (€)
+              xUnit: Karten
+              yUnit: €
+              xs: [0, 1, 2, 3, 4]
+              xMin: 0
+              xMax: 5
+              yMin: 0
+              yMax: 10
+              tickX: 1
+              tickY: 2
+              a: 2
+              aMin: 2
+              aMax: 2
+              aStep: 1
+              aName: k
+              fixed: true
+              hideTerm: true
+              pointsOnly: true
+            nojs: |
+              Tabelle: 0 Karten kosten 0 €, 1 Karte 2 €, 2 Karten 4 €, 3 Karten 6 €, 4 Karten 8 €. Der Graph zeigt nur diese fünf Punkte,
+              keine Linie dazwischen, denn es gibt keine halben Karten.
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: single-choice
+        id: punkte-verbinden
+        text: "Du zeichnest den Graphen der Zuordnung „Anzahl Äpfel → Preis“. Du kannst nur ganze Äpfel kaufen. Was zeichnest du?"
+        options:
+          - text: "Einzelne Punkte"
+            correct: true
+            info: "Zwischen zwei ganzen Äpfeln gibt es keinen Wert, also bleiben es einzelne Punkte."
+          - text: "Eine durchgehende Linie"
+            correct: false
+            info: "Eine Linie würde Werte wie 2,5 Äpfel zeigen. Die gibt es hier nicht."
+          - text: "Eine Linie, die erst steigt und dann fällt"
+            correct: false
+            info: "Dafür gibt es hier keinen Grund: Mit mehr Äpfeln wird der Preis nie wieder kleiner."
+        explanation: "Du verbindest Punkte nur, wenn auch die Zwischenwerte vorkommen."
+      - type: single-choice
+        id: wort-zu-tabelle
+        text: "In Worten: Jede Stunde Schwimmbad kostet 3 €. Welche Tabelle gehört dazu? (Stunden, Preis)"
+        options:
+          - text: "1 | 3, 2 | 6, 3 | 9"
+            correct: true
+            info: "Pro Stunde 3 €: Bei 2 Stunden sind es 6 €, bei 3 Stunden 9 €."
+          - text: "1 | 3, 2 | 4, 3 | 5"
+            correct: false
+            info: "Hier steigt der Preis nur um 1 € je Stunde. Gesagt war: 3 € je Stunde."
+          - text: "3 | 1, 6 | 2, 9 | 3"
+            correct: false
+            info: "Hier sind Preis und Stunden vertauscht. In der ersten Zeile stehen die Stunden."
+        explanation: "Die Beschreibung sagt, dass zu jeder Stunde 3 € dazukommen."
+      - type: generated
+        id: taxi-preis
+        given:
+          e: { pick: 1, from: { data: taxi-fahrten } }
+        task:
+          text: "Ein Taxi kostet {{e.g}} € Grundpreis und {{e.p}} € je Kilometer. Was kostet eine Fahrt von {{e.n}} km?"
+        answer: { value: "e.preis", compare: { number: { format: integer, unit: € } } }
+        mistakes:
+          - value: "e.p * e.n"
+            message: "Du hast den Grundpreis von {{e.g}} € vergessen. Er wird immer bezahlt, auch bei 0 km."
+          - value: "e.g + e.p"
+            message: "Du hast nur für 1 km gerechnet. Die Fahrt hat {{e.n}} km, also kommt der Kilometerpreis {{e.n}}-mal dazu."
+        hint: "Rechne erst die Kosten für die Kilometer, dann addiere den Grundpreis."
+        steps:
+          - "Kosten der Kilometer: {{e.n}} km mal {{e.p}} € je km"
+          - "Dazu der Grundpreis {{e.g}} €: Gesamt {{answer}} €."
+      - type: true-false
+        id: graph-ist-weg
+        text: "Ein Graph „Zeit → Strecke“ zeigt den Weg, den jemand gegangen ist, wie eine Landkarte."
+        answer: false
+        explanation: "Der Graph zeigt, welche Strecke zu welcher Zeit gehört. Die Zeit steht auf der $x$-Achse, die Strecke auf der $y$-Achse. Eine Landkarte zeigt dagegen den Ort."
+      - type: text
+        text: |
+          **Das kannst du jetzt:** Du stellst Zuordnungen in Worten, als Tabelle und als Graph dar und liest Werte ab. Als Nächstes
+          entdeckst du, woran du erkennst, ob eine Zuordnung proportional ist.

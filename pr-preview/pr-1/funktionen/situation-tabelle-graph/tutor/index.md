@@ -50,6 +50,8 @@ Interaktiv: Tabelle: Nach 0, 1, 2, 3, 4 Minuten steht das Wasser 0, 3, 6, 9, 12 
 
 ### Was die Form des Graphen sagt
 
+Wenn du eine Geschichte als Graph zeigen willst, zum Beispiel ein Gefäß, das sich füllt, hilft dir die Form des Graphen.
+
 Ein **steiler** Graph heißt: Der Wert ändert sich schnell. Ein **flacher** Graph heißt: Er ändert sich langsam. Ein **waagerechtes**
 Stück heißt: Er ändert sich gar nicht. Jede Situation hat so ihre eigene Form.
 

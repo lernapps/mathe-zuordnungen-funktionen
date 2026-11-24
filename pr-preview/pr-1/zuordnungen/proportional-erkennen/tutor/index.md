@@ -55,6 +55,8 @@ Antwort steht gleich unten.
 
 ### Doppelt so viel, doppelt so teuer
 
+Wenn du wissen willst, ob du bei einer Zuordnung mit einem festen Faktor rechnen darfst, prüfst du, ob sie proportional ist.
+
 Bild: Tabelle mit zwei Zeilen. Minuten: 1, 2, 3. Kosten in Euro: 2, 4, 6. Über der oberen Zeile ein Pfeil von 1 nach 2 mit „· 2“, unter der unteren Zeile ein Pfeil von 2 nach 4 mit „· 2“. Bildunterschrift: Tabelle mit Pfeilen: Rechnest du links · 2, rechnest du rechts auch · 2. Aus 1 Minute werden 2 Minuten, aus 2 € werden 4 €.
 
 - **proportional**: Eine Zuordnung ist proportional, wenn zum Doppelten von $x$ das Doppelte von $y$ gehört, zum Dreifachen das Dreifache und so weiter. Der Quotient $y : x$ ($y$ geteilt durch $x$) ist dann immer gleich.

@@ -50,6 +50,8 @@ Klasse, wenn sie 3 Stunden telefoniert? Nach dieser Seite deutest du die Lösun
 
 ### Was die Lösung bedeutet
 
+Wenn eine Sachaufgabe zwei Unbekannte hat, wählst du eines der drei Verfahren und sagst am Ende, was die Zahlen bedeuten.
+
 Ein Gleichungssystem aus einer Sachaufgabe löst du in vier Schritten: **1.** Unbekannte benennen, **2.** Gleichungen aufstellen, **3.**
 Verfahren wählen und lösen, **4.** Antwort in einem **Satz** mit Einheiten schreiben und prüfen, ob sie zur Aufgabe passt.
 

@@ -52,6 +52,8 @@ Bild: Pfeildiagramm. Links die Schüler Mia, Ben, Elif und Jonas, rechts die Mon
 
 ### Genau ein y zu jedem x
 
+Wenn du sicher einen Wert ausrechnen willst, muss er eindeutig sein. Dafür gibt es den Begriff Funktion.
+
 - **Funktion**: Eine Funktion ist eine Zuordnung, die jedem $x$ genau ein $y$ zuordnet. Beispiel: Jeder Strecke wird genau ein Fahrpreis zugeordnet.
 
 Zwei verschiedene $x$ dürfen **dasselbe** $y$ haben (Mia und Ben haben beide Mai). Ein $x$ darf aber **nicht zwei verschiedene** $y$

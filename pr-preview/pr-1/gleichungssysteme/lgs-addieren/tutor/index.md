@@ -48,6 +48,8 @@ schreibst und die linken Seiten addierst? Nach dieser Seite nutzt du das, um ein
 
 ### Addieren, damit y verschwindet
 
+Wenn in den beiden Gleichungen dasselbe Glied mit entgegengesetztem Vorzeichen steht, fällt es beim Addieren weg.
+
 - **Additionsverfahren**: Beim Additionsverfahren addierst du die beiden Gleichungen so, dass eine Unbekannte wegfällt. Beispiel: ($x$ + $y$) + (2 · $x$ − $y$) = 7 + 8 gibt 3 · $x$ = 15.
 
 **Schritt 1:** Beide Gleichungen untereinander schreiben und seitenweise addieren (links mit links, rechts mit rechts). Du kannst sie auch voneinander abziehen, wenn dasselbe Glied in beiden gleich vorkommt. **Schritt 2:** Nach $x$

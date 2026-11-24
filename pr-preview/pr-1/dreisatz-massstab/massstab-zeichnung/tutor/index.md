@@ -50,6 +50,8 @@ Bild: Rechteckiger Zimmerplan. Oben steht die Länge 8 cm, rechts die Breite 6 c
 
 ### Lesen, zeichnen, Maßstab finden
 
+Wenn du ein Zimmer auf Papier zeichnen oder einen Plan lesen willst, beantwortest du drei Fragen mit dem Maßstab: Wie lang ist es in der Wirklichkeit, wie lang in der Zeichnung, und welcher Maßstab passt?
+
 Du hast drei Fälle. **Lesen:** Zeichnung mal Maßstabszahl gibt die Wirklichkeit (die Maßstabszahl steht nach dem Doppelpunkt, bei 1 : 50 ist sie 50). Hier $8 \cdot 50 = 400$ cm, also 4 m.
 **Zeichnen:** Wirklichkeit geteilt durch die Maßstabszahl gibt die Zeichnung. **Maßstab finden:** Wirklichkeit geteilt
 durch Zeichnung.

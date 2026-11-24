@@ -49,6 +49,8 @@ sein, wenn die Kosten gleich sind. Für A und B: $x$ + 6 = 2 · $x$ + 2.
 
 ### Gleichsetzen in drei Schritten
 
+Wenn du den Tarif-Wechsel genau berechnen willst, statt ihn abzulesen, und in beiden Gleichungen schon $y$ allein steht, setzt du die Terme gleich.
+
 - **Gleichsetzungsverfahren**: Beim Gleichsetzungsverfahren setzt du die beiden Terme für $y$ gleich, löst nach $x$ auf und rechnest $y$ aus. Beispiel: $x$ + 6 = 2 · $x$ + 2 gibt $x$ = 4, dann $y$ = 4 + 6 = 10.
 
 **Schritt 1:** Beide Terme für $y$ gleichsetzen. **Schritt 2:** Die entstandene Gleichung nach $x$ lösen. **Schritt 3:** $x$ in eine

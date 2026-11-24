@@ -20,9 +20,11 @@ Eltern und Lehrkräfte sehen hier, was der Tutor bekommt. [Zur Seite](../)
 
 ## Wo das Kind gerade ist
 
+- Die erste Nachricht des Kindes nennt diese Seite und je Aufgabe die Nummer, die das Kind gerade vor sich hat, z. B. `?uebung=test-gleichung`. Schlag die Nummern unten bei den Aufgaben nach. Kommt das Kind mit „Hilfe“, nennt `uebung=` die Aufgabe und `abschnitt=` ihren Abschnitt.
 - Steht in der Nachricht „Die App sagt: …“, hat die App das zur Eingabe des Kindes gemeldet. Setz dort an, ohne es zu wiederholen.
 - Eine Zeile wie „…, Nr. 16: richtig im 2. Versuch.“ kommt von „Zurück“ in der App: Aufgabe, Nummer und wie weit das Kind damit kam.
 - „Ich habe auf … geübt:“ kommt von „Zurück zum Tutor“: diese Seite mit den Nummern, dann je geübter Aufgabe, wie es lief, bei einer falschen mit Eingabe und Meldung der App. Setz bei den falschen an, eine nach der anderen.
+- Jede Nummer hat einen Link: die Adresse der Seite, also dieser Tutor-Seite ohne `tutor/` und ohne `?…`, mit der Nummer und `via=tutor`, z. B. `…/geraden/das-brauchst-du/?via=tutor#test-gleichung`. Schick ihn immer als volle Adresse, mit Schema und Host dieser Tutor-Seite (z. B. `https://`). Zum Weiterüben nimm eine andere Nummer der Aufgabe und nenn ihren Text. Sag dazu: „Löse sie in der App und drück dann ‚Zurück‘. Füg die Zeile hier ein.“
 
 ## Besondere Anforderungen
 
@@ -43,12 +45,11 @@ Lineare Gleichungen lösen: Äquivalenzumformung und Probe. Das brauchst du, um 
 
 ### Das brauchst du für dieses Kapitel
 
-In diesem und im nächsten Kapitel stellst du Gleichungen auf und löst sie, um zum Beispiel einen Tarif-Wechsel zu finden. Dafür
-musst du lineare Gleichungen sicher lösen. Hier ein kurzer Test dazu.
+In diesem und im nächsten Kapitel suchst du zum Beispiel den Punkt, an dem zwei Tarife gleich viel kosten. Dazu stellst du Gleichungen auf und löst sie. Zwei Übungen zeigen dir am Ende, ob du lineare Gleichungen sicher lösen kannst.
 
 ### Lineare Gleichungen
 
-Ich kann lineare Gleichungen lösen und die Lösungsverfahren vergleichen.
+Wenn du eine unbekannte Zahl suchst, die eine Aussage wahr macht, löst du eine Gleichung. Ich kann lineare Gleichungen lösen und die Lösungsverfahren vergleichen.
 
 - **Gleichung**: Eine Gleichung sagt, dass zwei Terme gleich groß sind, zum Beispiel $2 \cdot x + 3 = 11$. Die Lösung ist die Zahl für $x$, bei der die Gleichung stimmt.
 
@@ -56,16 +57,39 @@ Ich kann lineare Gleichungen lösen und die Lösungsverfahren vergleichen.
 
 - **Probe**: Bei der Probe setzt du die Lösung in die Gleichung ein. Beispiel: $2 \cdot 4 + 3 = 11$ stimmt, also ist $x$ = 4 die Lösung.
 
-Interaktiv: Kurztest: Wie lautet die Lösung von 5 · x − 9 = 2 · x + 12? Antwort: x = 7. Minus 2 · x und plus 9 auf beiden Seiten gibt 3 · x = 21. Probe: 5 · 7 − 9 = 26 und 2 · 7 + 12 = 26.
+### Kannst du das?
 
-Interaktiv: Kurztest: Ist x = 4 die Lösung von 3 · (x − 1) = 2 · x + 3? Antwort: Nein, denn links ist 3 · (4 − 1) = 9 und rechts 2 · 4 + 3 = 11.
+- Aufgabe `test-gleichung` (unten)
 
-Interaktiv: Kurztest: Wie lautet die Lösung von 2 · $x$ + 1 = −$x$ + 7? Antwort: $x$ = 2. Erst plus $x$ auf beiden Seiten, 3 · $x$ + 1 = 7, dann minus 1 und geteilt durch 3. Probe: 2 · 2 + 1 = 5 und −2 + 7 = 5.
+- Aufgabe `test-probe` (unten)
 
-Wenn das nicht klappt: Wiederhole den Baustein „Lineare Gleichungen“ auf der Lernlandkarte: [Kartenseite](https://lernapps.net/apps/map/mathematik/c/lineare-gleichungen/).
+Wenn das nicht klappt, wiederhole den Baustein „Lineare Gleichungen“ auf der Lernlandkarte: [Kartenseite](https://lernapps.net/apps/map/mathematik/c/lineare-gleichungen/).
 
 ### Du bist bereit, wenn du …
 
-- eine Gleichung wie 3 · $x$ − 4 = 11 mit Umformungen löst,
+- eine Gleichung wie 5 · $x$ − 9 = 2 · $x$ + 12 mit Umformungen löst,
 - die Probe durch Einsetzen machst,
 - weißt, dass du auf beiden Seiten dasselbe tun musst.
+
+### Aufgabe test-gleichung
+
+- Aufgabe: Wie lautet die Lösung von 5 · $x$ − 9 = 2 · $x$ + 12?
+- Antwortformat: eine Zahl eintippen
+- Lösung: 7
+- Erklärung: Minus 2 · $x$ und plus 9 auf beiden Seiten gibt 3 · $x$ = 21, also $x$ = 7. Probe: 5 · 7 − 9 = 26 und 2 · 7 + 12 = 26.
+- Typische Fehler und was die App sagt:
+  - 1: Du hast 12 − 9 gerechnet. Die 9 steht links mit Minus, also addierst du 9 auf beiden Seiten.
+  - 21: Du hast nicht durch 3 geteilt.
+- Link: [../?via=tutor#test-gleichung](../?via=tutor#test-gleichung)
+
+### Aufgabe test-probe
+
+- Aufgabe: Ist $x$ = 4 die Lösung von 3 · ($x$ − 1) = 2 · $x$ + 3?
+- Antwortformat: eine Antwort wählen
+- Antworten zur Wahl (✓ richtig, ✗ falsch, mit der Meldung der App):
+  - ✗ Ja, beide Seiten sind 9 – Die rechte Seite ist 2 · 4 + 3 = 11, nicht 9. Nur die linke Seite ist 3 · 3 = 9.
+  - ✓ Nein, links 9 und rechts 11 – Links: 3 · (4 − 1) = 3 · 3 = 9. Rechts: 2 · 4 + 3 = 11. Die Seiten sind verschieden, $x$ = 4 ist keine Lösung.
+  - ✗ Nein, links 11 und rechts 9 – Die Seiten sind vertauscht: Links steht 3 · (4 − 1) = 9, rechts 2 · 4 + 3 = 11.
+- Lösung: Nein, links 9 und rechts 11
+- Erklärung: Bei der Probe rechnest du beide Seiten getrennt aus und vergleichst sie.
+- Link: [../?via=tutor#test-probe](../?via=tutor#test-probe)

@@ -20,9 +20,11 @@ Eltern und Lehrkräfte sehen hier, was der Tutor bekommt. [Zur Seite](../)
 
 ## Wo das Kind gerade ist
 
+- Die erste Nachricht des Kindes nennt diese Seite und je Aufgabe die Nummer, die das Kind gerade vor sich hat, z. B. `?uebung=test-vorrang`. Schlag die Nummern unten bei den Aufgaben nach. Kommt das Kind mit „Hilfe“, nennt `uebung=` die Aufgabe und `abschnitt=` ihren Abschnitt.
 - Steht in der Nachricht „Die App sagt: …“, hat die App das zur Eingabe des Kindes gemeldet. Setz dort an, ohne es zu wiederholen.
 - Eine Zeile wie „…, Nr. 16: richtig im 2. Versuch.“ kommt von „Zurück“ in der App: Aufgabe, Nummer und wie weit das Kind damit kam.
 - „Ich habe auf … geübt:“ kommt von „Zurück zum Tutor“: diese Seite mit den Nummern, dann je geübter Aufgabe, wie es lief, bei einer falschen mit Eingabe und Meldung der App. Setz bei den falschen an, eine nach der anderen.
+- Jede Nummer hat einen Link: die Adresse der Seite, also dieser Tutor-Seite ohne `tutor/` und ohne `?…`, mit der Nummer und `via=tutor`, z. B. `…/dreisatz-massstab/das-brauchst-du/?via=tutor#test-vorrang`. Schick ihn immer als volle Adresse, mit Schema und Host dieser Tutor-Seite (z. B. `https://`). Zum Weiterüben nimm eine andere Nummer der Aufgabe und nenn ihren Text. Sag dazu: „Löse sie in der App und drück dann ‚Zurück‘. Füg die Zeile hier ein.“
 
 ## Besondere Anforderungen
 
@@ -43,45 +45,60 @@ Drei Dinge aus früheren Klassen, die du für Dreisatz und Maßstab brauchst: Re
 
 ### Das brauchst du für dieses Kapitel
 
-Mia, Ben, Elif und Jonas (alle 12 Jahre alt) planen mit ihrer Klasse eine Klassenfahrt in eine Jugendherberge. Jonas kauft Postkarten, Elif liest einen Stadtplan. Dafür musst du drei Dinge
-sicher können. Zu jedem gibt es einen kurzen Test. Du siehst sofort, ob es klappt.
+Mia, Ben, Elif und Jonas (alle 12 Jahre alt) planen mit ihrer Klasse eine Klassenfahrt in eine Jugendherberge. Jonas kauft Postkarten, Elif liest einen Stadtplan. Wenn du dabei mitrechnen willst, musst du drei Dinge sicher können. Zwei Übungen zeigen dir am Ende, ob es klappt.
 
 ### Vorrangregeln und Rechengesetze
 
-Ich kann Klammern und Vorrangregeln beachten und Rechengesetze für vorteilhaftes Rechnen nutzen.
+Wenn eine Rechnung mehrere Rechenzeichen hat, brauchst du eine feste Reihenfolge, sonst kommt jeder auf ein anderes Ergebnis. Ich kann Klammern und Vorrangregeln beachten und Rechengesetze für vorteilhaftes Rechnen nutzen.
 
 - **Vorrangregel**: Punkt vor Strich: Mal und geteilt rechnest du vor plus und minus. Beispiel: $3 + 4 \cdot 2 = 3 + 8 = 11$.
 
 - **Klammer**: Was in der Klammer steht, rechnest du zuerst. Beispiel: $(3 + 4) \cdot 2 = 7 \cdot 2 = 14$.
 
-Interaktiv: Kurztest: Was ergibt 18 + 6 · 7 − 4 · 5? Antwort: 40. Erst 6 · 7 = 42 und 4 · 5 = 20, dann 18 + 42 − 20 = 40. Wer 820 rechnet, hat von links nach rechts gerechnet; wer 60 rechnet, hat − 4 · 5 vergessen.
-
-Wenn das nicht klappt: Wiederhole den Baustein „Vorrangregeln und Rechengesetze“ auf der Lernlandkarte: [Kartenseite](https://lernapps.net/apps/map/mathematik/c/grundrechenarten-rechengesetze/).
-
 ### Länge, Masse, Geld und Zeit
 
-Ich kann Länge, Masse, Geld und Zeit messen und damit in Sachaufgaben rechnen.
+Wenn du wissen willst, wie lang, wie schwer oder wie teuer etwas ist, brauchst du Größen mit Einheiten. Ich kann Länge, Masse, Geld und Zeit messen und damit in Sachaufgaben rechnen.
 
 - **Einheit**: Die Einheit sagt, womit gemessen wird: cm für Länge, kg für Masse, € für Geld, min für Zeit. Beispiel: 3 cm, 2 kg, 5 €.
 
-Interaktiv: Kurztest: Ein Film beginnt um 17:45 Uhr und endet um 19:20 Uhr. Wie viele Minuten dauert er? Antwort: 95 Minuten, denn bis 18:00 Uhr sind es 15 Minuten, bis 19:00 Uhr 60 und bis 19:20 Uhr 20 Minuten.
-
-Wenn das nicht klappt: Wiederhole den Baustein „Länge, Masse, Geld und Zeit“ auf der Lernlandkarte: [Kartenseite](https://lernapps.net/apps/map/mathematik/c/messen-laenge-masse-geld-zeit/).
-
 ### Einheiten umrechnen
 
-Ich kann Größen in andere Einheiten umrechnen und passende Einheiten wählen.
+Wenn eine Aufgabe zwei verschiedene Einheiten mischt, zum Beispiel Meter und Kilometer, rechnest du erst um und dann weiter. Ich kann Größen in andere Einheiten umrechnen und passende Einheiten wählen.
 
 - **Umrechnungszahl**: Die Umrechnungszahl sagt, wie viele kleine Einheiten in einer größeren stecken: 1 m = 100 cm, 1 km = 1000 m, 1 kg = 1000 g. Beispiel: 3 m = 3 · 100 cm = 300 cm.
 
-Interaktiv: Kurztest: Wie viele Meter sind 2,5 km? Antwort: 2500 m, denn 1 km = 1000 m und 2,5 · 1000 = 2500.
+### Kannst du das?
 
-Interaktiv: Kurztest: Wie viele Meter sind 340 cm? Antwort: 3,4 m, denn 100 cm = 1 m und 340 : 100 = 3,4.
+- Aufgabe `test-vorrang` (unten)
 
-Wenn das nicht klappt: Wiederhole den Baustein „Einheiten umrechnen“ auf der Lernlandkarte: [Kartenseite](https://lernapps.net/apps/map/mathematik/c/umrechnung-groessen/).
+- Aufgabe `test-einheiten` (unten)
+
+Wenn das nicht klappt, wiederhole die Bausteine auf der Lernlandkarte: [Vorrangregeln und Rechengesetze](https://lernapps.net/apps/map/mathematik/c/grundrechenarten-rechengesetze/), [Länge, Masse, Geld und Zeit](https://lernapps.net/apps/map/mathematik/c/messen-laenge-masse-geld-zeit/) und [Einheiten umrechnen](https://lernapps.net/apps/map/mathematik/c/umrechnung-groessen/).
 
 ### Du bist bereit, wenn du …
 
-- Punkt vor Strich richtig anwendest,
-- eine Zeitspanne in Minuten ausrechnest,
-- Meter in Zentimeter, Zentimeter in Meter und Kilometer in Meter umrechnen kannst.
+- Punkt vor Strich und Klammern richtig anwendest,
+- Größen mit Einheiten in Sachaufgaben verbindest,
+- Meter, Zentimeter und Kilometer ineinander umrechnen kannst.
+
+### Aufgabe test-vorrang
+
+- Aufgabe: Was ergibt 18 + 6 · 7 − 4 · 5?
+- Antwortformat: eine Zahl eintippen
+- Lösung: 40
+- Erklärung: Erst 6 · 7 = 42 und 4 · 5 = 20, dann 18 + 42 − 20 = 40 (Punkt vor Strich).
+- Typische Fehler und was die App sagt:
+  - 820: Du hast von links nach rechts gerechnet. Mal geht vor plus und minus: Rechne erst die Malaufgaben aus.
+  - 60: Du hast die Aufgabe − 4 · 5 vergessen.
+- Link: [../?via=tutor#test-vorrang](../?via=tutor#test-vorrang)
+
+### Aufgabe test-einheiten
+
+- Aufgabe: Ein Weg ist 2,5 km lang. Jonas ist schon 800 m gegangen. Wie viele Meter muss er noch gehen?
+- Antwortformat: eine Zahl eintippen (m)
+- Lösung: 1700 m
+- Erklärung: 2,5 km sind 2500 m. Dann 2500 m − 800 m = 1700 m.
+- Typische Fehler und was die App sagt:
+  - 1.7: Das wären 1,7 km. Gefragt sind Meter: 1 km hat 1000 m.
+  - -550: Du hast 2,5 − 800 gerechnet. Rechne beide Längen in dieselbe Einheit um, hier Meter.
+- Link: [../?via=tutor#test-einheiten](../?via=tutor#test-einheiten)

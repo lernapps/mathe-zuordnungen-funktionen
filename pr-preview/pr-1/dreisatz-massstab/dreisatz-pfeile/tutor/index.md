@@ -50,6 +50,8 @@ Bild: Tabelle mit zwei Zeilen. Postkarten: 3 und 6. Preis in Euro: 6 und ein Fra
 
 ### Links und rechts gleich
 
+Wenn du wissen willst, was 6 Karten kosten, obwohl du nur den Preis für 3 Karten kennst, musst du nicht raten. Dafür gibt es den Dreisatz.
+
 - **Dreisatz**: Der Dreisatz löst Aufgaben, bei denen die doppelte Menge den doppelten Wert hat. Du schreibst die Werte in eine Tabelle mit zwei Zeilen und rechnest links und rechts mit demselben Faktor. Beispiel: 3 Karten kosten 6 €, 6 Karten kosten 6 € · 2 = 12 €.
 
 Zwei Schritte: Erst siehst du, womit du links rechnen musst (hier mal 2). Dann rechnest du rechts genauso. Die

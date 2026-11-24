@@ -50,6 +50,8 @@ Interaktiv: Zwei Geraden mit je zwei Reglern: Taxi A ($m$ und $b$) und Taxi B ($
 
 ### Keine, eine oder unendlich viele
 
+Wenn du zwei Tarife vergleichst, kann es sein, dass sie sich nie, genau einmal oder immer treffen. Das siehst du an der Lage der Geraden.
+
 Lage der Geraden und Zahl der Lösungen:
 - Lage | $m$ | $b$ | Lösungen
 - schneiden sich | verschieden | egal | genau eine

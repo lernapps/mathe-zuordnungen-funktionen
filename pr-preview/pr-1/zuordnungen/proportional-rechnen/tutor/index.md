@@ -50,6 +50,8 @@ Interaktiv: Für $k$ = 2 gehören zu 1, 2, 3, 4 Minuten die Kosten 2 €, 4 €,
 
 ### Faktor und Gleichung
 
+Wenn du den Preis für jede beliebige Zahl von Minuten ausrechnen willst, ohne jedes Mal neu zu überlegen, brauchst du den Faktor.
+
 - **Proportionalitätsfaktor**: Der Proportionalitätsfaktor $k$ ist der gleiche Quotient $y$ : $x$ einer proportionalen Zuordnung. Beispiel: 3 Minuten kosten 6 €, also $k$ = 6 : 3 = 2 € je Minute.
 
 $k = y : x \qquad y = k \cdot x$

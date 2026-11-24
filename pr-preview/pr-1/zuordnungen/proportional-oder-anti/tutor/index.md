@@ -52,6 +52,8 @@ Interaktiv: Antiproportional: 1, 2, 3, 4 Pumpen brauchen 12 h, 6 h, 4 h, 3 h. De
 
 ### Quotient oder Produkt
 
+Wenn du bei einer Zuordnung rechnen willst, musst du zuerst wissen, welche Art sie ist. Dazu prüfst du Quotient und Produkt.
+
 Proportional und antiproportional im Vergleich:
 - Merkmal | proportional | antiproportional
 - Doppeltes $x$ | Doppeltes $y$ | Halbes $y$

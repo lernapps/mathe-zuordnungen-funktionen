@@ -50,6 +50,8 @@ Interaktiv: Die Punkte A (2|7) und B (5|13) sind markiert. Mit den Reglern $m$ u
 
 ### Erst m, dann b
 
+Wenn du einen Tarif aus zwei bekannten Preisen herausfinden willst, hast du zwei Punkte. Daraus bestimmst du die Gleichung in zwei Schritten.
+
 - **Geradengleichung**: Die Geradengleichung $y$ = $m$ · $x$ + $b$ beschreibt alle Punkte einer Geraden. Beispiel: $y$ = 2 · $x$ + 3 geht durch (0|3) und (1|5).
 
 **Schritt 1, die Steigung:** $m$ = ($y_2$ − $y_1$) : ($x_2$ − $x_1$), das ist das Steigungsdreieck von A nach B. **Schritt 2, der Achsenabschnitt:**

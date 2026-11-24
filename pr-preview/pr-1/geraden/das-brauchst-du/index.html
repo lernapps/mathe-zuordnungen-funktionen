@@ -10,7 +10,6 @@
     <meta name="description" content="Lineare Gleichungen lösen: Äquivalenzumformung und Probe. Das brauchst du, um Geradengleichungen und Gleichungssysteme zu lösen." />
     <meta name="lernapps-archetype" content="explainer" />
     <link rel="alternate" hreflang="de" href="../../geraden/das-brauchst-du/" />
-    <script type="module" crossorigin src="../../assets/islands-8rtyHVkl.js"></script>
     <meta name="robots" content="noindex" />
   </head>
   <body>
@@ -35,20 +34,19 @@
 </details>
 <p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
 <p class="explainer-tutor-status" role="status" aria-live="polite"></p>
-<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧geraden/das-brauchst-du/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"mathe-zuordnungen-funktionen","page":{"id":"das-brauchst-du","title":"Das brauchst du hier","exercises":[],"sections":["einstieg","lineare-gleichungen","bereit"]},"tutor":"geraden/das-brauchst-du/tutor/","markdown":"geraden/das-brauchst-du/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧geraden/das-brauchst-du/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"mathe-zuordnungen-funktionen","page":{"id":"das-brauchst-du","title":"Das brauchst du hier","exercises":[{"id":"test-gleichung","section":"selbsttest","numbered":false},{"id":"test-probe","section":"selbsttest","numbered":false}],"sections":["einstieg","lineare-gleichungen","selbsttest","bereit"]},"tutor":"geraden/das-brauchst-du/tutor/","markdown":"geraden/das-brauchst-du/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
 </div>
 </div>
 <section class="explainer-section">
 <h2 id="einstieg">Das brauchst du für dieses Kapitel</h2>
-<div class="explainer-block" data-block="einstieg/1" data-block-id="599afa9b" data-block-type="text" data-block-order="1">
-<div class="block-text"><p>In diesem und im nächsten Kapitel stellst du Gleichungen auf und löst sie, um zum Beispiel einen Tarif-Wechsel zu finden. Dafür
-musst du lineare Gleichungen sicher lösen. Hier ein kurzer Test dazu.</p></div>
+<div class="explainer-block" data-block="einstieg/1" data-block-id="fe834b48" data-block-type="text" data-block-order="1">
+<div class="block-text"><p>In diesem und im nächsten Kapitel suchst du zum Beispiel den Punkt, an dem zwei Tarife gleich viel kosten. Dazu stellst du Gleichungen auf und löst sie. Zwei Übungen zeigen dir am Ende, ob du lineare Gleichungen sicher lösen kannst.</p></div>
 </div>
 </section>
 <section class="explainer-section">
 <h2 id="lineare-gleichungen">Lineare Gleichungen</h2>
-<div class="explainer-block" data-block="lineare-gleichungen/1" data-block-id="ea555b6a" data-block-type="text" data-block-order="2">
-<div class="block-text"><p>Ich kann lineare Gleichungen lösen und die Lösungsverfahren vergleichen.</p></div>
+<div class="explainer-block" data-block="lineare-gleichungen/1" data-block-id="fa8dafc4" data-block-type="text" data-block-order="2">
+<div class="block-text"><p>Wenn du eine unbekannte Zahl suchst, die eine Aussage wahr macht, löst du eine Gleichung. Ich kann lineare Gleichungen lösen und die Lösungsverfahren vergleichen.</p></div>
 </div>
 <div class="explainer-block" data-block="lineare-gleichungen/2" data-block-id="36385b8f" data-block-type="definition" data-block-order="3">
 <dl class="explainer-definition"><dt><dfn id="begriff-gleichung"><a href="../../glossar/#gleichung">Gleichung</a></dfn></dt><dd><p>Eine Gleichung sagt, dass zwei Terme gleich groß sind, zum Beispiel <math><mrow><mn>2</mn><mo>⋅</mo><mi>x</mi><mo>+</mo><mn>3</mn><mo>=</mo><mn>11</mn></mrow></math>. Die Lösung ist die Zahl für <math><mi>x</mi></math>, bei der die Gleichung stimmt.</p></dd></dl>
@@ -59,37 +57,76 @@ musst du lineare Gleichungen sicher lösen. Hier ein kurzer Test dazu.</p></div>
 <div class="explainer-block" data-block="lineare-gleichungen/4" data-block-id="b95f18c3" data-block-type="definition" data-block-order="5">
 <dl class="explainer-definition"><dt><dfn id="begriff-probe"><a href="../../glossar/#probe">Probe</a></dfn></dt><dd><p>Bei der Probe setzt du die Lösung in die Gleichung ein. Beispiel: <math><mrow><mn>2</mn><mo>⋅</mo><mn>4</mn><mo>+</mo><mn>3</mn><mo>=</mo><mn>11</mn></mrow></math> stimmt, also ist <math><mi>x</mi></math> = 4 die Lösung.</p></dd></dl>
 </div>
-<div class="explainer-block" data-block="lineare-gleichungen/5" data-block-id="7d5622fd" data-block-type="vue-component" data-block-order="6">
-<div class="explainer-component" id="test-gleichung" data-component="Kurztest">
-<div class="explainer-island" hidden><fieldset class="kurztest" data-v-3a429376><legend data-v-3a429376>Wie lautet die Lösung von 5 · x − 9 = 2 · x + 12?</legend><!--[--><label class="kurztest-option" data-v-3a429376><input type="radio" name="kurztest-1339451097" value="0" data-v-3a429376> x = 1</label><label class="kurztest-option" data-v-3a429376><input type="radio" name="kurztest-1339451097" value="1" data-v-3a429376> x = 21</label><label class="kurztest-option" data-v-3a429376><input type="radio" name="kurztest-1339451097" value="2" data-v-3a429376> x = 7</label><!--]--><p class="kurztest-result" aria-live="polite" data-v-3a429376></p></fieldset></div>
-<div class="explainer-nojs"><p>Kurztest: Wie lautet die Lösung von 5 · x − 9 = 2 · x + 12? Antwort: x = 7. Minus 2 · x und plus 9 auf beiden Seiten gibt 3 · x = 21. Probe: 5 · 7 − 9 = 26 und 2 · 7 + 12 = 26.</p></div>
-<script type="application/json" class="explainer-component-props">{"question":"Wie lautet die Lösung von 5 · x − 9 = 2 · x + 12?","options":[{"text":"x = 1","correct":false,"info":"Du hast 12 − 9 gerechnet. Die 9 steht links mit Minus, also addierst du 9 auf beiden Seiten: 12 + 9 = 21."},{"text":"x = 21","correct":false,"info":"Du hast nicht durch 3 geteilt."},{"text":"x = 7","correct":true,"info":"Minus 2 · x und plus 9 auf beiden Seiten gibt 3 · x = 21, also x = 7. Probe: 5 · 7 − 9 = 26 und 2 · 7 + 12 = 26."}],"right":"Richtig.","wrong":"Nicht richtig."}</script>
+</section>
+<section class="explainer-section">
+<h2 id="selbsttest">Kannst du das?</h2>
+<div class="explainer-block" data-block="selbsttest/1" data-block-id="4580e62a" data-block-type="number" data-block-order="6">
+<div class="explainer-exercise explainer-question" id="test-gleichung">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-test-gleichung" data-id="test-gleichung" data-type="number">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Wie lautet die Lösung von 5 · <math><mi>x</mi></math> − 9 = 2 · <math><mi>x</mi></math> + 12?</legend>
+<label class="question-number">Deine Antwort <input type="text" inputmode="decimal" autocomplete="off" name="frage-test-gleichung">  </label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> 7</p>
+<p class="question-explanation">Minus 2 · <math><mi>x</mi></math> und plus 9 auf beiden Seiten gibt 3 · <math><mi>x</mi></math> = 21, also <math><mi>x</mi></math> = 7. Probe: 5 · 7 − 9 = 26 und 2 · 7 + 12 = 26.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> 7</p>
+<p class="question-explanation">Minus 2 · <math><mi>x</mi></math> und plus 9 auf beiden Seiten gibt 3 · <math><mi>x</mi></math> = 21, also <math><mi>x</mi></math> = 7. Probe: 5 · 7 − 9 = 26 und 2 · 7 + 12 = 26.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"test-gleichung","text":"Wie lautet die Lösung von 5 · $x$ − 9 = 2 · $x$ + 12?","explanation":"Minus 2 · $x$ und plus 9 auf beiden Seiten gibt 3 · $x$ = 21, also $x$ = 7. Probe: 5 · 7 − 9 = 26 und 2 · 7 + 12 = 26.","links":[],"type":"number","answer":7,"tolerance":0,"mistakes":[{"answer":1,"message":"Du hast 12 − 9 gerechnet. Die 9 steht links mit Minus, also addierst du 9 auf beiden Seiten."},{"answer":21,"message":"Du hast nicht durch 3 geteilt."}]},"rendered":{"Wie lautet die Lösung von 5 · $x$ − 9 = 2 · $x$ + 12?":"Wie lautet die Lösung von 5 · \u003cmath>\u003cmi>x\u003c/mi>\u003c/math> − 9 = 2 · \u003cmath>\u003cmi>x\u003c/mi>\u003c/math> + 12?","Minus 2 · $x$ und plus 9 auf beiden Seiten gibt 3 · $x$ = 21, also $x$ = 7. Probe: 5 · 7 − 9 = 26 und 2 · 7 + 12 = 26.":"Minus 2 · \u003cmath>\u003cmi>x\u003c/mi>\u003c/math> und plus 9 auf beiden Seiten gibt 3 · \u003cmath>\u003cmi>x\u003c/mi>\u003c/math> = 21, also \u003cmath>\u003cmi>x\u003c/mi>\u003c/math> = 7. Probe: 5 · 7 − 9 = 26 und 2 · 7 + 12 = 26."}}</script>
 </div>
 </div>
-<div class="explainer-block" data-block="lineare-gleichungen/6" data-block-id="ff32b3ff" data-block-type="vue-component" data-block-order="7">
-<div class="explainer-component" id="test-probe" data-component="Kurztest">
-<div class="explainer-island" hidden><fieldset class="kurztest" data-v-3a429376><legend data-v-3a429376>Ist x = 4 die Lösung von 3 · (x − 1) = 2 · x + 3?</legend><!--[--><label class="kurztest-option" data-v-3a429376><input type="radio" name="kurztest-1838440405" value="0" data-v-3a429376> Ja, beide Seiten sind 9</label><label class="kurztest-option" data-v-3a429376><input type="radio" name="kurztest-1838440405" value="1" data-v-3a429376> Nein, links 9 und rechts 11</label><label class="kurztest-option" data-v-3a429376><input type="radio" name="kurztest-1838440405" value="2" data-v-3a429376> Nein, links 11 und rechts 9</label><!--]--><p class="kurztest-result" aria-live="polite" data-v-3a429376></p></fieldset></div>
-<div class="explainer-nojs"><p>Kurztest: Ist x = 4 die Lösung von 3 · (x − 1) = 2 · x + 3? Antwort: Nein, denn links ist 3 · (4 − 1) = 9 und rechts 2 · 4 + 3 = 11.</p></div>
-<script type="application/json" class="explainer-component-props">{"question":"Ist x = 4 die Lösung von 3 · (x − 1) = 2 · x + 3?","options":[{"text":"Ja, beide Seiten sind 9","correct":false,"info":"Die rechte Seite ist 2 · 4 + 3 = 11, nicht 9. Nur die linke Seite ist 3 · 3 = 9."},{"text":"Nein, links 9 und rechts 11","correct":true,"info":"Links: 3 · (4 − 1) = 3 · 3 = 9. Rechts: 2 · 4 + 3 = 11. Die Seiten sind verschieden, x = 4 ist keine Lösung."},{"text":"Nein, links 11 und rechts 9","correct":false,"info":"Die Seiten sind vertauscht: Links steht 3 · (4 − 1) = 9, rechts 2 · 4 + 3 = 11."}],"right":"Richtig.","wrong":"Nicht richtig."}</script>
+<div class="explainer-block" data-block="selbsttest/2" data-block-id="1cb86fdf" data-block-type="single-choice" data-block-order="7">
+<div class="explainer-exercise explainer-question" id="test-probe">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-test-probe" data-id="test-probe" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Ist <math><mi>x</mi></math> = 4 die Lösung von 3 · (<math><mi>x</mi></math> − 1) = 2 · <math><mi>x</mi></math> + 3?</legend>
+<label class="question-option"><input type="radio" name="frage-test-probe" value="0"> <span>Ja, beide Seiten sind 9</span></label>
+<label class="question-option"><input type="radio" name="frage-test-probe" value="1"> <span>Nein, links 9 und rechts 11</span></label>
+<label class="question-option"><input type="radio" name="frage-test-probe" value="2"> <span>Nein, links 11 und rechts 9</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>Ja, beide Seiten sind 9</strong></p><p>Die rechte Seite ist 2 · 4 + 3 = 11, nicht 9. Nur die linke Seite ist 3 · 3 = 9.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>Nein, links 9 und rechts 11</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Links: 3 · (4 − 1) = 3 · 3 = 9. Rechts: 2 · 4 + 3 = 11. Die Seiten sind verschieden, <math><mi>x</mi></math> = 4 ist keine Lösung.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Nein, links 11 und rechts 9</strong></p><p>Die Seiten sind vertauscht: Links steht 3 · (4 − 1) = 9, rechts 2 · 4 + 3 = 11.</p></li>
+</ul>
+<p class="question-explanation">Bei der Probe rechnest du beide Seiten getrennt aus und vergleichst sie.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>Ja, beide Seiten sind 9</strong></p><p>Die rechte Seite ist 2 · 4 + 3 = 11, nicht 9. Nur die linke Seite ist 3 · 3 = 9.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>Nein, links 9 und rechts 11</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Links: 3 · (4 − 1) = 3 · 3 = 9. Rechts: 2 · 4 + 3 = 11. Die Seiten sind verschieden, <math><mi>x</mi></math> = 4 ist keine Lösung.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Nein, links 11 und rechts 9</strong></p><p>Die Seiten sind vertauscht: Links steht 3 · (4 − 1) = 9, rechts 2 · 4 + 3 = 11.</p></li>
+</ul>
+<p class="question-explanation">Bei der Probe rechnest du beide Seiten getrennt aus und vergleichst sie.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"test-probe","text":"Ist $x$ = 4 die Lösung von 3 · ($x$ − 1) = 2 · $x$ + 3?","explanation":"Bei der Probe rechnest du beide Seiten getrennt aus und vergleichst sie.","links":[],"type":"single-choice","options":[{"text":"Ja, beide Seiten sind 9","correct":false,"info":"Die rechte Seite ist 2 · 4 + 3 = 11, nicht 9. Nur die linke Seite ist 3 · 3 = 9."},{"text":"Nein, links 9 und rechts 11","correct":true,"info":"Links: 3 · (4 − 1) = 3 · 3 = 9. Rechts: 2 · 4 + 3 = 11. Die Seiten sind verschieden, $x$ = 4 ist keine Lösung."},{"text":"Nein, links 11 und rechts 9","correct":false,"info":"Die Seiten sind vertauscht: Links steht 3 · (4 − 1) = 9, rechts 2 · 4 + 3 = 11."}]},"rendered":{"Ist $x$ = 4 die Lösung von 3 · ($x$ − 1) = 2 · $x$ + 3?":"Ist \u003cmath>\u003cmi>x\u003c/mi>\u003c/math> = 4 die Lösung von 3 · (\u003cmath>\u003cmi>x\u003c/mi>\u003c/math> − 1) = 2 · \u003cmath>\u003cmi>x\u003c/mi>\u003c/math> + 3?","Links: 3 · (4 − 1) = 3 · 3 = 9. Rechts: 2 · 4 + 3 = 11. Die Seiten sind verschieden, $x$ = 4 ist keine Lösung.":"Links: 3 · (4 − 1) = 3 · 3 = 9. Rechts: 2 · 4 + 3 = 11. Die Seiten sind verschieden, \u003cmath>\u003cmi>x\u003c/mi>\u003c/math> = 4 ist keine Lösung."}}</script>
 </div>
 </div>
-<div class="explainer-block" data-block="lineare-gleichungen/7" data-block-id="de7ead4e" data-block-type="vue-component" data-block-order="8">
-<div class="explainer-component" id="test-beide-seiten" data-component="Kurztest">
-<div class="explainer-island" hidden><fieldset class="kurztest" data-v-3a429376><legend data-v-3a429376>Wie lautet die Lösung von 2 · x + 1 = −x + 7? (x steht auf beiden Seiten.)</legend><!--[--><label class="kurztest-option" data-v-3a429376><input type="radio" name="kurztest-515851816" value="0" data-v-3a429376> x = 8</label><label class="kurztest-option" data-v-3a429376><input type="radio" name="kurztest-515851816" value="1" data-v-3a429376> x = 6</label><label class="kurztest-option" data-v-3a429376><input type="radio" name="kurztest-515851816" value="2" data-v-3a429376> x = 2</label><!--]--><p class="kurztest-result" aria-live="polite" data-v-3a429376></p></fieldset></div>
-<div class="explainer-nojs"><p>Kurztest: Wie lautet die Lösung von 2 · <math><mi>x</mi></math> + 1 = −<math><mi>x</mi></math> + 7? Antwort: <math><mi>x</mi></math> = 2. Erst plus <math><mi>x</mi></math> auf beiden Seiten, 3 · <math><mi>x</mi></math> + 1 = 7, dann minus 1 und geteilt durch 3.
-Probe: 2 · 2 + 1 = 5 und −2 + 7 = 5.</p></div>
-<script type="application/json" class="explainer-component-props">{"question":"Wie lautet die Lösung von 2 · x + 1 = −x + 7? (x steht auf beiden Seiten.)","options":[{"text":"x = 8","correct":false,"info":"Du hast 1 zur 7 addiert statt abgezogen."},{"text":"x = 6","correct":false,"info":"Du hast nicht durch 3 geteilt."},{"text":"x = 2","correct":true,"info":"Plus x auf beiden Seiten gibt 3 · x + 1 = 7, dann 3 · x = 6 und x = 2. Probe: 2 · 2 + 1 = 5 und −2 + 7 = 5."}],"right":"Richtig.","wrong":"Nicht richtig."}</script>
-</div>
-</div>
-<div class="explainer-block" data-block="lineare-gleichungen/8" data-block-id="b22e851f" data-block-type="text" data-block-order="9">
-<div class="block-text"><p>Wenn das nicht klappt: Wiederhole den Baustein „Lineare Gleichungen“ auf der Lernlandkarte: <a href="https://lernapps.net/apps/map/mathematik/c/lineare-gleichungen/" rel="noopener">Kartenseite</a>.</p></div>
+<div class="explainer-block" data-block="selbsttest/3" data-block-id="2bc587b6" data-block-type="text" data-block-order="8">
+<div class="block-text"><p>Wenn das nicht klappt, wiederhole den Baustein „Lineare Gleichungen“ auf der Lernlandkarte: <a href="https://lernapps.net/apps/map/mathematik/c/lineare-gleichungen/" rel="noopener">Kartenseite</a>.</p></div>
 </div>
 </section>
 <section class="explainer-section">
 <h2 id="bereit">Du bist bereit, wenn du …</h2>
-<div class="explainer-block" data-block="bereit/1" data-block-id="a71270c3" data-block-type="text" data-block-order="10">
+<div class="explainer-block" data-block="bereit/1" data-block-id="8c1c661c" data-block-type="text" data-block-order="9">
 <div class="block-text"><ul>
-<li>eine Gleichung wie 3 · <math><mi>x</mi></math> − 4 = 11 mit Umformungen löst,</li>
+<li>eine Gleichung wie 5 · <math><mi>x</mi></math> − 9 = 2 · <math><mi>x</mi></math> + 12 mit Umformungen löst,</li>
 <li>die Probe durch Einsetzen machst,</li>
 <li>weißt, dass du auf beiden Seiten dasselbe tun musst.</li>
 </ul></div>
@@ -133,7 +170,7 @@ Probe: 2 · 2 + 1 = 5 und −2 + 7 = 5.</p></div>
 <span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
 <button type="button" class="explainer-feedback-off">Beenden</button>
 </div>
-<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-zuordnungen-funktionen","app":"Zuordnungen und lineare Funktionen","root":"../../","repository":"lernapps/mathe-zuordnungen-funktionen","revision":"93c4b9c","page":{"title":"Das brauchst du hier","order":16}}</script>
+<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-zuordnungen-funktionen","app":"Zuordnungen und lineare Funktionen","root":"../../","repository":"lernapps/mathe-zuordnungen-funktionen","revision":"4d41ec8","page":{"title":"Das brauchst du hier","order":16}}</script>
 </aside>
 </template>
 <nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../funktionen/graph-term-wechseln/">Zurück: Von der Gleichung zu Tabelle und Graph</a><a rel="next" href="../../geraden/m-und-b/">Weiter: Steigung m und Achsenabschnitt b</a></nav>

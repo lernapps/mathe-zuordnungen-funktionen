@@ -52,6 +52,8 @@ Interaktiv: Die Gleichung $y$ = 2 · $x$ − 1. Die Tabelle: für $x$ = −2, �
 
 ### Einsetzen, eintragen, prüfen
 
+Wenn du eine Gleichung hast und den Graphen brauchst, wechselst du zwischen den Darstellungen: einsetzen, eintragen, prüfen.
+
 - **Wertetabelle**: Eine Wertetabelle listet zu ausgewählten $x$-Werten die $y$-Werte der Funktion. Beispiel: Für $y$ = 2 · $x$ − 1 gehört zu $x$ = 2 der Wert $y$ = 3.
 
 **Gleichung zur Tabelle:** Setze jeden $x$-Wert in die Gleichung ein. **Tabelle zum Graphen:** Trage jedes Paar ($x$|$y$) als Punkt ein und

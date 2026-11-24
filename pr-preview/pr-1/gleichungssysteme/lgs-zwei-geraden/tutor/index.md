@@ -52,6 +52,8 @@ Interaktiv: Tarif A: $y$ = 1 · $x$ + 6, Tarif B: $y$ = 2 · $x$ + 2. Die Tabell
 
 ### Die Lösung ist der Schnittpunkt
 
+Wenn du wissen willst, wann zwei Tarife gleich viel kosten, suchst du ein Zahlenpaar, das beide Gleichungen erfüllt.
+
 - **Gleichungssystem**: Ein lineares Gleichungssystem besteht aus zwei Gleichungen mit zwei Unbekannten $x$ und $y$. Die Lösung ist ein Zahlenpaar ($x$|$y$), das beide Gleichungen erfüllt. Beispiel: $y$ = $x$ + 6 und $y$ = 2 · $x$ + 2 haben die Lösung (4|10).
 
 Schau dir beide Geraden an und lies den **Schnittpunkt** ab. Seine Koordinaten sind die Lösung. Mit einer Tabelle kannst du die Stelle

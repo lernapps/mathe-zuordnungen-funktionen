@@ -75,14 +75,17 @@ Klasse, wenn sie 3 Stunden telefoniert? Nach dieser Seite deutest du die Lösun
 </section>
 <section class="explainer-section">
 <h2 id="erklaerung">Was die Lösung bedeutet</h2>
-<div class="explainer-block" data-block="erklaerung/1" data-block-id="084d8323" data-block-type="text" data-block-order="3">
+<div class="explainer-block" data-block="erklaerung/1" data-block-id="7ea38df8" data-block-type="text" data-block-order="3">
+<div class="block-text"><p>Wenn eine Sachaufgabe zwei Unbekannte hat, wählst du eines der drei Verfahren und sagst am Ende, was die Zahlen bedeuten.</p></div>
+</div>
+<div class="explainer-block" data-block="erklaerung/2" data-block-id="084d8323" data-block-type="text" data-block-order="4">
 <div class="block-text"><p>Ein Gleichungssystem aus einer Sachaufgabe löst du in vier Schritten: <strong>1.</strong> Unbekannte benennen, <strong>2.</strong> Gleichungen aufstellen, <strong>3.</strong>
 Verfahren wählen und lösen, <strong>4.</strong> Antwort in einem <strong>Satz</strong> mit Einheiten schreiben und prüfen, ob sie zur Aufgabe passt.</p></div>
 </div>
-<div class="explainer-block" data-block="erklaerung/2" data-block-id="989f4996" data-block-type="note" data-block-order="4">
+<div class="explainer-block" data-block="erklaerung/3" data-block-id="989f4996" data-block-type="note" data-block-order="5">
 <div class="explainer-box explainer-note">
 <h3 class="explainer-box-title">Merke</h3>
-<div class="explainer-block" data-block="erklaerung/2/1" data-block-id="16675466" data-block-type="text" data-block-order="5">
+<div class="explainer-block" data-block="erklaerung/3/1" data-block-id="16675466" data-block-type="text" data-block-order="6">
 <div class="block-text"><p>Welches Verfahren? Steht ein <math><mi>y</mi></math> schon allein, nimm Gleichsetzen oder Einsetzen. Steht dasselbe <math><mi>y</mi></math> in beiden Gleichungen mit entgegengesetztem Vorzeichen (+ <math><mi>y</mi></math> und − <math><mi>y</mi></math>), nimm
 Addieren. Alle drei führen zur selben Lösung.</p></div>
 </div>
@@ -91,10 +94,10 @@ Addieren. Alle drei führen zur selben Lösung.</p></div>
 </section>
 <section class="explainer-section">
 <h2 id="beispiel">Beispiel</h2>
-<div class="explainer-block" data-block="beispiel/1" data-block-id="1eb41659" data-block-type="example" data-block-order="6">
+<div class="explainer-block" data-block="beispiel/1" data-block-id="1eb41659" data-block-type="example" data-block-order="7">
 <div class="explainer-box explainer-example">
 <h3 class="explainer-box-title">Eintritt für Kinder und Erwachsene</h3>
-<div class="explainer-block" data-block="beispiel/1/1" data-block-id="3c305dbe" data-block-type="text" data-block-order="7">
+<div class="explainer-block" data-block="beispiel/1/1" data-block-id="3c305dbe" data-block-type="text" data-block-order="8">
 <div class="block-text"><p>I: 1 Kind und 1 Erwachsener zahlen 8 €. II: 2 Kinder und 1 Erwachsener zahlen 11 €. Mit <math><mi>k</mi></math> für den Preis eines Kindes und e für den Preis eines Erwachsenen: <math><mrow><mi>k</mi><mo>+</mo><mi>e</mi><mo>=</mo><mn>8</mn></mrow></math> und <math><mrow><mn>2</mn><mi>k</mi><mo>+</mo><mi>e</mi><mo>=</mo><mn>11</mn></mrow></math>. II minus I: <math><mrow><mi>k</mi><mo>=</mo><mn>3</mn></mrow></math>. Dann <math><mrow><mi>e</mi><mo>=</mo><mn>8</mn><mo>−</mo><mn>3</mn><mo>=</mo><mn>5</mn></mrow></math>. Antwort: Ein Kind zahlt 3 €, ein Erwachsener 5 €.</p></div>
 </div>
 </div>
@@ -102,7 +105,7 @@ Addieren. Alle drei führen zur selben Lösung.</p></div>
 </section>
 <section class="explainer-section">
 <h2 id="uebung">Übung</h2>
-<div class="explainer-block" data-block="uebung/1" data-block-id="d8de3bac" data-block-type="generated" data-block-order="8">
+<div class="explainer-block" data-block="uebung/1" data-block-id="d8de3bac" data-block-type="generated" data-block-order="9">
 <div class="explainer-exercise explainer-generated" id="eintritt-kind">
 <p class="explainer-exercise-label">Aufgabe</p>
 <div class="explainer-live" hidden></div>
@@ -113,7 +116,7 @@ Addieren. Alle drei führen zur selben Lösung.</p></div>
 <script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"eintritt-kind","given":{"e":{"pick":1,"from":{"data":"eintritt"}}},"task":{"text":"1 Kind und 1 Erwachsener zahlen zusammen {{e.s}} €. 2 Kinder und 1 Erwachsener zahlen zusammen {{e.t}} €. Wie viel Euro zahlt ein Kind?"},"answer":{"value":"e.k","compare":{"number":{"format":"integer","unit":"€"}}},"mistakes":[{"value":"e.s","message":"{{e.s}} € zahlen ein Kind und ein Erwachsener zusammen. Du musst die beiden Gleichungen voneinander abziehen."},{"value":"e.e","message":"Das ist der Preis für einen Erwachsenen. Gefragt ist der Preis für ein Kind."}],"hint":"Der Unterschied der beiden Rechnungen ist genau ein Kind.","steps":["$k$ + e = {{e.s}} und 2 · $k$ + e = {{e.t}}","II − I: $k$ = {{e.t}} − {{e.s}} = {{answer}}. Ein Kind zahlt {{answer}} €."]},"templates":{"de":{"task":"1 Kind und 1 Erwachsener zahlen zusammen ⟦e.s⟧ €. 2 Kinder und 1 Erwachsener zahlen zusammen ⟦e.t⟧ €. Wie viel Euro zahlt ein Kind?","steps":["\u003cmath>\u003cmi>k\u003c/mi>\u003c/math> + e = ⟦e.s⟧ und 2 · \u003cmath>\u003cmi>k\u003c/mi>\u003c/math> + e = ⟦e.t⟧","II − I: \u003cmath>\u003cmi>k\u003c/mi>\u003c/math> = ⟦e.t⟧ − ⟦e.s⟧ = ⟦answer⟧. Ein Kind zahlt ⟦answer⟧ €."],"hint":"Der Unterschied der beiden Rechnungen ist genau ein Kind.","messages":["⟦e.s⟧ € zahlen ein Kind und ein Erwachsener zusammen. Du musst die beiden Gleichungen voneinander abziehen.","Das ist der Preis für einen Erwachsenen. Gefragt ist der Preis für ein Kind."]}},"data":{"eintritt":[{"s":8,"t":11,"k":3,"e":5},{"s":10,"t":14,"k":4,"e":6},{"s":7,"t":9,"k":2,"e":5},{"s":13,"t":18,"k":5,"e":8},{"s":10,"t":13,"k":3,"e":7},{"s":9,"t":13,"k":4,"e":5}]},"seeds":[1,2,3,4,8,9],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
 </div>
 </div>
-<div class="explainer-block" data-block="uebung/2" data-block-id="c4d911e1" data-block-type="generated" data-block-order="9">
+<div class="explainer-block" data-block="uebung/2" data-block-id="c4d911e1" data-block-type="generated" data-block-order="10">
 <div class="explainer-exercise explainer-generated" id="eintritt-erwachsene">
 <p class="explainer-exercise-label">Aufgabe</p>
 <div class="explainer-live" hidden></div>
@@ -124,7 +127,7 @@ Addieren. Alle drei führen zur selben Lösung.</p></div>
 <script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"eintritt-erwachsene","given":{"e":{"pick":1,"from":{"data":"eintritt"}}},"task":{"text":"Ein Kind zahlt {{e.k}} €. 1 Kind und 1 Erwachsener zahlen zusammen {{e.s}} €. Wie viel Euro zahlt ein Erwachsener?"},"answer":{"value":"e.e","compare":{"number":{"format":"integer","unit":"€"}}},"mistakes":[{"value":"e.s + e.k","message":"Du hast addiert. Der Erwachsene zahlt den Rest: {{e.s}} € minus den Preis für das Kind."}],"hint":"Von der Summe ziehst du den Preis für das Kind ab.","steps":["e = {{e.s}} − {{e.k}} = {{answer}}. Ein Erwachsener zahlt {{answer}} €."]},"templates":{"de":{"task":"Ein Kind zahlt ⟦e.k⟧ €. 1 Kind und 1 Erwachsener zahlen zusammen ⟦e.s⟧ €. Wie viel Euro zahlt ein Erwachsener?","steps":["e = ⟦e.s⟧ − ⟦e.k⟧ = ⟦answer⟧. Ein Erwachsener zahlt ⟦answer⟧ €."],"hint":"Von der Summe ziehst du den Preis für das Kind ab.","messages":["Du hast addiert. Der Erwachsene zahlt den Rest: ⟦e.s⟧ € minus den Preis für das Kind."]}},"data":{"eintritt":[{"s":8,"t":11,"k":3,"e":5},{"s":10,"t":14,"k":4,"e":6},{"s":7,"t":9,"k":2,"e":5},{"s":13,"t":18,"k":5,"e":8},{"s":10,"t":13,"k":3,"e":7},{"s":9,"t":13,"k":4,"e":5}]},"seeds":[1,2,4,5,6,16],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
 </div>
 </div>
-<div class="explainer-block" data-block="uebung/3" data-block-id="6037225d" data-block-type="single-choice" data-block-order="10">
+<div class="explainer-block" data-block="uebung/3" data-block-id="6037225d" data-block-type="single-choice" data-block-order="11">
 <div class="explainer-exercise explainer-question" id="schnittpunkt-deuten">
 <p class="explainer-exercise-label">Aufgabe</p>
 <div class="question" id="frage-schnittpunkt-deuten" data-id="schnittpunkt-deuten" data-type="single-choice">
@@ -158,7 +161,7 @@ Addieren. Alle drei führen zur selben Lösung.</p></div>
 <script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"schnittpunkt-deuten","text":"Tarif A: $y$ = $x$ + 6, Tarif B: $y$ = 2 · $x$ + 2 ($x$ in Stunden, $y$ in €). Die Lösung ist (4|10). Welcher Satz deutet sie richtig?","explanation":"Die Lösung ($x$|$y$) ist ein Zeitpunkt und ein Preis: Dort kosten beide gleich viel.","links":[],"type":"single-choice","options":[{"text":"Nach 4 Stunden kosten beide Tarife 10 €.","correct":true,"info":"$x$ = 4 ist die Zeit, $y$ = 10 der gemeinsame Preis. Das ist der Tarif-Wechsel."},{"text":"Nach 10 Stunden kosten beide Tarife 4 €.","correct":false,"info":"$x$ und $y$ sind vertauscht. Erst kommt $x$ (Stunden), dann $y$ (Euro)."},{"text":"Tarif A ist ab 4 Stunden immer teurer.","correct":false,"info":"Ab 4 Stunden ist B teurer, weil B steiler steigt. A ist dann billiger."}]},"rendered":{"Tarif A: $y$ = $x$ + 6, Tarif B: $y$ = 2 · $x$ + 2 ($x$ in Stunden, $y$ in €). Die Lösung ist (4|10). Welcher Satz deutet sie richtig?":"Tarif A: \u003cmath>\u003cmi>y\u003c/mi>\u003c/math> = \u003cmath>\u003cmi>x\u003c/mi>\u003c/math> + 6, Tarif B: \u003cmath>\u003cmi>y\u003c/mi>\u003c/math> = 2 · \u003cmath>\u003cmi>x\u003c/mi>\u003c/math> + 2 (\u003cmath>\u003cmi>x\u003c/mi>\u003c/math> in Stunden, \u003cmath>\u003cmi>y\u003c/mi>\u003c/math> in €). Die Lösung ist (4|10). Welcher Satz deutet sie richtig?","Die Lösung ($x$|$y$) ist ein Zeitpunkt und ein Preis: Dort kosten beide gleich viel.":"Die Lösung (\u003cmath>\u003cmi>x\u003c/mi>\u003c/math>|\u003cmath>\u003cmi>y\u003c/mi>\u003c/math>) ist ein Zeitpunkt und ein Preis: Dort kosten beide gleich viel.","$x$ = 4 ist die Zeit, $y$ = 10 der gemeinsame Preis. Das ist der Tarif-Wechsel.":"\u003cmath>\u003cmi>x\u003c/mi>\u003c/math> = 4 ist die Zeit, \u003cmath>\u003cmi>y\u003c/mi>\u003c/math> = 10 der gemeinsame Preis. Das ist der Tarif-Wechsel.","$x$ und $y$ sind vertauscht. Erst kommt $x$ (Stunden), dann $y$ (Euro).":"\u003cmath>\u003cmi>x\u003c/mi>\u003c/math> und \u003cmath>\u003cmi>y\u003c/mi>\u003c/math> sind vertauscht. Erst kommt \u003cmath>\u003cmi>x\u003c/mi>\u003c/math> (Stunden), dann \u003cmath>\u003cmi>y\u003c/mi>\u003c/math> (Euro)."}}</script>
 </div>
 </div>
-<div class="explainer-block" data-block="uebung/4" data-block-id="2f399257" data-block-type="single-choice" data-block-order="11">
+<div class="explainer-block" data-block="uebung/4" data-block-id="2f399257" data-block-type="single-choice" data-block-order="12">
 <div class="explainer-exercise explainer-question" id="welches-verfahren">
 <p class="explainer-exercise-label">Aufgabe</p>
 <div class="question" id="frage-welches-verfahren" data-id="welches-verfahren" data-type="single-choice">
@@ -192,7 +195,7 @@ Addieren. Alle drei führen zur selben Lösung.</p></div>
 <script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"welches-verfahren","text":"I: $y$ = 3 · $x$ − 2, II: 2 · $x$ + $y$ = 13. Welches Verfahren geht am schnellsten?","explanation":"Ist eine Gleichung schon nach $y$ aufgelöst, ist Einsetzen oder Gleichsetzen der kürzeste Weg.","links":[],"type":"single-choice","options":[{"text":"Einsetzen: y aus I in II einsetzen","correct":true,"info":"In I steht $y$ schon allein. Du setzt 3 · $x$ − 2 in II ein. Sofort bleibt nur noch $x$."},{"text":"Addieren, ohne vorher umzuformen","correct":false,"info":"Beim Addieren müsstest du erst umformen, weil $y$ in I allein steht und in II mit + $y$. Einsetzen geht hier direkt."},{"text":"Nur zeichnen, rechnen geht nicht","correct":false,"info":"Rechnen geht immer. Zeichnen ist nur so genau, wie du den Graphen lesen kannst."}]},"rendered":{"I: $y$ = 3 · $x$ − 2, II: 2 · $x$ + $y$ = 13. Welches Verfahren geht am schnellsten?":"I: \u003cmath>\u003cmi>y\u003c/mi>\u003c/math> = 3 · \u003cmath>\u003cmi>x\u003c/mi>\u003c/math> − 2, II: 2 · \u003cmath>\u003cmi>x\u003c/mi>\u003c/math> + \u003cmath>\u003cmi>y\u003c/mi>\u003c/math> = 13. Welches Verfahren geht am schnellsten?","Ist eine Gleichung schon nach $y$ aufgelöst, ist Einsetzen oder Gleichsetzen der kürzeste Weg.":"Ist eine Gleichung schon nach \u003cmath>\u003cmi>y\u003c/mi>\u003c/math> aufgelöst, ist Einsetzen oder Gleichsetzen der kürzeste Weg.","In I steht $y$ schon allein. Du setzt 3 · $x$ − 2 in II ein. Sofort bleibt nur noch $x$.":"In I steht \u003cmath>\u003cmi>y\u003c/mi>\u003c/math> schon allein. Du setzt 3 · \u003cmath>\u003cmi>x\u003c/mi>\u003c/math> − 2 in II ein. Sofort bleibt nur noch \u003cmath>\u003cmi>x\u003c/mi>\u003c/math>.","Beim Addieren müsstest du erst umformen, weil $y$ in I allein steht und in II mit + $y$. Einsetzen geht hier direkt.":"Beim Addieren müsstest du erst umformen, weil \u003cmath>\u003cmi>y\u003c/mi>\u003c/math> in I allein steht und in II mit + \u003cmath>\u003cmi>y\u003c/mi>\u003c/math>. Einsetzen geht hier direkt."}}</script>
 </div>
 </div>
-<div class="explainer-block" data-block="uebung/5" data-block-id="d6729930" data-block-type="text" data-block-order="12">
+<div class="explainer-block" data-block="uebung/5" data-block-id="d6729930" data-block-type="text" data-block-order="13">
 <div class="block-text"><p><strong>Das kannst du jetzt:</strong> Du löst Gleichungssysteme grafisch und rechnerisch mit den drei Verfahren, wählst ein passendes aus und deutest die
 Lösung in einem Satz. Das ist der Schluss dieser App: Von der Zuordnung bis zum Tarif-Wechsel hast du Term, Tabelle und Graph genutzt.</p></div>
 </div>
@@ -235,7 +238,7 @@ Lösung in einem Satz. Das ist der Schluss dieser App: Von der Zuordnung bis zum
 <span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
 <button type="button" class="explainer-feedback-off">Beenden</button>
 </div>
-<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-zuordnungen-funktionen","app":"Zuordnungen und lineare Funktionen","root":"../../","repository":"lernapps/mathe-zuordnungen-funktionen","revision":"93c4b9c","page":{"title":"Die Lösung im Sachzusammenhang","order":27}}</script>
+<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-zuordnungen-funktionen","app":"Zuordnungen und lineare Funktionen","root":"../../","repository":"lernapps/mathe-zuordnungen-funktionen","revision":"4d41ec8","page":{"title":"Die Lösung im Sachzusammenhang","order":27}}</script>
 </aside>
 </template>
 <nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../gleichungssysteme/lgs-addieren/">Zurück: Das Additionsverfahren</a></nav>

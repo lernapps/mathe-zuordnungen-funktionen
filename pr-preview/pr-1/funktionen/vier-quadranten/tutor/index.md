@@ -50,6 +50,8 @@ Interaktiv: Tabelle zur Temperatur: um 10 Uhr ($x$ = −2) 4 °C, um 11 Uhr 3 °
 
 ### Vier Quadranten
 
+Wenn Werte unter null vorkommen, zum Beispiel Temperaturen unter 0 °C, reichen Achsen nur mit positiven Zahlen nicht mehr aus.
+
 Bild: Koordinatensystem mit Zahlen von −3 bis 3 auf beiden Achsen. Oben rechts steht I, oben links II, unten links III, unten rechts IV. Bildunterschrift: Die Achsen teilen die Ebene in vier Quadranten. Gezählt wird gegen den Uhrzeigersinn, rechts oben beginnend.
 
 Die Achsen sind **Zahlengeraden**: rechts und oben stehen positive Zahlen, links und unten negative. Die Achsen schneiden sich

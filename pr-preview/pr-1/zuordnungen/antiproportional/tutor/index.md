@@ -51,6 +51,8 @@ Interaktiv: Für $c$ = 12 gehören zu 1, 2, 3, 4, 6 Pumpen die Zeiten 12 h, 6 h,
 
 ### Das Produkt bleibt gleich
 
+Wenn mehr von der einen Sache weniger von der anderen bedeutet, zum Beispiel mehr Pumpen und weniger Zeit, brauchst du eine andere Regel als bei proportionalen Zuordnungen.
+
 Bild: Vier Rechtecke aus Kästchen. Das erste ist 2 breit und 6 hoch, das zweite 3 breit und 4 hoch, das dritte 4 breit und 3 hoch, das vierte 6 breit und 2 hoch. Alle bestehen aus 12 Kästchen. Bildunterschrift: Vier Rechtecke mit der gleichen Fläche. Wird eine Seite länger, wird die andere kürzer.
 
 - **antiproportional**: Eine Zuordnung ist antiproportional, wenn zum Doppelten von $x$ die Hälfte von $y$ gehört. Das Produkt $x$ · $y$ ist dann immer gleich. Beispiel: 2 Pumpen brauchen 6 h, 4 Pumpen brauchen 3 h, beide Male 12.

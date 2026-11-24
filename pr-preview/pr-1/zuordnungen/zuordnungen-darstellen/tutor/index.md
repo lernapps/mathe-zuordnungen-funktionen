@@ -44,13 +44,15 @@ Du stellst eine Zuordnung in Worten, in einer Tabelle und in einem Graphen dar u
 ### Mit dem Taxi zur Haltestelle
 
 Die Klasse fährt ein Stück mit dem Taxi. Jeder Strecke gehört ein Fahrpreis. Das nennt man eine **Zuordnung**. Nach dieser
-Seite stellst du sie in Worten, als Tabelle und als Graph dar. Was kostet eine Fahrt von 5 km? Im Graphen steht die Strecke waagerecht auf der x-Achse und der Fahrpreis nach oben auf der y-Achse; zu jeder Strecke gehört ein Punkt. Lies den Preis im Graphen ab. Die Linie läuft über die Tabelle hinaus, dort darfst du auch ablesen.
+Seite stellst du sie in Worten, als Tabelle und als Graph dar. Was kostet eine Fahrt von 5 km? Im Graphen steht die Strecke waagerecht auf der $x$-Achse und der Fahrpreis nach oben auf der $y$-Achse; zu jeder Strecke gehört ein Punkt. Lies den Preis im Graphen ab. Die Linie läuft über die Tabelle hinaus, dort darfst du auch ablesen.
 
 Interaktiv: Tabelle zum Taxi: Bei 0 km kostet die Fahrt 3 €, bei 1 km 5 €, bei 2 km 7 €, bei 3 km 9 €. Der Graph ist eine Linie, die bei 3 € auf der $y$-Achse beginnt und mit jedem Kilometer um 2 € steigt.
 
 - Aufgabe `fahrt-fuenf-km` (unten)
 
 ### Drei Darstellungen
+
+Wenn du jemandem zeigen willst, wie der Fahrpreis von der Strecke abhängt, kannst du das auf drei Arten tun.
 
 - **Zuordnung**: Eine Zuordnung ordnet den Werten einer Größe Werte einer anderen Größe zu. Beispiel: Jeder Strecke in km wird ein Fahrpreis in € zugeordnet.
 

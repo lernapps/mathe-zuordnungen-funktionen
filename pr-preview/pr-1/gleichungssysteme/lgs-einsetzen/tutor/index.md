@@ -48,6 +48,8 @@ weil beide für dieselbe Zahl stehen. Wie sieht II dann aus?
 
 ### Einsetzen in drei Schritten
 
+Wenn in einer Gleichung $y$ schon allein steht und in der anderen nicht, ersetzt du dort $y$ durch den Term.
+
 - **Einsetzungsverfahren**: Beim Einsetzungsverfahren ersetzt du in einer Gleichung ein $y$ durch den Term der anderen. Es bleibt eine Gleichung mit nur $x$. Beispiel: 3 · $x$ + (2 · $x$ + 1) = 11.
 
 **Schritt 1:** Den Term für $y$ in die andere Gleichung einsetzen, **mit Klammer**. **Schritt 2:** Nach $x$ lösen. **Schritt 3:** $x$ in die

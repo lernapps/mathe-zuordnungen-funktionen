@@ -50,6 +50,8 @@ Bild: Einfacher Stadtplan mit mehreren Häuserblöcken. Links die Schule, rechts
 
 ### Was 1 : 5000 bedeutet
 
+Wenn du auf einem Plan eine Strecke misst und wissen willst, wie weit das in Wirklichkeit ist, brauchst du den Maßstab.
+
 - **Maßstab**: Der Maßstab sagt, wie viel Mal kürzer die Strecken auf der Karte sind als in der Wirklichkeit. Bei 1 : 5000 sind 1 cm auf der Karte in Wirklichkeit 5000 cm. Beispiel: 2 cm auf der Karte sind 10 000 cm, das sind 100 m.
 
 Der Maßstab ist eine Tabelle wie beim Dreisatz: Karte links, Wirklichkeit rechts. 1 cm auf der Karte sind 5000 cm in

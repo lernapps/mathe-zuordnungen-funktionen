@@ -48,6 +48,8 @@ dieser Seite weißt du, wie du trotzdem rechnest: erst auf **1 Karte**, dann auf
 
 ### Der Weg über die Eins
 
+Wenn die Kartenzahl nicht glatt auf die gesuchte Zahl passt (von 4 auf 7), brauchst du einen Zwischenschritt: den Preis für eine Karte.
+
 Bild: Tabelle mit zwei Zeilen und drei Spalten. Karten: 4, 1, 7. Preis in Euro: 12, Fragezeichen, Fragezeichen. Pfeile über und unter der Tabelle: von 4 nach 1 mit „: 4“, von 1 nach 7 mit „· 7“. Bildunterschrift: Erst durch 4 auf eine Karte, dann mal 7 auf sieben Karten. Links und rechts rechnest du das Gleiche.
 
 Der Dreisatz hat drei Sätze: **Gegeben:** 4 Karten kosten 12 €. **Auf 1:** 1 Karte kostet 12 € : 4 = 3 €. **Gesucht:**

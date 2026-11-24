@@ -50,6 +50,8 @@ Interaktiv: Der Funktionsterm ist $y$ = 2 · $x$ + 3. Die Tabelle: 0 km kosten 3
 
 ### Term, Graph und die beiden Mengen
 
+Wenn du eine Funktion genau beschreiben willst, brauchst du eine Rechenvorschrift, ein Bild und die Angabe, welche Werte erlaubt sind.
+
 - **Funktionsterm**: Der Funktionsterm ist die Rechenvorschrift, die aus $x$ das $y$ macht. Beispiel: $y$ = 2 · $x$ + 3 sagt: Nimm $x$ mal 2 und addiere 3.
 
 - **Definitionsmenge**: Die Definitionsmenge sind alle $x$-Werte, die du einsetzen darfst. Beim Taxi: alle Strecken von 0 bis 6 km.

@@ -50,6 +50,8 @@ Bild: Koordinatensystem mit einer steigenden Geraden. Ein gestricheltes Dreieck 
 
 ### Δy durch Δx
 
+Wenn du wissen willst, wie schnell sich etwas ändert, zum Beispiel der Preis pro Kilometer, misst du die Steigung.
+
 Gehe auf der Geraden von einem Punkt ein Stück nach rechts ($\Delta x$) und miss, wie weit es nach oben geht ($\Delta y$). Die Steigung ist
 $m$ = $\Delta y$ : $\Delta x$. Im Bild: 4 : 2 = 2. Bei jedem Schritt nach rechts steigt die Gerade um 2.
 

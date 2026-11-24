@@ -50,6 +50,8 @@ Interaktiv: Der Punkt P (3|10) ist markiert, die Steigung ist $m$ = 2. Mit dem R
 
 ### Punkt einsetzen, b ausrechnen
 
+Wenn du einen Preis und den Preis je Kilometer kennst, aber den Grundpreis suchst, hilft dir ein Punkt mit der Steigung.
+
 Setze den Punkt P ($x_1$|$y_1$) und die Steigung $m$ in $y$ = $m$ · $x$ + $b$ ein. Dann ist nur noch $b$ unbekannt. Das ist eine lineare Gleichung, die du
 löst: $b$ = $y_1$ − $m$ · $x_1$.
 

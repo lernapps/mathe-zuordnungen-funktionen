@@ -50,6 +50,8 @@ Interaktiv: Der Term ist $y$ = −2 · $x$ + 10. Die Tabelle: nach 0, 1, 2, 3 St
 
 ### y gleich null, y gleich y
 
+Wenn du wissen willst, wann ein Guthaben aufgebraucht ist oder wann zwei Preise gleich sind, suchst du die Nullstelle oder den Schnittpunkt.
+
 - **Nullstelle**: Die Nullstelle ist der $x$-Wert, bei dem $y$ = 0 ist. Dort schneidet der Graph die $x$-Achse. Beispiel: Bei $y$ = −2 · $x$ + 10 gilt 0 = −2 · $x$ + 10, also $x$ = 5.
 
 **Nullstelle:** Setze $y$ = 0 und löse nach $x$. **Schnittpunkt zweier Geraden:** Setze beide Terme gleich, löse nach $x$ und berechne dann $y$ mit

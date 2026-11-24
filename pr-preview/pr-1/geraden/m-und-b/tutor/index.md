@@ -50,6 +50,8 @@ Interaktiv: Die Gleichung $y$ = $m$ · $x$ + $b$ mit den Reglern $m$ (von −3 b
 
 ### Was m und b bewirken
 
+Wenn du eine Gerade genau treffen willst, musst du wissen, welche Zahl in der Gleichung was bewirkt.
+
 - **lineare Funktion**: Eine lineare Funktion hat die Gleichung $y$ = $m$ · $x$ + $b$. Ihr Graph ist eine Gerade. Beispiel: $y$ = 2 · $x$ + 1 ist linear, $y$ = 12 : $x$ ist es nicht.
 
 - **Steigung**: Die Steigung $m$ sagt, wie sich $y$ ändert, wenn $x$ um 1 größer wird. Beispiel: Bei $m$ = 2 steigt $y$ um 2 pro Schritt nach rechts. Ist $m$ negativ, fällt die Gerade.

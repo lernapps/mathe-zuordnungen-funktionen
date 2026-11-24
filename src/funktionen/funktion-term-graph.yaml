@@ -41,6 +41,8 @@ blocks:
     id: erklaerung
     title: Term, Graph und die beiden Mengen
     blocks:
+      - type: text
+        text: "Wenn du eine Funktion genau beschreiben willst, brauchst du eine Rechenvorschrift, ein Bild und die Angabe, welche Werte erlaubt sind."
       - type: definition
         term: Funktionsterm
         explanation: "Der Funktionsterm ist die Rechenvorschrift, die aus $x$ das $y$ macht. Beispiel: $y$ = 2 · $x$ + 3 sagt: Nimm $x$ mal 2 und addiere 3."

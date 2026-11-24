@@ -30,6 +30,8 @@ blocks:
     title: Was die Lösung bedeutet
     blocks:
       - type: text
+        text: "Wenn eine Sachaufgabe zwei Unbekannte hat, wählst du eines der drei Verfahren und sagst am Ende, was die Zahlen bedeuten."
+      - type: text
         text: |
           Ein Gleichungssystem aus einer Sachaufgabe löst du in vier Schritten: **1.** Unbekannte benennen, **2.** Gleichungen aufstellen, **3.**
           Verfahren wählen und lösen, **4.** Antwort in einem **Satz** mit Einheiten schreiben und prüfen, ob sie zur Aufgabe passt.

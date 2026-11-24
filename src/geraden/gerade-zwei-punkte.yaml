@@ -47,6 +47,8 @@ blocks:
     id: erklaerung
     title: Erst m, dann b
     blocks:
+      - type: text
+        text: "Wenn du einen Tarif aus zwei bekannten Preisen herausfinden willst, hast du zwei Punkte. Daraus bestimmst du die Gleichung in zwei Schritten."
       - type: definition
         term: Geradengleichung
         explanation: "Die Geradengleichung $y$ = $m$ · $x$ + $b$ beschreibt alle Punkte einer Geraden. Beispiel: $y$ = 2 · $x$ + 3 geht durch (0|3) und (1|5)."

@@ -66,6 +66,8 @@ blocks:
     id: erklaerung
     title: Quotient oder Produkt
     blocks:
+      - type: text
+        text: "Wenn du bei einer Zuordnung rechnen willst, musst du zuerst wissen, welche Art sie ist. Dazu prüfst du Quotient und Produkt."
       - type: table
         caption: Proportional und antiproportional im Vergleich
         header: ["Merkmal", "proportional", "antiproportional"]

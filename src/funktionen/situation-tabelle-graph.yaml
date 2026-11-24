@@ -41,6 +41,8 @@ blocks:
     title: Was die Form des Graphen sagt
     blocks:
       - type: text
+        text: "Wenn du eine Geschichte als Graph zeigen willst, zum Beispiel ein Gefäß, das sich füllt, hilft dir die Form des Graphen."
+      - type: text
         text: |
           Ein **steiler** Graph heißt: Der Wert ändert sich schnell. Ein **flacher** Graph heißt: Er ändert sich langsam. Ein **waagerechtes**
           Stück heißt: Er ändert sich gar nicht. Jede Situation hat so ihre eigene Form.

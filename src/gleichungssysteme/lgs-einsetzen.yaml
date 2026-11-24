@@ -15,6 +15,8 @@ blocks:
     id: erklaerung
     title: Einsetzen in drei Schritten
     blocks:
+      - type: text
+        text: "Wenn in einer Gleichung $y$ schon allein steht und in der anderen nicht, ersetzt du dort $y$ durch den Term."
       - type: definition
         term: Einsetzungsverfahren
         explanation: "Beim Einsetzungsverfahren ersetzt du in einer Gleichung ein $y$ durch den Term der anderen. Es bleibt eine Gleichung mit nur $x$. Beispiel: 3 · $x$ + (2 · $x$ + 1) = 11."

@@ -42,6 +42,8 @@ blocks:
     id: erklaerung
     title: Vier Quadranten
     blocks:
+      - type: text
+        text: "Wenn Werte unter null vorkommen, zum Beispiel Temperaturen unter 0 °C, reichen Achsen nur mit positiven Zahlen nicht mehr aus."
       - type: figure
         image: images/vier-quadranten.svg
         alt: "Koordinatensystem mit Zahlen von −3 bis 3 auf beiden Achsen. Oben rechts steht I, oben links II, unten links III, unten rechts IV."

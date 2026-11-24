@@ -40,6 +40,8 @@ blocks:
     id: erklaerung
     title: Das Produkt bleibt gleich
     blocks:
+      - type: text
+        text: "Wenn mehr von der einen Sache weniger von der anderen bedeutet, zum Beispiel mehr Pumpen und weniger Zeit, brauchst du eine andere Regel als bei proportionalen Zuordnungen."
       - type: figure
         image: images/rechtecke-gleiche-flaeche.svg
         alt: "Vier Rechtecke aus Kästchen. Das erste ist 2 breit und 6 hoch, das zweite 3 breit und 4 hoch, das dritte 4 breit und 3 hoch, das vierte 6 breit und 2 hoch. Alle bestehen aus 12 Kästchen."

@@ -41,6 +41,8 @@ blocks:
     id: erklaerung
     title: y gleich null, y gleich y
     blocks:
+      - type: text
+        text: "Wenn du wissen willst, wann ein Guthaben aufgebraucht ist oder wann zwei Preise gleich sind, suchst du die Nullstelle oder den Schnittpunkt."
       - type: definition
         term: Nullstelle
         explanation: "Die Nullstelle ist der $x$-Wert, bei dem $y$ = 0 ist. Dort schneidet der Graph die $x$-Achse. Beispiel: Bei $y$ = −2 · $x$ + 10 gilt 0 = −2 · $x$ + 10, also $x$ = 5."

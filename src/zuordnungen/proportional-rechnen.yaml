@@ -39,6 +39,8 @@ blocks:
     id: erklaerung
     title: Faktor und Gleichung
     blocks:
+      - type: text
+        text: "Wenn du den Preis für jede beliebige Zahl von Minuten ausrechnen willst, ohne jedes Mal neu zu überlegen, brauchst du den Faktor."
       - type: definition
         term: Proportionalitätsfaktor
         explanation: "Der Proportionalitätsfaktor $k$ ist der gleiche Quotient $y$ : $x$ einer proportionalen Zuordnung. Beispiel: 3 Minuten kosten 6 €, also $k$ = 6 : 3 = 2 € je Minute."

@@ -54,6 +54,8 @@ blocks:
     id: erklaerung
     title: Einsetzen, eintragen, prüfen
     blocks:
+      - type: text
+        text: "Wenn du eine Gleichung hast und den Graphen brauchst, wechselst du zwischen den Darstellungen: einsetzen, eintragen, prüfen."
       - type: definition
         term: Wertetabelle
         explanation: "Eine Wertetabelle listet zu ausgewählten $x$-Werten die $y$-Werte der Funktion. Beispiel: Für $y$ = 2 · $x$ − 1 gehört zu $x$ = 2 der Wert $y$ = 3."

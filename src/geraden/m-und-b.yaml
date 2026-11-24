@@ -45,6 +45,8 @@ blocks:
     id: erklaerung
     title: Was m und b bewirken
     blocks:
+      - type: text
+        text: "Wenn du eine Gerade genau treffen willst, musst du wissen, welche Zahl in der Gleichung was bewirkt."
       - type: definition
         term: lineare Funktion
         explanation: "Eine lineare Funktion hat die Gleichung $y$ = $m$ · $x$ + $b$. Ihr Graph ist eine Gerade. Beispiel: $y$ = 2 · $x$ + 1 ist linear, $y$ = 12 : $x$ ist es nicht."

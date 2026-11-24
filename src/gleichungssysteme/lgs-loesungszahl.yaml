@@ -56,6 +56,8 @@ blocks:
     id: erklaerung
     title: Keine, eine oder unendlich viele
     blocks:
+      - type: text
+        text: "Wenn du zwei Tarife vergleichst, kann es sein, dass sie sich nie, genau einmal oder immer treffen. Das siehst du an der Lage der Geraden."
       - type: table
         caption: Lage der Geraden und Zahl der Lösungen
         header: ["Lage", "$m$", "$b$", "Lösungen"]

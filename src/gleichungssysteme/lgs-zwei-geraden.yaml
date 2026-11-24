@@ -55,6 +55,8 @@ blocks:
     id: erklaerung
     title: Die Lösung ist der Schnittpunkt
     blocks:
+      - type: text
+        text: "Wenn du wissen willst, wann zwei Tarife gleich viel kosten, suchst du ein Zahlenpaar, das beide Gleichungen erfüllt."
       - type: definition
         term: Gleichungssystem
         explanation: "Ein lineares Gleichungssystem besteht aus zwei Gleichungen mit zwei Unbekannten $x$ und $y$. Die Lösung ist ein Zahlenpaar ($x$|$y$), das beide Gleichungen erfüllt. Beispiel: $y$ = $x$ + 6 und $y$ = 2 · $x$ + 2 haben die Lösung (4|10)."

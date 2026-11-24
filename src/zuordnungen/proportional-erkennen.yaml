@@ -46,6 +46,8 @@ blocks:
     id: erklaerung
     title: Doppelt so viel, doppelt so teuer
     blocks:
+      - type: text
+        text: "Wenn du wissen willst, ob du bei einer Zuordnung mit einem festen Faktor rechnen darfst, prüfst du, ob sie proportional ist."
       - type: figure
         image: images/pfeiltabelle-minuten.svg
         alt: "Tabelle mit zwei Zeilen. Minuten: 1, 2, 3. Kosten in Euro: 2, 4, 6. Über der oberen Zeile ein Pfeil von 1 nach 2 mit „· 2“, unter der unteren Zeile ein Pfeil von 2 nach 4 mit „· 2“."

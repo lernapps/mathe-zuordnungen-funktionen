@@ -49,10 +49,12 @@ Exercise ids: `<seitenid>-<kurzname>`, nur Kleinbuchstaben und Bindestriche, je 
   Komponente oder Aufgabe in den ersten 4 Blöcken.
 - Übungen steigen: erkennen, dann anwenden mit anderen Zahlen, dann neue Situation (Rückwärtsfrage, Sachaufgabe). Ein
   Kapitel schließt mit einem Rückblick („Das kannst du jetzt“, Ich-kann-Sätze der Karte) und sagt, was als Nächstes kommt.
+- Wozu vor Wie (Regeln Abschnitt 9, Punkt 8): Jede Seite und jeder Erklärabschnitt beginnt mit dem Anlass („Wenn du wissen willst …, dann …“), erst danach
+  kommen Begriff, Regel oder Verfahren. Wiederholungen stehen nur auf Recap-Seiten, nicht auf Inhaltsseiten.
 - Recap-Seiten (Regeln Abschnitt 7): Kopf „Das brauchst du für dieses Kapitel“; je Baustein ein Abschnitt (Name der
-  Karte als Überschrift), Fachbegriffe fett mit Beispiel (`definition` und `example`), Kurztest (Komponente `Kurztest`) und der
-  Satz „Wenn das nicht klappt: Wiederhole den Baustein <Name> auf der Lernlandkarte: <Kartenseite>“; Schluss: Checkliste
-  „Du bist bereit, wenn du …“. Kartenseite: `https://lernapps.net/apps/map/mathematik/c/<baustein-id>/`.
+  Karte als Überschrift) mit Anlass, Fachbegriffe fett mit Beispiel (`definition`); danach ein Abschnitt „Kannst du das?“ mit höchstens zwei
+  normalen Übungen (`number`, `single-choice`) mit Rückmeldung und der Satz „Wenn das nicht klappt, wiederhole den Baustein <Name> auf der
+  Lernlandkarte: <Kartenseite>“; Schluss: Checkliste „Du bist bereit, wenn du …“. Kartenseite: `https://lernapps.net/apps/map/mathematik/c/<baustein-id>/`.
 - Geschichte: Eine Klasse (Mia, Ben, Elif, Jonas, alle 12 bis 14 Jahre, frei erfunden) plant eine Klassenfahrt und vergleicht
   Tarife (Handyvertrag, Taxi, Schwimmbad, Becken füllen). Kapitel 1 mit Szenen (Stadtplan der Fahrt), Kapitel 2 bis 5
   als kurze Nachrichten oder Fallbeschreibung. Keine Marken, keine realen Personen.
@@ -86,7 +88,7 @@ Alle in `explainer-exercise-progression` nach Schwierigkeit geordnet; jede Aufga
    `matching` Situation–Graph (Wörter bei Formeln dazu).
 5. *Herleiten und rechnen* (Faktor, Steigung, Nullstelle): `generated` mit `steps`, `where` gegen krumme Werte.
 6. *Aufstellen* (Geradengleichung, Gleichungssystem): `generated`, eine Eingabe je Teil (`number`: *m*, *b*, *x*, *y*), Probe im Test.
-7. *Kurztest im Recap*: `Kurztest` mit genau einer richtigen Option und Grund in `info`.
+7. *Selbsttest im Recap*: höchstens zwei Übungen je Recap-Seite (`number` mit `mistakes` oder `single-choice` mit Grund in `info`), nicht zu leicht für die Stufe.
 
 Zufallsaufgaben: Division durch 0 und krumme Größen mit `where` ausschließen; Ergebnisse mit verlangter Genauigkeit.
 
@@ -106,8 +108,8 @@ Zufallsaufgaben: Division durch 0 und krumme Größen mit `where` ausschließen;
   Beschriftung, `aria-valuetext`; der Satz unter dem Graphen (`aria-live`) und das `aria-label` des Graphen beschreiben Linie und Punkte. Die Tabelle liegt in einem
   fokussierbaren, scrollbaren Bereich. Der Schnittpunkt zweier Geraden wird nie angezeigt (er ist die Antwort der Aufgaben). Farben nur über `--page-*`.
   Jeder Block braucht `nojs` mit Tabelle und Beschreibung. Ein neues Verhalten gehört hierher, nicht in eine zweite Komponente.
-- `Kurztest` (`src/components/Kurztest.*`, kopiert aus den gemeinsamen Dateien des Epics): eine Frage mit Optionen, Rückmeldung sofort, genau eine richtige Option, Grund
-  in `info`. Nur auf den Recap-Seiten (`das-brauchst-du`); jeder Block hat `nojs` mit Frage, Antwort und Grund.
+- Keine Buttons in den Komponenten: Die Dreifachansicht hat nur Regler (`input type="range"` mit `accent-color` aus den Variablen der Laufzeit). Kommt ein Button
+  dazu, darf er nur etwas Sichtbares bewirken und nutzt die Gestaltung der Laufzeit (Regeln Abschnitt 9, Punkt 9).
 - Bildherkunft: alles selbst gezeichnet (SVG), Lizenz CC BY 4.0 wie der Text.
 
 ## Sources

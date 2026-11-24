@@ -10,141 +10,76 @@ blocks:
     blocks:
       - type: text
         text: |
-          Mia, Ben, Elif und Jonas (alle 12 Jahre alt) planen mit ihrer Klasse eine Klassenfahrt in eine Jugendherberge. Jonas kauft Postkarten, Elif liest einen Stadtplan. Dafür musst du drei Dinge
-          sicher können. Zu jedem gibt es einen kurzen Test. Du siehst sofort, ob es klappt.
+          Mia, Ben, Elif und Jonas (alle 12 Jahre alt) planen mit ihrer Klasse eine Klassenfahrt in eine Jugendherberge. Jonas kauft Postkarten, Elif liest einen Stadtplan. Wenn du dabei mitrechnen willst, musst du drei Dinge sicher können. Zwei Übungen zeigen dir am Ende, ob es klappt.
   - type: section
     id: rechengesetze
     title: Vorrangregeln und Rechengesetze
     blocks:
       - type: text
         text: |
-          Ich kann Klammern und Vorrangregeln beachten und Rechengesetze für vorteilhaftes Rechnen nutzen.
+          Wenn eine Rechnung mehrere Rechenzeichen hat, brauchst du eine feste Reihenfolge, sonst kommt jeder auf ein anderes Ergebnis. Ich kann Klammern und Vorrangregeln beachten und Rechengesetze für vorteilhaftes Rechnen nutzen.
       - type: definition
         term: Vorrangregel
         explanation: "Punkt vor Strich: Mal und geteilt rechnest du vor plus und minus. Beispiel: $3 + 4 \\cdot 2 = 3 + 8 = 11$."
       - type: definition
         term: Klammer
         explanation: "Was in der Klammer steht, rechnest du zuerst. Beispiel: $(3 + 4) \\cdot 2 = 7 \\cdot 2 = 14$."
-      - type: vue-component
-        id: test-vorrang
-        component: Kurztest
-        props:
-          question: "Was ergibt 18 + 6 · 7 − 4 · 5?"
-          options:
-            - {
-                text: "820",
-                correct: false,
-                info: "Du hast von links nach rechts gerechnet: (18 + 6) · 7 − 4 und dann · 5. Mal geht vor plus und minus, rechne erst die Malaufgaben aus.",
-              }
-            - {
-                text: "40",
-                correct: true,
-                info: "Erst 6 · 7 = 42 und 4 · 5 = 20, dann 18 + 42 − 20 = 40 (Punkt vor Strich).",
-              }
-            - { text: "60", correct: false, info: "Du hast die Aufgabe − 4 · 5 vergessen." }
-          right: "Richtig."
-          wrong: "Nicht richtig."
-        nojs: |
-          Kurztest: Was ergibt 18 + 6 · 7 − 4 · 5? Antwort: 40. Erst 6 · 7 = 42 und 4 · 5 = 20, dann 18 + 42 − 20 = 40. Wer 820 rechnet, hat von links nach rechts gerechnet; wer 60 rechnet, hat − 4 · 5 vergessen.
-      - type: text
-        text: "Wenn das nicht klappt: Wiederhole den Baustein „Vorrangregeln und Rechengesetze“ auf der Lernlandkarte: [Kartenseite](https://lernapps.net/apps/map/mathematik/c/grundrechenarten-rechengesetze/)."
   - type: section
     id: groessen
     title: Länge, Masse, Geld und Zeit
     blocks:
       - type: text
         text: |
-          Ich kann Länge, Masse, Geld und Zeit messen und damit in Sachaufgaben rechnen.
+          Wenn du wissen willst, wie lang, wie schwer oder wie teuer etwas ist, brauchst du Größen mit Einheiten. Ich kann Länge, Masse, Geld und Zeit messen und damit in Sachaufgaben rechnen.
       - type: definition
         term: Einheit
         explanation: "Die Einheit sagt, womit gemessen wird: cm für Länge, kg für Masse, € für Geld, min für Zeit. Beispiel: 3 cm, 2 kg, 5 €."
-      - type: vue-component
-        id: test-zeit
-        component: Kurztest
-        props:
-          question: "Ein Film beginnt um 17:45 Uhr und endet um 19:20 Uhr. Wie viele Minuten dauert er?"
-          options:
-            - {
-                text: "175 Minuten",
-                correct: false,
-                info: "Du hast wie bei Dezimalzahlen 19,20 − 17,45 = 1,75 gerechnet. Eine Stunde hat aber 60 Minuten, nicht 100. Rechne in Schritten: bis 18:00 Uhr, bis 19:00 Uhr, bis 19:20 Uhr.",
-              }
-            - {
-                text: "125 Minuten",
-                correct: false,
-                info: "Du hast 60 + 45 + 20 gerechnet. Von 17:45 Uhr bis 18:00 Uhr sind es nur 15 Minuten, nicht 45.",
-              }
-            - {
-                text: "95 Minuten",
-                correct: true,
-                info: "Von 17:45 Uhr bis 18:00 Uhr sind es 15 Minuten, bis 19:00 Uhr weitere 60, bis 19:20 Uhr weitere 20: 15 + 60 + 20 = 95.",
-              }
-          right: "Richtig."
-          wrong: "Nicht richtig."
-        nojs: |
-          Kurztest: Ein Film beginnt um 17:45 Uhr und endet um 19:20 Uhr. Wie viele Minuten dauert er? Antwort: 95 Minuten, denn bis 18:00 Uhr sind es 15 Minuten, bis 19:00 Uhr 60 und bis 19:20 Uhr 20 Minuten.
-      - type: text
-        text: "Wenn das nicht klappt: Wiederhole den Baustein „Länge, Masse, Geld und Zeit“ auf der Lernlandkarte: [Kartenseite](https://lernapps.net/apps/map/mathematik/c/messen-laenge-masse-geld-zeit/)."
   - type: section
     id: umrechnen
     title: Einheiten umrechnen
     blocks:
       - type: text
         text: |
-          Ich kann Größen in andere Einheiten umrechnen und passende Einheiten wählen.
+          Wenn eine Aufgabe zwei verschiedene Einheiten mischt, zum Beispiel Meter und Kilometer, rechnest du erst um und dann weiter. Ich kann Größen in andere Einheiten umrechnen und passende Einheiten wählen.
       - type: definition
         term: Umrechnungszahl
         explanation: "Die Umrechnungszahl sagt, wie viele kleine Einheiten in einer größeren stecken: 1 m = 100 cm, 1 km = 1000 m, 1 kg = 1000 g. Beispiel: 3 m = 3 · 100 cm = 300 cm."
-      - type: vue-component
-        id: test-umrechnen
-        component: Kurztest
-        props:
-          question: "Wie viele Meter sind 2,5 km?"
-          options:
-            - {
-                text: "250 m",
-                correct: false,
-                info: "Du hast mit 100 gerechnet. Ein Kilometer hat 1000 Meter: 2,5 · 1000.",
-              }
-            - {
-                text: "2500 m",
-                correct: true,
-                info: "1 km = 1000 m, also 2,5 · 1000 = 2500. Das Komma wandert drei Stellen nach rechts.",
-              }
-            - {
-                text: "25 m",
-                correct: false,
-                info: "Du hast mit 10 gerechnet. Von km nach m multiplizierst du mit 1000.",
-              }
-          right: "Richtig."
-          wrong: "Nicht richtig."
-        nojs: |
-          Kurztest: Wie viele Meter sind 2,5 km? Antwort: 2500 m, denn 1 km = 1000 m und 2,5 · 1000 = 2500.
-      - type: vue-component
-        id: test-umrechnen-zurueck
-        component: Kurztest
-        props:
-          question: "Wie viele Meter sind 340 cm?"
-          options:
-            - { text: "34 m", correct: false, info: "Du hast durch 10 geteilt. Von cm nach m teilst du durch 100." }
-            - { text: "3,4 m", correct: true, info: "100 cm = 1 m, also 340 : 100 = 3,4." }
-            - {
-                text: "340 m",
-                correct: false,
-                info: "Du hast die Zahl nicht umgerechnet. 100 cm sind 1 m, also wird die Zahl kleiner.",
-              }
-          right: "Richtig."
-          wrong: "Nicht richtig."
-        nojs: |
-          Kurztest: Wie viele Meter sind 340 cm? Antwort: 3,4 m, denn 100 cm = 1 m und 340 : 100 = 3,4.
+  - type: section
+    id: selbsttest
+    title: Kannst du das?
+    blocks:
+      - type: number
+        id: test-vorrang
+        text: "Was ergibt 18 + 6 · 7 − 4 · 5?"
+        answer: 40
+        tolerance: 0
+        mistakes:
+          - answer: 820
+            message: "Du hast von links nach rechts gerechnet. Mal geht vor plus und minus: Rechne erst die Malaufgaben aus."
+          - answer: 60
+            message: "Du hast die Aufgabe − 4 · 5 vergessen."
+        explanation: "Erst 6 · 7 = 42 und 4 · 5 = 20, dann 18 + 42 − 20 = 40 (Punkt vor Strich)."
+      - type: number
+        id: test-einheiten
+        text: "Ein Weg ist 2,5 km lang. Jonas ist schon 800 m gegangen. Wie viele Meter muss er noch gehen?"
+        answer: 1700
+        tolerance: 0
+        unit: m
+        mistakes:
+          - answer: 1.7
+            message: "Das wären 1,7 km. Gefragt sind Meter: 1 km hat 1000 m."
+          - answer: -550
+            message: "Du hast 2,5 − 800 gerechnet. Rechne beide Längen in dieselbe Einheit um, hier Meter."
+        explanation: "2,5 km sind 2500 m. Dann 2500 m − 800 m = 1700 m."
       - type: text
-        text: "Wenn das nicht klappt: Wiederhole den Baustein „Einheiten umrechnen“ auf der Lernlandkarte: [Kartenseite](https://lernapps.net/apps/map/mathematik/c/umrechnung-groessen/)."
+        text: |
+          Wenn das nicht klappt, wiederhole die Bausteine auf der Lernlandkarte: [Vorrangregeln und Rechengesetze](https://lernapps.net/apps/map/mathematik/c/grundrechenarten-rechengesetze/), [Länge, Masse, Geld und Zeit](https://lernapps.net/apps/map/mathematik/c/messen-laenge-masse-geld-zeit/) und [Einheiten umrechnen](https://lernapps.net/apps/map/mathematik/c/umrechnung-groessen/).
   - type: section
     id: bereit
     title: Du bist bereit, wenn du …
     blocks:
       - type: text
         text: |
-          - Punkt vor Strich richtig anwendest,
-          - eine Zeitspanne in Minuten ausrechnest,
-          - Meter in Zentimeter, Zentimeter in Meter und Kilometer in Meter umrechnen kannst.
+          - Punkt vor Strich und Klammern richtig anwendest,
+          - Größen mit Einheiten in Sachaufgaben verbindest,
+          - Meter, Zentimeter und Kilometer ineinander umrechnen kannst.

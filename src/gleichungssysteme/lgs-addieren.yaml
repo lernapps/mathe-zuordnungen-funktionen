@@ -15,6 +15,8 @@ blocks:
     id: erklaerung
     title: Addieren, damit y verschwindet
     blocks:
+      - type: text
+        text: "Wenn in den beiden Gleichungen dasselbe Glied mit entgegengesetztem Vorzeichen steht, fällt es beim Addieren weg."
       - type: definition
         term: Additionsverfahren
         explanation: "Beim Additionsverfahren addierst du die beiden Gleichungen so, dass eine Unbekannte wegfällt. Beispiel: ($x$ + $y$) + (2 · $x$ − $y$) = 7 + 8 gibt 3 · $x$ = 15."

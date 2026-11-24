@@ -9,15 +9,14 @@ blocks:
     blocks:
       - type: text
         text: |
-          In diesem und im nächsten Kapitel stellst du Gleichungen auf und löst sie, um zum Beispiel einen Tarif-Wechsel zu finden. Dafür
-          musst du lineare Gleichungen sicher lösen. Hier ein kurzer Test dazu.
+          In diesem und im nächsten Kapitel suchst du zum Beispiel den Punkt, an dem zwei Tarife gleich viel kosten. Dazu stellst du Gleichungen auf und löst sie. Zwei Übungen zeigen dir am Ende, ob du lineare Gleichungen sicher lösen kannst.
   - type: section
     id: lineare-gleichungen
     title: Lineare Gleichungen
     blocks:
       - type: text
         text: |
-          Ich kann lineare Gleichungen lösen und die Lösungsverfahren vergleichen.
+          Wenn du eine unbekannte Zahl suchst, die eine Aussage wahr macht, löst du eine Gleichung. Ich kann lineare Gleichungen lösen und die Lösungsverfahren vergleichen.
       - type: definition
         term: Gleichung
         explanation: "Eine Gleichung sagt, dass zwei Terme gleich groß sind, zum Beispiel $2 \\cdot x + 3 = 11$. Die Lösung ist die Zahl für $x$, bei der die Gleichung stimmt."
@@ -27,78 +26,43 @@ blocks:
       - type: definition
         term: Probe
         explanation: "Bei der Probe setzt du die Lösung in die Gleichung ein. Beispiel: $2 \\cdot 4 + 3 = 11$ stimmt, also ist $x$ = 4 die Lösung."
-      - type: vue-component
+  - type: section
+    id: selbsttest
+    title: Kannst du das?
+    blocks:
+      - type: number
         id: test-gleichung
-        component: Kurztest
-        props:
-          question: "Wie lautet die Lösung von 5 · x − 9 = 2 · x + 12?"
-          options:
-            - {
-                text: "x = 1",
-                correct: false,
-                info: "Du hast 12 − 9 gerechnet. Die 9 steht links mit Minus, also addierst du 9 auf beiden Seiten: 12 + 9 = 21.",
-              }
-            - { text: "x = 21", correct: false, info: "Du hast nicht durch 3 geteilt." }
-            - {
-                text: "x = 7",
-                correct: true,
-                info: "Minus 2 · x und plus 9 auf beiden Seiten gibt 3 · x = 21, also x = 7. Probe: 5 · 7 − 9 = 26 und 2 · 7 + 12 = 26.",
-              }
-          right: "Richtig."
-          wrong: "Nicht richtig."
-        nojs: |
-          Kurztest: Wie lautet die Lösung von 5 · x − 9 = 2 · x + 12? Antwort: x = 7. Minus 2 · x und plus 9 auf beiden Seiten gibt 3 · x = 21. Probe: 5 · 7 − 9 = 26 und 2 · 7 + 12 = 26.
-      - type: vue-component
+        text: "Wie lautet die Lösung von 5 · $x$ − 9 = 2 · $x$ + 12?"
+        answer: 7
+        tolerance: 0
+        mistakes:
+          - answer: 1
+            message: "Du hast 12 − 9 gerechnet. Die 9 steht links mit Minus, also addierst du 9 auf beiden Seiten."
+          - answer: 21
+            message: "Du hast nicht durch 3 geteilt."
+        explanation: "Minus 2 · $x$ und plus 9 auf beiden Seiten gibt 3 · $x$ = 21, also $x$ = 7. Probe: 5 · 7 − 9 = 26 und 2 · 7 + 12 = 26."
+      - type: single-choice
         id: test-probe
-        component: Kurztest
-        props:
-          question: "Ist x = 4 die Lösung von 3 · (x − 1) = 2 · x + 3?"
-          options:
-            - {
-                text: "Ja, beide Seiten sind 9",
-                correct: false,
-                info: "Die rechte Seite ist 2 · 4 + 3 = 11, nicht 9. Nur die linke Seite ist 3 · 3 = 9.",
-              }
-            - {
-                text: "Nein, links 9 und rechts 11",
-                correct: true,
-                info: "Links: 3 · (4 − 1) = 3 · 3 = 9. Rechts: 2 · 4 + 3 = 11. Die Seiten sind verschieden, x = 4 ist keine Lösung.",
-              }
-            - {
-                text: "Nein, links 11 und rechts 9",
-                correct: false,
-                info: "Die Seiten sind vertauscht: Links steht 3 · (4 − 1) = 9, rechts 2 · 4 + 3 = 11.",
-              }
-          right: "Richtig."
-          wrong: "Nicht richtig."
-        nojs: |
-          Kurztest: Ist x = 4 die Lösung von 3 · (x − 1) = 2 · x + 3? Antwort: Nein, denn links ist 3 · (4 − 1) = 9 und rechts 2 · 4 + 3 = 11.
-      - type: vue-component
-        id: test-beide-seiten
-        component: Kurztest
-        props:
-          question: "Wie lautet die Lösung von 2 · x + 1 = −x + 7? (x steht auf beiden Seiten.)"
-          options:
-            - { text: "x = 8", correct: false, info: "Du hast 1 zur 7 addiert statt abgezogen." }
-            - { text: "x = 6", correct: false, info: "Du hast nicht durch 3 geteilt." }
-            - {
-                text: "x = 2",
-                correct: true,
-                info: "Plus x auf beiden Seiten gibt 3 · x + 1 = 7, dann 3 · x = 6 und x = 2. Probe: 2 · 2 + 1 = 5 und −2 + 7 = 5.",
-              }
-          right: "Richtig."
-          wrong: "Nicht richtig."
-        nojs: |
-          Kurztest: Wie lautet die Lösung von 2 · $x$ + 1 = −$x$ + 7? Antwort: $x$ = 2. Erst plus $x$ auf beiden Seiten, 3 · $x$ + 1 = 7, dann minus 1 und geteilt durch 3.
-          Probe: 2 · 2 + 1 = 5 und −2 + 7 = 5.
+        text: "Ist $x$ = 4 die Lösung von 3 · ($x$ − 1) = 2 · $x$ + 3?"
+        options:
+          - text: "Ja, beide Seiten sind 9"
+            correct: false
+            info: "Die rechte Seite ist 2 · 4 + 3 = 11, nicht 9. Nur die linke Seite ist 3 · 3 = 9."
+          - text: "Nein, links 9 und rechts 11"
+            correct: true
+            info: "Links: 3 · (4 − 1) = 3 · 3 = 9. Rechts: 2 · 4 + 3 = 11. Die Seiten sind verschieden, $x$ = 4 ist keine Lösung."
+          - text: "Nein, links 11 und rechts 9"
+            correct: false
+            info: "Die Seiten sind vertauscht: Links steht 3 · (4 − 1) = 9, rechts 2 · 4 + 3 = 11."
+        explanation: "Bei der Probe rechnest du beide Seiten getrennt aus und vergleichst sie."
       - type: text
-        text: "Wenn das nicht klappt: Wiederhole den Baustein „Lineare Gleichungen“ auf der Lernlandkarte: [Kartenseite](https://lernapps.net/apps/map/mathematik/c/lineare-gleichungen/)."
+        text: "Wenn das nicht klappt, wiederhole den Baustein „Lineare Gleichungen“ auf der Lernlandkarte: [Kartenseite](https://lernapps.net/apps/map/mathematik/c/lineare-gleichungen/)."
   - type: section
     id: bereit
     title: Du bist bereit, wenn du …
     blocks:
       - type: text
         text: |
-          - eine Gleichung wie 3 · $x$ − 4 = 11 mit Umformungen löst,
+          - eine Gleichung wie 5 · $x$ − 9 = 2 · $x$ + 12 mit Umformungen löst,
           - die Probe durch Einsetzen machst,
           - weißt, dass du auf beiden Seiten dasselbe tun musst.

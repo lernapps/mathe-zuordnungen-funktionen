@@ -16,6 +16,8 @@ blocks:
     id: erklaerung
     title: Gleichsetzen in drei Schritten
     blocks:
+      - type: text
+        text: "Wenn du den Tarif-Wechsel genau berechnen willst, statt ihn abzulesen, und in beiden Gleichungen schon $y$ allein steht, setzt du die Terme gleich."
       - type: definition
         term: Gleichsetzungsverfahren
         explanation: "Beim Gleichsetzungsverfahren setzt du die beiden Terme für $y$ gleich, löst nach $x$ auf und rechnest $y$ aus. Beispiel: $x$ + 6 = 2 · $x$ + 2 gibt $x$ = 4, dann $y$ = 4 + 6 = 10."

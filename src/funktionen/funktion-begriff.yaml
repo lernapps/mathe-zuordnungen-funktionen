@@ -35,6 +35,8 @@ blocks:
     id: erklaerung
     title: Genau ein y zu jedem x
     blocks:
+      - type: text
+        text: "Wenn du sicher einen Wert ausrechnen willst, muss er eindeutig sein. Dafür gibt es den Begriff Funktion."
       - type: definition
         term: Funktion
         explanation: "Eine Funktion ist eine Zuordnung, die jedem $x$ genau ein $y$ zuordnet. Beispiel: Jeder Strecke wird genau ein Fahrpreis zugeordnet."

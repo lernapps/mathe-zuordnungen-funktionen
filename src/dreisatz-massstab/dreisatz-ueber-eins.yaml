@@ -15,6 +15,8 @@ blocks:
     id: erklaerung
     title: Der Weg über die Eins
     blocks:
+      - type: text
+        text: "Wenn die Kartenzahl nicht glatt auf die gesuchte Zahl passt (von 4 auf 7), brauchst du einen Zwischenschritt: den Preis für eine Karte."
       - type: figure
         image: images/dreisatz-ueber-eins.svg
         alt: "Tabelle mit zwei Zeilen und drei Spalten. Karten: 4, 1, 7. Preis in Euro: 12, Fragezeichen, Fragezeichen. Pfeile über und unter der Tabelle: von 4 nach 1 mit „: 4“, von 1 nach 7 mit „· 7“."

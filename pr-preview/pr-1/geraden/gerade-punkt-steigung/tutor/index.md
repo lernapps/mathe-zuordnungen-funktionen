@@ -46,7 +46,7 @@ Du stellst die Gleichung einer Geraden aus einem Punkt und der Steigung auf, ind
 Ein anderes Taxi kostet 2 € je Kilometer, also $m$ = 2. Eine Fahrt von 3 km kostet 10 € (Punkt P). Wie groß ist der Grundpreis $b$? Stelle ihn
 mit dem Regler $b$ so ein, dass die Gerade durch P geht. Die Steigung ist schon eingestellt.
 
-Interaktiv: Der Punkt P (3|10) ist markiert, die Steigung ist $m$ = 2. Mit dem Regler $b$ wird die Gerade $y$ = 2 · $x$ + $b$ verschoben. Zu Beginn ist $b$ = 0: Für $x$ = 0, 2, 4 ist $y$ = 0, 4, 8. Die Tabelle ändert sich mit dem Regler.
+Interaktiv: Der Punkt P (3|10) ist markiert, die Steigung ist $m$ = 2. Mit dem Regler $b$ wird die Gerade $y$ = 2 · $x$ + $b$ verschoben. Zu Beginn ist $b$ = 0: Für $x$ = 0, 3, 6 ist $y$ = 0, 6, 12. Die Tabelle ändert sich mit dem Regler.
 
 ### Punkt einsetzen, b ausrechnen
 

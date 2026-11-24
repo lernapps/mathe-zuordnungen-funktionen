@@ -43,7 +43,7 @@ Mit den Reglern m und b bewegst du eine Gerade. Du erkennst, was m und b in Term
 
 ### Zwei Regler für eine Gerade
 
-Jonas wechselt zu einem Handyvertrag. Er hat einen Grundpreis und einen Minutenpreis. Das ist eine **lineare Funktion**: $y$ = $m$ · $x$ + $b$. Nach dieser Seite
+Wenn du einen Tarif mit Grundpreis und Preis je Stunde als Gerade beschreiben willst, brauchst du eine Gleichung mit zwei Zahlen: $y$ = $m$ · $x$ + $b$. Das ist eine **lineare Funktion**. Hier ist $x$ die Zahl der Stunden und $y$ die Kosten in Euro; Jonas wechselt zu einem Handyvertrag. Nach dieser Seite
 weißt du, was $m$ und $b$ bedeuten. Schiebe jeden Regler einzeln und beobachte Term, Tabelle und Graph: Was macht $m$? Was macht $b$?
 
 Interaktiv: Die Gleichung $y$ = $m$ · $x$ + $b$ mit den Reglern $m$ (von −3 bis 3) und $b$ (von −4 bis 4). Für $m$ = 2 und $b$ = 1 gehören zu $x$ = −2, −1, 0, 1, 2 die $y$-Werte −3, −1, 1, 3, 5. $m$ dreht die Gerade: Für größeres $m$ wird sie steiler, für negatives $m$ fällt sie. $b$ verschiebt sie nach oben oder unten: Sie schneidet die $y$-Achse bei $b$.
@@ -68,7 +68,7 @@ Kapitel 2, mit $k$ = $m$.
 
 **Beispiel: Handytarif**
 
-Der Tarif kostet 5 € im Monat ($b$ = 5) und 2 € je Stunde ($m$ = 2): $y = 2 \cdot x + 5$. Bei 0 Stunden zahlst du 5 €, bei 3 Stunden $2 \cdot 3 + 5 = 11$ €.
+Der Tarif kostet 5 € Grundpreis ($b$ = 5) und 2 € je Stunde ($m$ = 2): $y = 2 \cdot x + 5$. Bei 0 Stunden zahlst du 5 €, bei 3 Stunden $2 \cdot 3 + 5 = 11$ €.
 
 ### Übung
 

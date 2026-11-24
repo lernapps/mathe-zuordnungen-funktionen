@@ -51,7 +51,7 @@ In diesem und im nächsten Kapitel suchst du zum Beispiel den Punkt, an dem zwei
 
 Wenn du eine unbekannte Zahl suchst, die eine Aussage wahr macht, löst du eine Gleichung. Ich kann lineare Gleichungen lösen und die Lösungsverfahren vergleichen.
 
-- **Gleichung**: Eine Gleichung sagt, dass zwei Terme gleich groß sind, zum Beispiel $2 \cdot x + 3 = 11$. Die Lösung ist die Zahl für $x$, bei der die Gleichung stimmt.
+- **Gleichung**: Eine Gleichung sagt, dass zwei Terme gleich groß sind. Ein Term ist eine Rechnung mit Zahlen und $x$, wie $2 \cdot x + 3$. Beispiel: $2 \cdot x + 3 = 11$. Die Lösung ist die Zahl für $x$, bei der die Gleichung stimmt.
 
 - **Äquivalenzumformung**: Du darfst eine Gleichung umformen, wenn du auf beiden Seiten dasselbe tust. Beispiel: $2 \cdot x + 3 = 11$, minus 3 auf beiden Seiten gibt $2 \cdot x = 8$, geteilt durch 2 gibt $x = 4$.
 
@@ -67,9 +67,8 @@ Wenn das nicht klappt, wiederhole den Baustein „Lineare Gleichungen“ auf der
 
 ### Du bist bereit, wenn du …
 
-- eine Gleichung wie 5 · $x$ − 9 = 2 · $x$ + 12 mit Umformungen löst,
-- die Probe durch Einsetzen machst,
-- weißt, dass du auf beiden Seiten dasselbe tun musst.
+- eine Gleichung wie 5 · $x$ − 9 = 2 · $x$ + 12 mit Umformungen löst und
+- die Probe durch Einsetzen machst und damit prüfst, ob eine Zahl die Lösung ist.
 
 ### Aufgabe test-gleichung
 
@@ -80,6 +79,8 @@ Wenn das nicht klappt, wiederhole den Baustein „Lineare Gleichungen“ auf der
 - Typische Fehler und was die App sagt:
   - 1: Du hast 12 − 9 gerechnet. Die 9 steht links mit Minus, also addierst du 9 auf beiden Seiten.
   - 21: Du hast nicht durch 3 geteilt.
+  - -7: Du hast die Vorzeichen vertauscht: Die 12 und die 9 gehören beide auf die rechte Seite und werden dort addiert.
+  - 3: Du hast 2 · x zu 5 · x addiert. Bring 2 · x auf die linke Seite, indem du es auf beiden Seiten abziehst.
 - Link: [../?via=tutor#test-gleichung](../?via=tutor#test-gleichung)
 
 ### Aufgabe test-probe

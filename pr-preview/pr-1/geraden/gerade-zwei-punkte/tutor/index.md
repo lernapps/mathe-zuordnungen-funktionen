@@ -46,7 +46,7 @@ Du stellst die Gleichung einer Geraden aus zwei Punkten auf: erst m mit dem Stei
 Zwei Taxifahrten sind bekannt: 2 km kosten 7 € (Punkt A) und 5 km kosten 13 € (Punkt B). Wie lautet die Gleichung des Tarifs? Nach
 dieser Seite stellst du sie aus **zwei Punkten** auf. Stelle zuerst mit den Reglern $m$ und $b$ die Gerade so ein, dass sie durch beide Kreuze A und B geht. Dann passen $m$ und $b$.
 
-Interaktiv: Die Punkte A (2|7) und B (5|13) sind markiert. Mit den Reglern $m$ und $b$ wird die Gerade $y$ = $m$ · $x$ + $b$ so verschoben und gedreht, dass sie durch beide Punkte geht. Zu Beginn ist $m$ = 1 und $b$ = 0: Für $x$ = 0, 2, 4 ist $y$ = 0, 2, 4. Die Tabelle ändert sich mit den Reglern.
+Interaktiv: Die Punkte A (2|7) und B (5|13) sind markiert. Mit den Reglern $m$ und $b$ wird die Gerade $y$ = $m$ · $x$ + $b$ so verschoben und gedreht, dass sie durch beide Punkte geht. Zu Beginn ist $m$ = 1 und $b$ = 0: Für $x$ = 0, 2, 5 ist $y$ = 0, 2, 5. Die Tabelle ändert sich mit den Reglern.
 
 ### Erst m, dann b
 
@@ -54,7 +54,7 @@ Wenn du einen Tarif aus zwei bekannten Preisen herausfinden willst, hast du zwei
 
 - **Geradengleichung**: Die Geradengleichung $y$ = $m$ · $x$ + $b$ beschreibt alle Punkte einer Geraden. Beispiel: $y$ = 2 · $x$ + 3 geht durch (0|3) und (1|5).
 
-**Schritt 1, die Steigung:** $m$ = ($y_2$ − $y_1$) : ($x_2$ − $x_1$), das ist das Steigungsdreieck von A nach B. **Schritt 2, der Achsenabschnitt:**
+Der Punkt A hat die Koordinaten ($x_1$|$y_1$), der Punkt B die Koordinaten ($x_2$|$y_2$). **Schritt 1, die Steigung:** $m$ = ($y_2$ − $y_1$) : ($x_2$ − $x_1$), das ist das Steigungsdreieck von A nach B. **Schritt 2, der Achsenabschnitt:**
 Setze einen der Punkte und $m$ in $y$ = $m$ · $x$ + $b$ ein und löse nach $b$ auf.
 
 $m = \frac{y_2 - y_1}{x_2 - x_1} \qquad b = y_1 - m \cdot x_1$

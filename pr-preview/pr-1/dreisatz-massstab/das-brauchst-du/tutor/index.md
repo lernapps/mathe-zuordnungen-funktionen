@@ -77,9 +77,8 @@ Wenn das nicht klappt, wiederhole die Bausteine auf der Lernlandkarte: [Vorrangr
 
 ### Du bist bereit, wenn du …
 
-- Punkt vor Strich und Klammern richtig anwendest,
-- Größen mit Einheiten in Sachaufgaben verbindest,
-- Meter, Zentimeter und Kilometer ineinander umrechnen kannst.
+- Punkt vor Strich richtig anwendest,
+- Längen in verschiedenen Einheiten (km und m) in einer Sachaufgabe verbindest.
 
 ### Aufgabe test-vorrang
 
@@ -90,6 +89,8 @@ Wenn das nicht klappt, wiederhole die Bausteine auf der Lernlandkarte: [Vorrangr
 - Typische Fehler und was die App sagt:
   - 820: Du hast von links nach rechts gerechnet. Mal geht vor plus und minus: Rechne erst die Malaufgaben aus.
   - 60: Du hast die Aufgabe − 4 · 5 vergessen.
+  - 148: Du hast 18 + 6 zuerst gerechnet. Punkt vor Strich: Rechne erst 6 · 7 und 4 · 5.
+  - 164: Du hast nur bis − 4 von links nach rechts gerechnet und · 5 vergessen. Mal geht vor minus.
 - Link: [../?via=tutor#test-vorrang](../?via=tutor#test-vorrang)
 
 ### Aufgabe test-einheiten
@@ -100,5 +101,6 @@ Wenn das nicht klappt, wiederhole die Bausteine auf der Lernlandkarte: [Vorrangr
 - Erklärung: 2,5 km sind 2500 m. Dann 2500 m − 800 m = 1700 m.
 - Typische Fehler und was die App sagt:
   - 1.7: Das wären 1,7 km. Gefragt sind Meter: 1 km hat 1000 m.
+  - 3300: Du hast addiert. Jonas ist schon 800 m gegangen, diese Strecke geht von der ganzen Länge ab.
   - -550: Du hast 2,5 − 800 gerechnet. Rechne beide Längen in dieselbe Einheit um, hier Meter.
 - Link: [../?via=tutor#test-einheiten](../?via=tutor#test-einheiten)

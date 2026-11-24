@@ -159,7 +159,7 @@ Nr. | m | b | Lösung | F1
 
 - Aufgabe: Eine Gerade hat die Gleichung $y$ = 3 · $x$ − 2. Wie groß ist der $y$-Achsenabschnitt $b$?
 - Antwortformat: eine Zahl eintippen
-- Lösung: -2
+- Lösung: −2
 - Erklärung: Bei $x$ = 0 ist $y = 3 \cdot 0 - 2 = -2$. Die Gerade schneidet die $y$-Achse bei −2.
 - Typische Fehler und was die App sagt:
   - 2: Das Vorzeichen gehört zu b. In y = 3 · x − 2 steht ein Minus, also ist b = −2.

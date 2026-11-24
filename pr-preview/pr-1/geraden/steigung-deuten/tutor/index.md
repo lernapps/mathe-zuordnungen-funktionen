@@ -117,20 +117,20 @@ Nr. | e.dx | e.dy | e.m | Lösung | F1 | F2
 
 ```
 Nr. | e.dx | e.dy | Lösung | F1
-1 | 2 | 6 | -3 | 3
-2 | 2 | 8 | -4 | 4
-3 | 3 | 9 | -3 | 3
-4 | 4 | 8 | -2 | 2
-5 | 4 | 12 | -3 | 3
-6 | 3 | 6 | -2 | 2
-7 | 5 | 5 | -1 | 1
+1 | 2 | 6 | −3 | 3
+2 | 2 | 8 | −4 | 4
+3 | 3 | 9 | −3 | 3
+4 | 4 | 8 | −2 | 2
+5 | 4 | 12 | −3 | 3
+6 | 3 | 6 | −2 | 2
+7 | 5 | 5 | −1 | 1
 ```
 
 ### Aufgabe becken-steigung
 
 - Aufgabe: Ein Tank hat 80 Liter. Nach 4 Minuten sind es 60 Liter. Wie groß ist die Steigung $m$ in Liter pro Minute?
 - Antwortformat: eine Zahl eintippen (Liter pro Minute)
-- Lösung: -5 Liter pro Minute
+- Lösung: −5 Liter pro Minute
 - Erklärung: $\Delta y = 60 - 80 = -20$ Liter in $\Delta x = 4$ Minuten: $m = -20 : 4 = -5$.
 - Typische Fehler und was die App sagt:
   - 5: Der Tank wird leerer, y wird kleiner: Δy = −20. Darum ist m negativ.

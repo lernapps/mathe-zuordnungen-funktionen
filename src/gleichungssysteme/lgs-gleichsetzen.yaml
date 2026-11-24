@@ -46,7 +46,7 @@ blocks:
               - ["2", "6 = $x$ + 2", "$x$ auf beiden Seiten abziehen"]
               - ["3", "4 = $x$", "2 auf beiden Seiten abziehen"]
               - ["4", "$y$ = 4 + 6 = 10", "$x$ = 4 in die erste Gleichung einsetzen"]
-              - ["5", "2 · 4 + 2 = 10", "Probe in der zweiten Gleichung"]
+              - ["5", "4 + 6 = 10 und 2 · 4 + 2 = 10", "Probe in beiden Gleichungen"]
           - type: text
             text: "Die Lösung ist (4|10): Nach 4 Stunden kosten beide Tarife 10 €."
   - type: section

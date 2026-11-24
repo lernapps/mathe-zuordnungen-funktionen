@@ -19,7 +19,7 @@ blocks:
           Wenn du eine unbekannte Zahl suchst, die eine Aussage wahr macht, löst du eine Gleichung. Ich kann lineare Gleichungen lösen und die Lösungsverfahren vergleichen.
       - type: definition
         term: Gleichung
-        explanation: "Eine Gleichung sagt, dass zwei Terme gleich groß sind, zum Beispiel $2 \\cdot x + 3 = 11$. Die Lösung ist die Zahl für $x$, bei der die Gleichung stimmt."
+        explanation: "Eine Gleichung sagt, dass zwei Terme gleich groß sind. Ein Term ist eine Rechnung mit Zahlen und $x$, wie $2 \\cdot x + 3$. Beispiel: $2 \\cdot x + 3 = 11$. Die Lösung ist die Zahl für $x$, bei der die Gleichung stimmt."
       - type: definition
         term: Äquivalenzumformung
         explanation: "Du darfst eine Gleichung umformen, wenn du auf beiden Seiten dasselbe tust. Beispiel: $2 \\cdot x + 3 = 11$, minus 3 auf beiden Seiten gibt $2 \\cdot x = 8$, geteilt durch 2 gibt $x = 4$."
@@ -40,6 +40,10 @@ blocks:
             message: "Du hast 12 − 9 gerechnet. Die 9 steht links mit Minus, also addierst du 9 auf beiden Seiten."
           - answer: 21
             message: "Du hast nicht durch 3 geteilt."
+          - answer: -7
+            message: "Du hast die Vorzeichen vertauscht: Die 12 und die 9 gehören beide auf die rechte Seite und werden dort addiert."
+          - answer: 3
+            message: "Du hast 2 · x zu 5 · x addiert. Bring 2 · x auf die linke Seite, indem du es auf beiden Seiten abziehst."
         explanation: "Minus 2 · $x$ und plus 9 auf beiden Seiten gibt 3 · $x$ = 21, also $x$ = 7. Probe: 5 · 7 − 9 = 26 und 2 · 7 + 12 = 26."
       - type: single-choice
         id: test-probe
@@ -63,6 +67,5 @@ blocks:
     blocks:
       - type: text
         text: |
-          - eine Gleichung wie 5 · $x$ − 9 = 2 · $x$ + 12 mit Umformungen löst,
-          - die Probe durch Einsetzen machst,
-          - weißt, dass du auf beiden Seiten dasselbe tun musst.
+          - eine Gleichung wie 5 · $x$ − 9 = 2 · $x$ + 12 mit Umformungen löst und
+          - die Probe durch Einsetzen machst und damit prüfst, ob eine Zahl die Lösung ist.

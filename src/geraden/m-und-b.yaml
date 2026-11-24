@@ -9,7 +9,7 @@ blocks:
     blocks:
       - type: text
         text: |
-          Jonas wechselt zu einem Handyvertrag. Er hat einen Grundpreis und einen Minutenpreis. Das ist eine **lineare Funktion**: $y$ = $m$ · $x$ + $b$. Nach dieser Seite
+          Wenn du einen Tarif mit Grundpreis und Preis je Stunde als Gerade beschreiben willst, brauchst du eine Gleichung mit zwei Zahlen: $y$ = $m$ · $x$ + $b$. Das ist eine **lineare Funktion**. Hier ist $x$ die Zahl der Stunden und $y$ die Kosten in Euro; Jonas wechselt zu einem Handyvertrag. Nach dieser Seite
           weißt du, was $m$ und $b$ bedeuten. Schiebe jeden Regler einzeln und beobachte Term, Tabelle und Graph: Was macht $m$? Was macht $b$?
       - type: vue-component
         id: m-b-regler
@@ -72,7 +72,7 @@ blocks:
         title: Handytarif
         blocks:
           - type: text
-            text: "Der Tarif kostet 5 € im Monat ($b$ = 5) und 2 € je Stunde ($m$ = 2): $y = 2 \\cdot x + 5$. Bei 0 Stunden zahlst du 5 €, bei 3 Stunden $2 \\cdot 3 + 5 = 11$ €."
+            text: "Der Tarif kostet 5 € Grundpreis ($b$ = 5) und 2 € je Stunde ($m$ = 2): $y = 2 \\cdot x + 5$. Bei 0 Stunden zahlst du 5 €, bei 3 Stunden $2 \\cdot 3 + 5 = 11$ €."
   - type: section
     id: uebung
     title: Übung

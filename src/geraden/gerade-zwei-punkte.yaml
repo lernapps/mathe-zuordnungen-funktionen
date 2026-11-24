@@ -20,7 +20,7 @@ blocks:
           yLabel: Preis (€)
           xUnit: km
           yUnit: €
-          xs: [0, 2, 4]
+          xs: [0, 2, 5]
           xMin: 0
           xMax: 6
           yMin: 0
@@ -42,7 +42,7 @@ blocks:
             - { x: 5, y: 13, name: B }
         nojs: |
           Die Punkte A (2|7) und B (5|13) sind markiert. Mit den Reglern $m$ und $b$ wird die Gerade $y$ = $m$ · $x$ + $b$ so verschoben und gedreht, dass sie
-          durch beide Punkte geht. Zu Beginn ist $m$ = 1 und $b$ = 0: Für $x$ = 0, 2, 4 ist $y$ = 0, 2, 4. Die Tabelle ändert sich mit den Reglern.
+          durch beide Punkte geht. Zu Beginn ist $m$ = 1 und $b$ = 0: Für $x$ = 0, 2, 5 ist $y$ = 0, 2, 5. Die Tabelle ändert sich mit den Reglern.
   - type: section
     id: erklaerung
     title: Erst m, dann b
@@ -54,7 +54,7 @@ blocks:
         explanation: "Die Geradengleichung $y$ = $m$ · $x$ + $b$ beschreibt alle Punkte einer Geraden. Beispiel: $y$ = 2 · $x$ + 3 geht durch (0|3) und (1|5)."
       - type: text
         text: |
-          **Schritt 1, die Steigung:** $m$ = ($y_2$ − $y_1$) : ($x_2$ − $x_1$), das ist das Steigungsdreieck von A nach B. **Schritt 2, der Achsenabschnitt:**
+          Der Punkt A hat die Koordinaten ($x_1$|$y_1$), der Punkt B die Koordinaten ($x_2$|$y_2$). **Schritt 1, die Steigung:** $m$ = ($y_2$ − $y_1$) : ($x_2$ − $x_1$), das ist das Steigungsdreieck von A nach B. **Schritt 2, der Achsenabschnitt:**
           Setze einen der Punkte und $m$ in $y$ = $m$ · $x$ + $b$ ein und löse nach $b$ auf.
       - type: formula
         formula: 'm = \frac{y_2 - y_1}{x_2 - x_1} \qquad b = y_1 - m \cdot x_1'
